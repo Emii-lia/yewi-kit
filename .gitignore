@@ -1,0 +1,6 @@
+/target
+/node_modules
+/.idea
+/dist
+/src/styles/global.css
+/src/styles/global.css.map

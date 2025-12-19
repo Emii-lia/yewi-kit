@@ -1,0 +1,12 @@
+[package]
+name = "yew-werewolf-client"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+yew = { git = "https://github.com/yewstack/yew/", features = ["csr", "serde"] }
+gloo-net = "0.6.0"
+serde = { version = "1.0.228", features = ["derive"] }
+wasm-bindgen-futures = "0.4.56"
+wasm-logger = "0.2.0"
+yew-router = "0.19.0"
