@@ -1,0 +1,104 @@
+.Button{
+  @apply inline-flex items-center justify-center gap-2 font-semibold whitespace-nowrap;
+  &.primary{
+    @apply bg-blue-500 text-white shadow-inner;
+
+    &:hover{
+      @apply bg-blue-700;
+    }
+    &:focus{
+      @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+    }
+    &:disabled{
+      @apply bg-blue-200 cursor-not-allowed text-slate-200;
+    }
+  }
+  &.danger {
+    @apply bg-red-600 text-white;
+    &:hover {
+      @apply bg-red-700;
+    }
+    &:focus {
+      @apply outline-none ring-2 ring-red-500 ring-offset-2;
+    }
+    &:disabled {
+      @apply bg-red-300 text-slate-300 cursor-not-allowed;
+    }
+  }
+  &.success {
+    @apply bg-emerald-600 text-white;
+    &:hover {
+      @apply bg-emerald-700;
+    }
+    &:focus {
+      @apply outline-none ring-2 ring-emerald-500 ring-offset-2;
+    }
+    &:disabled {
+      @apply bg-emerald-300 text-slate-300 cursor-not-allowed;
+    }
+  }
+  &.secondary {
+    @apply bg-white text-slate-950 border border-solid border-slate-500 shadow-sm;
+    &:hover{
+      @apply bg-slate-200;
+    }
+    &:focus{
+      @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+    }
+    &:disabled{
+      @apply bg-slate-100 text-slate-500 cursor-not-allowed;
+    }
+  }
+  &.tertiary{
+    @apply bg-transparent text-slate-950;
+    &:hover{
+      @apply bg-slate-100;
+    }
+    &:focus{
+      @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+    }
+    &:disabled{
+      @apply bg-transparent text-slate-500 cursor-not-allowed;
+    }
+  }
+  &.btn-sm{
+    @apply py-1.5 px-2.5 h-8 rounded-lg text-sm;
+  }
+  &.btn-md{
+    @apply py-2 px-3 h-9 rounded-lg;
+  }
+  &.btn-lg{
+    @apply py-2.5 px-3.5 h-10 rounded-lg;
+  }
+  &.rounded{
+    @apply rounded-full !important;
+  }
+  &.loading {
+    @apply cursor-wait;
+  }
+
+  .spinner-container {
+    @apply relative flex items-center justify-center;
+    min-width: 100px;
+
+    .spinner {
+      @apply absolute flex items-center justify-center;
+      width: 15px;
+      height: 15px;
+      border: 2px solid transparent;
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
