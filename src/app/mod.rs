@@ -1,6 +1,6 @@
 use yew::{function_component, html, Html};
 use crate::components::Button;
-use crate::types::{ButtonSize, ButtonVariant};
+use crate::types::{ButtonVariant};
 
 #[function_component]
 pub fn App() -> Html {
