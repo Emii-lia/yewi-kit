@@ -8,7 +8,7 @@ pub enum ButtonVariant {
 }
 
 #[derive(PartialEq, Clone)]
-pub enum ButtonSize {
+pub enum Size {
     Small,
     Medium,
     Large,

@@ -2,7 +2,7 @@ mod use_button;
 
 use yew::{classes, function_component, html, AttrValue, Callback, Html, MouseEvent, Properties};
 use crate::components::button::use_button::{use_button, HookParams, HookResponse};
-use crate::types::{ButtonSize, ButtonVariant};
+use crate::types::{Size, ButtonVariant};
 
 #[derive(Clone, PartialEq)]
 pub enum ButtonClick {
@@ -20,8 +20,8 @@ pub struct Props {
   pub onclick: Option<ButtonClick>,
   #[prop_or_default]
   pub disabled: bool,
-  #[prop_or(ButtonSize::Medium)]
-  pub size: ButtonSize,
+  #[prop_or(Size::Medium)]
+  pub size: Size,
   #[prop_or_default]
   pub href: AttrValue,
   #[prop_or_default]
