@@ -1,11 +1,11 @@
 use yew::{Callback, MouseEvent, Properties, prelude::*};
 use crate::components::ButtonClick;
-use crate::types::{ButtonSize, ButtonVariant};
+use crate::types::{Size, ButtonVariant};
 
 #[derive(Properties, PartialEq)]
 pub struct HookParams {
   pub variant: ButtonVariant,
-  pub size: ButtonSize,
+  pub size: Size,
   pub onclick: Option<ButtonClick>
 }
 
@@ -38,9 +38,9 @@ pub(crate) fn use_button(params: HookParams) -> HookResponse {
   };
 
   let size = match size {
-    ButtonSize::Small => "btn-sm",
-    ButtonSize::Medium => "btn-md",
-    ButtonSize::Large => "btn-lg",
+    Size::Small => "btn-sm",
+    Size::Medium => "btn-md",
+    Size::Large => "btn-lg",
   };
 
   HookResponse {
