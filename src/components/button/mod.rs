@@ -1,6 +1,6 @@
 mod use_button;
 
-use yew::{classes, function_component, html, AttrValue, Callback, Html, MouseEvent, Properties};
+use yew::{classes, function_component, html, AttrValue, Callback, Classes, Html, MouseEvent, Properties};
 use crate::components::button::use_button::{use_button, HookParams, HookResponse};
 use crate::types::{Size, ButtonVariant};
 
@@ -15,7 +15,7 @@ pub struct Props {
   #[prop_or(ButtonVariant::Primary)]
   pub variant: ButtonVariant,
   #[prop_or_default]
-  pub class: String,
+  pub class: Classes,
   #[prop_or_default]
   pub onclick: Option<ButtonClick>,
   #[prop_or_default]
@@ -27,8 +27,8 @@ pub struct Props {
   #[prop_or_default]
   pub is_loading: bool,
 }
-#[function_component]
-pub(crate) fn Button(Props {
+#[function_component(Button)]
+pub(crate) fn button(Props {
   href,
   children,
   is_loading,
@@ -53,14 +53,14 @@ pub(crate) fn Button(Props {
     if Some(href) != None && href != "" {
       <a
         href={href.clone()}
-        class={classes!("Button", class, variant, size, if is_loading.clone() { "loading" } else { "" })}
+        class={classes!("Button", variant, size, if is_loading.clone() { "loading" } else { "" }, class)}
         disabled={disabled.clone() || is_loading.clone()}
       >
         {children.clone()}
       </a>
     } else {
       <button
-        class={classes!("Button", class, variant, size, if is_loading.clone() { "loading" } else { "" })}
+        class={classes!("Button", variant, size, if is_loading.clone() { "loading" } else { "" }, class)}
         disabled={disabled.clone() || is_loading.clone()}
         onclick={on_click}
       >

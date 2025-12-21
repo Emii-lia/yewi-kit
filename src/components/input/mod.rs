@@ -5,8 +5,8 @@ use crate::components::input::use_input::{use_input, HookParams, HookResponse};
 mod types;
 mod use_input;
 
-#[function_component]
-pub(crate) fn Input(props: &InputProps) -> Html {
+#[function_component(Input)]
+pub(crate) fn input(props: &InputProps) -> Html {
   let HookResponse { size } = use_input(HookParams { size: props.input_size.clone() });
   html! {
     <div class="Input">
