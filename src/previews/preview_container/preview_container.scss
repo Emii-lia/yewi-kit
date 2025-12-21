@@ -1,0 +1,9 @@
+.PreviewContainer {
+  @apply w-full flex flex-col gap-4 bg-slate-100 rounded-lg;
+  .preview-container-title {
+    @apply text-lg text-slate-800 font-semibold p-2 rounded-br-lg bg-white w-fit border-e border-slate-100;
+  }
+  .preview-content {
+    @apply flex items-center justify-center gap-4 p-6;
+  }
+}
