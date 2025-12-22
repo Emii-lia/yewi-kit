@@ -23,7 +23,7 @@
       @apply bg-transparent;
     }
     &.filled {
-      @apply text-white p-2 px-3 gap-2.5 bg-zinc-500 bg-opacity-70;
+      @apply text-white py-1 px-2.5 gap-2.5 bg-zinc-500 bg-opacity-70;
     }
   }
   &.red{
@@ -38,7 +38,7 @@
       @apply bg-transparent;
     }
     &.filled {
-      @apply text-white p-2 px-3 gap-2.5 bg-red-500 bg-opacity-70;
+      @apply text-white py-1 px-2.5 gap-2.5 bg-red-500 bg-opacity-70;
     }
   }
   &.yellow{
@@ -53,7 +53,7 @@
       @apply bg-transparent;
     }
     &.filled {
-      @apply text-white p-2 px-3 gap-2.5 bg-yellow-500 bg-opacity-70;
+      @apply text-white py-1 px-2.5 gap-2.5 bg-yellow-500 bg-opacity-70;
     }
   }
   &.green{
@@ -68,7 +68,7 @@
       @apply bg-transparent;
     }
     &.filled {
-      @apply text-white p-2 px-3 gap-2.5 bg-green-500 bg-opacity-70;
+      @apply text-white py-1 px-2.5 gap-2.5 bg-green-500 bg-opacity-70;
     }
   }
   &.orange{
@@ -83,7 +83,7 @@
       @apply bg-transparent;
     }
     &.filled {
-      @apply text-white p-2 px-3 gap-2.5 bg-orange-500 bg-opacity-70;
+      @apply text-white py-1 px-2.5 gap-2.5 bg-orange-500 bg-opacity-70;
     }
   }
   &.purple{
@@ -98,7 +98,7 @@
       @apply bg-transparent;
     }
     &.filled {
-      @apply text-white p-2 px-3 gap-2.5 bg-purple-500 bg-opacity-70;
+      @apply text-white py-1 px-2.5 gap-2.5 bg-purple-500 bg-opacity-70;
     }
   }
   &.blue{
@@ -113,7 +113,7 @@
       @apply bg-transparent;
     }
     &.filled {
-      @apply text-white p-2 px-3 gap-2.5 bg-blue-500 bg-opacity-70;
+      @apply text-white py-1 px-2.5 gap-2.5 bg-blue-500 bg-opacity-70;
     }
   }
   &.pink{
@@ -128,7 +128,7 @@
       @apply bg-transparent;
     }
     &.filled {
-      @apply text-white p-2 px-3 gap-2.5 bg-pink-500 bg-opacity-70;
+      @apply text-white py-1 px-2.5 gap-2.5 bg-pink-500 bg-opacity-70;
     }
   }
   &.fuchsia{
@@ -143,7 +143,7 @@
       @apply bg-transparent;
     }
     &.filled {
-      @apply text-white p-2 px-3 gap-2.5 bg-fuchsia-500 bg-opacity-70;
+      @apply text-white py-1 px-2.5 gap-2.5 bg-fuchsia-500 bg-opacity-70;
     }
   }
   &.cyan{
@@ -158,7 +158,7 @@
       @apply bg-transparent;
     }
     &.filled {
-      @apply text-white p-2 px-3 gap-2.5 bg-cyan-500 bg-opacity-70;
+      @apply text-white py-1 px-2.5 gap-2.5 bg-cyan-500 bg-opacity-70;
     }
   }
   &.teal{
@@ -173,7 +173,7 @@
       @apply bg-transparent;
     }
     &.filled {
-      @apply text-white p-2 px-3 gap-2.5 bg-teal-500 bg-opacity-70;
+      @apply text-white py-1 px-2.5 gap-2.5 bg-teal-500 bg-opacity-70;
     }
   }
   &.lime{
@@ -188,7 +188,7 @@
       @apply bg-transparent;
     }
     &.filled {
-      @apply text-white p-2 px-3 gap-2.5 bg-lime-500 bg-opacity-70;
+      @apply text-white py-1 px-2.5 gap-2.5 bg-lime-500 bg-opacity-70;
     }
   }
   &.amber{
@@ -203,7 +203,7 @@
       @apply bg-transparent;
     }
     &.filled {
-      @apply text-white p-2 px-3 gap-2.5 bg-amber-500 bg-opacity-70;
+      @apply text-white py-1 px-2.5 gap-2.5 bg-amber-500 bg-opacity-70;
     }
   }
   &.emerald{
@@ -218,7 +218,7 @@
       @apply bg-transparent;
     }
     &.filled {
-      @apply text-white p-2 px-3 gap-2.5 bg-emerald-500 bg-opacity-70;
+      @apply text-white py-1 px-2.5 gap-2.5 bg-emerald-500 bg-opacity-70;
     }
   }
   &.indigo{
@@ -233,7 +233,7 @@
       @apply bg-transparent;
     }
     &.filled {
-      @apply text-white p-2 px-3 gap-2.5 bg-indigo-500 bg-opacity-70;
+      @apply text-white py-1 px-2.5 gap-2.5 bg-indigo-500 bg-opacity-70;
     }
   }
   &.violet{
@@ -248,7 +248,7 @@
       @apply bg-transparent;
     }
     &.filled {
-      @apply text-white p-2 px-3 gap-2.5 bg-violet-500 bg-opacity-70;
+      @apply text-white py-1 px-2.5 gap-2.5 bg-violet-500 bg-opacity-70;
     }
   }
   &.rose{
@@ -263,7 +263,7 @@
       @apply bg-transparent;
     }
     &.filled {
-      @apply text-white p-2 px-3 gap-2.5 bg-rose-500 bg-opacity-70;
+      @apply text-white py-1 px-2.5 gap-2.5 bg-rose-500 bg-opacity-70;
     }
   }
   &.sky{
@@ -278,7 +278,7 @@
       @apply bg-transparent;
     }
     &.filled {
-      @apply text-white p-2 px-3 gap-2.5 bg-sky-500 bg-opacity-70;
+      @apply text-white py-1 px-2.5 gap-2.5 bg-sky-500 bg-opacity-70;
     }
   }
   &.light {
