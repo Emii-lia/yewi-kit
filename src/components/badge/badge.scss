@@ -1,0 +1,290 @@
+.Badge{
+  @apply flex flex-row items-center gap-1.5 px-1.5 py-1 rounded-md w-fit h-fit font-medium text-sm border border-transparent;
+  &:hover{
+    @apply brightness-90;
+  }
+
+  &.rounded {
+    @apply rounded-full px-3;
+  }
+
+  &.none{
+    @apply bg-inherit text-gray-500;
+  }
+  &.zinc{
+    @apply text-zinc-500;
+    &.with-border {
+      @apply border border-zinc-300;
+    }
+    &.default{
+      @apply bg-zinc-100;
+    }
+    &.plain{
+      @apply bg-transparent;
+    }
+    &.filled {
+      @apply text-white py-1 px-2.5 gap-2.5 bg-zinc-500 bg-opacity-70;
+    }
+  }
+  &.red{
+    @apply text-red-700;
+    &.with-border {
+      @apply border border-red-300;
+    }
+    &.default{
+      @apply bg-red-100;
+    }
+    &.plain{
+      @apply bg-transparent;
+    }
+    &.filled {
+      @apply text-white py-1 px-2.5 gap-2.5 bg-red-500 bg-opacity-70;
+    }
+  }
+  &.yellow{
+    @apply text-yellow-700;
+    &.with-border {
+      @apply border border-yellow-300;
+    }
+    &.default{
+      @apply bg-yellow-100;
+    }
+    &.plain{
+      @apply bg-transparent;
+    }
+    &.filled {
+      @apply text-white py-1 px-2.5 gap-2.5 bg-yellow-500 bg-opacity-70;
+    }
+  }
+  &.green{
+    @apply text-green-700;
+    &.with-border {
+      @apply border border-green-300;
+    }
+    &.default{
+      @apply bg-green-100;
+    }
+    &.plain{
+      @apply bg-transparent;
+    }
+    &.filled {
+      @apply text-white py-1 px-2.5 gap-2.5 bg-green-500 bg-opacity-70;
+    }
+  }
+  &.orange{
+    @apply text-orange-700;
+    &.with-border {
+      @apply border border-orange-300;
+    }
+    &.default{
+      @apply bg-orange-100;
+    }
+    &.plain{
+      @apply bg-transparent;
+    }
+    &.filled {
+      @apply text-white py-1 px-2.5 gap-2.5 bg-orange-500 bg-opacity-70;
+    }
+  }
+  &.purple{
+    @apply text-purple-700;
+    &.with-border {
+      @apply border border-purple-300;
+    }
+    &.default{
+      @apply bg-purple-100;
+    }
+    &.plain{
+      @apply bg-transparent;
+    }
+    &.filled {
+      @apply text-white py-1 px-2.5 gap-2.5 bg-purple-500 bg-opacity-70;
+    }
+  }
+  &.blue{
+    @apply text-blue-700;
+    &.with-border {
+      @apply border border-blue-300;
+    }
+    &.default{
+      @apply bg-blue-100;
+    }
+    &.plain{
+      @apply bg-transparent;
+    }
+    &.filled {
+      @apply text-white py-1 px-2.5 gap-2.5 bg-blue-500 bg-opacity-70;
+    }
+  }
+  &.pink{
+    @apply text-pink-700;
+    &.with-border {
+      @apply border border-pink-300;
+    }
+    &.default{
+      @apply bg-pink-100;
+    }
+    &.plain{
+      @apply bg-transparent;
+    }
+    &.filled {
+      @apply text-white py-1 px-2.5 gap-2.5 bg-pink-500 bg-opacity-70;
+    }
+  }
+  &.fuchsia{
+    @apply text-fuchsia-700;
+    &.with-border {
+      @apply border border-fuchsia-300;
+    }
+    &.default{
+      @apply bg-fuchsia-100;
+    }
+    &.plain{
+      @apply bg-transparent;
+    }
+    &.filled {
+      @apply text-white py-1 px-2.5 gap-2.5 bg-fuchsia-500 bg-opacity-70;
+    }
+  }
+  &.cyan{
+    @apply text-cyan-700;
+    &.with-border {
+      @apply border border-cyan-300;
+    }
+    &.default{
+      @apply bg-cyan-100;
+    }
+    &.plain{
+      @apply bg-transparent;
+    }
+    &.filled {
+      @apply text-white py-1 px-2.5 gap-2.5 bg-cyan-500 bg-opacity-70;
+    }
+  }
+  &.teal{
+    @apply text-teal-700;
+    &.with-border {
+      @apply border border-teal-300;
+    }
+    &.default{
+      @apply bg-teal-100;
+    }
+    &.plain{
+      @apply bg-transparent;
+    }
+    &.filled {
+      @apply text-white py-1 px-2.5 gap-2.5 bg-teal-500 bg-opacity-70;
+    }
+  }
+  &.lime{
+    @apply text-lime-700;
+    &.with-border {
+      @apply border border-lime-300;
+    }
+    &.default{
+      @apply bg-lime-100;
+    }
+    &.plain{
+      @apply bg-transparent;
+    }
+    &.filled {
+      @apply text-white py-1 px-2.5 gap-2.5 bg-lime-500 bg-opacity-70;
+    }
+  }
+  &.amber{
+    @apply text-amber-700;
+    &.with-border {
+      @apply border border-amber-300;
+    }
+    &.default{
+      @apply bg-amber-100;
+    }
+    &.plain{
+      @apply bg-transparent;
+    }
+    &.filled {
+      @apply text-white py-1 px-2.5 gap-2.5 bg-amber-500 bg-opacity-70;
+    }
+  }
+  &.emerald{
+    @apply text-emerald-700;
+    &.with-border {
+      @apply border border-emerald-300;
+    }
+    &.default{
+      @apply bg-emerald-100;
+    }
+    &.plain{
+      @apply bg-transparent;
+    }
+    &.filled {
+      @apply text-white py-1 px-2.5 gap-2.5 bg-emerald-500 bg-opacity-70;
+    }
+  }
+  &.indigo{
+    @apply text-indigo-700;
+    &.with-border {
+      @apply border border-indigo-300;
+    }
+    &.default{
+      @apply bg-indigo-100;
+    }
+    &.plain{
+      @apply bg-transparent;
+    }
+    &.filled {
+      @apply text-white py-1 px-2.5 gap-2.5 bg-indigo-500 bg-opacity-70;
+    }
+  }
+  &.violet{
+    @apply text-violet-700;
+    &.with-border {
+      @apply border border-violet-300;
+    }
+    &.default{
+      @apply bg-violet-100;
+    }
+    &.plain{
+      @apply bg-transparent;
+    }
+    &.filled {
+      @apply text-white py-1 px-2.5 gap-2.5 bg-violet-500 bg-opacity-70;
+    }
+  }
+  &.rose{
+    @apply text-rose-700;
+    &.with-border {
+      @apply border border-rose-300;
+    }
+    &.default{
+      @apply bg-rose-100;
+    }
+    &.plain{
+      @apply bg-transparent;
+    }
+    &.filled {
+      @apply text-white py-1 px-2.5 gap-2.5 bg-rose-500 bg-opacity-70;
+    }
+  }
+  &.sky{
+    @apply text-sky-700;
+    &.with-border {
+      @apply border border-sky-300;
+    }
+    &.default{
+      @apply bg-sky-100;
+    }
+    &.plain{
+      @apply bg-transparent;
+    }
+    &.filled {
+      @apply text-white py-1 px-2.5 gap-2.5 bg-sky-500 bg-opacity-70;
+    }
+  }
+  &.light {
+    @apply bg-zinc-50/20 text-white border-white;
+    &.filled {
+      @apply bg-white text-zinc-950;
+    }
+  }
+}

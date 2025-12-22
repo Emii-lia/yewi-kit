@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-yew = { git = "https://github.com/yewstack/yew/", features = ["csr", "serde"] }
+yew = { version = "0.22.0", features = ["csr", "serde"] }
 gloo-net = "0.6.0"
 serde = { version = "1.0.228", features = ["derive"] }
 wasm-bindgen-futures = "0.4.56"

@@ -1,0 +1,47 @@
+mod types;
+mod use_badge;
+
+use yew::{classes, function_component, html, AttrValue, Classes, Html, Properties};
+pub(crate) use types::*;
+use crate::components::badge::use_badge::{use_badge, HookParams, HookResponse};
+
+#[derive(Properties, PartialEq, Clone)]
+pub struct Props {
+  #[prop_or_default]
+  pub label: AttrValue,
+  #[prop_or(BadgeVariant::Default)]
+  pub variant: BadgeVariant,
+  #[prop_or(BadgeColor::None)]
+  pub color: BadgeColor,
+  #[prop_or_default]
+  pub class: Classes,
+  #[prop_or_default]
+  pub rounded: bool,
+  #[prop_or_default]
+  pub with_border: bool,
+  #[prop_or_default]
+  pub title: AttrValue,
+}
+
+#[function_component(Badge)]
+pub(crate) fn badge(props: &Props) -> Html {
+  let HookResponse { color, variant } = use_badge(HookParams {
+    variant: props.variant.clone(),
+    color: props.color.clone()
+  });
+  
+  html! {
+    <div class={classes!(
+        "Badge",
+        if props.rounded.clone() { "rounded" } else { "" },
+        if props.with_border.clone() { "with-border" } else { "" },
+        variant,
+        color,
+        props.class.clone()
+      )}
+      title={if props.title.clone() != "" { props.title.clone() } else { props.label.clone() }}
+    >
+      {props.label.clone()}
+    </div>
+  }
+}
