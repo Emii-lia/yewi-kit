@@ -1,0 +1,225 @@
+.Avatar {
+  @apply rounded-lg;
+  &.small {
+    @apply w-8 h-8 aspect-square;
+  }
+  &.medium {
+    @apply w-10 h-10 aspect-square;
+  }
+  &.large {
+    @apply w-14 h-14 aspect-square;
+  }
+  &.rounded {
+    @apply rounded-full;
+  }
+  &.avatar-image {
+    @apply bg-no-repeat bg-cover bg-center;
+    &.with-border {
+      @apply border border-gray-300;
+      &.purple {
+        @apply border-purple-400;
+      }
+      &.blue {
+        @apply border-blue-400;
+      }
+      &.green {
+        @apply border-green-400;
+      }
+      &.red {
+        @apply border-red-400;
+      }
+      &.yellow {
+        @apply border-yellow-400;
+      }
+      &.gray {
+        @apply border-gray-400;
+      }
+      &.orange {
+        @apply border-orange-400;
+      }
+      &.pink {
+        @apply border-pink-400;
+      }
+      &.fuchsia {
+        @apply border-fuchsia-400;
+      }
+      &.cyan {
+        @apply border-cyan-400;
+      }
+      &.teal {
+        @apply border-teal-400;
+      }
+      &.indigo {
+        @apply border-indigo-400;
+      }
+      &.violet {
+        @apply border-violet-400;
+      }
+      &.emerald {
+        @apply border-emerald-400;
+      }
+      &.lime {
+        @apply border-lime-400;
+      }
+      &.amber {
+        @apply border-amber-400;
+      }
+      &.rose {
+        @apply border-rose-400;
+      }
+      &.sky {
+        @apply border-sky-400;
+      }
+      &.light {
+        @apply border-gray-100;
+      }
+      &.dark {
+        @apply border-gray-700;
+      }
+      &.transparent {
+        @apply border-transparent;
+      }
+      &.none {
+        @apply border-none;
+      }
+    }
+  }
+  &.avatar-initials {
+    @apply flex items-center justify-center text-white font-semibold capitalize;
+    &.small {
+      @apply text-xs;
+    }
+    &.medium {
+      @apply text-sm;
+    }
+    &.large {
+      @apply text-lg;
+    }
+    &.purple {
+      @apply bg-purple-500;
+      &.with-border {
+        @apply border border-purple-700;
+      }
+    }
+    &.blue {
+      @apply bg-blue-500;
+      &.with-border {
+        @apply border border-blue-700;
+      }
+    }
+    &.green {
+      @apply bg-green-500;
+      &.with-border {
+        @apply border border-green-700;
+      }
+    }
+    &.red {
+      @apply bg-red-500;
+      &.with-border {
+        @apply border border-red-700;
+      }
+    }
+    &.yellow {
+      @apply bg-yellow-500;
+      &.with-border {
+        @apply border border-yellow-700;
+      }
+    }
+    &.gray {
+      @apply bg-gray-500;
+      &.with-border {
+        @apply border border-gray-700;
+      }
+    }
+    &.orange {
+      @apply bg-orange-500;
+      &.with-border {
+        @apply border border-orange-700;
+      }
+    }
+    &.pink {
+      @apply bg-pink-500;
+      &.with-border {
+        @apply border border-pink-700;
+      }
+    }
+    &.fuchsia {
+      @apply bg-fuchsia-500;
+      &.with-border {
+        @apply border border-fuchsia-700;
+      }
+    }
+    &.cyan {
+      @apply bg-cyan-500;
+      &.with-border {
+        @apply border border-cyan-700;
+      }
+    }
+    &.teal {
+      @apply bg-teal-500;
+      &.with-border {
+        @apply border border-teal-700;
+      }
+    }
+    &.indigo {
+      @apply bg-indigo-500;
+      &.with-border {
+        @apply border border-indigo-700;
+      }
+    }
+    &.violet {
+      @apply bg-violet-500;
+      &.with-border {
+        @apply border border-violet-700;
+      }
+    }
+    &.emerald {
+      @apply bg-emerald-500;
+      &.with-border {
+        @apply border border-emerald-700;
+      }
+    }
+    &.lime {
+      @apply bg-lime-500;
+      &.with-border {
+        @apply border border-lime-700;
+      }
+    }
+    &.amber {
+      @apply bg-amber-500;
+      &.with-border {
+        @apply border border-amber-700;
+      }
+    }
+    &.rose {
+      @apply bg-rose-500;
+      &.with-border {
+        @apply border border-rose-700;
+      }
+    }
+    &.sky {
+      @apply bg-sky-500;
+      &.with-border {
+        @apply border border-sky-700;
+      }
+    }
+    &.light {
+      @apply bg-gray-100 text-gray-700;
+      &.with-border {
+        @apply border border-gray-300;
+      }
+    }
+    &.dark {
+      @apply bg-gray-700;
+      &.with-border {
+        @apply border border-gray-100;
+      }
+    }
+    &.transparent {
+      @apply bg-transparent text-gray-500;
+      &.with-border {
+        @apply border border-gray-500;
+      }
+    }
+  }
+}
