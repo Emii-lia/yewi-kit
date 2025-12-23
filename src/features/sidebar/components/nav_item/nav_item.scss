@@ -1,0 +1,9 @@
+.NavItem {
+  @apply px-4 py-2 cursor-pointer w-full flex items-center text-slate-50 font-medium transition-all;
+  &.nav-active {
+    @apply bg-white text-slate-800 rounded-l-3xl;
+  }
+  &:hover {
+    @apply bg-slate-50 text-slate-800 rounded-l-3xl;
+  }
+}
