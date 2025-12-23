@@ -15,7 +15,7 @@ pub(crate) fn input(props: &InputProps) -> Html {
         class={classes!(
           "input-container",
           size.clone(),
-          if props.disabled { "disabled" } else { "" }
+          props.disabled.clone().then_some("disabled")
         )}
       >
         <input

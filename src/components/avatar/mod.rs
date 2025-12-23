@@ -31,8 +31,8 @@ pub(crate) fn avatar(props: &Props) -> Html {
           "avatar-image",
           format!("{:?}", props.size.clone()).to_lowercase(),
           format!("{:?}", props.color.clone()).to_lowercase(),
-          if props.with_border.clone() { "with-border" } else { "" },
-          if props.rounded.clone() { "rounded" } else { "" },
+          props.with_border.clone().then_some("with-border"),
+          props.rounded.clone().then_some("rounded"),
           props.class.clone()
         )}
         style={format!("background-image: url('{}');", props.src.clone())}
@@ -45,8 +45,8 @@ pub(crate) fn avatar(props: &Props) -> Html {
           "avatar-initials",
           format!("{:?}", props.size.clone()).to_lowercase(),
           format!("{:?}", props.color.clone()).to_lowercase(),
-          if props.with_border.clone() { "with-border" } else { "" },
-          if props.rounded.clone() { "rounded" } else { "" },
+          props.with_border.clone().then_some("with-border"),
+          props.rounded.clone().then_some("rounded"),
         )}
         title={props.title.clone()}
       >
