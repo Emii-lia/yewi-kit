@@ -3,6 +3,8 @@ mod badge;
 mod routes;
 mod page;
 mod not_found;
+mod avatar;
+mod input;
 
 pub(crate) use button::*;
 pub(crate) use badge::*;
@@ -11,12 +13,16 @@ pub(crate) use page::*;
 
 use yew::{function_component, html, Html};
 use yew_router::prelude::{BrowserRouter, Switch};
+use crate::features::Sidebar;
 
 #[function_component(App)]
 pub fn app() -> Html {
   html! {
     <BrowserRouter>
-      <Switch<AppRoute> render={switch}/>
+      <div class="app">
+        <Sidebar/>
+        <Switch<AppRoute> render={switch}/>
+      </div>
     </BrowserRouter>
   }
 }

@@ -1,0 +1,37 @@
+mod components {
+  pub mod nav_item;
+}
+
+use yew::{function_component, html, Html};
+use crate::app::AppRoute;
+use crate::features::sidebar::components::nav_item::NavItem;
+
+#[function_component(Sidebar)]
+pub(crate) fn sidebar() -> Html {
+  html! {
+    <div class="Sidebar">
+      <div class="sidebar-header">
+        <h1 class="sidebar-title">{"Yewi-kit"}</h1>
+      </div>
+      <div class="sidebar-menu">
+        {
+          AppRoute::iter().filter(|route| *route != AppRoute::NotFound).map(|route| {
+            let label = match route {
+              AppRoute::Home => "Home",
+              AppRoute::ButtonPage => "Button",
+              AppRoute::BadgePage => "Badge",
+              AppRoute::AvatarPage => "Avatar",
+              AppRoute::InputPage => "Input",
+              AppRoute::NotFound => "Not Found",
+            }.to_string();
+            html! {
+              <NavItem label={label} href={route.clone()}/>
+            }
+          }).collect::<Html>()
+
+        }
+
+      </div>
+    </div>
+  }
+}
