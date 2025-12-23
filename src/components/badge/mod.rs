@@ -33,8 +33,8 @@ pub(crate) fn badge(props: &Props) -> Html {
   html! {
     <div class={classes!(
         "Badge",
-        if props.rounded.clone() { "rounded" } else { "" },
-        if props.with_border.clone() { "with-border" } else { "" },
+        props.rounded.clone().then_some("rounded"),
+        props.with_border.clone().then_some("with-border"),
         variant,
         color,
         props.class.clone()

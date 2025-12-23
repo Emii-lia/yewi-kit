@@ -53,14 +53,14 @@ pub(crate) fn button(Props {
     if Some(href) != None && href != "" {
       <a
         href={href.clone()}
-        class={classes!("Button", variant, size, if is_loading.clone() { "loading" } else { "" }, class)}
+        class={classes!("Button", variant, size, is_loading.clone().then_some("loading"), class)}
         disabled={disabled.clone() || is_loading.clone()}
       >
         {children.clone()}
       </a>
     } else {
       <button
-        class={classes!("Button", variant, size, if is_loading.clone() { "loading" } else { "" }, class)}
+        class={classes!("Button", variant, size, is_loading.clone().then_some("loading"), class)}
         disabled={disabled.clone() || is_loading.clone()}
         onclick={on_click}
       >
