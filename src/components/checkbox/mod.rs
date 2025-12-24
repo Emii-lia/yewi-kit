@@ -1,7 +1,7 @@
 mod types;
 mod use_checkbox;
 
-use yew::{classes, function_component, html, AttrValue, Callback, Classes, Html, InputEvent, Properties};
+use yew::{classes, function_component, html, AttrValue, Callback, Classes, Html, Properties};
 use crate::components::checkbox::use_checkbox::{use_checkbox, HookParams, HookResponse};
 use crate::types::{Color, Size};
 pub use types::*;
