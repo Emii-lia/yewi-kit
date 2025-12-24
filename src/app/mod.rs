@@ -7,6 +7,7 @@ mod avatar;
 mod input;
 mod select;
 mod checkbox;
+mod modal;
 
 pub(crate) use button::*;
 pub(crate) use badge::*;
@@ -15,16 +16,20 @@ pub(crate) use page::*;
 
 use yew::{function_component, html, Html};
 use yew_router::prelude::{BrowserRouter, Switch};
+use crate::components::{Modal, ModalProvider};
 use crate::features::Sidebar;
 
 #[function_component(App)]
 pub fn app() -> Html {
   html! {
     <BrowserRouter>
-      <div class="app">
-        <Sidebar/>
-        <Switch<AppRoute> render={switch}/>
-      </div>
+      <ModalProvider>
+        <div class="app">
+          <Modal/>
+          <Sidebar/>
+          <Switch<AppRoute> render={switch}/>
+        </div>
+      </ModalProvider>
     </BrowserRouter>
   }
 }
