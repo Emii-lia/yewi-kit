@@ -1,0 +1,574 @@
+.Checkbox{
+  @apply flex flex-row items-center gap-4 text-slate-950  transition-all duration-200 ease-in-out;
+  &.button {
+    @apply flex items-center justify-center;
+    @apply border border-slate-300 rounded-lg bg-white cursor-pointer;
+    @apply text-sm font-semibold text-slate-950;
+    @apply hover:shadow-sm;
+    &.small {
+      @apply px-3 py-1.5 text-sm;
+    }
+    &.medium {
+      @apply px-4 py-2;
+    }
+    &.large {
+      @apply px-6 py-2.5 text-lg;
+    }
+    &.checked, &:hover {
+      &.purple {
+        @apply bg-transparent text-purple-500 border border-purple-700 bg-purple-50;
+        &:focus {
+          @apply ring-purple-500;
+        }
+      }
+      &.blue {
+        @apply bg-transparent text-blue-500 border border-blue-700 bg-blue-50;
+        &:focus {
+          @apply ring-blue-500;
+        }
+      }
+      &.green {
+        @apply bg-transparent text-green-500 border border-green-700 bg-green-50;
+        &:focus {
+          @apply ring-green-500;
+        }
+      }
+      &.red {
+        @apply bg-transparent text-red-500 border border-red-700 bg-red-50;
+        &:focus {
+          @apply ring-red-500;
+        }
+      }
+      &.yellow {
+        @apply bg-transparent text-yellow-500 border border-yellow-700 bg-yellow-50;
+        &:focus {
+          @apply ring-yellow-500;
+        }
+      }
+      &.gray {
+        @apply bg-transparent text-gray-500 border border-gray-700 bg-gray-50;
+        &:focus {
+          @apply ring-gray-500;
+        }
+      }
+      &.orange {
+        @apply bg-transparent text-orange-500 border border-orange-700 bg-orange-50;
+        &:focus {
+          @apply ring-orange-500;
+        }
+      }
+      &.pink {
+        @apply bg-transparent text-pink-500 border border-pink-700 bg-pink-50;
+        &:focus {
+          @apply ring-pink-500;
+        }
+      }
+      &.fuchsia {
+        @apply bg-transparent text-fuchsia-500 border border-fuchsia-700 bg-fuchsia-50;
+        &:focus {
+          @apply ring-fuchsia-500;
+        }
+      }
+      &.cyan {
+        @apply bg-transparent text-cyan-500 border border-cyan-700 bg-cyan-50;
+        &:focus {
+          @apply ring-cyan-500;
+        }
+      }
+      &.teal {
+        @apply bg-transparent text-teal-500 border border-teal-700 bg-teal-50;
+        &:focus {
+          @apply ring-teal-500;
+        }
+      }
+      &.indigo {
+        @apply bg-transparent text-indigo-500 border border-indigo-700 bg-indigo-50;
+        &:focus {
+          @apply ring-indigo-500;
+        }
+      }
+      &.violet {
+        @apply bg-transparent text-violet-500 border border-violet-700 bg-violet-50;
+        &:focus {
+          @apply ring-violet-500;
+        }
+      }
+      &.emerald {
+        @apply bg-transparent text-emerald-500 border border-emerald-700 bg-emerald-50;
+        &:focus {
+          @apply ring-emerald-500;
+        }
+      }
+      &.lime {
+        @apply bg-transparent text-lime-500 border border-lime-700 bg-lime-50;
+        &:focus {
+          @apply ring-lime-500;
+        }
+      }
+      &.amber {
+        @apply bg-transparent text-amber-500 border border-amber-700 bg-amber-50;
+        &:focus {
+          @apply ring-amber-500;
+        }
+      }
+      &.rose {
+        @apply bg-transparent text-rose-500 border border-rose-700 bg-rose-50;
+        &:focus {
+          @apply ring-rose-500;
+        }
+      }
+      &.sky {
+        @apply bg-transparent text-sky-500 border border-sky-700 bg-sky-50;
+        &:focus {
+          @apply ring-sky-500;
+        }
+      }
+      &.light {
+        @apply bg-transparent text-slate-50 border border-slate-50 bg-slate-50;
+        &:focus {
+          @apply bg-slate-100 ring-slate-500;
+        }
+      }
+      &.dark {
+        @apply bg-transparent text-slate-700 border border-slate-900 bg-slate-100;
+        &:focus {
+          @apply ring-slate-100;
+        }
+      }
+      &.transparent {
+        @apply bg-transparent text-slate-500 border border-slate-900;
+        &:focus {
+          @apply ring-slate-500;
+        }
+      }
+    }
+    &.disabled {
+      @apply bg-zinc-100 text-zinc-400 border-zinc-200 cursor-not-allowed;
+      &.checked {
+        @apply border-zinc-200 text-zinc-400;
+      }
+    }
+    .checkbox-input {
+      @apply hidden;
+    }
+  }
+  &.toggle {
+    @apply gap-3 items-center;
+    .checkbox-input {
+      @apply hidden;
+    }
+    .checkbox-toggle {
+      @apply relative w-12 h-6 rounded-full bg-slate-300 border border-slate-400;
+      @apply transition-all duration-200 ease-in-out cursor-pointer;
+      @apply flex items-center;
+
+      &::after {
+        @apply content-[''] absolute left-1 w-[1.125rem] h-[1.125rem] rounded-full bg-white;
+        @apply transition-all duration-200 ease-in-out shadow-sm;
+      }
+    }
+    input:checked ~ .checkbox-toggle {
+      &.purple {
+        @apply bg-purple-500 border-purple-700;
+        &::after {
+          @apply left-6;
+        }
+      }
+      &.blue {
+        @apply bg-blue-500 border-blue-700;
+        &::after {
+          @apply left-6;
+        }
+      }
+      &.green {
+        @apply bg-green-500 border-green-700;
+        &::after {
+          @apply left-6;
+        }
+      }
+      &.red {
+        @apply bg-red-500 border-red-700;
+        &::after {
+          @apply left-6;
+        }
+      }
+      &.yellow {
+        @apply bg-yellow-500 border-yellow-700;
+        &::after {
+          @apply left-6;
+        }
+      }
+      &.gray {
+        @apply bg-gray-500 border-gray-700;
+        &::after {
+          @apply left-6;
+        }
+      }
+      &.orange {
+        @apply bg-orange-500 border-orange-700;
+        &::after {
+          @apply left-6;
+        }
+      }
+      &.pink {
+        @apply bg-pink-500 border-pink-700;
+        &::after {
+          @apply left-6;
+        }
+      }
+      &.fuchsia {
+        @apply bg-fuchsia-500 border-fuchsia-700;
+        &::after {
+          @apply left-6;
+        }
+      }
+      &.cyan {
+        @apply bg-cyan-500 border-cyan-700;
+        &::after {
+          @apply left-6;
+        }
+      }
+      &.teal {
+        @apply bg-teal-500 border-teal-700;
+        &::after {
+          @apply left-6;
+        }
+      }
+      &.indigo {
+        @apply bg-indigo-500 border-indigo-700;
+        &::after {
+          @apply left-6;
+        }
+      }
+      &.violet {
+        @apply bg-violet-500 border-violet-700;
+        &::after {
+          @apply left-6;
+        }
+      }
+      &.emerald {
+        @apply bg-emerald-500 border-emerald-700;
+        &::after {
+          @apply left-6;
+        }
+      }
+      &.lime {
+        @apply bg-lime-500 border-lime-700;
+        &::after {
+          @apply left-6;
+        }
+      }
+      &.amber {
+        @apply bg-amber-500 border-amber-700;
+        &::after {
+          @apply left-6;
+        }
+      }
+      &.rose {
+        @apply bg-rose-500 border-rose-700;
+        &::after {
+          @apply left-6;
+        }
+      }
+      &.sky {
+        @apply bg-sky-500 border-sky-700;
+        &::after {
+          @apply left-6;
+        }
+      }
+      &.light {
+        @apply bg-slate-100 border-slate-300;
+        &::after {
+          @apply left-6;
+        }
+      }
+      &.dark {
+        @apply bg-slate-700 border-slate-900;
+        &::after {
+          @apply left-6;
+        }
+      }
+      &.transparent {
+        @apply bg-slate-400 border-slate-500;
+        &::after {
+          @apply left-6;
+        }
+      }
+    }
+    input:disabled ~ .checkbox-toggle {
+      @apply bg-zinc-200 border-zinc-300 cursor-not-allowed;
+      &::after {
+        @apply bg-zinc-100;
+      }
+    }
+    input:focus ~ .checkbox-toggle {
+      @apply ring-2 ring-offset-2;
+      &.purple {
+        @apply ring-purple-500;
+      }
+      &.blue {
+        @apply ring-blue-500;
+      }
+      &.green {
+        @apply ring-green-500;
+      }
+      &.red {
+        @apply ring-red-500;
+      }
+      &.yellow {
+        @apply ring-yellow-500;
+      }
+      &.gray {
+        @apply ring-gray-500;
+      }
+      &.orange {
+        @apply ring-orange-500;
+      }
+      &.pink {
+        @apply ring-pink-500;
+      }
+      &.fuchsia {
+        @apply ring-fuchsia-500;
+      }
+      &.cyan {
+        @apply ring-cyan-500;
+      }
+      &.teal {
+        @apply ring-teal-500;
+      }
+      &.indigo {
+        @apply ring-indigo-500;
+      }
+      &.violet {
+        @apply ring-violet-500;
+      }
+      &.emerald {
+        @apply ring-emerald-500;
+      }
+      &.lime {
+        @apply ring-lime-500;
+      }
+      &.amber {
+        @apply ring-amber-500;
+      }
+      &.rose {
+        @apply ring-rose-500;
+      }
+      &.sky {
+        @apply ring-sky-500;
+      }
+      &.light {
+        @apply ring-slate-500;
+      }
+      &.dark {
+        @apply ring-slate-100;
+      }
+      &.transparent {
+        @apply ring-slate-500;
+      }
+    }
+  }
+  &.small {
+    @apply gap-2;
+    .checkbox-input {
+      @apply w-3.5 h-3.5;
+      &::after {
+        @apply text-xs;
+      }
+    }
+    .checkbox-toggle {
+      @apply w-10 h-5;
+      &::after {
+        @apply w-3 h-3;
+      }
+    }
+    input:checked ~ .checkbox-toggle::after {
+      @apply left-4;
+    }
+    .checkbox-label {
+      @apply text-xs;
+    }
+  }
+  &.medium {
+    @apply gap-3;
+    .checkbox-input {
+      @apply w-4 h-4;
+      &::after {
+        @apply text-sm;
+      }
+    }
+    .checkbox-label {
+      @apply text-sm;
+    }
+  }
+  &.large {
+    @apply gap-5;
+    .checkbox-input {
+      @apply w-6 h-6;
+    }
+    &.toggle {
+      .checkbox-toggle {
+        @apply w-14 h-7;
+        &::after {
+          @apply w-[1.375rem] h-[1.375rem];
+        }
+      }
+      input:checked ~ .checkbox-toggle::after {
+        @apply left-7;
+      }
+    }
+    .checkbox-label {
+      @apply text-lg;
+    }
+  }
+  &.default {
+    .checkbox-input{
+      @apply w-5 h-5 aspect-square border rounded-md appearance-none flex;
+      &:checked{
+        @apply flex items-center justify-center;
+        &::after {
+          @apply flex items-center justify-center;
+          @apply content-['\2714'] text-white text-center;
+        }
+        &.purple {
+          @apply bg-purple-500 border border-purple-500;
+          &:focus {
+            @apply ring-purple-500;
+          }
+        }
+        &.blue {
+          @apply bg-blue-500 border border-blue-500;
+          &:focus {
+            @apply ring-blue-500;
+          }
+        }
+        &.green {
+          @apply bg-green-500 border border-green-500;
+          &:focus {
+            @apply ring-green-500;
+          }
+        }
+        &.red {
+          @apply bg-red-500 border border-red-500;
+          &:focus {
+            @apply ring-red-500;
+          }
+        }
+        &.yellow {
+          @apply bg-yellow-500 border border-yellow-500;
+          &:focus {
+            @apply ring-yellow-500;
+          }
+        }
+        &.gray {
+          @apply bg-gray-500 border border-gray-500;
+          &:focus {
+            @apply ring-gray-500;
+          }
+        }
+        &.orange {
+          @apply bg-orange-500 border border-orange-500;
+          &:focus {
+            @apply ring-orange-500;
+          }
+        }
+        &.pink {
+          @apply bg-pink-500 border border-pink-500;
+          &:focus {
+            @apply ring-pink-500;
+          }
+        }
+        &.fuchsia {
+          @apply bg-fuchsia-500 border border-fuchsia-500;
+          &:focus {
+            @apply ring-fuchsia-500;
+          }
+        }
+        &.cyan {
+          @apply bg-cyan-500 border border-cyan-500;
+          &:focus {
+            @apply ring-cyan-500;
+          }
+        }
+        &.teal {
+          @apply bg-teal-500 border border-teal-500;
+          &:focus {
+            @apply ring-teal-500;
+          }
+        }
+        &.indigo {
+          @apply bg-indigo-500 border border-indigo-500;
+          &:focus {
+            @apply ring-indigo-500;
+          }
+        }
+        &.violet {
+          @apply bg-violet-500 border border-violet-500;
+          &:focus {
+            @apply ring-violet-500;
+          }
+        }
+        &.emerald {
+          @apply bg-emerald-500 border border-emerald-500;
+          &:focus {
+            @apply ring-emerald-500;
+          }
+        }
+        &.lime {
+          @apply bg-lime-500 border border-lime-500;
+          &:focus {
+            @apply ring-lime-500;
+          }
+        }
+        &.amber {
+          @apply bg-amber-500 border border-amber-500;
+          &:focus {
+            @apply ring-amber-500;
+          }
+        }
+        &.rose {
+          @apply bg-rose-500 border border-rose-500;
+          &:focus {
+            @apply ring-rose-500;
+          }
+        }
+        &.sky {
+          @apply bg-sky-500 border border-sky-500;
+          &:focus {
+            @apply ring-sky-500;
+          }
+        }
+        &.light {
+          @apply bg-slate-100 text-slate-700 border border-slate-300;
+          &:focus {
+            @apply bg-slate-100 ring-slate-500;
+          }
+        }
+        &.dark {
+          @apply bg-slate-700 border border-slate-100;
+          &:focus {
+            @apply ring-slate-100;
+          }
+        }
+        &.transparent {
+          @apply bg-transparent text-slate-500 border border-slate-500;
+          &:focus {
+            @apply ring-slate-500;
+          }
+        }
+      }
+      &:disabled {
+        @apply cursor-not-allowed bg-opacity-60;
+        &::after {
+          @apply text-slate-200;
+        }
+      }
+      &:focus {
+        @apply outline-none ring-2 ring-offset-2;
+      }
+    }
+  }
+  .checkbox-label{
+    @apply font-medium;
+  }
+}
