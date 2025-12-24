@@ -17,7 +17,7 @@ pub struct Props {
   #[prop_or_default]
   pub class: Classes,
   #[prop_or_default]
-  pub onclick: Option<ButtonClick>,
+  pub onclick: Callback<MouseEvent>,
   #[prop_or_default]
   pub disabled: bool,
   #[prop_or(Size::Medium)]

@@ -6,7 +6,7 @@ use crate::types::{Size, ButtonVariant};
 pub struct HookParams {
   pub variant: ButtonVariant,
   pub size: Size,
-  pub onclick: Option<ButtonClick>
+  pub onclick: Callback<MouseEvent>
 }
 
 #[derive(Clone, PartialEq)]
@@ -21,12 +21,7 @@ pub(crate) fn use_button(params: HookParams) -> HookResponse {
   let HookParams { variant, size, onclick } = params;
   let onclick = onclick;
   let on_click = Callback::from(move |e: MouseEvent| {
-    if let Some(handler) = &onclick {
-      match handler {
-        ButtonClick::Mouse(cb) => cb.emit(e),
-        ButtonClick::Simple(cb) => cb.emit(())
-      }
-    }
+    onclick.emit(e);
   });
 
   let variant = match variant {
