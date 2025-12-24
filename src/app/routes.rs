@@ -2,6 +2,7 @@ use yew::{html, Html};
 use yew_router::Routable;
 use crate::app::{BadgePage, ButtonPage, Home};
 use crate::app::avatar::AvatarPage;
+use crate::app::checkbox::CheckboxPage;
 use crate::app::input::InputPage;
 use crate::app::not_found::NotFound;
 use crate::app::select::SelectPage;
@@ -20,6 +21,8 @@ pub enum AppRoute {
   InputPage,
   #[at("/select")]
   SelectPage,
+  #[at("/checkbox")]
+  CheckboxPage,
   #[not_found]
   #[at("/404")]
   NotFound,
@@ -34,6 +37,7 @@ impl AppRoute {
       AppRoute::AvatarPage,
       AppRoute::InputPage,
       AppRoute::SelectPage,
+      AppRoute::CheckboxPage,
     ].into_iter()
   }
 }
@@ -46,6 +50,7 @@ pub fn switch(route: AppRoute) -> Html {
     AppRoute::AvatarPage => html! {<AvatarPage/>},
     AppRoute::InputPage => html! {<InputPage/>},
     AppRoute::SelectPage => html! {<SelectPage/>},
+    AppRoute::CheckboxPage => html! {<CheckboxPage/>},
     AppRoute::NotFound => html! {<NotFound/>},
   }
 }
