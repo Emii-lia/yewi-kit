@@ -4,6 +4,7 @@ use crate::app::{BadgePage, ButtonPage, Home};
 use crate::app::avatar::AvatarPage;
 use crate::app::checkbox::CheckboxPage;
 use crate::app::input::InputPage;
+use crate::app::modal::ModalPage;
 use crate::app::not_found::NotFound;
 use crate::app::select::SelectPage;
 
@@ -23,6 +24,8 @@ pub enum AppRoute {
   SelectPage,
   #[at("/checkbox")]
   CheckboxPage,
+  #[at("/modal")]
+  ModalPage,
   #[not_found]
   #[at("/404")]
   NotFound,
@@ -38,6 +41,7 @@ impl AppRoute {
       AppRoute::InputPage,
       AppRoute::SelectPage,
       AppRoute::CheckboxPage,
+      AppRoute::ModalPage
     ].into_iter()
   }
 }
@@ -51,6 +55,7 @@ pub fn switch(route: AppRoute) -> Html {
     AppRoute::InputPage => html! {<InputPage/>},
     AppRoute::SelectPage => html! {<SelectPage/>},
     AppRoute::CheckboxPage => html! {<CheckboxPage/>},
+    AppRoute::ModalPage => html! {<ModalPage/>},
     AppRoute::NotFound => html! {<NotFound/>},
   }
 }

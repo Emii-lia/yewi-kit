@@ -24,6 +24,7 @@ pub(crate) fn sidebar() -> Html {
               AppRoute::InputPage => "Input",
               AppRoute::SelectPage => "Select",
               AppRoute::CheckboxPage => "Checkbox",
+              AppRoute::ModalPage => "Modal",
               AppRoute::NotFound => "Not Found",
             }.to_string();
             html! {
