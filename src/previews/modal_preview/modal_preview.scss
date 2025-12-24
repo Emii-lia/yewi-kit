@@ -1,0 +1,9 @@
+.ex-modal-content {
+  @apply flex flex-col gap-4 w-full;
+  .ex-modal-title {
+    @apply text-xl font-semibold text-slate-800;
+  }
+  .ex-modal-description {
+    @apply text-slate-500 font-medium text-sm;
+  }
+}
