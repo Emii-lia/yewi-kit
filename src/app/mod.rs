@@ -6,6 +6,7 @@ mod not_found;
 mod avatar;
 mod input;
 mod select;
+mod checkbox;
 
 pub(crate) use button::*;
 pub(crate) use badge::*;
