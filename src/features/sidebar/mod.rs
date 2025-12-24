@@ -22,6 +22,7 @@ pub(crate) fn sidebar() -> Html {
               AppRoute::BadgePage => "Badge",
               AppRoute::AvatarPage => "Avatar",
               AppRoute::InputPage => "Input",
+              AppRoute::SelectPage => "Select",
               AppRoute::NotFound => "Not Found",
             }.to_string();
             html! {

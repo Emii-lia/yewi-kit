@@ -1,0 +1,40 @@
+.Select{
+  @apply flex flex-col gap-1 w-full;
+  .select{
+    @apply w-full relative text-slate-900 border border-zinc-200 bg-white;
+    @apply rounded-md flex items-center bg-no-repeat m-0 box-border appearance-none;
+    background-image:
+      linear-gradient(45deg, transparent 50%, gray 50%),
+      linear-gradient(135deg, gray 50%, transparent 50%);
+    background-position:
+      calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px),
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+
+    &.large{
+      @apply py-2 pr-14 pl-4 h-12;
+    }
+    &.medium{
+      @apply p-2 pr-14 pl-4 h-11;
+    }
+    &.small{
+      @apply py-2 pr-12 pl-3 h-10 text-sm;
+    }
+    &:focus{
+      @apply outline-1 outline-blue-500;
+    }
+    &:disabled {
+      @apply bg-slate-100 cursor-not-allowed text-slate-500;
+    }
+  }
+  .select-errors {
+    @apply flex items-baseline justify-end;
+    .select-error {
+      @apply text-red-500 text-sm italic text-right;
+    }
+  }
+}

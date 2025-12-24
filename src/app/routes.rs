@@ -4,6 +4,7 @@ use crate::app::{BadgePage, ButtonPage, Home};
 use crate::app::avatar::AvatarPage;
 use crate::app::input::InputPage;
 use crate::app::not_found::NotFound;
+use crate::app::select::SelectPage;
 
 #[derive(Clone, Routable, PartialEq)]
 pub enum AppRoute {
@@ -17,6 +18,8 @@ pub enum AppRoute {
   AvatarPage,
   #[at("/input")]
   InputPage,
+  #[at("/select")]
+  SelectPage,
   #[not_found]
   #[at("/404")]
   NotFound,
@@ -29,7 +32,8 @@ impl AppRoute {
       AppRoute::ButtonPage,
       AppRoute::BadgePage,
       AppRoute::AvatarPage,
-      AppRoute::InputPage
+      AppRoute::InputPage,
+      AppRoute::SelectPage,
     ].into_iter()
   }
 }
@@ -41,6 +45,7 @@ pub fn switch(route: AppRoute) -> Html {
     AppRoute::BadgePage => html! {<BadgePage/>},
     AppRoute::AvatarPage => html! {<AvatarPage/>},
     AppRoute::InputPage => html! {<InputPage/>},
+    AppRoute::SelectPage => html! {<SelectPage/>},
     AppRoute::NotFound => html! {<NotFound/>},
   }
 }
