@@ -75,6 +75,9 @@
   }
   &.loading {
     @apply cursor-wait;
+    &:disabled {
+      @apply cursor-wait;
+    }
   }
 
   .spinner-container {
