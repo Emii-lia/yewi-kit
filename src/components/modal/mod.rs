@@ -19,10 +19,10 @@ pub(crate) fn modal() -> Html {
     is_open,
     children,
     ..
-  } = modal_vars.clone();
+  } = modal_vars;
   
   html! {
-    if is_open.clone() {
+    if is_open {
       <div
         class={classes!("Modal")}
         onclick={{
@@ -49,7 +49,7 @@ pub(crate) fn modal() -> Html {
               {"x"}
             </Button>
           </div>
-          {modal_vars.children.clone()}
+          {children.clone()}
         </div>
       </div>
     }

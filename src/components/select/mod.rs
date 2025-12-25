@@ -32,22 +32,22 @@ pub struct Props {
 #[function_component(Select)]
 pub(crate) fn select(props: &Props) -> Html {
   html! {
-    <div class={classes!("Select", props.main_class.clone())}>
+    <div class={classes!("Select", &props.main_class)}>
       <select
-        disabled={props.disabled.clone()}
-        name={props.name.clone()}
-        id={props.name.clone()}
+        disabled={props.disabled}
+        name={&props.name}
+        id={&props.name}
         value={props.value.clone()}
         onchange={props.on_change.clone()}
         class={classes!(
           "select",
-          props.class.clone(),
-          format!("{:?}", props.size.clone()).to_lowercase()
+          &props.class,
+          format!("{:?}", props.size).to_lowercase()
         )}
       >
         {html! {
-          if !props.label.clone().is_empty() {
-            <option value="" disabled=true>{props.label.clone()}</option>
+          if !props.label.is_empty() {
+            <option value="" disabled=true>{&props.label}</option>
           }
         }}
        {for props.options.iter().map(|option| {
@@ -56,8 +56,8 @@ pub(crate) fn select(props: &Props) -> Html {
             SelectOption::Simple(value) => (value.clone(), value.clone()),
           };
           html! {
-            <option key={value.clone().to_string()} value={value.clone()}>
-              {label.clone()}
+            <option key={value.to_string()} value={value}>
+              {label}
             </option>
           }
         })}
@@ -68,7 +68,7 @@ pub(crate) fn select(props: &Props) -> Html {
             <div class="select-errors">
               {for props.errors.iter().map(|error| html! {
                 <span class="select-error">
-                  {format!("{}. ",error.clone())}
+                  {format!("{}. ", error)}
                 </span>
               })}
             </div>

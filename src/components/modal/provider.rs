@@ -6,7 +6,7 @@ use crate::components::{use_modal, ModalHookResponse};
 pub(crate) fn modal_provider(props: &ChildrenProps) -> Html {
   let modal_vars = use_modal();
   html! {
-    <ContextProvider<ModalHookResponse> context={modal_vars.clone()}>
+    <ContextProvider<ModalHookResponse> context={modal_vars}>
       {props.children.clone()}
     </ContextProvider<ModalHookResponse>>
   }

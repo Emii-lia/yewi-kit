@@ -12,7 +12,7 @@ pub struct InputProps {
   #[prop_or_default]
   pub errors: Vec<String>,
   #[prop_or_default]
-  pub placeholder: String,
+  pub placeholder: AttrValue,
   #[prop_or_default]
   pub value: Option<AttrValue>,
   #[prop_or_default]

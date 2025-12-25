@@ -8,42 +8,43 @@ mod use_input;
 #[function_component(Input)]
 pub(crate) fn input(props: &InputProps) -> Html {
   let HookResponse { size } = use_input(HookParams { size: props.input_size.clone() });
+  let errors = &props.errors;
   html! {
     <div class="Input">
       <label
-        r#for={props.id.clone()}
+        for={&props.id}
         class={classes!(
           "input-container",
-          size.clone(),
-          props.disabled.clone().then_some("disabled")
+          size,
+          props.disabled.then_some("disabled")
         )}
       >
         <input
-          ref={props.node_ref.clone()}
+          ref={&props.node_ref}
           class={classes!(
             "input-form",
-            props.class.clone()
+            &props.class
           )}
 
-          id={props.id.clone()}
-          name={props.name.clone()}
-          type={props.r#type.clone()}
-          value={props.value.clone()}
-          placeholder={props.placeholder.clone()}
+          id={&props.id}
+          name={&props.name}
+          type={&props.r#type}
+          value={&props.value}
+          placeholder={&props.placeholder}
 
           disabled={props.disabled}
           readonly={props.readonly}
           required={props.required}
           autofocus={props.autofocus}
-          autocomplete={props.autocomplete.clone()}
+          autocomplete={&props.autocomplete}
 
-          min={props.min.clone()}
-          max={props.max.clone()}
-          step={props.step.clone()}
-          pattern={props.pattern.clone()}
-          maxLength={props.maxlength.clone()}
-          minlength={props.minlength.clone()}
-          tabindex={props.tabindex.clone()}
+          min={&props.min}
+          max={&props.max}
+          step={&props.step}
+          pattern={&props.pattern}
+          maxLength={&props.maxlength}
+          minlength={&props.minlength}
+          tabindex={&props.tabindex}
           oninput={props.oninput.clone()}
           onchange={props.onchange.clone()}
           onfocus={props.onfocus.clone()}
@@ -52,11 +53,11 @@ pub(crate) fn input(props: &InputProps) -> Html {
         />
       </label>
       {html! {
-        if !props.errors.is_empty() {
+        if !errors.is_empty() {
           <div class="input-errors">
-            {for props.errors.iter().map(|error|
+            {for errors.iter().map(|error|
               html! {
-                <p class="input-error" key={error.clone()}>{format!("{}. ", error)}</p>
+                <p class="input-error" key={error.to_string()}>{format!("{}. ", error)}</p>
               })
             }
           </div>
