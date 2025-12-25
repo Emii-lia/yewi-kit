@@ -18,8 +18,11 @@ pub(crate) fn textarea_preview() -> Html {
           <Textarea
             placeholder="Type here..."
             rows={"4"}
-            label={"Description"} 
+            label={"Description"}
           />
+        </PreviewContainer>
+        <PreviewContainer title={"With error"}>
+          <Textarea placeholder="Type here..." rows={"4"} errors={vec!["Invalid input".to_string()]}/>
         </PreviewContainer>
       </div>
     </div>
