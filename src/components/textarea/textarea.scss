@@ -1,0 +1,26 @@
+.Textarea {
+  @apply w-full relative text-slate-700 text-sm;
+  @apply flex flex-col gap-0.5;
+  .textarea-container {
+    @apply flex flex-col gap-3 w-full;
+    .textarea-label {
+      @apply text-sm font-semibold text-slate-900;
+    }
+    .textarea {
+      @apply border border-slate-500;
+      @apply focus:border-blue-500 focus:ring-blue-500 focus:outline-none focus:ring-1 focus:ring-inset block w-full rounded-md border-slate-400 shadow-sm p-2 text-slate-700;
+      &:disabled {
+        @apply cursor-not-allowed;
+      }
+      &:not(.resizable) {
+        @apply resize-none;
+      }
+    }
+  }
+  .textarea-errors {
+    @apply flex items-baseline justify-end w-full;
+    .textarea-error {
+      @apply text-red-500 italic text-right text-sm;
+    }
+  }
+}

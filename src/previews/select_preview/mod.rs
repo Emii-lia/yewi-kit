@@ -57,7 +57,29 @@ pub(crate) fn select_preview() -> Html {
             disabled=true
           />
         </PreviewContainer>
-
+        <PreviewContainer title={"With error"}>
+          <Select
+            options={options()}
+            value={""}
+            label={"Select an option"}
+            size={Size::Small}
+            errors={vec!["Invalid selection".to_string()]}
+          />
+          <Select
+            options={options()}
+            value={""}
+            label={"Select an option"}
+            size={Size::Medium}
+            errors={vec!["Invalid selection".to_string()]}
+          />
+          <Select
+            options={options()}
+            value={""}
+            label={"Select an option"}
+            size={Size::Large}
+            errors={vec!["Invalid selection".to_string()]}
+          />
+        </PreviewContainer>
       </div>
     </div>
   }
