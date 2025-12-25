@@ -23,32 +23,37 @@ pub struct Props {
 
 #[function_component(Avatar)]
 pub(crate) fn avatar(props: &Props) -> Html {
+  let size_class = format!("{:?}", &props.size).to_lowercase();
+  let color_class = format!("{:?}", &props.color).to_lowercase();
+  let with_border_class = props.with_border.then_some("with-border");
+  let rounded_class = props.rounded.then_some("rounded");
+  
   html! {
     if props.src != "" {
       <div
         class={classes!(
           "Avatar",
           "avatar-image",
-          format!("{:?}", props.size.clone()).to_lowercase(),
-          format!("{:?}", props.color.clone()).to_lowercase(),
-          props.with_border.clone().then_some("with-border"),
-          props.rounded.clone().then_some("rounded"),
-          props.class.clone()
+          size_class,
+          color_class,
+          with_border_class,
+          rounded_class,
+          &props.class
         )}
-        style={format!("background-image: url('{}');", props.src.clone())}
-        title={props.title.clone()}
+        style={format!("background-image: url('{}');", &props.src)}
+        title={&props.title}
       />
     } else {
       <div
         class={classes!(
           "Avatar",
           "avatar-initials",
-          format!("{:?}", props.size.clone()).to_lowercase(),
-          format!("{:?}", props.color.clone()).to_lowercase(),
-          props.with_border.clone().then_some("with-border"),
-          props.rounded.clone().then_some("rounded"),
+          size_class,
+          color_class,
+          with_border_class,
+          rounded_class,
         )}
-        title={props.title.clone()}
+        title={&props.title}
       >
         {if props.alt.clone() != "" {
           let initials: String = props.alt

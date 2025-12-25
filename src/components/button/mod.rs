@@ -52,21 +52,21 @@ pub(crate) fn button(Props {
   html! {
     if Some(href) != None && href != "" {
       <a
-        href={href.clone()}
-        class={classes!("Button", variant, size, is_loading.clone().then_some("loading"), class)}
-        disabled={disabled.clone() || is_loading.clone()}
+        href={href}
+        class={classes!("Button", variant, size, (*is_loading).then_some("loading"), class)}
+        disabled={*disabled || *is_loading}
       >
         {children.clone()}
       </a>
     } else {
       <button
-        class={classes!("Button", variant, size, is_loading.clone().then_some("loading"), class)}
-        disabled={disabled.clone() || is_loading.clone()}
+        class={classes!("Button", variant, size, (*is_loading).then_some("loading"), class)}
+        disabled={*disabled || *is_loading}
         onclick={on_click}
       >
         {
           html! {
-            if is_loading.clone() {
+            if *is_loading {
               <div class="spinner-container">
                 <span class="spinner"></span>
               </div>
