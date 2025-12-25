@@ -24,11 +24,11 @@ pub struct Props {
   #[prop_or(true)]
   pub resize: bool,
   #[prop_or_default]
-  max_length: Option<AttrValue>,
+  pub max_length: Option<AttrValue>,
   #[prop_or_default]
-  errors: Vec<String>,
+  pub errors: Vec<String>,
   #[prop_or_default]
-  on_change: Callback<Event>
+  pub on_change: Callback<Event>
 }
 
 #[function_component(Textarea)]
