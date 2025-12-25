@@ -8,6 +8,7 @@ mod input;
 mod select;
 mod checkbox;
 mod modal;
+mod textarea;
 
 pub(crate) use button::*;
 pub(crate) use badge::*;
