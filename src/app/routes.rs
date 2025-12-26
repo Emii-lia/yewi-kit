@@ -6,6 +6,7 @@ use crate::app::checkbox::CheckboxPage;
 use crate::app::input::InputPage;
 use crate::app::modal::ModalPage;
 use crate::app::not_found::NotFound;
+use crate::app::radio::RadioPage;
 use crate::app::select::SelectPage;
 use crate::app::textarea::TextareaPage;
 
@@ -29,6 +30,8 @@ pub enum AppRoute {
   ModalPage,
   #[at("/textarea")]
   TextareaPage,
+  #[at("/radio")]
+  RadioPage,
   #[not_found]
   #[at("/404")]
   NotFound,
@@ -46,6 +49,7 @@ impl AppRoute {
       AppRoute::CheckboxPage,
       AppRoute::ModalPage,
       AppRoute::TextareaPage,
+      AppRoute::RadioPage,
     ].into_iter()
   }
 }
@@ -61,6 +65,7 @@ pub fn switch(route: AppRoute) -> Html {
     AppRoute::CheckboxPage => html! {<CheckboxPage/>},
     AppRoute::ModalPage => html! {<ModalPage/>},
     AppRoute::TextareaPage => html! {<TextareaPage/>},
+    AppRoute::RadioPage => html! {<RadioPage/>},
     AppRoute::NotFound => html! {<NotFound/>},
   }
 }
