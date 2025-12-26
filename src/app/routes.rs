@@ -14,24 +14,24 @@ use crate::app::textarea::TextareaPage;
 pub enum AppRoute {
   #[at("/")]
   Home,
-  #[at("/button")]
-  ButtonPage,
-  #[at("/badge")]
-  BadgePage,
   #[at("/avatar")]
   AvatarPage,
-  #[at("/input")]
-  InputPage,
-  #[at("/select")]
-  SelectPage,
+  #[at("/badge")]
+  BadgePage,
+  #[at("/button")]
+  ButtonPage,
   #[at("/checkbox")]
   CheckboxPage,
+  #[at("/input")]
+  InputPage,
   #[at("/modal")]
   ModalPage,
-  #[at("/textarea")]
-  TextareaPage,
   #[at("/radio")]
   RadioPage,
+  #[at("/select")]
+  SelectPage,
+  #[at("/textarea")]
+  TextareaPage,
   #[not_found]
   #[at("/404")]
   NotFound,
@@ -41,15 +41,15 @@ impl AppRoute {
   pub(crate) fn iter() -> impl Iterator<Item = AppRoute> {
     vec![
       AppRoute::Home,
-      AppRoute::ButtonPage,
-      AppRoute::BadgePage,
       AppRoute::AvatarPage,
-      AppRoute::InputPage,
-      AppRoute::SelectPage,
+      AppRoute::BadgePage,
+      AppRoute::ButtonPage,
       AppRoute::CheckboxPage,
+      AppRoute::InputPage,
       AppRoute::ModalPage,
-      AppRoute::TextareaPage,
       AppRoute::RadioPage,
+      AppRoute::SelectPage,
+      AppRoute::TextareaPage,
     ].into_iter()
   }
 }
@@ -57,15 +57,15 @@ impl AppRoute {
 pub fn switch(route: AppRoute) -> Html {
   match route {
     AppRoute::Home => html! {<Home/>},
-    AppRoute::ButtonPage => html! {<ButtonPage/>},
-    AppRoute::BadgePage => html! {<BadgePage/>},
     AppRoute::AvatarPage => html! {<AvatarPage/>},
-    AppRoute::InputPage => html! {<InputPage/>},
-    AppRoute::SelectPage => html! {<SelectPage/>},
+    AppRoute::BadgePage => html! {<BadgePage/>},
+    AppRoute::ButtonPage => html! {<ButtonPage/>},
     AppRoute::CheckboxPage => html! {<CheckboxPage/>},
+    AppRoute::InputPage => html! {<InputPage/>},
     AppRoute::ModalPage => html! {<ModalPage/>},
-    AppRoute::TextareaPage => html! {<TextareaPage/>},
     AppRoute::RadioPage => html! {<RadioPage/>},
+    AppRoute::SelectPage => html! {<SelectPage/>},
+    AppRoute::TextareaPage => html! {<TextareaPage/>},
     AppRoute::NotFound => html! {<NotFound/>},
   }
 }
