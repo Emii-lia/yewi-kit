@@ -6,6 +6,7 @@ mod select;
 mod checkbox;
 mod modal;
 mod textarea;
+mod radio;
 
 pub use button::*;
 pub use input::*;
@@ -15,3 +16,4 @@ pub use select::*;
 pub use checkbox::*;
 pub use modal::*;
 pub use textarea::*;
+pub use radio::*;

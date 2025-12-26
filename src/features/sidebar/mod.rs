@@ -18,13 +18,14 @@ pub(crate) fn sidebar() -> Html {
           AppRoute::iter().filter(|route| *route != AppRoute::NotFound).map(|route| {
             let label = match route {
               AppRoute::Home => "Home",
-              AppRoute::ButtonPage => "Button",
-              AppRoute::BadgePage => "Badge",
               AppRoute::AvatarPage => "Avatar",
-              AppRoute::InputPage => "Input",
-              AppRoute::SelectPage => "Select",
+              AppRoute::BadgePage => "Badge",
+              AppRoute::ButtonPage => "Button",
               AppRoute::CheckboxPage => "Checkbox",
               AppRoute::ModalPage => "Modal",
+              AppRoute::InputPage => "Input",
+              AppRoute::RadioPage => "Radio",
+              AppRoute::SelectPage => "Select",
               AppRoute::TextareaPage => "Textarea",
               AppRoute::NotFound => "Not Found",
             }.to_string();
