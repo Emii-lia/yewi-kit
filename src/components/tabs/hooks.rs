@@ -1,4 +1,4 @@
-use yew::{hook, use_state, virtual_dom, Hook, UseStateHandle};
+use yew::{hook, use_state, Hook, UseStateHandle};
 use yew::virtual_dom::VChild;
 use crate::components::tabs::{Tab, TabsProps};
 
