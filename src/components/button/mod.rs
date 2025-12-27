@@ -1,7 +1,7 @@
-mod use_button;
+mod hooks;
 
 use yew::{classes, function_component, html, AttrValue, Callback, Classes, Html, MouseEvent, Properties};
-use crate::components::button::use_button::{use_button, HookParams, HookResponse};
+use crate::components::button::hooks::{use_button, HookParams, HookResponse};
 use crate::types::{Size, ButtonVariant};
 
 #[derive(Clone, PartialEq)]

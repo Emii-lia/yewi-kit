@@ -1,9 +1,9 @@
 mod types;
-mod use_badge;
+mod hooks;
 
 use yew::{classes, function_component, html, AttrValue, Classes, Html, Properties};
 pub(crate) use types::*;
-use crate::components::badge::use_badge::{use_badge, HookParams, HookResponse};
+use crate::components::badge::hooks::{use_badge, HookParams, HookResponse};
 
 #[derive(Properties, PartialEq, Clone)]
 pub struct Props {
