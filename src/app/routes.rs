@@ -8,6 +8,7 @@ use crate::app::modal::ModalPage;
 use crate::app::not_found::NotFound;
 use crate::app::radio::RadioPage;
 use crate::app::select::SelectPage;
+use crate::app::tabs::TabsPage;
 use crate::app::textarea::TextareaPage;
 
 #[derive(Clone, Routable, PartialEq)]
@@ -30,6 +31,8 @@ pub enum AppRoute {
   RadioPage,
   #[at("/select")]
   SelectPage,
+  #[at("/tabs")]
+  TabsPage,
   #[at("/textarea")]
   TextareaPage,
   #[not_found]
@@ -49,6 +52,7 @@ impl AppRoute {
       AppRoute::ModalPage,
       AppRoute::RadioPage,
       AppRoute::SelectPage,
+      AppRoute::TabsPage,
       AppRoute::TextareaPage,
     ].into_iter()
   }
@@ -65,6 +69,7 @@ pub fn switch(route: AppRoute) -> Html {
     AppRoute::ModalPage => html! {<ModalPage/>},
     AppRoute::RadioPage => html! {<RadioPage/>},
     AppRoute::SelectPage => html! {<SelectPage/>},
+    AppRoute::TabsPage => html! {<TabsPage/>},
     AppRoute::TextareaPage => html! {<TextareaPage/>},
     AppRoute::NotFound => html! {<NotFound/>},
   }
