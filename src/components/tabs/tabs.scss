@@ -1,0 +1,191 @@
+.Tabs {
+  @apply w-full h-full flex flex-col gap-4;
+  .tab-list {
+    @apply flex items-center gap-2 p-2 rounded-xl bg-slate-100 border border-slate-200 shadow-inner w-fit;
+    &:has(.Tab.light) {
+      @apply border-slate-800 bg-slate-700;
+      .Tab {
+        @apply text-white;
+      }
+    }
+    .Tab {
+      @apply px-4 py-2 rounded-xl cursor-pointer bg-transparent text-slate-900 transition-all duration-200 ease-in-out;
+      @apply font-semibold;
+      &.is-active {
+        @apply shadow-md;
+      }
+      &.purple {
+        &:hover {
+          @apply bg-white text-slate-800;
+        }
+        &.is-active{
+          @apply bg-purple-500 text-white;
+        }
+      }
+      &.blue {
+        &:hover {
+          @apply bg-white text-slate-800;
+        }
+        &.is-active{
+          @apply bg-blue-500 text-white;
+        }
+      }
+      &.green {
+        &:hover {
+          @apply bg-white text-slate-800;
+        }
+        &.is-active{
+          @apply bg-green-500 text-white;
+        }
+      }
+      &.red {
+        &:hover {
+          @apply bg-white text-slate-800;
+        }
+        &.is-active{
+          @apply bg-red-500 text-white;
+        }
+      }
+      &.yellow {
+        &:hover {
+          @apply bg-white text-slate-800;
+        }
+        &.is-active{
+          @apply bg-yellow-500 text-white;
+        }
+      }
+      &.gray {
+        &:hover {
+          @apply bg-white text-slate-800;
+        }
+        &.is-active{
+          @apply bg-gray-500 text-white;
+        }
+      }
+      &.orange {
+        &:hover {
+          @apply bg-white text-slate-800;
+        }
+        &.is-active{
+          @apply bg-orange-500 text-white;
+        }
+      }
+      &.pink {
+        &:hover {
+          @apply bg-white text-slate-800;
+        }
+        &.is-active{
+          @apply bg-pink-500 text-white;
+        }
+      }
+      &.fuchsia {
+        &:hover {
+          @apply bg-white text-slate-800;
+        }
+        &.is-active{
+          @apply bg-fuchsia-500 text-white;
+        }
+      }
+      &.cyan {
+        &:hover {
+          @apply bg-white text-slate-800;
+        }
+        &.is-active{
+          @apply bg-cyan-500 text-white;
+        }
+      }
+      &.teal {
+        &:hover {
+          @apply bg-white text-slate-800;
+        }
+        &.is-active{
+          @apply bg-teal-500 text-white;
+        }
+      }
+      &.indigo {
+        &:hover {
+          @apply bg-white text-slate-800;
+        }
+        &.is-active{
+          @apply bg-indigo-500 text-white;
+        }
+      }
+      &.violet {
+        &:hover {
+          @apply bg-white text-slate-800;
+        }
+        &.is-active{
+          @apply bg-violet-500 text-white;
+        }
+      }
+      &.emerald {
+        &:hover {
+          @apply bg-white text-slate-800;
+        }
+        &.is-active{
+          @apply bg-emerald-500 text-white;
+        }
+      }
+      &.lime {
+        &:hover {
+          @apply bg-white text-slate-800;
+        }
+        &.is-active{
+          @apply bg-lime-500 text-white;
+        }
+      }
+      &.amber {
+        &:hover {
+          @apply bg-white text-slate-800;
+        }
+        &.is-active{
+          @apply bg-amber-500 text-white;
+        }
+      }
+      &.rose {
+        &:hover {
+          @apply bg-white text-slate-800;
+        }
+        &.is-active{
+          @apply bg-rose-500 text-white;
+        }
+      }
+      &.sky {
+        &:hover {
+          @apply bg-white text-slate-800;
+        }
+        &.is-active{
+          @apply bg-sky-500 text-white;
+        }
+      }
+      &.light {
+        &:hover {
+          @apply bg-white text-slate-800;
+        }
+        &.is-active{
+          @apply bg-slate-50 text-slate-700;
+        }
+      }
+      &.dark {
+        &:hover {
+          @apply bg-white text-slate-800;
+        }
+        &.is-active{
+          @apply bg-slate-700 text-white;
+        }
+      }
+      &.transparent {
+        @apply bg-transparent text-slate-900;
+        &:hover {
+          @apply bg-white text-slate-800;
+        }
+        &.is-active{
+          @apply bg-white text-slate-900;
+        }
+      }
+    }
+  }
+  .tab-panel {
+    @apply w-full h-full;
+  }
+}

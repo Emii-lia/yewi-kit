@@ -1,9 +1,9 @@
-mod use_nav_item;
+mod hooks;
 
 use yew::{classes, function_component, html, Html, Properties};
 use yew_router::prelude::Link;
 use crate::app::AppRoute;
-use crate::features::sidebar::components::nav_item::use_nav_item::{use_nav_item, HookParams, HookResponse};
+use crate::features::sidebar::components::nav_item::hooks::{use_nav_item, HookParams, HookResponse};
 
 #[derive(Properties, PartialEq ,Clone)]
 pub struct Props {

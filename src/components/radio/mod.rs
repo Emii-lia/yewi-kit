@@ -1,8 +1,8 @@
-mod use_radio;
+mod hooks;
 
 use yew::{classes, function_component, html, AttrValue, Callback, Classes, Html, Properties};
 use crate::types::{Color, Size};
-use crate::components::radio::use_radio::{use_radio, HookParams, HookResponse};
+use crate::components::radio::hooks::{use_radio, HookParams, HookResponse};
 
 #[derive(Properties, Clone, PartialEq)]
 pub struct Props {

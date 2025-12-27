@@ -1,9 +1,9 @@
 use yew::{classes, function_component, html, Html};
 use crate::components::input::types::InputProps;
-use crate::components::input::use_input::{use_input, HookParams, HookResponse};
+use crate::components::input::hooks::{use_input, HookParams, HookResponse};
 
 mod types;
-mod use_input;
+mod hooks;
 
 #[function_component(Input)]
 pub(crate) fn input(props: &InputProps) -> Html {

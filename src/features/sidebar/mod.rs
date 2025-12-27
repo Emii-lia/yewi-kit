@@ -26,6 +26,7 @@ pub(crate) fn sidebar() -> Html {
               AppRoute::InputPage => "Input",
               AppRoute::RadioPage => "Radio",
               AppRoute::SelectPage => "Select",
+              AppRoute::TabsPage => "Tabs",
               AppRoute::TextareaPage => "Textarea",
               AppRoute::NotFound => "Not Found",
             }.to_string();

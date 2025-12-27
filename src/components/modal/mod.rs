@@ -1,14 +1,14 @@
-mod use_modal;
+mod hooks;
 mod provider;
-mod use_modal_store;
+mod store;
 
 use web_sys::MouseEvent;
 use yew::{classes, function_component, html, Callback, Html};
 use crate::components::Button;
 use crate::types::{ButtonVariant, Size};
-pub use use_modal::*;
+pub(crate) use hooks::*;
 pub use provider::*;
-pub use use_modal_store::*;
+pub use store::*;
 
 #[function_component(Modal)]
 pub(crate) fn modal() -> Html {
