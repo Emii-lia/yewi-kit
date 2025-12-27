@@ -10,6 +10,7 @@ mod checkbox;
 mod modal;
 mod textarea;
 mod radio;
+mod tabs;
 
 pub(crate) use button::*;
 pub(crate) use badge::*;
