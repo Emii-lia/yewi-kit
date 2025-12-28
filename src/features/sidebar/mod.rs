@@ -19,6 +19,7 @@ pub(crate) fn sidebar() -> Html {
             let label = match route {
               AppRoute::Home => "Home",
               AppRoute::AvatarPage => "Avatar",
+              AppRoute::AvatarGroupPage => "Avatar Group",
               AppRoute::BadgePage => "Badge",
               AppRoute::ButtonPage => "Button",
               AppRoute::CheckboxPage => "Checkbox",

@@ -19,6 +19,12 @@ pub struct Props {
   pub title: AttrValue,
   #[prop_or(Color::Blue)]
   pub color: Color,
+  #[prop_or(2)]
+  pub take: usize,
+  #[prop_or_default]
+  pub no_split: bool,
+  #[prop_or_default]
+  pub style: String,
 }
 
 #[function_component(Avatar)]
@@ -40,7 +46,7 @@ pub(crate) fn avatar(props: &Props) -> Html {
           rounded_class,
           &props.class
         )}
-        style={format!("background-image: url('{}');", &props.src)}
+        style={format!("background-image: url('{}'); {}", &props.src, &props.style)}
         title={&props.title}
       />
     } else {
@@ -52,16 +58,18 @@ pub(crate) fn avatar(props: &Props) -> Html {
           color_class,
           with_border_class,
           rounded_class,
+          &props.class
         )}
         title={&props.title}
+        style={props.style.to_string()}
       >
         {if props.alt.clone() != "" {
           let initials: String = props.alt
             .split_whitespace()
             .filter_map(|s| s.chars().next())
-            .take(2)
+            .take(props.take)
             .collect();
-          initials
+          if props.no_split { props.alt.to_string() } else { initials }
         } else {
           "U".to_string()
         }}

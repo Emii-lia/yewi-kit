@@ -8,6 +8,7 @@ mod modal;
 mod textarea;
 mod radio;
 mod tabs;
+mod avatar_group;
 
 pub use button::*;
 pub use input::*;
@@ -19,3 +20,4 @@ pub use modal::*;
 pub use textarea::*;
 pub use radio::*;
 pub use tabs::*;
+pub use avatar_group::*;
