@@ -1,7 +1,7 @@
 use yew::{function_component, html, Html};
 use crate::components::{Avatar, AvatarGroup, AvatarGroupVariant};
 use crate::previews::PreviewContainer;
-use crate::types::{Color, Size};
+use crate::types::{ Size };
 
 #[function_component(AvatarGroupPreview)]
 pub(crate) fn avatar_group_preview() -> Html {
