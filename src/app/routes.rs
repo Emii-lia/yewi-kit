@@ -2,6 +2,7 @@ use yew::{html, Html};
 use yew_router::Routable;
 use crate::app::{BadgePage, ButtonPage, Home};
 use crate::app::avatar::AvatarPage;
+use crate::app::avatar_group::AvatarGroupPage;
 use crate::app::checkbox::CheckboxPage;
 use crate::app::input::InputPage;
 use crate::app::modal::ModalPage;
@@ -17,6 +18,8 @@ pub enum AppRoute {
   Home,
   #[at("/avatar")]
   AvatarPage,
+  #[at("/avatar-group")]
+  AvatarGroupPage,
   #[at("/badge")]
   BadgePage,
   #[at("/button")]
@@ -45,6 +48,7 @@ impl AppRoute {
     vec![
       AppRoute::Home,
       AppRoute::AvatarPage,
+      AppRoute::AvatarGroupPage,
       AppRoute::BadgePage,
       AppRoute::ButtonPage,
       AppRoute::CheckboxPage,
@@ -62,6 +66,7 @@ pub fn switch(route: AppRoute) -> Html {
   match route {
     AppRoute::Home => html! {<Home/>},
     AppRoute::AvatarPage => html! {<AvatarPage/>},
+    AppRoute::AvatarGroupPage => html! {<AvatarGroupPage/>},
     AppRoute::BadgePage => html! {<BadgePage/>},
     AppRoute::ButtonPage => html! {<ButtonPage/>},
     AppRoute::CheckboxPage => html! {<CheckboxPage/>},
