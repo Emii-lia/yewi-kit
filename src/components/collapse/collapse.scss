@@ -1,0 +1,24 @@
+.Collapse {
+  @apply w-full flex flex-col gap-4 px-4 py-3 border border-slate-200 rounded-lg bg-white shadow-sm transition-all duration-200 ease-in-out;
+  .collapse-trigger {
+    @apply w-full flex items-center justify-between gap-4 cursor-pointer;
+    @apply text-slate-950 font-semibold text-lg;
+    &:after {
+      content: "\002B";
+      @apply h-full aspect-square text-slate-800 text-lg font-medium flex justify-center items-center;
+    }
+  }
+  .collapse-content {
+    @apply hidden w-full;
+  }
+  &:focus-within {
+    .collapse-trigger {
+      &:after {
+        content: "\2212";
+      }
+    }
+    .collapse-content {
+      @apply flex;
+    }
+  }
+}
