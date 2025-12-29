@@ -1,0 +1,9 @@
+.ex-collapse-content {
+  @apply flex flex-col gap-4 w-full;
+  .ex-collapse-title {
+    @apply text-xl font-semibold text-slate-800;
+  }
+  .ex-collapse-description {
+    @apply text-slate-500 font-medium text-sm;
+  }
+}
