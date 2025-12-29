@@ -12,6 +12,7 @@ mod textarea;
 mod radio;
 mod tabs;
 mod avatar_group;
+mod collapse;
 
 pub(crate) use button::*;
 pub(crate) use badge::*;

@@ -1,4 +1,5 @@
 @use "./modal_preview/modal_preview";
+@use "./collapse_preview/collapse_preview";
 .PreviewSection {
   @apply w-full flex flex-col gap-5 pt-4 pb-6;
   .preview-title {

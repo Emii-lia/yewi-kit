@@ -9,6 +9,7 @@ mod textarea;
 mod radio;
 mod tabs;
 mod avatar_group;
+mod collapse;
 
 pub use button::*;
 pub use input::*;
@@ -21,3 +22,4 @@ pub use textarea::*;
 pub use radio::*;
 pub use tabs::*;
 pub use avatar_group::*;
+pub use collapse::*;
