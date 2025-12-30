@@ -11,6 +11,7 @@ mod radio_preview;
 mod tabs_preview;
 mod avatar_group_preview;
 mod collapse_preview;
+mod file_input_previews;
 
 pub(crate) use button_preview::*;
 pub(crate) use preview_container::*;
@@ -25,3 +26,4 @@ pub(crate) use radio_preview::*;
 pub(crate) use tabs_preview::*;
 pub(crate) use avatar_group_preview::*;
 pub(crate) use collapse_preview::*;
+pub(crate) use file_input_previews::*;

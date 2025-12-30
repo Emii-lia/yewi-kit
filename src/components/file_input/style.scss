@@ -1,0 +1,47 @@
+.FileInput {
+  @apply w-full;
+  .file-input-element {
+    @apply w-full px-4 py-2 text-sm text-slate-900 placeholder-slate-500 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200;
+    &::file-selector-button {
+      @apply px-4 py-2 mr-4 bg-slate-800 text-white text-sm font-medium rounded-md border-0 cursor-pointer transition-colors duration-200 hover:bg-slate-950;
+    }
+    &:disabled {
+      @apply bg-slate-50 text-slate-400 cursor-not-allowed opacity-60;
+      &::file-selector-button {
+        @apply bg-slate-400 cursor-not-allowed hover:bg-slate-400;
+      }
+    }
+
+    &:hover:not(:disabled) {
+      @apply border-slate-400;
+      &::file-selector-button {
+        @apply bg-slate-700;
+      }
+    }
+  }
+
+  .file-dropzone {
+    @apply block w-full px-6 py-12 border-2 border-dashed border-slate-300 rounded-lg text-center cursor-pointer transition-all duration-200 bg-white hover:border-slate-400 hover:bg-slate-50;
+
+    &.disabled {
+      @apply bg-slate-50 border-slate-200 text-slate-400 cursor-not-allowed opacity-60;
+    }
+
+    &:not(.disabled):focus-within {
+      @apply border-blue-500 bg-blue-50;
+    }
+  }
+
+  .file-input-hidden {
+    @apply hidden;
+  }
+
+  .file-input-button {
+    @apply inline-block cursor-pointer;
+
+    &:has(input:disabled) {
+      @apply cursor-not-allowed;
+    }
+  }
+}
+

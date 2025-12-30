@@ -13,6 +13,7 @@ mod radio;
 mod tabs;
 mod avatar_group;
 mod collapse;
+mod file_input;
 
 pub(crate) use button::*;
 pub(crate) use badge::*;
