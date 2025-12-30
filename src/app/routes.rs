@@ -5,6 +5,7 @@ use crate::app::avatar::AvatarPage;
 use crate::app::avatar_group::AvatarGroupPage;
 use crate::app::checkbox::CheckboxPage;
 use crate::app::collapse::CollapsePage;
+use crate::app::file_input::FileInputPage;
 use crate::app::input::InputPage;
 use crate::app::modal::ModalPage;
 use crate::app::not_found::NotFound;
@@ -29,6 +30,8 @@ pub enum AppRoute {
   CheckboxPage,
   #[at("/collapse")]
   CollapsePage,
+  #[at("/file-input")]
+  FileInput,
   #[at("/input")]
   InputPage,
   #[at("/modal")]
@@ -56,6 +59,7 @@ impl AppRoute {
       AppRoute::ButtonPage,
       AppRoute::CheckboxPage,
       AppRoute::CollapsePage,
+      AppRoute::FileInput,
       AppRoute::InputPage,
       AppRoute::ModalPage,
       AppRoute::RadioPage,
@@ -75,6 +79,7 @@ pub fn switch(route: AppRoute) -> Html {
     AppRoute::ButtonPage => html! {<ButtonPage/>},
     AppRoute::CheckboxPage => html! {<CheckboxPage/>},
     AppRoute::CollapsePage => html! {<CollapsePage/>},
+    AppRoute::FileInput => html! {<FileInputPage/>},
     AppRoute::InputPage => html! {<InputPage/>},
     AppRoute::ModalPage => html! {<ModalPage/>},
     AppRoute::RadioPage => html! {<RadioPage/>},
