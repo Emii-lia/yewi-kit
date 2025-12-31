@@ -11,7 +11,7 @@ A **Component-driven UI kit for Yew** inspired by **React / Next.ts architecture
 | View (JSX / HTML)    | `mod.rs`                         |
 | Logic (custom hooks) | `hooks.rs`                       |
 | Utilities            | `(types/data/utils/contants).rs` |
-| Styles               | `*.scss`                         |
+| Styles               | `style.scss`                     |
 
 
 ``` bash
@@ -20,19 +20,19 @@ components/
 │   ├── mod.rs          # Button view (Yew component)
 │   ├── hooks.rs   # Button logic (custom hook)
 │   ├── types.rs        # Component-specific enums / types
-│   └── button.scss     # Tailwind + SCSS styles
+│   └── style.scss     # Tailwind + SCSS styles
 │
 ├── input/
 │   ├── mod.rs
 │   ├── hooks.rs
 │   ├── utils.rs
-│   └── input.scss
+│   └── style.scss
 │
 ├── badge/
 │   ├── mod.rs
 │   ├── hooks.rs
 │   ├── types.rs
-│   └── badge.scss
+│   └── style.scss
 │
 └── mod.rs              # Public exports
 ```
