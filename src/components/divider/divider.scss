@@ -1,0 +1,19 @@
+.Divider {
+  @apply flex items-center gap-2 w-full;
+  @apply text-slate-500 font-medium;
+  &:before, &:after {
+    @apply w-1/2 h-0.5 rounded-full bg-slate-500 content-[""];
+  }
+  &:not(&.has-children) {
+    @apply w-full h-0.5 bg-slate-500 rounded-full;
+  }
+  &.vertical {
+    @apply h-full flex flex-col items-center w-0.5 relative min-h-10 bg-inherit;
+    &:before, &:after {
+      @apply w-0.5 h-1/2 rounded-full bg-slate-500 content-[""] min-h-4;
+    }
+    &:not(&.has-children) {
+      @apply w-0.5 h-full bg-slate-500;
+    }
+  }
+}
