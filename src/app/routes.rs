@@ -1,18 +1,23 @@
 use yew::{html, Html};
 use yew_router::Routable;
-use crate::app::{BadgePage, ButtonPage, Home};
-use crate::app::avatar::AvatarPage;
-use crate::app::avatar_group::AvatarGroupPage;
-use crate::app::checkbox::CheckboxPage;
-use crate::app::collapse::CollapsePage;
-use crate::app::file_input::FileInputPage;
-use crate::app::input::InputPage;
-use crate::app::modal::ModalPage;
-use crate::app::not_found::NotFound;
-use crate::app::radio::RadioPage;
-use crate::app::select::SelectPage;
-use crate::app::tabs::TabsPage;
-use crate::app::textarea::TextareaPage;
+use crate::app::{
+  AvatarGroupPage,
+  AvatarPage,
+  BadgePage,
+  ButtonPage,
+  CheckboxPage,
+  CollapsePage,
+  DividerPage,
+  FileInputPage,
+  Home,
+  InputPage,
+  ModalPage,
+  NotFound,
+  RadioPage,
+  SelectPage,
+  TabsPage,
+  TextareaPage
+};
 
 #[derive(Clone, Routable, PartialEq)]
 pub enum AppRoute {
@@ -30,6 +35,8 @@ pub enum AppRoute {
   CheckboxPage,
   #[at("/collapse")]
   CollapsePage,
+  #[at("/divider")]
+  DividerPage,
   #[at("/file-input")]
   FileInput,
   #[at("/input")]
@@ -59,6 +66,7 @@ impl AppRoute {
       AppRoute::ButtonPage,
       AppRoute::CheckboxPage,
       AppRoute::CollapsePage,
+      AppRoute::DividerPage,
       AppRoute::FileInput,
       AppRoute::InputPage,
       AppRoute::ModalPage,
@@ -79,6 +87,7 @@ pub fn switch(route: AppRoute) -> Html {
     AppRoute::ButtonPage => html! {<ButtonPage/>},
     AppRoute::CheckboxPage => html! {<CheckboxPage/>},
     AppRoute::CollapsePage => html! {<CollapsePage/>},
+    AppRoute::DividerPage => html! {<DividerPage/>},
     AppRoute::FileInput => html! {<FileInputPage/>},
     AppRoute::InputPage => html! {<InputPage/>},
     AppRoute::ModalPage => html! {<ModalPage/>},

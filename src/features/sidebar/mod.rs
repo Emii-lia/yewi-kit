@@ -24,6 +24,7 @@ pub(crate) fn sidebar() -> Html {
               AppRoute::ButtonPage => "Button",
               AppRoute::CheckboxPage => "Checkbox",
               AppRoute::CollapsePage => "Collapse",
+              AppRoute::DividerPage => "Divider",
               AppRoute::FileInput => "File Input",
               AppRoute::InputPage => "Input",
               AppRoute::ModalPage => "Modal",

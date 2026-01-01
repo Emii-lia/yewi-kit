@@ -11,6 +11,7 @@ mod tabs;
 mod avatar_group;
 mod collapse;
 mod file_input;
+mod divider;
 
 pub use button::*;
 pub use input::*;
@@ -25,3 +26,4 @@ pub use tabs::*;
 pub use avatar_group::*;
 pub use collapse::*;
 pub use file_input::*;
+pub use divider::*;
