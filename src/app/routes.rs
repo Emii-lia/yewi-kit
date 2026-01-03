@@ -18,6 +18,7 @@ use crate::app::{
   TabsPage,
   TextareaPage
 };
+use crate::app::card::CardPage;
 
 #[derive(Clone, Routable, PartialEq)]
 pub enum AppRoute {
@@ -31,6 +32,8 @@ pub enum AppRoute {
   BadgePage,
   #[at("/button")]
   ButtonPage,
+  #[at("/card")]
+  CardPage,
   #[at("/checkbox")]
   CheckboxPage,
   #[at("/collapse")]
@@ -64,6 +67,7 @@ impl AppRoute {
       AppRoute::AvatarGroupPage,
       AppRoute::BadgePage,
       AppRoute::ButtonPage,
+      AppRoute::CardPage,
       AppRoute::CheckboxPage,
       AppRoute::CollapsePage,
       AppRoute::DividerPage,
@@ -85,6 +89,7 @@ pub fn switch(route: AppRoute) -> Html {
     AppRoute::AvatarGroupPage => html! {<AvatarGroupPage/>},
     AppRoute::BadgePage => html! {<BadgePage/>},
     AppRoute::ButtonPage => html! {<ButtonPage/>},
+    AppRoute::CardPage => html! {<CardPage/>},
     AppRoute::CheckboxPage => html! {<CheckboxPage/>},
     AppRoute::CollapsePage => html! {<CollapsePage/>},
     AppRoute::DividerPage => html! {<DividerPage/>},

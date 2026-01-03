@@ -15,6 +15,7 @@ mod avatar_group;
 mod collapse;
 mod file_input;
 mod divider;
+mod card;
 
 pub(crate) use button::*;
 pub(crate) use badge::*;

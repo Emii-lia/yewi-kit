@@ -1,0 +1,21 @@
+.Card {
+  @apply flex flex-col gap-6 border border-slate-100 shadow-md bg-white rounded-xl py-6 w-full max-w-md text-slate-800;
+  &__header {
+    @apply grid auto-rows-min grid-cols-[1fr_auto] grid-rows-[auto_auto] items-start gap-2 px-6;
+  }
+  &__title {
+    @apply font-semibold leading-none;
+  }
+  &__description {
+    @apply text-sm text-slate-600;
+  }
+  &__action {
+    @apply col-start-2 row-start-1 row-span-2 self-start justify-self-end;
+  }
+  &__content {
+    @apply px-6;
+  }
+  &__footer {
+    @apply px-6 pt-2 flex items-center gap-2;
+  }
+}
