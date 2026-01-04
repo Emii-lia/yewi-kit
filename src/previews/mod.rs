@@ -14,6 +14,7 @@ mod collapse_preview;
 mod file_input_previews;
 mod divider_preview;
 mod card_preview;
+mod password_input_preview;
 
 pub(crate) use button_preview::*;
 pub(crate) use preview_container::*;
@@ -31,3 +32,4 @@ pub(crate) use collapse_preview::*;
 pub(crate) use file_input_previews::*;
 pub(crate) use divider_preview::*;
 pub(crate) use card_preview::*;
+pub(crate) use password_input_preview::*;

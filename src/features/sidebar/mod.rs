@@ -28,6 +28,7 @@ pub(crate) fn sidebar() -> Html {
               AppRoute::DividerPage => "Divider",
               AppRoute::FileInput => "File Input",
               AppRoute::InputPage => "Input",
+              AppRoute::PasswordInputPage => "Password Input",
               AppRoute::ModalPage => "Modal",
               AppRoute::RadioPage => "Radio",
               AppRoute::SelectPage => "Select",

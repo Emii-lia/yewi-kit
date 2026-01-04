@@ -1,6 +1,6 @@
 @use "./components/nav_item/nav_item";
 .Sidebar {
-  @apply flex flex-col gap-4 w-64 bg-slate-700 top-0 left-0 bottom-0 h-screen overflow-y-auto z-40 fixed;
+  @apply flex flex-col gap-4 w-64 bg-slate-700 top-0 left-0 bottom-0 h-screen overflow-y-auto z-40 fixed py-4;
   .sidebar-header {
     @apply flex items-center justify-start gap-4 pl-6 pt-6;
     .sidebar-title {

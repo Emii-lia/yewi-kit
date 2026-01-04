@@ -13,6 +13,7 @@ mod collapse;
 mod file_input;
 mod divider;
 mod card;
+mod password_input;
 
 pub use button::*;
 pub use input::*;
@@ -29,3 +30,4 @@ pub use collapse::*;
 pub use file_input::*;
 pub use divider::*;
 pub use card::*;
+pub use password_input::*;

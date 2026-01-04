@@ -1,3 +1,3 @@
 mod sidebar;
 
-pub use sidebar::*;
+pub(crate) use sidebar::*;
