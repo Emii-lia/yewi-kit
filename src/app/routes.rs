@@ -19,6 +19,7 @@ use crate::app::{
   TextareaPage
 };
 use crate::app::card::CardPage;
+use crate::app::password_input::PasswordInputPage;
 
 #[derive(Clone, Routable, PartialEq)]
 pub enum AppRoute {
@@ -46,6 +47,8 @@ pub enum AppRoute {
   InputPage,
   #[at("/modal")]
   ModalPage,
+  #[at("/password-input")]
+  PasswordInputPage,
   #[at("/radio")]
   RadioPage,
   #[at("/select")]
@@ -74,6 +77,7 @@ impl AppRoute {
       AppRoute::FileInput,
       AppRoute::InputPage,
       AppRoute::ModalPage,
+      AppRoute::PasswordInputPage,
       AppRoute::RadioPage,
       AppRoute::SelectPage,
       AppRoute::TabsPage,
@@ -96,6 +100,7 @@ pub fn switch(route: AppRoute) -> Html {
     AppRoute::FileInput => html! {<FileInputPage/>},
     AppRoute::InputPage => html! {<InputPage/>},
     AppRoute::ModalPage => html! {<ModalPage/>},
+    AppRoute::PasswordInputPage => html! {<PasswordInputPage/>},
     AppRoute::RadioPage => html! {<RadioPage/>},
     AppRoute::SelectPage => html! {<SelectPage/>},
     AppRoute::TabsPage => html! {<TabsPage/>},
