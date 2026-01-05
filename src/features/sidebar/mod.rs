@@ -29,6 +29,7 @@ pub(crate) fn sidebar() -> Html {
               AppRoute::FileInput => "File Input",
               AppRoute::InputPage => "Input",
               AppRoute::PasswordInputPage => "Password Input",
+              AppRoute::ProgressPage => "Progress",
               AppRoute::ModalPage => "Modal",
               AppRoute::RadioPage => "Radio",
               AppRoute::SelectPage => "Select",
