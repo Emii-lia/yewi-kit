@@ -20,6 +20,7 @@ use crate::app::{
 };
 use crate::app::card::CardPage;
 use crate::app::password_input::PasswordInputPage;
+use crate::app::progress::ProgressPage;
 
 #[derive(Clone, Routable, PartialEq)]
 pub enum AppRoute {
@@ -49,6 +50,8 @@ pub enum AppRoute {
   ModalPage,
   #[at("/password-input")]
   PasswordInputPage,
+  #[at("/progress")]
+  ProgressPage,
   #[at("/radio")]
   RadioPage,
   #[at("/select")]
@@ -78,6 +81,7 @@ impl AppRoute {
       AppRoute::InputPage,
       AppRoute::ModalPage,
       AppRoute::PasswordInputPage,
+      AppRoute::ProgressPage,
       AppRoute::RadioPage,
       AppRoute::SelectPage,
       AppRoute::TabsPage,
@@ -101,6 +105,7 @@ pub fn switch(route: AppRoute) -> Html {
     AppRoute::InputPage => html! {<InputPage/>},
     AppRoute::ModalPage => html! {<ModalPage/>},
     AppRoute::PasswordInputPage => html! {<PasswordInputPage/>},
+    AppRoute::ProgressPage => html! {<ProgressPage/>},
     AppRoute::RadioPage => html! {<RadioPage/>},
     AppRoute::SelectPage => html! {<SelectPage/>},
     AppRoute::TabsPage => html! {<TabsPage/>},
