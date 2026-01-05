@@ -17,6 +17,7 @@ mod file_input;
 mod divider;
 mod card;
 mod password_input;
+mod progress;
 
 pub(crate) use button::*;
 pub(crate) use badge::*;
