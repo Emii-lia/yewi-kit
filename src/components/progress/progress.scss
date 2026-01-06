@@ -1,5 +1,5 @@
 .Progress{
-  @apply flex flex-row items-center w-full gap-3;
+  @apply flex flex-row items-center w-full gap-3 transition-all duration-300 ease-in-out;
   .progress-bar{
     @apply w-full bg-slate-300 rounded-full h-2 overflow-hidden;
     &:before{
@@ -83,5 +83,109 @@
   }
   .progress-value{
     @apply text-sm text-zinc-600 font-medium whitespace-nowrap;
+  }
+}
+:root {
+  --blank: theme('colors.slate.300');
+}
+.RadialProgress {
+  @apply aspect-square rounded-[50%] grid place-content-center transition-all duration-500 ease-in-out;
+  &.purple {
+    background: conic-gradient(theme("colors.purple.500") var(--value, 0), var(--blank) 0);
+  }
+  &.blue {
+    background: conic-gradient(theme("colors.blue.500") var(--value, 0), var(--blank) 0);
+  }
+  &.green {
+    background: conic-gradient(theme("colors.green.500") var(--value, 0), var(--blank) 0);
+  }
+  &.red {
+    background: conic-gradient(theme("colors.red.500") var(--value, 0), var(--blank) 0);
+  }
+  &.yellow {
+    background: conic-gradient(theme("colors.yellow.500") var(--value, 0), var(--blank) 0);
+  }
+  &.gray {
+    background: conic-gradient(theme("colors.gray.500") var(--value, 0), var(--blank) 0);
+  }
+  &.orange {
+    background: conic-gradient(theme("colors.orange.500") var(--value, 0), var(--blank) 0);
+  }
+  &.pink {
+    background: conic-gradient(theme("colors.pink.500") var(--value, 0), var(--blank) 0);
+  }
+  &.fuchsia {
+    background: conic-gradient(theme("colors.fuchsia.500") var(--value, 0), var(--blank) 0);
+  }
+  &.cyan {
+    background: conic-gradient(theme("colors.cyan.500") var(--value, 0), var(--blank) 0);
+  }
+  &.teal {
+    background: conic-gradient(theme("colors.teal.500") var(--value, 0), var(--blank) 0);
+  }
+  &.indigo {
+    background: conic-gradient(theme("colors.indigo.500") var(--value, 0), var(--blank) 0);
+  }
+  &.violet {
+    background: conic-gradient(theme("colors.violet.500") var(--value, 0), var(--blank) 0);
+  }
+  &.emerald {
+    background: conic-gradient(theme("colors.emerald.500") var(--value, 0), var(--blank) 0);
+  }
+  &.lime {
+    background: conic-gradient(theme("colors.lime.500") var(--value, 0), var(--blank) 0);
+  }
+  &.amber {
+    background: conic-gradient(theme("colors.amber.500") var(--value, 0), var(--blank) 0);
+  }
+  &.rose {
+    background: conic-gradient(theme("colors.rose.500") var(--value, 0), var(--blank) 0);
+  }
+  &.sky {
+    background: conic-gradient(theme("colors.sky.500") var(--value, 0), var(--blank) 0);
+  }
+  &.light {
+    background: conic-gradient(theme("colors.slate.100") var(--value, 0), theme("colors.slate.700") 0);
+  }
+  &.dark {
+    background: conic-gradient(theme("colors.slate.800") var(--value, 0), var(--blank) 0);
+  }
+  &.transparent {
+    background: conic-gradient(theme("colors.slate.800") var(--value, 0), rgb(40, 40, 40, .05) 0);
+  }
+
+  &.large {
+    @apply w-20 h-20 text-sm whitespace-nowrap;
+    &:after {
+      @apply w-[calc(5rem*0.75)] p-1;
+    }
+  }
+  &.medium {
+    @apply w-16 h-16 text-[.625rem];
+    &:after {
+      @apply w-[calc(4rem*0.775)] p-1;
+    }
+  }
+  &.small {
+    @apply w-14 h-14 text-[.625rem] whitespace-nowrap;
+    &:after {
+      @apply w-[calc(3.5rem*0.725)] p-1;
+    }
+  }
+  &.xs {
+    @apply w-12 h-12 text-[.625rem] whitespace-nowrap;
+    &:after {
+      @apply w-[calc(3rem*0.725)] p-0.5;
+    }
+  }
+  &.show-percentage {
+    &:after {
+      @apply aspect-square grid bg-slate-50 place-content-center rounded-[50%];
+      @apply text-zinc-950 font-medium;
+      content: attr(data-progress);
+      &.light {
+        @apply bg-slate-700 text-slate-100;
+      }
+    }
   }
 }
