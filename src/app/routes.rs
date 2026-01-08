@@ -19,6 +19,7 @@ use crate::app::{
   TextareaPage
 };
 use crate::app::card::CardPage;
+use crate::app::carousel::CarouselPage;
 use crate::app::password_input::PasswordInputPage;
 use crate::app::progress::ProgressPage;
 
@@ -36,6 +37,8 @@ pub enum AppRoute {
   ButtonPage,
   #[at("/card")]
   CardPage,
+  #[at("/carousel")]
+  CarouselPage,
   #[at("/checkbox")]
   CheckboxPage,
   #[at("/collapse")]
@@ -74,6 +77,7 @@ impl AppRoute {
       AppRoute::BadgePage,
       AppRoute::ButtonPage,
       AppRoute::CardPage,
+      AppRoute::CarouselPage,
       AppRoute::CheckboxPage,
       AppRoute::CollapsePage,
       AppRoute::DividerPage,
@@ -98,6 +102,7 @@ pub fn switch(route: AppRoute) -> Html {
     AppRoute::BadgePage => html! {<BadgePage/>},
     AppRoute::ButtonPage => html! {<ButtonPage/>},
     AppRoute::CardPage => html! {<CardPage/>},
+    AppRoute::CarouselPage => html! {<CarouselPage/>},
     AppRoute::CheckboxPage => html! {<CheckboxPage/>},
     AppRoute::CollapsePage => html! {<CollapsePage/>},
     AppRoute::DividerPage => html! {<DividerPage/>},
