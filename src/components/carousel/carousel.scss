@@ -1,0 +1,55 @@
+.Carousel {
+  @apply relative w-fit;
+  .CarouselWrapper {
+    @apply overflow-hidden relative bg-slate-100 rounded-lg w-fit px-16;
+    .CarouselContent {
+      @apply flex transition-transform duration-500 ease-in-out w-fit;
+      .CarouselItem {
+        @apply w-0 opacity-0 transition-all duration-500 ease-in-out;
+        &[data-active="true"] {
+          @apply opacity-100 z-10 flex w-fit;
+        }
+      }
+    }
+    .CarouselControls {
+      &__arrow-btn {
+        @apply absolute top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-black/75 text-white text-3xl w-10 h-10 flex items-center justify-center rounded-full transition-colors duration-200 cursor-pointer;
+        &[data-direction="prev"] {
+          @apply left-4;
+        }
+        &[data-direction="next"] {
+          @apply right-4;
+        }
+        &:focus {
+          @apply outline-none ring-2 ring-slate-400 ring-offset-2;
+        }
+      }
+      &__dots {
+        @apply flex items-center justify-center gap-4 mt-6 p-2;
+      }
+      &__dot {
+        @apply w-3 h-3 rounded-full bg-slate-300 hover:bg-slate-400 transition-colors duration-200 cursor-pointer border-none;
+
+        &[data-active="true"] {
+          @apply bg-slate-800;
+        }
+
+        &:hover {
+          @apply bg-slate-400;
+        }
+        &:focus {
+          @apply outline-none ring-2 ring-slate-400 ring-offset-2;
+        }
+      }
+      &__autoplay {
+        @apply absolute bottom-4 right-4 z-10 bg-white bg-opacity-70 hover:bg-opacity-100 text-slate-800 rounded-lg px-4 py-2 cursor-pointer shadow-md transition-all duration-200 ease-in-out;
+        &:focus {
+          @apply outline-none ring-2 ring-slate-400 ring-offset-2;
+        }
+        &[data-playing="true"] {
+          @apply bg-slate-600 hover:bg-slate-700 text-white;
+        }
+      }
+    }
+  }
+}
