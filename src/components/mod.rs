@@ -15,6 +15,7 @@ mod divider;
 mod card;
 mod password_input;
 mod progress;
+mod carousel;
 
 pub use button::*;
 pub use input::*;
@@ -33,3 +34,4 @@ pub use divider::*;
 pub use card::*;
 pub use password_input::*;
 pub use progress::*;
+pub use carousel::*;
