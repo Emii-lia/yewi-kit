@@ -1,6 +1,6 @@
 use std::borrow::BorrowMut;
 use std::collections::HashMap;
-use yew::{function_component, html, use_memo, use_ref, use_state, Callback, Children, ContextProvider, Html, Properties};
+use yew::{function_component, html, use_memo, use_state, Callback, Children, ContextProvider, Html, Properties};
 use crate::components::carousel::hooks::{use_carousel, HookParams};
 
 #[derive(Clone, Debug, PartialEq)]
