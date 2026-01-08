@@ -1029,6 +1029,7 @@ dependencies = [
 name = "yewi-kit"
 version = "0.1.0"
 dependencies = [
+ "gloo",
  "uuid",
  "wasm-logger",
  "web-sys",

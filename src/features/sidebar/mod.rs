@@ -23,6 +23,7 @@ pub(crate) fn sidebar() -> Html {
               AppRoute::BadgePage => "Badge",
               AppRoute::ButtonPage => "Button",
               AppRoute::CardPage => "Card",
+              AppRoute::CarouselPage => "Carousel",
               AppRoute::CheckboxPage => "Checkbox",
               AppRoute::CollapsePage => "Collapse",
               AppRoute::DividerPage => "Divider",

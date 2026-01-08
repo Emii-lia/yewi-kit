@@ -1,6 +1,6 @@
 use web_sys::{Event, EventTarget, HtmlInputElement};
 use web_sys::wasm_bindgen::JsCast;
-use yew::{hook, Callback, Properties, TargetCast};
+use yew::{hook, Callback, Properties};
 
 #[derive(Properties, Clone, PartialEq)]
 pub struct HookParams {
