@@ -16,6 +16,7 @@ mod divider_preview;
 mod card_preview;
 mod password_input_preview;
 mod progress_preview;
+mod carousel_preview;
 
 pub(crate) use button_preview::*;
 pub(crate) use preview_container::*;
@@ -35,3 +36,4 @@ pub(crate) use divider_preview::*;
 pub(crate) use card_preview::*;
 pub(crate) use password_input_preview::*;
 pub(crate) use progress_preview::*;
+pub(crate) use carousel_preview::*;
