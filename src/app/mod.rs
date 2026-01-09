@@ -32,7 +32,6 @@ pub(crate) use avatar::*;
 pub(crate) use collapse::*;
 pub(crate) use file_input::*;
 pub(crate) use divider::*;
-pub(crate) use tabs::*;
 pub(crate) use avatar_group::*;
 pub(crate) use not_found::*;
 pub(crate) use modal::*;
