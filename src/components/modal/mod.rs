@@ -7,8 +7,8 @@ use yew::{classes, function_component, html, Callback, Html};
 use crate::components::Button;
 use crate::types::{ButtonVariant, Size};
 pub(crate) use hooks::*;
-pub use provider::*;
-pub use store::*;
+pub(crate) use provider::*;
+pub(crate) use store::*;
 
 #[function_component(Modal)]
 pub(crate) fn modal() -> Html {

@@ -17,7 +17,7 @@ pub(crate) fn sidebar() -> Html {
         {
           AppRoute::iter().filter(|route| *route != AppRoute::NotFound).map(|route| {
             let label = match route {
-              AppRoute::Home => "Home",
+              AppRoute::Home => "Installation",
               AppRoute::AvatarPage => "Avatar",
               AppRoute::AvatarGroupPage => "Avatar Group",
               AppRoute::BadgePage => "Badge",

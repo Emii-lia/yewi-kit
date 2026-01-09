@@ -4,11 +4,6 @@ use yew::{classes, function_component, html, AttrValue, Callback, Classes, Html,
 use crate::components::button::hooks::{use_button, HookParams, HookResponse};
 use crate::types::{Size, ButtonVariant};
 
-#[derive(Clone, PartialEq)]
-pub enum ButtonClick {
-  Mouse(Callback<MouseEvent>),
-  Simple(Callback<()>)
-}
 #[derive(Properties, PartialEq)]
 pub struct Props {
   pub children: Html,
