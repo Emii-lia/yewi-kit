@@ -6,6 +6,9 @@
     @apply text-2xl text-slate-800 font-semibold;
   }
   .preview-list {
-    @apply w-full flex flex-col gap-5;
+    @apply w-full flex flex-col gap-8;
+    .preview-tab-content {
+      @apply w-full flex items-center justify-center gap-4 p-6;
+    }
   }
 }

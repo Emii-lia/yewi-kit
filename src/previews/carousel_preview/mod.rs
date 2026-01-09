@@ -27,7 +27,30 @@ pub(crate) fn carousel_preview() -> Html {
     <div class="PreviewSection">
       <h2 class="preview-title">{ "Carousel" }</h2>
       <div class="preview-list">
-        <PreviewContainer title={"Default"}>
+        <PreviewContainer
+          title={"Default"}
+          code={r#"
+            <Carousel>
+              <CarouselWrapper>
+                <CarouselContent>
+                  <CarouselItem id={"slide1".to_string()}>
+                    <ImageSlide url={"https://picsum.photos/200".to_string()} alt={"Slide 1".to_string()}/>
+                  </CarouselItem>
+                  <CarouselItem id={"slide2".to_string()}>
+                    <ImageSlide url={"https://picsum.photos/201".to_string()} alt={"Slide 2".to_string()}/>
+                  </CarouselItem>
+                  <CarouselItem id={"slide3".to_string()}>
+                    <ImageSlide url={"https://picsum.photos/202".to_string()} alt={"Slide 3".to_string()}/>
+                  </CarouselItem>
+                  <CarouselItem id={"slide4".to_string()}>
+                    <ImageSlide url={"https://picsum.photos/203".to_string()} alt={"Slide 4".to_string()}/>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselControls/>
+              </CarouselWrapper>
+            </Carousel>
+          "#}
+        >
           <Carousel>
             <CarouselWrapper>
               <CarouselContent>
@@ -48,7 +71,30 @@ pub(crate) fn carousel_preview() -> Html {
             </CarouselWrapper>
           </Carousel>
         </PreviewContainer>
-        <PreviewContainer title={"Auto Play"}>
+        <PreviewContainer
+          title={"Auto Play"}
+          code={r#"
+           <Carousel auto_play=true auto_play_interval={2000.0}>
+            <CarouselWrapper>
+              <CarouselContent>
+                <CarouselItem id={"slide1".to_string()}>
+                  <ImageSlide url={"https://picsum.photos/200".to_string()} alt={"Slide 1".to_string()}/>
+                </CarouselItem>
+                <CarouselItem id={"slide2".to_string()}>
+                  <ImageSlide url={"https://picsum.photos/201".to_string()} alt={"Slide 2".to_string()}/>
+                </CarouselItem>
+                <CarouselItem id={"slide3".to_string()}>
+                  <ImageSlide url={"https://picsum.photos/202".to_string()} alt={"Slide 3".to_string()}/>
+                </CarouselItem>
+                <CarouselItem id={"slide4".to_string()}>
+                  <ImageSlide url={"https://picsum.photos/203".to_string()} alt={"Slide 4".to_string()}/>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselControls/>
+            </CarouselWrapper>
+          </Carousel>
+          "#}
+        >
           <Carousel auto_play=true auto_play_interval={2000.0}>
             <CarouselWrapper>
               <CarouselContent>
@@ -69,7 +115,30 @@ pub(crate) fn carousel_preview() -> Html {
             </CarouselWrapper>
           </Carousel>
         </PreviewContainer>
-        <PreviewContainer title={"No Controls"}>
+        <PreviewContainer
+          title={"No Controls"}
+          code={r#"
+            <Carousel auto_play=true auto_play_interval={2000.0}>
+              <CarouselWrapper>
+                <CarouselContent>
+                  <CarouselItem id={"slide1".to_string()}>
+                    <ImageSlide url={"https://picsum.photos/200".to_string()} alt={"Slide 1".to_string()}/>
+                  </CarouselItem>
+                  <CarouselItem id={"slide2".to_string()}>
+                    <ImageSlide url={"https://picsum.photos/201".to_string()} alt={"Slide 2".to_string()}/>
+                  </CarouselItem>
+                  <CarouselItem id={"slide3".to_string()}>
+                    <ImageSlide url={"https://picsum.photos/202".to_string()} alt={"Slide 3".to_string()}/>
+                  </CarouselItem>
+                  <CarouselItem id={"slide4".to_string()}>
+                    <ImageSlide url={"https://picsum.photos/203".to_string()} alt={"Slide 4".to_string()}/>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselControls show_arrows=false show_dots=false/>
+              </CarouselWrapper>
+            </Carousel>
+          "#}
+        >
           <Carousel auto_play=true auto_play_interval={2000.0}>
             <CarouselWrapper>
               <CarouselContent>
@@ -90,7 +159,6 @@ pub(crate) fn carousel_preview() -> Html {
             </CarouselWrapper>
           </Carousel>
         </PreviewContainer>
-
       </div>
     </div>
   }

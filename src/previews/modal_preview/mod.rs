@@ -1,7 +1,6 @@
 use yew::{function_component, html, Callback, Html};
 use crate::components::{use_modal_store, Button, ModalHookResponse, OpenParams};
 use crate::previews::PreviewContainer;
-use crate::types::Size;
 
 #[function_component(ModalPreview)]
 pub(crate) fn modal_preview() -> Html {
@@ -21,7 +20,29 @@ pub(crate) fn modal_preview() -> Html {
     <div class="PreviewSection">
       <h1 class="preview-title">{"Modal"}</h1>
       <div class="preview-list">
-        <PreviewContainer title={"Example"}>
+        <PreviewContainer
+          title={"Example"}
+          code={r#"
+            // Callback
+            <Button onclick={Callback::from(move |_| {
+                on_open.clone().emit(OpenParams {
+                  children: children.clone(),
+                  class: Some("".into()),
+                });
+              })}
+            >
+              {"Open Modal"}
+            </Button>
+
+            // Modal Provider on src/app/mod.rs
+            <ModalProvider>
+              <div class="app">
+                <Modal/>
+                <Switch<AppRoute> render={switch}/>
+              </div>
+            </ModalProvider>
+          "#}
+        >
           <Button onclick={Callback::from(move |_| {
               on_open.clone().emit(OpenParams {
                 children: children.clone(),

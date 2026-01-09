@@ -9,7 +9,20 @@ pub(crate) fn button_preview () -> Html {
     <div class="PreviewSection">
       <h1 class="preview-title">{"Button"}</h1>
       <div class="preview-list">
-        <PreviewContainer title="Primary">
+        <PreviewContainer
+          title="Primary"
+          code={r#"
+            <Button size={Size::Small}>
+              {"Primary"}
+            </Button>
+            <Button size={Size::Medium}>
+              {"Primary"}
+            </Button>
+            <Button size={Size::Large}>
+              {"Primary"}
+            </Button>   
+          "#}
+        >
           <Button size={Size::Small}>
             {"Primary"}
           </Button>
@@ -20,7 +33,20 @@ pub(crate) fn button_preview () -> Html {
             {"Primary"}
           </Button>
         </PreviewContainer>
-        <PreviewContainer title="Secondary">
+        <PreviewContainer
+          title="Secondary"
+          code={r#"
+            <Button size={Size::Small} variant={ButtonVariant::Secondary} >
+              {"Secondary"}
+            </Button>
+            <Button size={Size::Medium} variant={ButtonVariant::Secondary} >
+              {"Secondary"}
+            </Button>
+            <Button size={Size::Large} variant={ButtonVariant::Secondary} >
+              {"Secondary"}
+            </Button>  
+          "#}
+        >
           <Button size={Size::Small} variant={ButtonVariant::Secondary} >
             {"Secondary"}
           </Button>
@@ -31,7 +57,20 @@ pub(crate) fn button_preview () -> Html {
             {"Secondary"}
           </Button>
         </PreviewContainer>
-        <PreviewContainer title="Tertiary">
+        <PreviewContainer
+          title="Tertiary"
+          code={r#"
+            <Button size={Size::Small} variant={ButtonVariant::Tertiary} >
+              {"Tertiary"}
+            </Button>
+            <Button size={Size::Medium} variant={ButtonVariant::Tertiary} >
+              {"Tertiary"}
+            </Button>
+            <Button size={Size::Large} variant={ButtonVariant::Tertiary} >
+              {"Tertiary"}
+            </Button>  
+          "#}
+        >
           <Button size={Size::Small} variant={ButtonVariant::Tertiary} >
             {"Tertiary"}
           </Button>
@@ -42,7 +81,20 @@ pub(crate) fn button_preview () -> Html {
             {"Tertiary"}
           </Button>
         </PreviewContainer>
-        <PreviewContainer title="Success">
+        <PreviewContainer
+          title="Success"
+          code={r#"
+            <Button size={Size::Small} variant={ButtonVariant::Success} >
+              {"Success"}
+            </Button>
+            <Button size={Size::Medium} variant={ButtonVariant::Success} >
+              {"Success"}
+            </Button>
+            <Button size={Size::Large} variant={ButtonVariant::Success} >
+              {"Success"}
+            </Button>  
+          "#}
+        >
           <Button size={Size::Small} variant={ButtonVariant::Success} >
             {"Success"}
           </Button>
@@ -53,7 +105,20 @@ pub(crate) fn button_preview () -> Html {
             {"Success"}
           </Button>
         </PreviewContainer>
-        <PreviewContainer title="Danger">
+        <PreviewContainer
+          title="Danger"
+          code={r#"
+            <Button size={Size::Small} variant={ButtonVariant::Danger} >
+              {"Danger"}
+            </Button>
+            <Button size={Size::Medium} variant={ButtonVariant::Danger} >
+              {"Danger"}
+            </Button>
+            <Button size={Size::Large} variant={ButtonVariant::Danger} >
+              {"Danger"}
+            </Button>  
+          "#}
+        >
           <Button size={Size::Small} variant={ButtonVariant::Danger} >
             {"Danger"}
           </Button>
@@ -64,22 +129,50 @@ pub(crate) fn button_preview () -> Html {
             {"Danger"}
           </Button>
         </PreviewContainer>
-        <PreviewContainer title="As Link">
+        <PreviewContainer
+          title="As Link"
+          code={r#"
+            <Button href="https://github.com/Emii-lia" >
+              {"Link"}
+            </Button>  
+          "#}
+        >
           <Button href="https://github.com/Emii-lia" >
             {"Link"}
           </Button>
         </PreviewContainer>
-        <PreviewContainer title="Disabled">
+        <PreviewContainer
+          title="Disabled"
+          code={r#"
+            <Button disabled=true >
+              {"Disabled"}
+            </Button>  
+          "#}
+        >
           <Button disabled=true >
             {"Disabled"}
           </Button>
         </PreviewContainer>
-        <PreviewContainer title="Loading">
+        <PreviewContainer
+          title="Loading"
+          code={r#"
+            <Button is_loading=true >
+              {"Loading"}
+            </Button>  
+          "#}
+        >
           <Button is_loading=true >
             {"Loading"}
           </Button>
         </PreviewContainer>
-        <PreviewContainer title="Custom Class">
+        <PreviewContainer
+          title="Custom Class"
+          code={r#"
+            <Button class="!bg-slate-500" >
+              {"Custom"}
+            </Button>  
+          "#}
+        >
           <Button class="!bg-slate-500" >
             {"Custom"}
           </Button>
