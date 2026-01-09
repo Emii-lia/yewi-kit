@@ -1,0 +1,54 @@
+.InstallationSection {
+  @apply max-w-5xl mx-auto px-6 py-14 space-y-12 bg-white;
+  .doc-title {
+    @apply text-4xl font-bold text-slate-900;
+  }
+}
+
+.doc-section {
+  @apply space-y-12;
+}
+
+.doc-section-title {
+  @apply text-3xl font-bold tracking-tight text-slate-900;
+}
+
+.doc-subsection {
+  @apply space-y-5;
+}
+
+.doc-subsection-title {
+  @apply text-xl font-semibold text-slate-800;
+}
+
+.doc-section-text {
+  @apply text-slate-700 leading-relaxed text-base max-w-prose;
+}
+
+.doc-section-text + .doc-section-text {
+  @apply mt-4;
+}
+
+.doc-section-text a {
+  @apply text-blue-600 hover:text-blue-700 underline underline-offset-4 transition;
+}
+
+.code-block {
+  @apply rounded-xl border border-slate-700 bg-slate-800 overflow-x-auto;
+}
+
+.code-block code {
+  @apply block p-4 text-sm font-mono text-slate-50 text-left leading-relaxed;
+}
+
+.doc-footer {
+  @apply pt-10 border-t border-slate-200;
+}
+
+.doc-footer-text {
+  @apply text-sm text-slate-500;
+}
+
+.doc-footer-text a {
+  @apply text-blue-600 hover:text-blue-700 underline underline-offset-4 transition;
+}

@@ -8,20 +8,40 @@ pub(crate) fn textarea_preview() -> Html {
     <div class="PreviewSection">
       <h1 class="preview-title">{"Textarea"}</h1>
       <div class="preview-list">
-        <PreviewContainer title={"Default"}>
+        <PreviewContainer
+          title={"Default"}
+          code={r#"
+            <Textarea placeholder="Type here..." rows={"4"} />
+          "#}
+        >
           <Textarea placeholder="Type here..." rows={"4"} />
         </PreviewContainer>
-        <PreviewContainer title={"Disabled"}>
+        <PreviewContainer
+          title={"Disabled"}
+          code={r#"
+            <Textarea placeholder="Cannot type here..." rows={"4"} disabled=true />
+          "#}
+        >
           <Textarea placeholder="Cannot type here..." rows={"4"} disabled=true />
         </PreviewContainer>
-        <PreviewContainer title={"With label"}>
+        <PreviewContainer
+          title={"With label"}
+          code={r#"
+            <Textarea
+          "#}
+        >
           <Textarea
             placeholder="Type here..."
             rows={"4"}
             label={"Description"}
           />
         </PreviewContainer>
-        <PreviewContainer title={"With error"}>
+        <PreviewContainer
+          title={"With error"}
+          code={r#"
+            <Textarea placeholder="Type here..." rows={"4"} errors={vec!["Invalid input".to_string()]}/>
+          "#}
+        >
           <Textarea placeholder="Type here..." rows={"4"} errors={vec!["Invalid input".to_string()]}/>
         </PreviewContainer>
       </div>

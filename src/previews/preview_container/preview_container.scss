@@ -1,9 +1,7 @@
 .PreviewContainer {
-  @apply w-full flex flex-col gap-4 bg-slate-100 rounded-lg;
-  .preview-container-title {
-    @apply text-lg text-slate-800 font-semibold p-2 rounded-br-lg bg-white w-fit border-e border-slate-100;
-  }
+  @apply w-full rounded-xl border border-slate-200 bg-white p-4 shadow-sm;
   .preview-content {
-    @apply flex items-center justify-center gap-4 p-6;
+    @apply flex flex-wrap items-center justify-center gap-4
+    rounded-lg bg-slate-50 px-6 py-8 border border-slate-50 shadow-inner;
   }
 }

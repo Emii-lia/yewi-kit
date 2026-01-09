@@ -8,11 +8,23 @@ pub(crate) fn divider_preview() -> Html {
     <div class="PreviewSection">
       <h1 class="preview-title">{"Divider"}</h1>
       <div class="preview-list">
-        <PreviewContainer title="Horizontal">
+        <PreviewContainer
+          title="Horizontal"
+          code={r#"
+            <Divider/>
+            <Divider>{"OR"}</Divider>
+          "#}
+        >
           <Divider/>
           <Divider>{"OR"}</Divider>
         </PreviewContainer>
-        <PreviewContainer title="Vertical">
+        <PreviewContainer
+          title="Vertical"
+          code={r#"
+            <Divider vertical=true/>
+            <Divider vertical=true>{"OR"}</Divider>
+          "#}
+        >
           <Divider vertical=true/>
           <Divider vertical=true>{"OR"}</Divider>
         </PreviewContainer>
