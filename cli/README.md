@@ -213,3 +213,7 @@ MIT
 ## Support
 
 For issues, questions, or suggestions, please open an issue on the [GitHub repository](https://github.com/Emii-lia/yewi-kit)
+
+## Yewi-Kit website
+
+Visit the [Yewi-Kit website](https://yewi.pages.dev) for documentation, examples, and more information about the components available.

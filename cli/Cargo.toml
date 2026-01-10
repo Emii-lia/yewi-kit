@@ -4,8 +4,10 @@ version = "0.1.0"
 edition = "2024"
 authors = ["Fiaro fiaromiangaly@gmail.com"]
 description = "CLI tool for managing yewi-kit components in Yew projects"
-homepage = "https://github.com/Emii-lia/yewi-kit"
+homepage = "https://yewi.pages.dev"
 repository = "https://github.com/Emii-lia/yewi-kit"
+keywords = ["yew", "ui-kit", "react", "components", "wasm"]
+categories = ["command-line-utilities", "development-tools::cargo-plugins"]
 license = "MIT"
 
 [dependencies]
