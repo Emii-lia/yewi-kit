@@ -15,44 +15,44 @@ pub(crate) fn tabs_preview() -> Html {
           title={"Default"}
           code={r#"
             <Tabs>
-              <Tab
-                label={"Button"}
-                value={"button"}
-              >
-                <PreviewContainer title="Primary">
-                  <Button size={Size::Small}>
-                    {"Primary"}
-                  </Button>
-                  <Button size={Size::Medium}>
-                    {"Primary"}
-                  </Button>
-                  <Button size={Size::Large}>
-                    {"Primary"}
-                  </Button>
-                </PreviewContainer>
-              </Tab>
-              <Tab
-                label={"Label"}
-                value={"label"}
-              >
-                <PreviewContainer title={"Default"}>
-                  <Badge label="Default" color={BadgeColor::Red}/>
-                  <Badge label="Default" color={BadgeColor::Blue}/>
-                  <Badge label="Default" color={BadgeColor::Green}/>
-                  <Badge label="Default" color={BadgeColor::Yellow}/>
-                </PreviewContainer>
-              </Tab>
-              <Tab
-                label={"Avatar"}
-                value={"avatar"}
-              >
-                <PreviewContainer title={"Default"}>
-                  <Avatar alt={"John Doe"} size={Size::Small}/>
-                  <Avatar alt={"John Doe"} size={Size::Medium}/>
-                  <Avatar alt={"John Doe"} size={Size::Large}/>
-                </PreviewContainer>
-              </Tab>
-            </Tabs>
+            <Tab
+              label={"Button"}
+              value={"button"}
+            >
+              <div class="w-full flex items-center justify-center gap-5">
+                <Button size={Size::Small}>
+                  {"Primary"}
+                </Button>
+                <Button size={Size::Medium}>
+                  {"Primary"}
+                </Button>
+                <Button size={Size::Large}>
+                  {"Primary"}
+                </Button>
+              </div>
+            </Tab>
+            <Tab
+              label={"Label"}
+              value={"label"}
+            >
+              <div class="w-full flex items-center justify-center gap-5">
+                <Badge label="Default" color={BadgeColor::Red}/>
+                <Badge label="Default" color={BadgeColor::Blue}/>
+                <Badge label="Default" color={BadgeColor::Green}/>
+                <Badge label="Default" color={BadgeColor::Yellow}/>
+              </div>
+            </Tab>
+            <Tab
+              label={"Avatar"}
+              value={"avatar"}
+            >
+              <div class="w-full flex items-center justify-center gap-5">
+                <Avatar alt={"John Doe"} size={Size::Small}/>
+                <Avatar alt={"John Doe"} size={Size::Medium}/>
+                <Avatar alt={"John Doe"} size={Size::Large}/>
+              </div>
+            </Tab>
+          </Tabs>
           "#}
         >
           <Tabs>
@@ -60,7 +60,7 @@ pub(crate) fn tabs_preview() -> Html {
               label={"Button"}
               value={"button"}
             >
-              <PreviewContainer title="Primary">
+              <div class="w-full flex items-center justify-center gap-5">
                 <Button size={Size::Small}>
                   {"Primary"}
                 </Button>
@@ -70,28 +70,28 @@ pub(crate) fn tabs_preview() -> Html {
                 <Button size={Size::Large}>
                   {"Primary"}
                 </Button>
-              </PreviewContainer>
+              </div>
             </Tab>
             <Tab
               label={"Label"}
               value={"label"}
             >
-              <PreviewContainer title={"Default"}>
+              <div class="w-full flex items-center justify-center gap-5">
                 <Badge label="Default" color={BadgeColor::Red}/>
                 <Badge label="Default" color={BadgeColor::Blue}/>
                 <Badge label="Default" color={BadgeColor::Green}/>
                 <Badge label="Default" color={BadgeColor::Yellow}/>
-              </PreviewContainer>
+              </div>
             </Tab>
             <Tab
               label={"Avatar"}
               value={"avatar"}
             >
-              <PreviewContainer title={"Default"}>
+              <div class="w-full flex items-center justify-center gap-5">
                 <Avatar alt={"John Doe"} size={Size::Small}/>
                 <Avatar alt={"John Doe"} size={Size::Medium}/>
                 <Avatar alt={"John Doe"} size={Size::Large}/>
-              </PreviewContainer>
+              </div>
             </Tab>
           </Tabs>
         </PreviewContainer>
@@ -99,52 +99,11 @@ pub(crate) fn tabs_preview() -> Html {
           title={"Colour"}
           code={r#"
             <Tabs color={Color::Rose}>
-              <Tab
-                label={"Button"}
-                value={"button"}
-              >
-                <PreviewContainer title="Primary">
-                  <Button size={Size::Small}>
-                    {"Primary"}
-                  </Button>
-                  <Button size={Size::Medium}>
-                    {"Primary"}
-                  </Button>
-                  <Button size={Size::Large}>
-                    {"Primary"}
-                  </Button>
-                </PreviewContainer>
-              </Tab>
-              <Tab
-                label={"Label"}
-                value={"label"}
-              >
-                <PreviewContainer title={"Default"}>
-                  <Badge label="Default" color={BadgeColor::Red}/>
-                  <Badge label="Default" color={BadgeColor::Blue}/>
-                  <Badge label="Default" color={BadgeColor::Green}/>
-                  <Badge label="Default" color={BadgeColor::Yellow}/>
-                </PreviewContainer>
-              </Tab>
-              <Tab
-                label={"Avatar"}
-                value={"avatar"}
-              >
-                <PreviewContainer title={"Default"}>
-                  <Avatar alt={"John Doe"} size={Size::Small}/>
-                  <Avatar alt={"John Doe"} size={Size::Medium}/>
-                  <Avatar alt={"John Doe"} size={Size::Large}/>
-                </PreviewContainer>
-              </Tab>
-            </Tabs>
-          "#}
-        >
-          <Tabs color={Color::Rose}>
             <Tab
               label={"Button"}
               value={"button"}
             >
-              <PreviewContainer title="Primary">
+              <div class="w-full flex items-center justify-center gap-5">
                 <Button size={Size::Small}>
                   {"Primary"}
                 </Button>
@@ -154,28 +113,69 @@ pub(crate) fn tabs_preview() -> Html {
                 <Button size={Size::Large}>
                   {"Primary"}
                 </Button>
-              </PreviewContainer>
+              </div>
             </Tab>
             <Tab
               label={"Label"}
               value={"label"}
             >
-              <PreviewContainer title={"Default"}>
+              <div class="w-full flex items-center justify-center gap-5">
                 <Badge label="Default" color={BadgeColor::Red}/>
                 <Badge label="Default" color={BadgeColor::Blue}/>
                 <Badge label="Default" color={BadgeColor::Green}/>
                 <Badge label="Default" color={BadgeColor::Yellow}/>
-              </PreviewContainer>
+              </div>
             </Tab>
             <Tab
               label={"Avatar"}
               value={"avatar"}
             >
-              <PreviewContainer title={"Default"}>
+              <div class="w-full flex items-center justify-center gap-5">
                 <Avatar alt={"John Doe"} size={Size::Small}/>
                 <Avatar alt={"John Doe"} size={Size::Medium}/>
                 <Avatar alt={"John Doe"} size={Size::Large}/>
-              </PreviewContainer>
+              </div>
+            </Tab>
+          </Tabs>
+          "#}
+        >
+          <Tabs color={Color::Rose}>
+            <Tab
+              label={"Button"}
+              value={"button"}
+            >
+              <div class="w-full flex items-center justify-center gap-5">
+                <Button size={Size::Small}>
+                  {"Primary"}
+                </Button>
+                <Button size={Size::Medium}>
+                  {"Primary"}
+                </Button>
+                <Button size={Size::Large}>
+                  {"Primary"}
+                </Button>
+              </div>
+            </Tab>
+            <Tab
+              label={"Label"}
+              value={"label"}
+            >
+              <div class="w-full flex items-center justify-center gap-5">
+                <Badge label="Default" color={BadgeColor::Red}/>
+                <Badge label="Default" color={BadgeColor::Blue}/>
+                <Badge label="Default" color={BadgeColor::Green}/>
+                <Badge label="Default" color={BadgeColor::Yellow}/>
+              </div>
+            </Tab>
+            <Tab
+              label={"Avatar"}
+              value={"avatar"}
+            >
+              <div class="w-full flex items-center justify-center gap-5">
+                <Avatar alt={"John Doe"} size={Size::Small}/>
+                <Avatar alt={"John Doe"} size={Size::Medium}/>
+                <Avatar alt={"John Doe"} size={Size::Large}/>
+              </div>
             </Tab>
           </Tabs>
         </PreviewContainer>
