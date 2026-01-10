@@ -68,15 +68,27 @@ cargo install --path .
             <code>
               {r#"
 cd my-yewi-app
-yarn install && yarn build
+yarn install
 trunk serve
               "#}
             </code>
           </pre>
           <p class="doc-section-text">
             {r#"
-              Make sure you have `yarn` and `trunk` installed on your system. You can now start building your application using Yewi-kit components!
+              Make sure you have
             "#}
+            <a
+              href="https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable"
+              target="_blank"
+              rel="noreferrer"
+            >{"yarn"}</a>
+            {" , "}
+            <a
+              href="https://yew.rs/docs/getting-started/introduction"
+              target="_blank"
+              rel="noreferrer"
+            >{"WebAssembly target and trunk"}</a>
+            {" installed on your system. You can now start building your application using Yewi-kit components!"}
           </p>
         </div>
         <div class="doc-subsection">
