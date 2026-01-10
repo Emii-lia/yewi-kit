@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass ./src/styles/main.scss ./src/styles/main.css && npx tailwindcss -i ./src/styles/main.css -o ./src/styles/global.css --minify",
+    "build": "sass ./src/styles/main.scss ./dist/main.css && npx tailwindcss -i ./dist/main.css -o ./src/styles/global.css --minify",
     "start": "trunk serve"
   },
   "dependencies": {

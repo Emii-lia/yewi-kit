@@ -43,6 +43,9 @@
       &::after {
         @apply flex items-center justify-center aspect-square;
         @apply content-[''] text-white text-center border border-white rounded-full;
+        &:focus {
+          @apply border-inherit;
+        }
       }
       &.purple {
         @apply bg-purple-500 border border-purple-500;

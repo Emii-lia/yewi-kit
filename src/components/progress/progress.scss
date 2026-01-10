@@ -188,4 +188,10 @@
       }
     }
   }
+  &:not(.show-percentage) {
+    &:after {
+      @apply aspect-square grid bg-slate-50 place-content-center rounded-[50%];
+      content: " ";
+    }
+  }
 }
