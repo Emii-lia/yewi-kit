@@ -86,11 +86,11 @@ trunk serve
               If you prefer to add Yewi-kit to an existing Yew project, you can do so by mirroring your project structure with the project in the template repo
             "#}
             <a
-              href="https://github.com/Emii-lia/yewi-app-template"
+              href="https://github.com/Emii-lia/yew-app-template"
               target="_blank"
               rel="noreferrer"
             >
-              {"yewi-app-template"}
+              {"yew-app-template"}
             </a>
             {", along with the dependencies and configs, including tailwindcss config."}
           </p>
