@@ -8,3 +8,10 @@ command = "sh"
 command_arguments = [
     "-c", "sass ./src/styles/main.scss ./src/styles/main.css && npx tailwindcss -i ./src/styles/main.css -o ./src/styles/global.css --minify"
 ]
+
+[[hooks]]
+stage = "post_build"
+command = "sh"
+command_arguments = [
+    "-c", "cp -r ./_routes.json ./dist/_routes.json"
+]
