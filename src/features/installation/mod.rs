@@ -19,8 +19,16 @@ pub(crate) fn installation_section() -> Html {
           <p class="doc-section-text">
             {r#"
               The easiest way to get started with Yewi-kit is by using the Yewi CLI tool, which sets up a new Yew project
-              with Yewi-kit pre-configured. To install the Yewi CLI, run the following command:
+              with Yewi-kit pre-configured. To install the
             "#}
+            <a
+              href="https://crates.io/crates/yewi-cli"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {"Yewi CLI"}
+            </a>
+            {", run the following command:"}
           </p>
           <pre class="code-block">
             <code>

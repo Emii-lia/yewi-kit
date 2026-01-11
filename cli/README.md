@@ -1,6 +1,6 @@
 # Yewi-Kit CLI
 
-A command-line tool for managing UI components in your Yew projects, inspired by shadcn/ui.
+[Yewi-cli](https://crates.io/crates/yewi-cli) is a command-line tool for managing UI components in your Yew projects, inspired by shadcn/ui.
 
 ## Features
 
