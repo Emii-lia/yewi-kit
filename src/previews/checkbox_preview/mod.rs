@@ -186,7 +186,7 @@ pub fn checkbox_preview() -> Html {
         </PreviewContainer>
 
         <PreviewContainer
-          title={"Color"}
+          title={"Colours"}
           code={r#"
             <Checkbox
               checked={*checked}

@@ -70,7 +70,7 @@ pub(crate) fn progress_preview() -> Html {
           <Progress value={80} max={100} color={Color::Pink} />
         </PreviewContainer>
         <PreviewContainer
-          title={"Other colors"}
+          title={"Colours"}
           code={r#"
             <Progress value={30} max={100} color={Color::Amber} show_percentage=true />
             <Progress value={55} max={100} color={Color::Sky} show_percentage=true />
