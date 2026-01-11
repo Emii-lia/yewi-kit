@@ -36,3 +36,7 @@ components/
 │
 └── mod.rs              # Public exports
 ```
+## Website / CLI
+
+- [yewi-kit Website](https://yewi.pages.dev)
+- [yewi-cli](https://crates.io/crates/yewi-cli)
