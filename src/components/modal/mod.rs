@@ -4,8 +4,8 @@ mod store;
 
 use web_sys::MouseEvent;
 use yew::{classes, function_component, html, Callback, Html};
-use crate::components::Button;
-use crate::types::{ButtonVariant, Size};
+use crate::components::{Button, ButtonVariant};
+use crate::types::{Size};
 pub(crate) use hooks::*;
 pub(crate) use provider::*;
 pub(crate) use store::*;

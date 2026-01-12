@@ -1,12 +1,3 @@
-#[derive(PartialEq, Clone)]
-pub enum ButtonVariant {
-    Primary,
-    Secondary,
-    Tertiary,
-    Danger,
-    Success,
-}
-
 #[derive(PartialEq, Clone, Debug)]
 pub enum Size {
     Small,
