@@ -16,7 +16,7 @@ enum Commands {
     project_name: String
   },
   Add {
-    component_name: String
+    component_names: Vec<String>
   }
 }
 #[derive(Parser)]
@@ -34,8 +34,10 @@ fn main() -> Result<(), Box<dyn Error>> {
     Commands::New { project_name } => {
       create(&project_name)?;
     }
-    Commands::Add { component_name } => {
-      add(&component_name)?;
+    Commands::Add { component_names } => {
+      for component_name in component_names {
+        add(&component_name)?;
+      };
     }
   }
 
