@@ -1,5 +1,6 @@
 use yew::{Callback, MouseEvent, Properties, prelude::*};
-use crate::types::{Size, ButtonVariant};
+use crate::components::ButtonVariant;
+use crate::types::{Size};
 
 #[derive(Properties, PartialEq)]
 pub struct HookParams {

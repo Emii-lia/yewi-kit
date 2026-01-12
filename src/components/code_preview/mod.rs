@@ -1,9 +1,9 @@
 mod hooks;
 
 use yew::{function_component, html, AttrValue, Html, Properties};
-use crate::components::Button;
+use crate::components::{Button, ButtonVariant};
 use crate::components::code_preview::hooks::{use_code_preview, HookParams, HookResponse};
-use crate::types::{ButtonVariant, Size};
+use crate::types::{Size};
 
 #[derive(PartialEq, Properties, Clone)]
 pub struct Props {

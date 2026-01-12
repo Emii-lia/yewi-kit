@@ -1,7 +1,6 @@
 use yew::{function_component, html, Html};
-use crate::components::{Button, Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, Input};
+use crate::components::{Button, ButtonVariant, Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, Input};
 use crate::previews::PreviewContainer;
-use crate::types::ButtonVariant;
 
 #[function_component(CardPreview)]
 pub(crate) fn card_preview() -> Html {

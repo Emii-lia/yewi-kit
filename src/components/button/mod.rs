@@ -1,8 +1,10 @@
 mod hooks;
+mod types;
 
 use yew::{classes, function_component, html, AttrValue, Callback, Classes, Html, MouseEvent, Properties};
 use crate::components::button::hooks::{use_button, HookParams, HookResponse};
-use crate::types::{Size, ButtonVariant};
+use crate::types::{Size};
+pub use types::*;
 
 #[derive(Properties, PartialEq)]
 pub struct Props {

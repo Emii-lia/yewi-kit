@@ -1,7 +1,7 @@
 use yew::{function_component, html, Html};
-use crate::components::Button;
+use crate::components::{Button, ButtonVariant};
 use crate::previews::PreviewContainer;
-use crate::types::{ButtonVariant, Size};
+use crate::types::{Size};
 
 #[function_component(ButtonPreview)]
 pub(crate) fn button_preview () -> Html {
