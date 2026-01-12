@@ -77,6 +77,7 @@ cargo install --path .
               {r#"
 cd my-yewi-app
 yarn install
+yarn build
 trunk serve
               "#}
             </code>
