@@ -12,7 +12,7 @@ pub(crate) fn badge_preview() -> Html {
           {"Installation"}
         </h2>
         <div class="preview-header-description">
-          {"Badges are used to display small status descriptors for UI elements."}
+          {"Display small status descriptors for UI elements."}
         </div>
         <pre class="code-block">
           <code>
