@@ -1,7 +1,23 @@
 @use "./modal_preview/modal_preview";
 @use "./collapse_preview/collapse_preview";
 .PreviewSection {
-  @apply w-full flex flex-col gap-5 pt-4 pb-6;
+  @apply w-full flex flex-col gap-8 pt-4 pb-6;
+  .preview-subsection {
+    @apply w-full flex flex-col gap-3;
+    .preview-subsection-title {
+      @apply text-slate-900 font-semibold;
+    }
+    .preview-header-description {
+      @apply text-slate-600 text-sm;
+    }
+    .code-block {
+      @apply rounded-xl border border-slate-700 bg-slate-800 overflow-x-auto;
+      code {
+        @apply block p-4 text-sm font-mono text-slate-50 text-left leading-relaxed;
+      }
+    }
+
+  }
   .preview-title {
     @apply text-2xl text-slate-800 font-semibold;
   }

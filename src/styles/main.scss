@@ -12,5 +12,5 @@ html, body {
   @apply h-screen w-screen flex flex-col;
 }
 .page-container {
-  @apply w-full p-6 pl-72 flex flex-col gap-4;
+  @apply w-full p-6 pl-96 pr-16 flex flex-col gap-4;
 }
