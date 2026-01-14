@@ -4,6 +4,7 @@ mod hooks;
 use yew::{classes, function_component, html, AttrValue, Classes, Html, Properties};
 pub(crate) use types::*;
 use crate::components::badge::hooks::{use_badge, HookParams, HookResponse};
+use crate::types::Color;
 
 #[derive(Properties, PartialEq, Clone)]
 pub struct Props {
@@ -11,8 +12,8 @@ pub struct Props {
   pub label: AttrValue,
   #[prop_or(BadgeVariant::Default)]
   pub variant: BadgeVariant,
-  #[prop_or(BadgeColor::None)]
-  pub color: BadgeColor,
+  #[prop_or(Color::None)]
+  pub color: Color,
   #[prop_or_default]
   pub class: Classes,
   #[prop_or_default]

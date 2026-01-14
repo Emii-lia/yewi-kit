@@ -1,6 +1,7 @@
 use yew::{function_component, html, Html};
-use crate::components::{Badge, BadgeColor, BadgeVariant};
+use crate::components::{Badge, BadgeVariant};
 use crate::previews::PreviewContainer;
+use crate::types::Color;
 
 #[function_component(BadgePreview)]
 pub(crate) fn badge_preview() -> Html {
@@ -28,88 +29,88 @@ pub(crate) fn badge_preview() -> Html {
           <PreviewContainer
             title={"Default"}
             code={r#"
-              <Badge label="Default" color={BadgeColor::Red}/>
-              <Badge label="Default" color={BadgeColor::Blue}/>
-              <Badge label="Default" color={BadgeColor::Green}/>
-              <Badge label="Default" color={BadgeColor::Yellow}/>
+              <Badge label="Default" color={Color::Red}/>
+              <Badge label="Default" color={Color::Blue}/>
+              <Badge label="Default" color={Color::Green}/>
+              <Badge label="Default" color={Color::Yellow}/>
             "#}
           >
-            <Badge label="Default" color={BadgeColor::Red}/>
-            <Badge label="Default" color={BadgeColor::Blue}/>
-            <Badge label="Default" color={BadgeColor::Green}/>
-            <Badge label="Default" color={BadgeColor::Yellow}/>
+            <Badge label="Default" color={Color::Red}/>
+            <Badge label="Default" color={Color::Blue}/>
+            <Badge label="Default" color={Color::Green}/>
+            <Badge label="Default" color={Color::Yellow}/>
           </PreviewContainer>
           <PreviewContainer
             title={"Plain"}
             code={r#"
-              <Badge variant={BadgeVariant::Plain} label="Plain" color={BadgeColor::Red}/>
-              <Badge variant={BadgeVariant::Plain} label="Plain" color={BadgeColor::Blue}/>
-              <Badge variant={BadgeVariant::Plain} label="Plain" color={BadgeColor::Green}/>
-              <Badge variant={BadgeVariant::Plain} label="Plain" color={BadgeColor::Yellow}/>
+              <Badge variant={BadgeVariant::Plain} label="Plain" color={Color::Red}/>
+              <Badge variant={BadgeVariant::Plain} label="Plain" color={Color::Blue}/>
+              <Badge variant={BadgeVariant::Plain} label="Plain" color={Color::Green}/>
+              <Badge variant={BadgeVariant::Plain} label="Plain" color={Color::Yellow}/>
             "#}
           >
-            <Badge variant={BadgeVariant::Plain} label="Plain" color={BadgeColor::Red}/>
-            <Badge variant={BadgeVariant::Plain} label="Plain" color={BadgeColor::Blue}/>
-            <Badge variant={BadgeVariant::Plain} label="Plain" color={BadgeColor::Green}/>
-            <Badge variant={BadgeVariant::Plain} label="Plain" color={BadgeColor::Yellow}/>
+            <Badge variant={BadgeVariant::Plain} label="Plain" color={Color::Red}/>
+            <Badge variant={BadgeVariant::Plain} label="Plain" color={Color::Blue}/>
+            <Badge variant={BadgeVariant::Plain} label="Plain" color={Color::Green}/>
+            <Badge variant={BadgeVariant::Plain} label="Plain" color={Color::Yellow}/>
           </PreviewContainer>
           <PreviewContainer
             title={"Filled"}
             code={r#"
-              <Badge variant={BadgeVariant::Filled} label="Filled" color={BadgeColor::Red}/>
-              <Badge variant={BadgeVariant::Filled} label="Filled" color={BadgeColor::Blue}/>
-              <Badge variant={BadgeVariant::Filled} label="Filled" color={BadgeColor::Green}/>
-              <Badge variant={BadgeVariant::Filled} label="Filled" color={BadgeColor::Yellow}/>
+              <Badge variant={BadgeVariant::Filled} label="Filled" color={Color::Red}/>
+              <Badge variant={BadgeVariant::Filled} label="Filled" color={Color::Blue}/>
+              <Badge variant={BadgeVariant::Filled} label="Filled" color={Color::Green}/>
+              <Badge variant={BadgeVariant::Filled} label="Filled" color={Color::Yellow}/>
             "#}
           >
-            <Badge variant={BadgeVariant::Filled} label="Filled" color={BadgeColor::Red}/>
-            <Badge variant={BadgeVariant::Filled} label="Filled" color={BadgeColor::Blue}/>
-            <Badge variant={BadgeVariant::Filled} label="Filled" color={BadgeColor::Green}/>
-            <Badge variant={BadgeVariant::Filled} label="Filled" color={BadgeColor::Yellow}/>
+            <Badge variant={BadgeVariant::Filled} label="Filled" color={Color::Red}/>
+            <Badge variant={BadgeVariant::Filled} label="Filled" color={Color::Blue}/>
+            <Badge variant={BadgeVariant::Filled} label="Filled" color={Color::Green}/>
+            <Badge variant={BadgeVariant::Filled} label="Filled" color={Color::Yellow}/>
           </PreviewContainer>
           <PreviewContainer
             title={"Rounded"}
             code={r#"
-              <Badge label="Rounded" color={BadgeColor::Red} rounded=true />
-              <Badge label="Rounded" color={BadgeColor::Blue} rounded=true />
-              <Badge label="Rounded" color={BadgeColor::Green} rounded=true />
-              <Badge label="Rounded" color={BadgeColor::Yellow} rounded=true />
+              <Badge label="Rounded" color={Color::Red} rounded=true />
+              <Badge label="Rounded" color={Color::Blue} rounded=true />
+              <Badge label="Rounded" color={Color::Green} rounded=true />
+              <Badge label="Rounded" color={Color::Yellow} rounded=true />
             "#}
           >
-            <Badge label="Rounded" color={BadgeColor::Red} rounded=true />
-            <Badge label="Rounded" color={BadgeColor::Blue} rounded=true />
-            <Badge label="Rounded" color={BadgeColor::Green} rounded=true />
-            <Badge label="Rounded" color={BadgeColor::Yellow} rounded=true />
+            <Badge label="Rounded" color={Color::Red} rounded=true />
+            <Badge label="Rounded" color={Color::Blue} rounded=true />
+            <Badge label="Rounded" color={Color::Green} rounded=true />
+            <Badge label="Rounded" color={Color::Yellow} rounded=true />
           </PreviewContainer>
           <PreviewContainer
             title={"Bordered"}
             code={r#"
-              <Badge label="Bordered" color={BadgeColor::Red} with_border=true/>
-              <Badge label="Bordered" color={BadgeColor::Blue} with_border=true/>
-              <Badge label="Bordered" color={BadgeColor::Green} with_border=true/>
-              <Badge label="Bordered" color={BadgeColor::Yellow} with_border=true/>
+              <Badge label="Bordered" color={Color::Red} with_border=true/>
+              <Badge label="Bordered" color={Color::Blue} with_border=true/>
+              <Badge label="Bordered" color={Color::Green} with_border=true/>
+              <Badge label="Bordered" color={Color::Yellow} with_border=true/>
             "#}
           >
-            <Badge label="Bordered" color={BadgeColor::Red} with_border=true/>
-            <Badge label="Bordered" color={BadgeColor::Blue} with_border=true/>
-            <Badge label="Bordered" color={BadgeColor::Green} with_border=true/>
-            <Badge label="Bordered" color={BadgeColor::Yellow} with_border=true/>
+            <Badge label="Bordered" color={Color::Red} with_border=true/>
+            <Badge label="Bordered" color={Color::Blue} with_border=true/>
+            <Badge label="Bordered" color={Color::Green} with_border=true/>
+            <Badge label="Bordered" color={Color::Yellow} with_border=true/>
           </PreviewContainer>
           <PreviewContainer
             title={"Colours"}
             code={r#"
-              <Badge label="Orange" color={BadgeColor::Orange}/>
-              <Badge label="Teal" color={BadgeColor::Teal}/>
-              <Badge label="Purple" color={BadgeColor::Purple}/>
-              <Badge label="Zinc" color={BadgeColor::Zinc}/>
-              <Badge label="Sky" color={BadgeColor::Sky}/>
+              <Badge label="Orange" color={Color::Orange}/>
+              <Badge label="Teal" color={Color::Teal}/>
+              <Badge label="Purple" color={Color::Purple}/>
+              <Badge label="Zinc" color={Color::Zinc}/>
+              <Badge label="Sky" color={Color::Sky}/>
             "#}
           >
-            <Badge label="Orange" color={BadgeColor::Orange}/>
-            <Badge label="Teal" color={BadgeColor::Teal}/>
-            <Badge label="Purple" color={BadgeColor::Purple}/>
-            <Badge label="Zinc" color={BadgeColor::Zinc}/>
-            <Badge label="Sky" color={BadgeColor::Sky}/>
+            <Badge label="Orange" color={Color::Orange}/>
+            <Badge label="Teal" color={Color::Teal}/>
+            <Badge label="Purple" color={Color::Purple}/>
+            <Badge label="Zinc" color={Color::Gray}/>
+            <Badge label="Sky" color={Color::Sky}/>
           </PreviewContainer>
         </div>
       </div>

@@ -9,21 +9,21 @@
   }
 
   &.none{
-    @apply bg-inherit text-gray-500;
+    @apply bg-inherit text-slate-500;
   }
-  &.zinc{
-    @apply text-zinc-500;
+  &.gray{
+    @apply text-slate-500;
     &.with-border {
-      @apply border border-zinc-300;
+      @apply border border-slate-300;
     }
     &.default{
-      @apply bg-zinc-100;
+      @apply bg-slate-100;
     }
     &.plain{
       @apply bg-transparent;
     }
     &.filled {
-      @apply text-white py-1 px-2.5 gap-2.5 bg-zinc-500 bg-opacity-70;
+      @apply text-white py-1 px-2.5 gap-2.5 bg-slate-500 bg-opacity-70;
     }
   }
   &.red{
@@ -282,9 +282,9 @@
     }
   }
   &.light {
-    @apply bg-zinc-50/20 text-white border-white;
+    @apply bg-slate-50/20 text-white border-white;
     &.filled {
-      @apply bg-white text-zinc-950;
+      @apply bg-white text-slate-950;
     }
   }
 }

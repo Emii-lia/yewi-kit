@@ -1,9 +1,10 @@
 use yew::{hook, Properties};
-use crate::components::{BadgeColor, BadgeVariant};
+use crate::components::{BadgeVariant};
+use crate::types::Color;
 
 #[derive(PartialEq, Properties, Clone)]
 pub struct HookParams {
-  pub color: BadgeColor,
+  pub color: Color,
   pub variant: BadgeVariant,
 }
 

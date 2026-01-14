@@ -1,5 +1,5 @@
 use yew::{function_component, html, Html};
-use crate::components::{Avatar, Badge, BadgeColor, Button, Tab, Tabs};
+use crate::components::{Avatar, Badge, Button, Tab, Tabs};
 use crate::previews::PreviewContainer;
 use crate::types::{Color, Size};
 
@@ -53,10 +53,10 @@ pub(crate) fn tabs_preview() -> Html {
                 value={"label"}
               >
                 <div class="w-full flex items-center justify-center gap-5">
-                  <Badge label="Default" color={BadgeColor::Red}/>
-                  <Badge label="Default" color={BadgeColor::Blue}/>
-                  <Badge label="Default" color={BadgeColor::Green}/>
-                  <Badge label="Default" color={BadgeColor::Yellow}/>
+                  <Badge label="Default" color={Color::Red}/>
+                  <Badge label="Default" color={Color::Blue}/>
+                  <Badge label="Default" color={Color::Green}/>
+                  <Badge label="Default" color={Color::Yellow}/>
                 </div>
               </Tab>
               <Tab
@@ -94,10 +94,10 @@ pub(crate) fn tabs_preview() -> Html {
                 value={"label"}
               >
                 <div class="w-full flex items-center justify-center gap-5">
-                  <Badge label="Default" color={BadgeColor::Red}/>
-                  <Badge label="Default" color={BadgeColor::Blue}/>
-                  <Badge label="Default" color={BadgeColor::Green}/>
-                  <Badge label="Default" color={BadgeColor::Yellow}/>
+                  <Badge label="Default" color={Color::Red}/>
+                  <Badge label="Default" color={Color::Blue}/>
+                  <Badge label="Default" color={Color::Green}/>
+                  <Badge label="Default" color={Color::Yellow}/>
                 </div>
               </Tab>
               <Tab
@@ -137,10 +137,10 @@ pub(crate) fn tabs_preview() -> Html {
                 value={"label"}
               >
                 <div class="w-full flex items-center justify-center gap-5">
-                  <Badge label="Default" color={BadgeColor::Red}/>
-                  <Badge label="Default" color={BadgeColor::Blue}/>
-                  <Badge label="Default" color={BadgeColor::Green}/>
-                  <Badge label="Default" color={BadgeColor::Yellow}/>
+                  <Badge label="Default" color={Color::Red}/>
+                  <Badge label="Default" color={Color::Blue}/>
+                  <Badge label="Default" color={Color::Green}/>
+                  <Badge label="Default" color={Color::Yellow}/>
                 </div>
               </Tab>
               <Tab
@@ -178,10 +178,10 @@ pub(crate) fn tabs_preview() -> Html {
                 value={"label"}
               >
                 <div class="w-full flex items-center justify-center gap-5">
-                  <Badge label="Default" color={BadgeColor::Red}/>
-                  <Badge label="Default" color={BadgeColor::Blue}/>
-                  <Badge label="Default" color={BadgeColor::Green}/>
-                  <Badge label="Default" color={BadgeColor::Yellow}/>
+                  <Badge label="Default" color={Color::Red}/>
+                  <Badge label="Default" color={Color::Blue}/>
+                  <Badge label="Default" color={Color::Green}/>
+                  <Badge label="Default" color={Color::Yellow}/>
                 </div>
               </Tab>
               <Tab
