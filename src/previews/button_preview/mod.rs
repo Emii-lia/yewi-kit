@@ -17,7 +17,7 @@ pub(crate) fn button_preview () -> Html {
         </div>
         <pre class="code-block">
           <code>
-{"yewi add button"}
+    {"yewi add button"}
           </code>
         </pre>
       </div>
@@ -29,15 +29,15 @@ pub(crate) fn button_preview () -> Html {
           <PreviewContainer
             title="Primary"
             code={r#"
-              <Button size={Size::Small}>
-                {"Primary"}
-              </Button>
-              <Button size={Size::Medium}>
-                {"Primary"}
-              </Button>
-              <Button size={Size::Large}>
-                {"Primary"}
-              </Button>
+    <Button size={Size::Small}>
+      {"Primary"}
+    </Button>
+    <Button size={Size::Medium}>
+      {"Primary"}
+    </Button>
+    <Button size={Size::Large}>
+      {"Primary"}
+    </Button>
             "#}
           >
             <Button size={Size::Small}>
@@ -53,15 +53,15 @@ pub(crate) fn button_preview () -> Html {
           <PreviewContainer
             title="Secondary"
             code={r#"
-              <Button size={Size::Small} variant={ButtonVariant::Secondary} >
-                {"Secondary"}
-              </Button>
-              <Button size={Size::Medium} variant={ButtonVariant::Secondary} >
-                {"Secondary"}
-              </Button>
-              <Button size={Size::Large} variant={ButtonVariant::Secondary} >
-                {"Secondary"}
-              </Button>
+    <Button size={Size::Small} variant={ButtonVariant::Secondary} >
+      {"Secondary"}
+    </Button>
+    <Button size={Size::Medium} variant={ButtonVariant::Secondary} >
+      {"Secondary"}
+    </Button>
+    <Button size={Size::Large} variant={ButtonVariant::Secondary} >
+      {"Secondary"}
+    </Button>
             "#}
           >
             <Button size={Size::Small} variant={ButtonVariant::Secondary} >
@@ -77,15 +77,15 @@ pub(crate) fn button_preview () -> Html {
           <PreviewContainer
             title="Tertiary"
             code={r#"
-              <Button size={Size::Small} variant={ButtonVariant::Tertiary} >
-                {"Tertiary"}
-              </Button>
-              <Button size={Size::Medium} variant={ButtonVariant::Tertiary} >
-                {"Tertiary"}
-              </Button>
-              <Button size={Size::Large} variant={ButtonVariant::Tertiary} >
-                {"Tertiary"}
-              </Button>
+    <Button size={Size::Small} variant={ButtonVariant::Tertiary} >
+      {"Tertiary"}
+    </Button>
+    <Button size={Size::Medium} variant={ButtonVariant::Tertiary} >
+      {"Tertiary"}
+    </Button>
+    <Button size={Size::Large} variant={ButtonVariant::Tertiary} >
+      {"Tertiary"}
+    </Button>
             "#}
           >
             <Button size={Size::Small} variant={ButtonVariant::Tertiary} >
@@ -101,15 +101,15 @@ pub(crate) fn button_preview () -> Html {
           <PreviewContainer
             title="Success"
             code={r#"
-              <Button size={Size::Small} variant={ButtonVariant::Success} >
-                {"Success"}
-              </Button>
-              <Button size={Size::Medium} variant={ButtonVariant::Success} >
-                {"Success"}
-              </Button>
-              <Button size={Size::Large} variant={ButtonVariant::Success} >
-                {"Success"}
-              </Button>
+    <Button size={Size::Small} variant={ButtonVariant::Success} >
+      {"Success"}
+    </Button>
+    <Button size={Size::Medium} variant={ButtonVariant::Success} >
+      {"Success"}
+    </Button>
+    <Button size={Size::Large} variant={ButtonVariant::Success} >
+      {"Success"}
+    </Button>
             "#}
           >
             <Button size={Size::Small} variant={ButtonVariant::Success} >
@@ -125,15 +125,15 @@ pub(crate) fn button_preview () -> Html {
           <PreviewContainer
             title="Danger"
             code={r#"
-              <Button size={Size::Small} variant={ButtonVariant::Danger} >
-                {"Danger"}
-              </Button>
-              <Button size={Size::Medium} variant={ButtonVariant::Danger} >
-                {"Danger"}
-              </Button>
-              <Button size={Size::Large} variant={ButtonVariant::Danger} >
-                {"Danger"}
-              </Button>
+    <Button size={Size::Small} variant={ButtonVariant::Danger} >
+      {"Danger"}
+    </Button>
+    <Button size={Size::Medium} variant={ButtonVariant::Danger} >
+      {"Danger"}
+    </Button>
+    <Button size={Size::Large} variant={ButtonVariant::Danger} >
+      {"Danger"}
+    </Button>
             "#}
           >
             <Button size={Size::Small} variant={ButtonVariant::Danger} >
@@ -149,9 +149,9 @@ pub(crate) fn button_preview () -> Html {
           <PreviewContainer
             title="As Link"
             code={r#"
-              <Button href="https://github.com/Emii-lia" >
-                {"Link"}
-              </Button>
+    <Button href="https://github.com/Emii-lia" >
+      {"Link"}
+    </Button>
             "#}
           >
             <Button href="https://github.com/Emii-lia" >
@@ -161,9 +161,9 @@ pub(crate) fn button_preview () -> Html {
           <PreviewContainer
             title="Disabled"
             code={r#"
-              <Button disabled=true >
-                {"Disabled"}
-              </Button>
+    <Button disabled=true >
+      {"Disabled"}
+    </Button>
             "#}
           >
             <Button disabled=true >
@@ -173,9 +173,9 @@ pub(crate) fn button_preview () -> Html {
           <PreviewContainer
             title="Loading"
             code={r#"
-              <Button is_loading=true >
-                {"Loading"}
-              </Button>
+    <Button is_loading=true >
+      {"Loading"}
+    </Button>
             "#}
           >
             <Button is_loading=true >
@@ -185,9 +185,9 @@ pub(crate) fn button_preview () -> Html {
           <PreviewContainer
             title="Custom Class"
             code={r#"
-              <Button class="!bg-slate-500" >
-                {"Custom"}
-              </Button>
+    <Button class="!bg-slate-500" >
+      {"Custom"}
+    </Button>
             "#}
           >
             <Button class="!bg-slate-500" >

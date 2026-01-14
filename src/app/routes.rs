@@ -20,6 +20,7 @@ use crate::app::{
 };
 use crate::app::card::CardPage;
 use crate::app::carousel::CarouselPage;
+use crate::app::dropdown::DropdownPage;
 use crate::app::password_input::PasswordInputPage;
 use crate::app::progress::ProgressPage;
 
@@ -45,6 +46,8 @@ pub enum AppRoute {
   CollapsePage,
   #[at("/divider")]
   DividerPage,
+  #[at("/dropdown")]
+  DropdownPage,
   #[at("/file-input")]
   FileInput,
   #[at("/input")]
@@ -81,6 +84,7 @@ impl AppRoute {
       AppRoute::CheckboxPage,
       AppRoute::CollapsePage,
       AppRoute::DividerPage,
+      AppRoute::DropdownPage,
       AppRoute::FileInput,
       AppRoute::InputPage,
       AppRoute::ModalPage,
@@ -106,6 +110,7 @@ pub fn switch(route: AppRoute) -> Html {
     AppRoute::CheckboxPage => html! {<CheckboxPage/>},
     AppRoute::CollapsePage => html! {<CollapsePage/>},
     AppRoute::DividerPage => html! {<DividerPage/>},
+    AppRoute::DropdownPage => html! {<DropdownPage/>},
     AppRoute::FileInput => html! {<FileInputPage/>},
     AppRoute::InputPage => html! {<InputPage/>},
     AppRoute::ModalPage => html! {<ModalPage/>},

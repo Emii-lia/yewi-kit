@@ -1,0 +1,29 @@
+.Dropdown {
+  @apply relative;
+  &__trigger {
+    @apply cursor-pointer;
+  }
+  &__menu {
+    @apply absolute w-fit min-w-48 bg-white border border-slate-300 rounded-md shadow-lg z-50;
+    @apply max-h-0 opacity-0 overflow-hidden transition-all duration-200 ease-in-out;
+    &.open {
+      @apply max-h-96 opacity-100 overflow-auto;
+    }
+    &.top {
+      @apply bottom-full mb-2;
+    }
+    &.bottom {
+      @apply top-full mt-2;
+    }
+  }
+  &__item {
+    @apply px-4 py-2 hover:bg-slate-100 cursor-pointer transition-colors duration-150;
+    @apply text-slate-800;
+    &:first-child {
+      @apply rounded-t-md;
+    }
+    &:last-child {
+      @apply rounded-b-md;
+    }
+  }
+}

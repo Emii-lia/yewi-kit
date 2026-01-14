@@ -17,7 +17,7 @@ pub(crate) fn avatar_preview() -> Html{
         </div>
         <pre class="code-block">
           <code>
-{"yewi add avatar"}
+    {"yewi add avatar"}
           </code>
         </pre>
       </div>
@@ -29,9 +29,9 @@ pub(crate) fn avatar_preview() -> Html{
           <PreviewContainer
             title={"Default"}
             code={r#"
-              <Avatar alt={"John Doe"} size={Size::Small}/>
-              <Avatar alt={"John Doe"} size={Size::Medium}/>
-              <Avatar alt={"John Doe"} size={Size::Large}/>
+    <Avatar alt={"John Doe"} size={Size::Small}/>
+    <Avatar alt={"John Doe"} size={Size::Medium}/>
+    <Avatar alt={"John Doe"} size={Size::Large}/>
             "#}
           >
             <Avatar alt={"John Doe"} size={Size::Small}/>
@@ -41,9 +41,9 @@ pub(crate) fn avatar_preview() -> Html{
           <PreviewContainer
             title={"Rounded"}
             code={r#"
-              <Avatar alt={"John Doe"} size={Size::Small} rounded=true/>
-              <Avatar alt={"John Doe"} size={Size::Medium} rounded=true/>
-              <Avatar alt={"John Doe"} size={Size::Large} rounded=true/>
+    <Avatar alt={"John Doe"} size={Size::Small} rounded=true/>
+    <Avatar alt={"John Doe"} size={Size::Medium} rounded=true/>
+    <Avatar alt={"John Doe"} size={Size::Large} rounded=true/>
             "#}
           >
             <Avatar alt={"John Doe"} size={Size::Small} rounded=true/>
@@ -53,9 +53,9 @@ pub(crate) fn avatar_preview() -> Html{
           <PreviewContainer
             title={"With Border"}
             code={r#"
-              <Avatar alt={"John Doe"} size={Size::Small} rounded=true with_border=true/>
-              <Avatar alt={"John Doe"} size={Size::Medium} rounded=true with_border=true/>
-              <Avatar alt={"John Doe"} size={Size::Large} rounded=true with_border=true/>
+    <Avatar alt={"John Doe"} size={Size::Small} rounded=true with_border=true/>
+    <Avatar alt={"John Doe"} size={Size::Medium} rounded=true with_border=true/>
+    <Avatar alt={"John Doe"} size={Size::Large} rounded=true with_border=true/>
             "#}
           >
             <Avatar alt={"John Doe"} size={Size::Small} rounded=true with_border=true/>
@@ -65,9 +65,9 @@ pub(crate) fn avatar_preview() -> Html{
           <PreviewContainer
             title={"With image"}
             code={r#"
-              <Avatar alt={"John Doe"} size={Size::Small} rounded=true src={"https://picsum.photos/200"}/>
-              <Avatar alt={"John Doe"} size={Size::Medium} rounded=true src={"https://picsum.photos/200"} />
-              <Avatar alt={"John Doe"} size={Size::Large} rounded=true src={"https://picsum.photos/200"}/>
+    <Avatar alt={"John Doe"} size={Size::Small} rounded=true src={"https://picsum.photos/200"}/>
+    <Avatar alt={"John Doe"} size={Size::Medium} rounded=true src={"https://picsum.photos/200"} />
+    <Avatar alt={"John Doe"} size={Size::Large} rounded=true src={"https://picsum.photos/200"}/>
             "#}
           >
             <Avatar alt={"John Doe"} size={Size::Small} rounded=true src={"https://picsum.photos/200"}/>
@@ -77,12 +77,12 @@ pub(crate) fn avatar_preview() -> Html{
           <PreviewContainer
             title={"Colours"}
             code={r#"
-              <Avatar alt={"John Doe"} size={Size::Medium} with_border=true rounded=true src={"https://picsum.photos/200"} color={Color::Red}/>
-              <Avatar alt={"John Doe"} size={Size::Medium} rounded=true color={Color::Blue} />
-              <Avatar alt={"John Doe"} size={Size::Medium} with_border=true src={"https://picsum.photos/200"} color={Color::Sky}/>
-              <Avatar alt={"John Doe"} size={Size::Medium} color={Color::Rose} />
-              <Avatar alt={"John Doe"} size={Size::Medium} with_border=true rounded=true color={Color::Amber} />
-              <Avatar alt={"John Doe"} size={Size::Medium} with_border=true color={Color::Teal} />
+    <Avatar alt={"John Doe"} size={Size::Medium} with_border=true rounded=true src={"https://picsum.photos/200"} color={Color::Red}/>
+    <Avatar alt={"John Doe"} size={Size::Medium} rounded=true color={Color::Blue} />
+    <Avatar alt={"John Doe"} size={Size::Medium} with_border=true src={"https://picsum.photos/200"} color={Color::Sky}/>
+    <Avatar alt={"John Doe"} size={Size::Medium} color={Color::Rose} />
+    <Avatar alt={"John Doe"} size={Size::Medium} with_border=true rounded=true color={Color::Amber} />
+    <Avatar alt={"John Doe"} size={Size::Medium} with_border=true color={Color::Teal} />
             "#}
           >
             <Avatar alt={"John Doe"} size={Size::Medium} with_border=true rounded=true src={"https://picsum.photos/200"} color={Color::Red}/>

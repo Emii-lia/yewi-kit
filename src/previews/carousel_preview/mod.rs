@@ -35,7 +35,7 @@ pub(crate) fn carousel_preview() -> Html {
         </div>
         <pre class="code-block">
           <code>
-{"yewi add carousel"}
+    {"yewi add carousel"}
           </code>
         </pre>
       </div>
@@ -47,25 +47,25 @@ pub(crate) fn carousel_preview() -> Html {
           <PreviewContainer
             title={"Default"}
             code={r#"
-              <Carousel>
-                <CarouselWrapper>
-                  <CarouselContent>
-                    <CarouselItem id={"slide1".to_string()}>
-                      <ImageSlide url={"https://picsum.photos/200".to_string()} alt={"Slide 1".to_string()}/>
-                    </CarouselItem>
-                    <CarouselItem id={"slide2".to_string()}>
-                      <ImageSlide url={"https://picsum.photos/201".to_string()} alt={"Slide 2".to_string()}/>
-                    </CarouselItem>
-                    <CarouselItem id={"slide3".to_string()}>
-                      <ImageSlide url={"https://picsum.photos/202".to_string()} alt={"Slide 3".to_string()}/>
-                    </CarouselItem>
-                    <CarouselItem id={"slide4".to_string()}>
-                      <ImageSlide url={"https://picsum.photos/203".to_string()} alt={"Slide 4".to_string()}/>
-                    </CarouselItem>
-                  </CarouselContent>
-                  <CarouselControls/>
-                </CarouselWrapper>
-              </Carousel>
+    <Carousel>
+      <CarouselWrapper>
+        <CarouselContent>
+          <CarouselItem id={"slide1".to_string()}>
+            <ImageSlide url={"https://picsum.photos/200".to_string()} alt={"Slide 1".to_string()}/>
+          </CarouselItem>
+          <CarouselItem id={"slide2".to_string()}>
+            <ImageSlide url={"https://picsum.photos/201".to_string()} alt={"Slide 2".to_string()}/>
+          </CarouselItem>
+          <CarouselItem id={"slide3".to_string()}>
+            <ImageSlide url={"https://picsum.photos/202".to_string()} alt={"Slide 3".to_string()}/>
+          </CarouselItem>
+          <CarouselItem id={"slide4".to_string()}>
+            <ImageSlide url={"https://picsum.photos/203".to_string()} alt={"Slide 4".to_string()}/>
+          </CarouselItem>
+        </CarouselContent>
+        <CarouselControls/>
+      </CarouselWrapper>
+    </Carousel>
             "#}
           >
             <Carousel>
@@ -91,25 +91,25 @@ pub(crate) fn carousel_preview() -> Html {
           <PreviewContainer
             title={"Auto Play"}
             code={r#"
-             <Carousel auto_play=true auto_play_interval={2000.0}>
-              <CarouselWrapper>
-                <CarouselContent>
-                  <CarouselItem id={"slide1".to_string()}>
-                    <ImageSlide url={"https://picsum.photos/200".to_string()} alt={"Slide 1".to_string()}/>
-                  </CarouselItem>
-                  <CarouselItem id={"slide2".to_string()}>
-                    <ImageSlide url={"https://picsum.photos/201".to_string()} alt={"Slide 2".to_string()}/>
-                  </CarouselItem>
-                  <CarouselItem id={"slide3".to_string()}>
-                    <ImageSlide url={"https://picsum.photos/202".to_string()} alt={"Slide 3".to_string()}/>
-                  </CarouselItem>
-                  <CarouselItem id={"slide4".to_string()}>
-                    <ImageSlide url={"https://picsum.photos/203".to_string()} alt={"Slide 4".to_string()}/>
-                  </CarouselItem>
-                </CarouselContent>
-                <CarouselControls/>
-              </CarouselWrapper>
-            </Carousel>
+   <Carousel auto_play=true auto_play_interval={2000.0}>
+    <CarouselWrapper>
+      <CarouselContent>
+        <CarouselItem id={"slide1".to_string()}>
+          <ImageSlide url={"https://picsum.photos/200".to_string()} alt={"Slide 1".to_string()}/>
+        </CarouselItem>
+        <CarouselItem id={"slide2".to_string()}>
+          <ImageSlide url={"https://picsum.photos/201".to_string()} alt={"Slide 2".to_string()}/>
+        </CarouselItem>
+        <CarouselItem id={"slide3".to_string()}>
+          <ImageSlide url={"https://picsum.photos/202".to_string()} alt={"Slide 3".to_string()}/>
+        </CarouselItem>
+        <CarouselItem id={"slide4".to_string()}>
+          <ImageSlide url={"https://picsum.photos/203".to_string()} alt={"Slide 4".to_string()}/>
+        </CarouselItem>
+      </CarouselContent>
+      <CarouselControls/>
+    </CarouselWrapper>
+  </Carousel>
             "#}
           >
             <Carousel auto_play=true auto_play_interval={2000.0}>
@@ -135,25 +135,25 @@ pub(crate) fn carousel_preview() -> Html {
           <PreviewContainer
             title={"No Controls"}
             code={r#"
-              <Carousel auto_play=true auto_play_interval={2000.0}>
-                <CarouselWrapper>
-                  <CarouselContent>
-                    <CarouselItem id={"slide1".to_string()}>
-                      <ImageSlide url={"https://picsum.photos/200".to_string()} alt={"Slide 1".to_string()}/>
-                    </CarouselItem>
-                    <CarouselItem id={"slide2".to_string()}>
-                      <ImageSlide url={"https://picsum.photos/201".to_string()} alt={"Slide 2".to_string()}/>
-                    </CarouselItem>
-                    <CarouselItem id={"slide3".to_string()}>
-                      <ImageSlide url={"https://picsum.photos/202".to_string()} alt={"Slide 3".to_string()}/>
-                    </CarouselItem>
-                    <CarouselItem id={"slide4".to_string()}>
-                      <ImageSlide url={"https://picsum.photos/203".to_string()} alt={"Slide 4".to_string()}/>
-                    </CarouselItem>
-                  </CarouselContent>
-                  <CarouselControls show_arrows=false show_dots=false/>
-                </CarouselWrapper>
-              </Carousel>
+    <Carousel auto_play=true auto_play_interval={2000.0}>
+      <CarouselWrapper>
+        <CarouselContent>
+          <CarouselItem id={"slide1".to_string()}>
+            <ImageSlide url={"https://picsum.photos/200".to_string()} alt={"Slide 1".to_string()}/>
+          </CarouselItem>
+          <CarouselItem id={"slide2".to_string()}>
+            <ImageSlide url={"https://picsum.photos/201".to_string()} alt={"Slide 2".to_string()}/>
+          </CarouselItem>
+          <CarouselItem id={"slide3".to_string()}>
+            <ImageSlide url={"https://picsum.photos/202".to_string()} alt={"Slide 3".to_string()}/>
+          </CarouselItem>
+          <CarouselItem id={"slide4".to_string()}>
+            <ImageSlide url={"https://picsum.photos/203".to_string()} alt={"Slide 4".to_string()}/>
+          </CarouselItem>
+        </CarouselContent>
+        <CarouselControls show_arrows=false show_dots=false/>
+      </CarouselWrapper>
+    </Carousel>
             "#}
           >
             <Carousel auto_play=true auto_play_interval={2000.0}>

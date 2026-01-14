@@ -16,7 +16,7 @@ pub(crate) fn collapse_preview() -> Html {
         </div>
         <pre class="code-block">
           <code>
-{"yewi add collapse"}
+    {"yewi add collapse"}
           </code>
         </pre>
       </div>
@@ -28,12 +28,12 @@ pub(crate) fn collapse_preview() -> Html {
           <PreviewContainer
             title={"Focus Variant"}
             code={r#"
-              <Collapse summary={"See more details"}>
-                <div class="ex-collapse-content">
-                  <h2 class="ex-collapse-title">{ "This is a Collapse" }</h2>
-                  <p class="ex-collapse-description">{ "Collapse toggles its content vibisi- vilisibili- vibilisi-... visibilility" }</p>
-                </div>
-              </Collapse>
+    <Collapse summary={"See more details"}>
+      <div class="ex-collapse-content">
+        <h2 class="ex-collapse-title">{ "This is a Collapse" }</h2>
+        <p class="ex-collapse-description">{ "Collapse toggles its content vibisi- vilisibili- vibilisi-... visibilility" }</p>
+      </div>
+    </Collapse>
             "#}
           >
             <Collapse summary={"See more details"}>
@@ -46,12 +46,12 @@ pub(crate) fn collapse_preview() -> Html {
           <PreviewContainer
             title={"Toggle Variant"}
             code={r#"
-              <Collapse summary={"See more details"} variant={CollapseVariant::Toggle}>
-                <div class="ex-collapse-content">
-                  <h2 class="ex-collapse-title">{ "This is a Collapse" }</h2>
-                  <p class="ex-collapse-description">{ "Collapse toggles its content vibisi- vilisibili- vibilisi-... visibilility" }</p>
-                </div>
-              </Collapse>
+    <Collapse summary={"See more details"} variant={CollapseVariant::Toggle}>
+      <div class="ex-collapse-content">
+        <h2 class="ex-collapse-title">{ "This is a Collapse" }</h2>
+        <p class="ex-collapse-description">{ "Collapse toggles its content vibisi- vilisibili- vibilisi-... visibilility" }</p>
+      </div>
+    </Collapse>
             "#}
           >
             <Collapse summary={"See more details"} variant={CollapseVariant::Toggle}>

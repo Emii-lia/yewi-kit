@@ -17,7 +17,7 @@ pub(crate) fn radio_preview() -> Html {
         </div>
         <pre class="code-block">
           <code>
-{"yewi add radio"}
+    {"yewi add radio"}
           </code>
         </pre>
       </div>
@@ -29,9 +29,9 @@ pub(crate) fn radio_preview() -> Html {
           <PreviewContainer
             title={"Default"}
             code={r#"
-              <Radio name={"radio_default"} id={"radio_default_1"} size={Size::Small}/>
-              <Radio name={"radio_default"} id={"radio_default_2"} size={Size::Medium}/>
-              <Radio name={"radio_default"} id={"radio_default_3"} size={Size::Large}/>
+    <Radio name={"radio_default"} id={"radio_default_1"} size={Size::Small}/>
+    <Radio name={"radio_default"} id={"radio_default_2"} size={Size::Medium}/>
+    <Radio name={"radio_default"} id={"radio_default_3"} size={Size::Large}/>
             "#}
           >
             <Radio name={"radio_default"} id={"radio_default_1"} size={Size::Small}/>
@@ -41,9 +41,9 @@ pub(crate) fn radio_preview() -> Html {
           <PreviewContainer
             title={"Disabled"}
             code={r#"
-              <Radio name={"radio_disabled"} id={"radio_disabled_1"} size={Size::Small} disabled=true/>
-              <Radio name={"radio_disabled"} id={"radio_disabled_2"} size={Size::Medium} disabled=true/>
-              <Radio name={"radio_disabled"} id={"radio_disabled_3"} size={Size::Large} disabled=true/>
+    <Radio name={"radio_disabled"} id={"radio_disabled_1"} size={Size::Small} disabled=true/>
+    <Radio name={"radio_disabled"} id={"radio_disabled_2"} size={Size::Medium} disabled=true/>
+    <Radio name={"radio_disabled"} id={"radio_disabled_3"} size={Size::Large} disabled=true/>
             "#}
           >
             <Radio name={"radio_disabled"} id={"radio_disabled_1"} size={Size::Small} disabled=true/>
@@ -53,11 +53,11 @@ pub(crate) fn radio_preview() -> Html {
           <PreviewContainer
             title={"Colours"}
             code={r#"
-              <Radio name={"radio_coloured"} id={"radio_coloured_1"}  color={Color::Yellow}/>
-              <Radio name={"radio_coloured"} id={"radio_coloured_2"} color={Color::Rose}/>
-              <Radio name={"radio_coloured"} id={"radio_coloured_3"} color={Color::Teal}/>
-              <Radio name={"radio_coloured"} id={"radio_coloured_4"} color={Color::Amber}/>
-              <Radio name={"radio_coloured"} id={"radio_coloured_5"} color={Color::Fuchsia}/>
+    <Radio name={"radio_coloured"} id={"radio_coloured_1"}  color={Color::Yellow}/>
+    <Radio name={"radio_coloured"} id={"radio_coloured_2"} color={Color::Rose}/>
+    <Radio name={"radio_coloured"} id={"radio_coloured_3"} color={Color::Teal}/>
+    <Radio name={"radio_coloured"} id={"radio_coloured_4"} color={Color::Amber}/>
+    <Radio name={"radio_coloured"} id={"radio_coloured_5"} color={Color::Fuchsia}/>
             "#}
           >
             <Radio name={"radio_coloured"} id={"radio_coloured_1"}  color={Color::Yellow}/>

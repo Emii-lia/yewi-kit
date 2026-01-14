@@ -28,7 +28,7 @@ pub(crate) fn modal_preview() -> Html {
         </div>
         <pre class="code-block">
           <code>
-{"yewi add button modal"}
+    {"yewi add button modal"}
           </code>
         </pre>
       </div>
@@ -40,24 +40,29 @@ pub(crate) fn modal_preview() -> Html {
           <PreviewContainer
             title={"Example"}
             code={r#"
-              // Callback
-              <Button onclick={Callback::from(move |_| {
-                  on_open.clone().emit(OpenParams {
-                    children: children.clone(),
-                    class: Some("".into()),
-                  });
-                })}
-              >
-                {"Open Modal"}
-              </Button>
-  
-              // Modal Provider on src/app/mod.rs
-              <ModalProvider>
-                <div class="app">
-                  <Modal/>
-                  <Switch<AppRoute> render={switch}/>
-                </div>
-              </ModalProvider>
+    // Callback
+    let ModalHookResponse {
+      on_open,
+      ..
+    } = use_modal_store();
+
+    <Button onclick={Callback::from(move |_| {
+        on_open.clone().emit(OpenParams {
+          children: children.clone(),
+          class: Some("".into()),
+        });
+      })}
+    >
+      {"Open Modal"}
+    </Button>
+
+    // Modal Provider on src/app/mod.rs
+    <ModalProvider>
+      <div class="app">
+        <Modal/>
+        <Switch<AppRoute> render={switch}/>
+      </div>
+    </ModalProvider>
             "#}
           >
             <Button onclick={Callback::from(move |_| {
