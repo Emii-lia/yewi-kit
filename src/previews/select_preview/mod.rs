@@ -22,7 +22,7 @@ pub(crate) fn select_preview() -> Html {
         </div>
         <pre class="code-block">
           <code>
-{"yewi add select"}
+  {"yewi add select"}
           </code>
         </pre>
       </div>
@@ -34,27 +34,24 @@ pub(crate) fn select_preview() -> Html {
           <PreviewContainer
             title={"Default"}
             code={r#"
-              <Select
-                options={options()}
-                value={""}
-                label={"Select an option"}
-                size={Size::Small}
-              />
-              <Select
-                options={options()}
-                value={""}
-                label={"Select an option"}
-                size={Size::Medium}
-              />
-              <Select
-                options={options()}
-                value={""}
-                label={"Select an option"}
-                size={Size::Large}
-              />
-            </PreviewContainer>
-            <PreviewContainer
-              title={"Disabled"}
+    <Select
+      options={options()}
+      value={""}
+      label={"Select an option"}
+      size={Size::Small}
+    />
+    <Select
+      options={options()}
+      value={""}
+      label={"Select an option"}
+      size={Size::Medium}
+    />
+    <Select
+      options={options()}
+      value={""}
+      label={"Select an option"}
+      size={Size::Large}
+    />
             "#}
           >
             <Select
@@ -79,27 +76,27 @@ pub(crate) fn select_preview() -> Html {
           <PreviewContainer
             title={"Disabled"}
             code={r#"
-              <Select
-                options={options()}
-                value={""}
-                label={"Cannot select an option"}
-                size={Size::Small}
-                disabled=true
-              />
-              <Select
-                options={options()}
-                value={""}
-                label={"Cannot select an option"}
-                size={Size::Medium}
-                disabled=true
-              />
-              <Select
-                options={options()}
-                value={""}
-                label={"Cannot select an option"}
-                size={Size::Large}
-                disabled=true
-              />
+    <Select
+      options={options()}
+      value={""}
+      label={"Cannot select an option"}
+      size={Size::Small}
+      disabled=true
+    />
+    <Select
+      options={options()}
+      value={""}
+      label={"Cannot select an option"}
+      size={Size::Medium}
+      disabled=true
+    />
+    <Select
+      options={options()}
+      value={""}
+      label={"Cannot select an option"}
+      size={Size::Large}
+      disabled=true
+    />
             "#}
           >
             <Select
@@ -127,27 +124,27 @@ pub(crate) fn select_preview() -> Html {
           <PreviewContainer
             title={"With error"}
             code={r#"
-              <Select
-                options={options()}
-                value={""}
-                label={"Select an option"}
-                size={Size::Small}
-                errors={vec!["Invalid selection".to_string()]}
-              />
-              <Select
-                options={options()}
-                value={""}
-                label={"Select an option"}
-                size={Size::Medium}
-                errors={vec!["Invalid selection".to_string()]}
-              />
-              <Select
-                options={options()}
-                value={""}
-                label={"Select an option"}
-                size={Size::Large}
-                errors={vec!["Invalid selection".to_string()]}
-              />
+    <Select
+      options={options()}
+      value={""}
+      label={"Select an option"}
+      size={Size::Small}
+      errors={vec!["Invalid selection".to_string()]}
+    />
+    <Select
+      options={options()}
+      value={""}
+      label={"Select an option"}
+      size={Size::Medium}
+      errors={vec!["Invalid selection".to_string()]}
+    />
+    <Select
+      options={options()}
+      value={""}
+      label={"Select an option"}
+      size={Size::Large}
+      errors={vec!["Invalid selection".to_string()]}
+    />
             "#}
           >
             <Select

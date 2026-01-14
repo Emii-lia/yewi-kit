@@ -16,7 +16,7 @@ pub(crate) fn divider_preview() -> Html {
         </div>
         <pre class="code-block">
           <code>
-{"yewi add divider"}
+    {"yewi add divider"}
           </code>
         </pre>
       </div>
@@ -28,8 +28,8 @@ pub(crate) fn divider_preview() -> Html {
           <PreviewContainer
             title="Horizontal"
             code={r#"
-              <Divider/>
-              <Divider>{"OR"}</Divider>
+    <Divider/>
+    <Divider>{"OR"}</Divider>
             "#}
           >
             <Divider/>
@@ -38,8 +38,8 @@ pub(crate) fn divider_preview() -> Html {
           <PreviewContainer
             title="Vertical"
             code={r#"
-              <Divider vertical=true/>
-              <Divider vertical=true>{"OR"}</Divider>
+    <Divider vertical=true/>
+    <Divider vertical=true>{"OR"}</Divider>
             "#}
           >
             <Divider vertical=true/>

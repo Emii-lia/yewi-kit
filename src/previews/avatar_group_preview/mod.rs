@@ -17,7 +17,7 @@ pub(crate) fn avatar_group_preview() -> Html {
         </div>
         <pre class="code-block">
           <code>
-{"yewi add avatar avatar_group"}
+    {"yewi add avatar avatar_group"}
           </code>
         </pre>
       </div>
@@ -29,30 +29,30 @@ pub(crate) fn avatar_group_preview() -> Html {
           <PreviewContainer
             title={"Default"}
             code={r#"
-              <AvatarGroup rounded=true size={Size::Small}>
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/200"} />
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/201"} />
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/202"} />
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/203"} />
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/204"} />
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/205"} />
-              </AvatarGroup>
-              <AvatarGroup rounded=true>
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/200"} />
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/201"} />
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/202"} />
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/203"} />
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/204"} />
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/205"} />
-              </AvatarGroup>
-              <AvatarGroup rounded=true size={Size::Large}>
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/200"} />
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/201"} />
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/202"} />
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/203"} />
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/204"} />
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/205"} />
-              </AvatarGroup>
+    <AvatarGroup rounded=true size={Size::Small}>
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/200"} />
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/201"} />
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/202"} />
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/203"} />
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/204"} />
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/205"} />
+    </AvatarGroup>
+    <AvatarGroup rounded=true>
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/200"} />
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/201"} />
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/202"} />
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/203"} />
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/204"} />
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/205"} />
+    </AvatarGroup>
+    <AvatarGroup rounded=true size={Size::Large}>
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/200"} />
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/201"} />
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/202"} />
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/203"} />
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/204"} />
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/205"} />
+    </AvatarGroup>
             "#}
           >
             <AvatarGroup rounded=true size={Size::Small}>
@@ -84,18 +84,18 @@ pub(crate) fn avatar_group_preview() -> Html {
             title={"Stacked"}
             class="!gap-8"
             code={r#"
-              <AvatarGroup rounded=true variant={AvatarGroupVariant::Stacked} size={Size::Small}>
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/203"} />
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/204"} />
-              </AvatarGroup>
-              <AvatarGroup rounded=true variant={AvatarGroupVariant::Stacked}>
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/203"} />
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/204"} />
-              </AvatarGroup>
-              <AvatarGroup rounded=true variant={AvatarGroupVariant::Stacked} size={Size::Large}>
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/203"} />
-                <Avatar alt={"John Doe"} src={"https://picsum.photos/204"} />
-              </AvatarGroup>
+    <AvatarGroup rounded=true variant={AvatarGroupVariant::Stacked} size={Size::Small}>
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/203"} />
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/204"} />
+    </AvatarGroup>
+    <AvatarGroup rounded=true variant={AvatarGroupVariant::Stacked}>
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/203"} />
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/204"} />
+    </AvatarGroup>
+    <AvatarGroup rounded=true variant={AvatarGroupVariant::Stacked} size={Size::Large}>
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/203"} />
+      <Avatar alt={"John Doe"} src={"https://picsum.photos/204"} />
+    </AvatarGroup>
             "#}
           >
             <AvatarGroup rounded=true variant={AvatarGroupVariant::Stacked} size={Size::Small}>

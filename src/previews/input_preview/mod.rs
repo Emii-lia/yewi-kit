@@ -20,7 +20,7 @@ pub(crate) fn input_preview() -> Html {
         </div>
         <pre class="code-block">
           <code>
-{"yewi add input"}
+    {"yewi add input"}
           </code>
         </pre>
       </div>
@@ -32,9 +32,9 @@ pub(crate) fn input_preview() -> Html {
           <PreviewContainer
             title={"Default"}
             code={r#"
-              <Input placeholder={"Type here..."} input_size={Size::Small}/>
-              <Input placeholder={"Type here..."} input_size={Size::Medium}/>
-              <Input placeholder={"Type here..."} input_size={Size::Large}/>
+    <Input placeholder={"Type here..."} input_size={Size::Small}/>
+    <Input placeholder={"Type here..."} input_size={Size::Medium}/>
+    <Input placeholder={"Type here..."} input_size={Size::Large}/>
             "#}
           >
             <Input placeholder={"Type here..."} input_size={Size::Small}/>
@@ -44,9 +44,9 @@ pub(crate) fn input_preview() -> Html {
           <PreviewContainer
             title={"Disabled"}
             code={r#"
-              <Input placeholder={"Cannot type here..."} input_size={Size::Small} disabled=true/>
-              <Input placeholder={"Cannot type here..."} input_size={Size::Medium} disabled=true/>
-              <Input placeholder={"Cannot type here..."} input_size={Size::Large} disabled=true/>
+    <Input placeholder={"Cannot type here..."} input_size={Size::Small} disabled=true/>
+    <Input placeholder={"Cannot type here..."} input_size={Size::Medium} disabled=true/>
+    <Input placeholder={"Cannot type here..."} input_size={Size::Large} disabled=true/>
             "#}
           >
             <Input placeholder={"Cannot type here..."} input_size={Size::Small} disabled=true/>
@@ -56,9 +56,9 @@ pub(crate) fn input_preview() -> Html {
           <PreviewContainer
             title={"With error"}
             code={r#"
-              <Input placeholder={"Type here..."} input_size={Size::Small} errors={errors.clone()}/>
-              <Input placeholder={"Type here..."} input_size={Size::Medium} errors={errors.clone()}/>
-              <Input placeholder={"Type here..."} input_size={Size::Large} errors={errors.clone()}/>
+    <Input placeholder={"Type here..."} input_size={Size::Small} errors={errors.clone()}/>
+    <Input placeholder={"Type here..."} input_size={Size::Medium} errors={errors.clone()}/>
+    <Input placeholder={"Type here..."} input_size={Size::Large} errors={errors.clone()}/>
             "#}
           >
             <Input placeholder={"Type here..."} input_size={Size::Small} errors={errors.clone()}/>

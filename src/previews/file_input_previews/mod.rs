@@ -16,7 +16,7 @@ pub(crate) fn file_input_previews() -> Html {
         </div>
         <pre class="code-block">
           <code>
-{"yewi add button file_input"}
+    {"yewi add button file_input"}
           </code>
         </pre>
       </div>
@@ -28,7 +28,7 @@ pub(crate) fn file_input_previews() -> Html {
           <PreviewContainer
             title={"Default"}
             code={r#"
-              <FileInput/>
+    <FileInput/>
             "#}
           >
             <FileInput/>
@@ -36,7 +36,7 @@ pub(crate) fn file_input_previews() -> Html {
           <PreviewContainer
             title={"Drag and drop"}
             code={r#"
-              <FileInput r#type={FileInputType::DnD}/>
+    <FileInput r#type={FileInputType::DnD}/>
             "#}
           >
             <FileInput r#type={FileInputType::DnD}/>
@@ -44,9 +44,9 @@ pub(crate) fn file_input_previews() -> Html {
           <PreviewContainer
             title={"Button"}
             code={r#"
-              <FileInput r#type={FileInputType::Button}>
-                {"Upload files"}
-              </FileInput>
+    <FileInput r#type={FileInputType::Button}>
+      {"Upload files"}
+    </FileInput>
             "#}
           >
             <FileInput r#type={FileInputType::Button}>
@@ -56,11 +56,11 @@ pub(crate) fn file_input_previews() -> Html {
           <PreviewContainer
             title={"Disabled"}
             code={r#"
-              <FileInput disabled=true/>
-              <FileInput r#type={FileInputType::DnD} disabled=true/>
-              <FileInput r#type={FileInputType::Button} disabled=true>
-                {"Upload files"}
-              </FileInput>
+    <FileInput disabled=true/>
+    <FileInput r#type={FileInputType::DnD} disabled=true/>
+    <FileInput r#type={FileInputType::Button} disabled=true>
+      {"Upload files"}
+    </FileInput>
             "#}
           >
             <FileInput disabled=true/>

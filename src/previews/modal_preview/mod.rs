@@ -28,7 +28,7 @@ pub(crate) fn modal_preview() -> Html {
         </div>
         <pre class="code-block">
           <code>
-{"yewi add button modal"}
+    {"yewi add button modal"}
           </code>
         </pre>
       </div>

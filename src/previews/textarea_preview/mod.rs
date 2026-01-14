@@ -16,7 +16,7 @@ pub(crate) fn textarea_preview() -> Html {
         </div>
         <pre class="code-block">
           <code>
-{"yewi add textarea"}
+    {"yewi add textarea"}
           </code>
         </pre>
       </div>
@@ -28,7 +28,7 @@ pub(crate) fn textarea_preview() -> Html {
           <PreviewContainer
             title={"Default"}
             code={r#"
-              <Textarea placeholder="Type here..." rows={"4"} />
+    <Textarea placeholder="Type here..." rows={"4"} />
             "#}
           >
             <Textarea placeholder="Type here..." rows={"4"} />
@@ -36,7 +36,7 @@ pub(crate) fn textarea_preview() -> Html {
           <PreviewContainer
             title={"Disabled"}
             code={r#"
-              <Textarea placeholder="Cannot type here..." rows={"4"} disabled=true />
+    <Textarea placeholder="Cannot type here..." rows={"4"} disabled=true />
             "#}
           >
             <Textarea placeholder="Cannot type here..." rows={"4"} disabled=true />
@@ -44,7 +44,11 @@ pub(crate) fn textarea_preview() -> Html {
           <PreviewContainer
             title={"With label"}
             code={r#"
-              <Textarea
+    <Textarea
+      placeholder="Type here..."
+      rows={"4"}
+      label={"Description"}
+    />
             "#}
           >
             <Textarea
@@ -56,7 +60,7 @@ pub(crate) fn textarea_preview() -> Html {
           <PreviewContainer
             title={"With error"}
             code={r#"
-              <Textarea placeholder="Type here..." rows={"4"} errors={vec!["Invalid input".to_string()]}/>
+    <Textarea placeholder="Type here..." rows={"4"} errors={vec!["Invalid input".to_string()]}/>
             "#}
           >
             <Textarea placeholder="Type here..." rows={"4"} errors={vec!["Invalid input".to_string()]}/>

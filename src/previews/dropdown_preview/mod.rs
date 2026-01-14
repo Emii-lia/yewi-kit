@@ -16,7 +16,7 @@ pub(crate) fn dropdown_preview() -> Html {
         </div>
         <pre class="code-block">
           <code>
-{"yewi add dropdown"}
+    {"yewi add dropdown"}
           </code>
         </pre>
       </div>
@@ -28,16 +28,16 @@ pub(crate) fn dropdown_preview() -> Html {
           <PreviewContainer
             title={"Bottom"}
             code={r#"
-<Dropdown>
-  <DropdownTrigger>
-    <Button>{"Open Dropdown"}</Button>
-  </DropdownTrigger>
-  <DropdownMenu>
-    <DropdownItem>{"Option 1"}</DropdownItem>
-    <DropdownItem>{"Option 2"}</DropdownItem>
-    <DropdownItem>{"Option 3"}</DropdownItem>
-  </DropdownMenu>
-</Dropdown>
+    <Dropdown>
+      <DropdownTrigger>
+        <Button>{"Open Dropdown"}</Button>
+      </DropdownTrigger>
+      <DropdownMenu>
+        <DropdownItem>{"Option 1"}</DropdownItem>
+        <DropdownItem>{"Option 2"}</DropdownItem>
+        <DropdownItem>{"Option 3"}</DropdownItem>
+      </DropdownMenu>
+    </Dropdown>
             "#}
           >
             <Dropdown>
@@ -54,16 +54,16 @@ pub(crate) fn dropdown_preview() -> Html {
           <PreviewContainer
             title={"Top"}
             code={r#"
-<Dropdown>
-  <DropdownTrigger>
-    <Button>{"Open Dropdown"}</Button>
-  </DropdownTrigger>
-  <DropdownMenu position={DropdownPosition::Top}>
-    <DropdownItem>{"Option 1"}</DropdownItem>
-    <DropdownItem>{"Option 2"}</DropdownItem>
-    <DropdownItem>{"Option 3"}</DropdownItem>
-  </DropdownMenu>
-</Dropdown>
+    <Dropdown>
+      <DropdownTrigger>
+        <Button>{"Open Dropdown"}</Button>
+      </DropdownTrigger>
+      <DropdownMenu position={DropdownPosition::Top}>
+        <DropdownItem>{"Option 1"}</DropdownItem>
+        <DropdownItem>{"Option 2"}</DropdownItem>
+        <DropdownItem>{"Option 3"}</DropdownItem>
+      </DropdownMenu>
+    </Dropdown>
           "#}
         >
           <Dropdown>
