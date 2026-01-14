@@ -19,6 +19,7 @@ mod card;
 mod password_input;
 mod progress;
 mod carousel;
+mod dropdown;
 
 pub(crate) use button::*;
 pub(crate) use badge::*;
