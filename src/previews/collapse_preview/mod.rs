@@ -26,7 +26,7 @@ pub(crate) fn collapse_preview() -> Html {
         </h2>
         <div class="preview-list">
           <PreviewContainer
-            title={"Focus Variant"}
+            title={"Focus"}
             code={r#"
     <Collapse summary={"See more details"}>
       <div class="ex-collapse-content">
@@ -44,7 +44,7 @@ pub(crate) fn collapse_preview() -> Html {
             </Collapse>
           </PreviewContainer>
           <PreviewContainer
-            title={"Toggle Variant"}
+            title={"Toggle"}
             code={r#"
     <Collapse summary={"See more details"} variant={CollapseVariant::Toggle}>
       <div class="ex-collapse-content">
