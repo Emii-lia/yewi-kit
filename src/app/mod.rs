@@ -20,6 +20,7 @@ mod password_input;
 mod progress;
 mod carousel;
 mod dropdown;
+mod toast;
 
 pub(crate) use button::*;
 pub(crate) use badge::*;
@@ -41,7 +42,7 @@ pub(crate) use textarea::*;
 
 use yew::{function_component, html, Html};
 use yew_router::prelude::{BrowserRouter, Switch};
-use crate::components::{Modal, ModalProvider};
+use crate::components::{Modal, ModalProvider, ToastContainer, ToastProvider};
 use crate::features::Sidebar;
 
 #[function_component(App)]
@@ -49,11 +50,14 @@ pub fn app() -> Html {
   html! {
     <BrowserRouter>
       <ModalProvider>
-        <div class="app">
-          <Modal/>
-          <Sidebar/>
-          <Switch<AppRoute> render={switch}/>
-        </div>
+        <ToastProvider>
+          <div class="app">
+            <ToastContainer/>
+            <Modal/>
+            <Sidebar/>
+            <Switch<AppRoute> render={switch}/>
+          </div>
+        </ToastProvider>
       </ModalProvider>
     </BrowserRouter>
   }

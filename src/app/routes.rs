@@ -23,6 +23,7 @@ use crate::app::carousel::CarouselPage;
 use crate::app::dropdown::DropdownPage;
 use crate::app::password_input::PasswordInputPage;
 use crate::app::progress::ProgressPage;
+use crate::app::toast::ToastPage;
 
 #[derive(Clone, Routable, PartialEq)]
 pub enum AppRoute {
@@ -66,6 +67,8 @@ pub enum AppRoute {
   TabsPage,
   #[at("/textarea")]
   TextareaPage,
+  #[at("/toast")]
+  ToastPage,
   #[not_found]
   #[at("/404")]
   NotFound,
@@ -94,6 +97,7 @@ impl AppRoute {
       AppRoute::SelectPage,
       AppRoute::TabsPage,
       AppRoute::TextareaPage,
+      AppRoute::ToastPage
     ].into_iter()
   }
 }
@@ -120,6 +124,7 @@ pub fn switch(route: AppRoute) -> Html {
     AppRoute::SelectPage => html! {<SelectPage/>},
     AppRoute::TabsPage => html! {<TabsPage/>},
     AppRoute::TextareaPage => html! {<TextareaPage/>},
+    AppRoute::ToastPage => html! {<ToastPage/>},
     AppRoute::NotFound => html! {<NotFound/>},
   }
 }

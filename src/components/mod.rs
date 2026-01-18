@@ -18,6 +18,7 @@ mod progress;
 mod carousel;
 mod code_preview;
 mod dropdown;
+mod toast;
 
 pub use button::*;
 pub(crate) use input::*;
@@ -39,3 +40,4 @@ pub use progress::*;
 pub(crate) use carousel::*;
 pub use code_preview::*;
 pub(crate) use dropdown::*;
+pub(crate) use toast::*;

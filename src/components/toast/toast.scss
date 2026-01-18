@@ -1,0 +1,65 @@
+.ToastContainer {
+  @apply fixed inset-0 z-[9999] w-full pointer-events-none select-none;
+}
+
+.ToastStack {
+  @apply absolute flex flex-col gap-2 pointer-events-none;
+  @apply max-w-[calc(100vw-2rem)];
+  &.topleft {
+    @apply top-4 left-4 items-start;
+  }
+  &.topcenter {
+    @apply top-4 left-1/2 -translate-x-1/2 items-center;
+  }
+  &.topright {
+    @apply top-4 right-4 items-end;
+  }
+  &.bottomleft {
+    @apply bottom-4 left-4 items-start flex-col-reverse;
+  }
+  &.bottomcenter {
+    @apply bottom-4 left-1/2 -translate-x-1/2 items-center flex-col-reverse;
+  }
+  &.bottomright {
+    @apply bottom-4 right-4 items-end flex-col-reverse;
+  }
+}
+.Toast {
+  @apply relative z-[999] flex items-center gap-4 justify-between bg-white rounded-lg px-4 py-2 pr-2 shadow-md;
+  @apply max-w-sm;
+  @apply transition-all duration-200 ease-in-out opacity-0;
+  @apply pointer-events-auto;
+
+  &.open {
+    @apply opacity-100;
+  }
+  &.bottomleft,
+  &.bottomright,
+  &.bottomcenter,
+  &.topleft,
+  &.topright,
+  &.topcenter {
+    @apply m-0;
+  }
+  &__content {
+    @apply w-full text-slate-800 font-medium;
+    &.success {
+      @apply flex items-center gap-3;
+      &:before {
+        @apply w-4 h-4 p-1.5 text-green-500 bg-green-100 rounded-full flex items-center justify-center;
+        content: "\2713";
+      }
+    }
+    &.error {
+      @apply flex items-center gap-3;
+      &:before {
+        @apply w-4 h-4 p-1.5 text-red-500 bg-red-100 rounded-full flex items-center justify-center;
+        content: "\2717";
+      }
+    }
+  }
+  &__close {
+    @apply cursor-pointer text-slate-800 p-3 w-7 h-7 aspect-square rounded-full hover:bg-slate-100;
+    @apply flex items-center justify-center;
+  }
+}
