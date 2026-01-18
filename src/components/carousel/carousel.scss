@@ -1,7 +1,7 @@
 .Carousel {
   @apply relative w-fit;
   .CarouselWrapper {
-    @apply overflow-hidden relative bg-slate-100 rounded-lg w-fit px-16;
+    @apply overflow-hidden relative rounded-lg w-fit px-16;
     .CarouselContent {
       @apply flex transition-transform duration-500 ease-in-out w-fit;
       .CarouselItem {
