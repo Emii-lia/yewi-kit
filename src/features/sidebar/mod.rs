@@ -37,6 +37,7 @@ pub(crate) fn sidebar() -> Html {
               AppRoute::SelectPage => "Select",
               AppRoute::TabsPage => "Tabs",
               AppRoute::TextareaPage => "Textarea",
+              AppRoute::ToastPage => "Toast",
               AppRoute::NotFound => "Not Found",
             }.to_string();
             html! {
