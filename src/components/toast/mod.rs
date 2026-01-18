@@ -1,6 +1,4 @@
-use std::fmt::format;
 use yew::{classes, function_component, html, Callback, Children, Classes, Html, Properties};
-use yew::html::ChildrenProps;
 use crate::components::toast::hooks::{use_toast_item, HookParams, HookResponse};
 
 mod types;

@@ -1,4 +1,4 @@
-use yew::{Callback, Children, Classes};
+use yew::{ Children, Classes};
 
 #[derive(Clone, Debug, PartialEq)]
 pub enum ToastType {

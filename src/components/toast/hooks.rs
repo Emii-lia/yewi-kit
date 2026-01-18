@@ -1,7 +1,5 @@
 use gloo::timers::callback::Timeout;
-use gloo::utils::document;
-use yew::{hook, html, Callback, Children, Classes, create_portal, use_state, use_effect_with};
-use crate::components::Toast;
+use yew::{hook, html, Callback, Children, Classes, use_state, use_effect_with};
 use crate::components::toast::types::{ToastItem, ToastPosition, ToastType};
 
 
