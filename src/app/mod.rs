@@ -21,6 +21,7 @@ mod progress;
 mod carousel;
 mod dropdown;
 mod toast;
+mod table;
 
 pub(crate) use button::*;
 pub(crate) use badge::*;
