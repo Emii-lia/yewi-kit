@@ -1,66 +1,5 @@
 .Button{
   @apply inline-flex items-center justify-center gap-2 font-semibold whitespace-nowrap;
-  &.primary{
-    @apply bg-blue-500 text-white shadow-inner;
-
-    &:hover{
-      @apply bg-blue-700;
-    }
-    &:focus{
-      @apply outline-none ring-2 ring-blue-500 ring-offset-2;
-    }
-    &:disabled{
-      @apply bg-blue-200 cursor-not-allowed text-slate-200;
-    }
-  }
-  &.danger {
-    @apply bg-red-600 text-white;
-    &:hover {
-      @apply bg-red-700;
-    }
-    &:focus {
-      @apply outline-none ring-2 ring-red-500 ring-offset-2;
-    }
-    &:disabled {
-      @apply bg-red-300 text-slate-300 cursor-not-allowed;
-    }
-  }
-  &.success {
-    @apply bg-emerald-600 text-white;
-    &:hover {
-      @apply bg-emerald-700;
-    }
-    &:focus {
-      @apply outline-none ring-2 ring-emerald-500 ring-offset-2;
-    }
-    &:disabled {
-      @apply bg-emerald-300 text-slate-300 cursor-not-allowed;
-    }
-  }
-  &.secondary {
-    @apply bg-white text-slate-950 border border-solid border-slate-500 shadow-sm;
-    &:hover{
-      @apply bg-slate-200;
-    }
-    &:focus{
-      @apply outline-none ring-2 ring-blue-500 ring-offset-2;
-    }
-    &:disabled{
-      @apply bg-slate-100 text-slate-500 cursor-not-allowed;
-    }
-  }
-  &.tertiary{
-    @apply bg-transparent text-slate-950;
-    &:hover{
-      @apply bg-slate-100;
-    }
-    &:focus{
-      @apply outline-none ring-2 ring-blue-500 ring-offset-2;
-    }
-    &:disabled{
-      @apply bg-transparent text-slate-500 cursor-not-allowed;
-    }
-  }
   &.btn-sm{
     @apply py-1.5 px-2.5 h-8 rounded-lg text-sm;
   }
@@ -103,5 +42,67 @@
     to {
       transform: rotate(360deg);
     }
+  }
+}
+
+.primary{
+  @apply bg-blue-500 text-white shadow-inner;
+
+  &:hover{
+    @apply bg-blue-700;
+  }
+  &:focus{
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+  }
+  &:disabled{
+    @apply bg-blue-200 cursor-not-allowed text-slate-200;
+  }
+}
+.danger {
+  @apply bg-red-600 text-white;
+  &:hover {
+    @apply bg-red-700;
+  }
+  &:focus {
+    @apply outline-none ring-2 ring-red-500 ring-offset-2;
+  }
+  &:disabled {
+    @apply bg-red-300 text-slate-300 cursor-not-allowed;
+  }
+}
+.success {
+  @apply bg-emerald-600 text-white;
+  &:hover {
+    @apply bg-emerald-700;
+  }
+  &:focus {
+    @apply outline-none ring-2 ring-emerald-500 ring-offset-2;
+  }
+  &:disabled {
+    @apply bg-emerald-300 text-slate-300 cursor-not-allowed;
+  }
+}
+.secondary {
+  @apply bg-white text-slate-950 border border-solid border-slate-500 shadow-sm;
+  &:hover{
+    @apply bg-slate-200;
+  }
+  &:focus{
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+  }
+  &:disabled{
+    @apply bg-slate-100 text-slate-500 cursor-not-allowed;
+  }
+}
+.tertiary{
+  @apply bg-transparent text-slate-950;
+  &:hover{
+    @apply bg-slate-100;
+  }
+  &:focus{
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+  }
+  &:disabled{
+    @apply bg-transparent text-slate-500 cursor-not-allowed;
   }
 }

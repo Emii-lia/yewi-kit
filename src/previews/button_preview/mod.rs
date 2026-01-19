@@ -185,12 +185,12 @@ pub(crate) fn button_preview () -> Html {
           <PreviewContainer
             title="Custom Class"
             code={r#"
-    <Button class="!bg-slate-500" >
+    <Button class="bg-slate-500" >
       {"Custom"}
     </Button>
             "#}
           >
-            <Button class="!bg-slate-500" >
+            <Button class="bg-slate-500" >
               {"Custom"}
             </Button>
           </PreviewContainer>

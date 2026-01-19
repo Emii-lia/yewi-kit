@@ -25,50 +25,41 @@ pub struct Props {
   pub is_loading: bool,
 }
 #[function_component(Button)]
-pub(crate) fn button(Props {
-  href,
-  children,
-  is_loading,
-  class,
-  disabled,
-  onclick,
-  variant,
-  size
-}: &Props) -> Html {
+pub(crate) fn button(props: &Props) -> Html {
   
   let HookResponse {
     variant,
     size,
     on_click
   } = use_button(HookParams {
-    size: size.clone(),
-    variant: variant.clone(),
-    onclick: onclick.clone()
+    size: props.size.clone(),
+    variant: props.variant.clone(),
+    onclick: props.onclick.clone()
   });
 
   html! {
-    if Some(href) != None && href != "" {
+    if Some(&props.href) != None && &props.href != "" {
       <a
-        href={href}
-        class={classes!("Button", variant, size, (*is_loading).then_some("loading"), class)}
-        disabled={*disabled || *is_loading}
+        href={&props.href}
+        class={classes!("Button", variant, size, props.is_loading.then_some("loading"), &props.class)}
+        disabled={props.disabled || props.is_loading}
       >
-        {children.clone()}
+        {props.children.clone()}
       </a>
     } else {
       <button
-        class={classes!("Button", variant, size, (*is_loading).then_some("loading"), class)}
-        disabled={*disabled || *is_loading}
+        class={classes!("Button", variant, size, props.is_loading.then_some("loading"), &props.class)}
+        disabled={props.disabled || props.is_loading}
         onclick={on_click}
       >
         {
           html! {
-            if *is_loading {
+            if props.is_loading {
               <div class="spinner-container">
                 <span class="spinner"></span>
               </div>
             } else {
-              {children.clone()}
+              {props.children.clone()}
             }
           }
         }
