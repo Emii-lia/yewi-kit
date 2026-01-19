@@ -35,6 +35,7 @@ pub(crate) fn sidebar() -> Html {
               AppRoute::ModalPage => "Modal",
               AppRoute::RadioPage => "Radio",
               AppRoute::SelectPage => "Select",
+              AppRoute::TablePage => "Table",
               AppRoute::TabsPage => "Tabs",
               AppRoute::TextareaPage => "Textarea",
               AppRoute::ToastPage => "Toast",
