@@ -1,4 +1,5 @@
 use yew::{function_component, html, Html};
+use yew_icons::IconData;
 use crate::components::{Button, ButtonVariant};
 use crate::previews::PreviewContainer;
 use crate::types::{Size};
@@ -180,6 +181,42 @@ pub(crate) fn button_preview () -> Html {
           >
             <Button is_loading=true >
               {"Loading"}
+            </Button>
+          </PreviewContainer>
+          <PreviewContainer
+            title="With icon"
+            code={r#"
+    <Button icon={IconData::LUCIDE_PLUS}>
+      {"Add"}
+    </Button>
+    <Button variant={ButtonVariant::Secondary} icon={IconData::LUCIDE_MAIL} >
+      {"Contact"}
+    </Button>
+    <Button variant={ButtonVariant::Tertiary} icon={IconData::LUCIDE_SHARE} >
+      {"Share"}
+    </Button>
+    <Button variant={ButtonVariant::Success} icon={IconData::LUCIDE_CHECK} >
+      {"Confirm"}
+    </Button>
+    <Button variant={ButtonVariant::Danger} icon={IconData::LUCIDE_STOP_CIRCLE} >
+      {"Stop"}
+    </Button>
+            "#}
+          >
+            <Button icon={IconData::LUCIDE_PLUS}>
+              {"Add"}
+            </Button>
+            <Button variant={ButtonVariant::Secondary} icon={IconData::LUCIDE_MAIL} >
+              {"Contact"}
+            </Button>
+            <Button variant={ButtonVariant::Tertiary} icon={IconData::LUCIDE_SHARE} >
+              {"Share"}
+            </Button>
+            <Button variant={ButtonVariant::Success} icon={IconData::LUCIDE_CHECK} >
+              {"Confirm"}
+            </Button>
+            <Button variant={ButtonVariant::Danger} icon={IconData::LUCIDE_STOP_CIRCLE} >
+              {"Stop"}
             </Button>
           </PreviewContainer>
           <PreviewContainer
