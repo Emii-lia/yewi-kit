@@ -1,23 +1,5 @@
 .Button{
   @apply inline-flex items-center justify-center gap-2 font-semibold whitespace-nowrap;
-  &.btn-sm{
-    @apply py-1.5 px-2.5 h-8 rounded-lg text-sm;
-  }
-  &.btn-md{
-    @apply py-2 px-3 h-9 rounded-lg;
-  }
-  &.btn-lg{
-    @apply py-2.5 px-3.5 h-10 rounded-lg;
-  }
-  &.rounded{
-    @apply rounded-full !important;
-  }
-  &.loading {
-    @apply cursor-wait;
-    &:disabled {
-      @apply cursor-wait;
-    }
-  }
 
   .spinner-container {
     @apply relative flex items-center justify-center;
@@ -45,6 +27,24 @@
   }
 }
 
+.btn-sm{
+  @apply py-1.5 px-2.5 h-8 rounded-lg text-sm;
+}
+.btn-md{
+  @apply py-2 px-3 h-9 rounded-lg;
+}
+.btn-lg{
+  @apply py-2.5 px-3.5 h-10 rounded-lg;
+}
+.rounded{
+  @apply rounded-full !important;
+}
+.loading {
+  @apply cursor-wait;
+  &:disabled {
+    @apply cursor-wait;
+  }
+}
 .primary{
   @apply bg-blue-500 text-white shadow-inner;
 
