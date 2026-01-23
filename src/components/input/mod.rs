@@ -1,6 +1,8 @@
 use yew::{classes, function_component, html, Html};
+use yew_icons::Icon;
 use crate::components::input::types::InputProps;
 use crate::components::input::hooks::{use_input, HookParams, HookResponse};
+use crate::types::Size;
 
 mod types;
 mod hooks;
@@ -9,6 +11,13 @@ mod hooks;
 pub(crate) fn input(props: &InputProps) -> Html {
   let HookResponse { size } = use_input(HookParams { size: props.input_size.clone() });
   let errors = &props.errors;
+  let icon = props.icon;
+  let icon_size = match props.input_size {
+    Size::Small => "1rem",
+    Size::Medium => "1.25rem",
+    Size::Large => "1.5rem",
+  };
+
   html! {
     <div class="Input">
       <label
@@ -16,9 +25,15 @@ pub(crate) fn input(props: &InputProps) -> Html {
         class={classes!(
           "input-container",
           size,
+          icon.is_some().then_some("with-icon"),
           props.disabled.then_some("disabled")
         )}
       >
+        {html! {
+          if let Some(icon) = icon {
+            <Icon data={icon} width={icon_size.to_string()} height={icon_size.to_string()} class={"input-icon"} />
+          }
+        }}
         <input
           ref={&props.node_ref}
           class={classes!(

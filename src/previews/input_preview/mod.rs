@@ -1,4 +1,5 @@
 use yew::{function_component, html, Html};
+use yew_icons::IconData;
 use crate::components::Input;
 use crate::previews::PreviewContainer;
 use crate::types::Size;
@@ -40,6 +41,18 @@ pub(crate) fn input_preview() -> Html {
             <Input placeholder={"Type here..."} input_size={Size::Small}/>
             <Input placeholder={"Type here..."} input_size={Size::Medium}/>
             <Input placeholder={"Type here..."} input_size={Size::Large}/>
+          </PreviewContainer>
+          <PreviewContainer
+            title={"With Icon"}
+            code={r#"
+    <Input placeholder={"Type here..."} input_size={Size::Small} icon={IconData::LUCIDE_SEARCH}/>
+    <Input placeholder={"Type here..."} input_size={Size::Medium} icon={IconData::LUCIDE_SEARCH}/>
+    <Input placeholder={"Type here..."} input_size={Size::Large} icon={IconData::LUCIDE_SEARCH}/>
+            "#}
+          >
+            <Input placeholder={"Search here..."} input_size={Size::Small} icon={IconData::LUCIDE_SEARCH} />
+            <Input placeholder={"Search here..."} input_size={Size::Medium} icon={IconData::LUCIDE_SEARCH}/>
+            <Input placeholder={"Search here..."} input_size={Size::Large} icon={IconData::LUCIDE_SEARCH}/>
           </PreviewContainer>
           <PreviewContainer
             title={"Disabled"}

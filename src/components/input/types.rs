@@ -1,4 +1,5 @@
 use yew::{AttrValue, Callback, Classes, Event, FocusEvent, InputEvent, KeyboardEvent, NodeRef, Properties};
+use yew_icons::IconData;
 use crate::types::Size;
 
 #[derive(Properties, PartialEq, Clone)]
@@ -7,6 +8,8 @@ pub struct InputProps {
   pub class: Classes,
   #[prop_or(Size::Medium)]
   pub input_size: Size,
+  #[prop_or_default]
+  pub icon: Option<IconData>,
   #[prop_or_default]
   pub node_ref: NodeRef,
   #[prop_or_default]
