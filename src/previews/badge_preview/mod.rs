@@ -1,4 +1,5 @@
 use yew::{function_component, html, Html};
+use yew_icons::IconData;
 use crate::components::{Badge, BadgeVariant};
 use crate::previews::PreviewContainer;
 use crate::types::Color;
@@ -67,6 +68,18 @@ pub(crate) fn badge_preview() -> Html {
             <Badge variant={BadgeVariant::Filled} label="Filled" color={Color::Blue}/>
             <Badge variant={BadgeVariant::Filled} label="Filled" color={Color::Green}/>
             <Badge variant={BadgeVariant::Filled} label="Filled" color={Color::Yellow}/>
+          </PreviewContainer>
+          <PreviewContainer
+            title={"With Icon"}
+            code={r#"
+    <Badge label="Stop" color={Color::Red} icon={IconData::LUCIDE_STOP_CIRCLE} />
+    <Badge variant={BadgeVariant::Plain} label="Info" color={Color::Blue} icon={IconData::LUCIDE_INFO}/>
+    <Badge variant={BadgeVariant::Filled} label="Success" color={Color::Green} icon={IconData::LUCIDE_CHECK}/>
+            "#}
+          >
+            <Badge label="Stop" color={Color::Red} icon={IconData::LUCIDE_KEY} />
+            <Badge variant={BadgeVariant::Plain} label="Info" color={Color::Blue} icon={IconData::LUCIDE_INFO}/>
+            <Badge variant={BadgeVariant::Filled} label="Success" color={Color::Green} icon={IconData::LUCIDE_CHECK}/>
           </PreviewContainer>
           <PreviewContainer
             title={"Rounded"}
