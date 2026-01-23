@@ -2,6 +2,7 @@ mod types;
 mod hooks;
 
 use yew::{classes, function_component, html, AttrValue, Classes, Html, Properties};
+use yew_icons::{Icon, IconData};
 pub(crate) use types::*;
 use crate::components::badge::hooks::{use_badge, HookParams, HookResponse};
 use crate::types::Color;
@@ -22,6 +23,8 @@ pub struct Props {
   pub with_border: bool,
   #[prop_or_default]
   pub title: AttrValue,
+  #[prop_or_default]
+  pub icon: Option<IconData>,
 }
 
 #[function_component(Badge)]
@@ -30,6 +33,7 @@ pub(crate) fn badge(props: &Props) -> Html {
     variant: props.variant.clone(),
     color: props.color.clone()
   });
+  let icon = props.icon;
   
   html! {
     <div class={classes!(
@@ -38,10 +42,16 @@ pub(crate) fn badge(props: &Props) -> Html {
         props.with_border.then_some("with-border"),
         variant,
         color,
+        icon.is_some().then_some("with-icon"),
         &props.class
       )}
       title={if !props.title.is_empty() { &props.title } else { &props.label }}
     >
+      {html! {
+        if let Some(icon_data) = icon {
+          <Icon data={icon_data} width={"1rem".to_string()} height={"1rem".to_string()} />
+        }
+      }}
       {&props.label}
     </div>
   }
