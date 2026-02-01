@@ -10,74 +10,77 @@
       @apply h-[var(--height)];
     }
     &:before {
-      &.purple {
+      &.progress-purple {
         @apply bg-purple-500 border border-purple-500;
       }
-      &.blue {
+      &.progress-primary {
+        @apply bg-primary-500 border border-primary-500;
+      }
+      &.progress-blue {
         @apply bg-blue-500 border border-blue-500;
       }
-      &.green {
+      &.progress-green {
         @apply bg-green-500 border border-green-500;
       }
-      &.red {
+      &.progress-red {
         @apply bg-red-500 border border-red-500;
       }
-      &.yellow {
+      &.progress-yellow {
         @apply bg-yellow-500 border border-yellow-500;
       }
-      &.gray {
+      &.progress-gray {
         @apply bg-gray-500 border border-gray-500;
       }
-      &.orange {
+      &.progress-orange {
         @apply bg-orange-500 border border-orange-500;
       }
-      &.pink {
+      &.progress-pink {
         @apply bg-pink-500 border border-pink-500;
       }
-      &.fuchsia {
+      &.progress-fuchsia {
         @apply bg-fuchsia-500 border border-fuchsia-500;
       }
-      &.cyan {
+      &.progress-cyan {
         @apply bg-cyan-500 border border-cyan-500;
       }
-      &.teal {
+      &.progress-teal {
         @apply bg-teal-500 border border-teal-500;
       }
-      &.indigo {
+      &.progress-indigo {
         @apply bg-indigo-500 border border-indigo-500;
       }
-      &.violet {
+      &.progress-violet {
         @apply bg-violet-500 border border-violet-500;
       }
-      &.emerald {
+      &.progress-emerald {
         @apply bg-emerald-500 border border-emerald-500;
       }
-      &.lime {
+      &.progress-lime {
         @apply bg-lime-500 border border-lime-500;
       }
-      &.amber {
+      &.progress-amber {
         @apply bg-amber-500 border border-amber-500;
       }
-      &.rose {
+      &.progress-rose {
         @apply bg-rose-500 border border-rose-500;
       }
-      &.sky {
+      &.progress-sky {
         @apply bg-sky-500 border border-sky-500;
       }
-      &.light {
+      &.progress-light {
         @apply bg-slate-100 border border-slate-100 text-slate-700;
       }
-      &.dark {
+      &.progress-dark {
         @apply bg-slate-800 border border-slate-800;
       }
-      &.transparent {
+      &.progress-transparent {
         @apply bg-slate-800 border border-slate-800 text-slate-500;
       }
     }
-    &.transparent {
+    &.progress-transparent {
       @apply bg-transparent;
     }
-    &.light {
+    &.progress-light {
       @apply bg-slate-700;
     }
   }
@@ -90,105 +93,102 @@
 }
 .RadialProgress {
   @apply aspect-square rounded-[50%] grid place-content-center transition-all duration-500 ease-in-out;
-  &.purple {
+  &.progress-purple {
     background: conic-gradient(theme("colors.purple.500") var(--value, 0), var(--blank) 0);
   }
-  &.blue {
+  &.progress-primary {
+    background: conic-gradient(theme("colors.primary.500") var(--value, 0), var(--blank) 0);
+  }
+  &.progress-blue {
     background: conic-gradient(theme("colors.blue.500") var(--value, 0), var(--blank) 0);
   }
-  &.green {
+  &.progress-green {
     background: conic-gradient(theme("colors.green.500") var(--value, 0), var(--blank) 0);
   }
-  &.red {
+  &.progress-red {
     background: conic-gradient(theme("colors.red.500") var(--value, 0), var(--blank) 0);
   }
-  &.yellow {
+  &.progress-yellow {
     background: conic-gradient(theme("colors.yellow.500") var(--value, 0), var(--blank) 0);
   }
-  &.gray {
+  &.progress-gray {
     background: conic-gradient(theme("colors.gray.500") var(--value, 0), var(--blank) 0);
   }
-  &.orange {
+  &.progress-orange {
     background: conic-gradient(theme("colors.orange.500") var(--value, 0), var(--blank) 0);
   }
-  &.pink {
+  &.progress-pink {
     background: conic-gradient(theme("colors.pink.500") var(--value, 0), var(--blank) 0);
   }
-  &.fuchsia {
+  &.progress-fuchsia {
     background: conic-gradient(theme("colors.fuchsia.500") var(--value, 0), var(--blank) 0);
   }
-  &.cyan {
+  &.progress-cyan {
     background: conic-gradient(theme("colors.cyan.500") var(--value, 0), var(--blank) 0);
   }
-  &.teal {
+  &.progress-teal {
     background: conic-gradient(theme("colors.teal.500") var(--value, 0), var(--blank) 0);
   }
-  &.indigo {
+  &.progress-indigo {
     background: conic-gradient(theme("colors.indigo.500") var(--value, 0), var(--blank) 0);
   }
-  &.violet {
+  &.progress-violet {
     background: conic-gradient(theme("colors.violet.500") var(--value, 0), var(--blank) 0);
   }
-  &.emerald {
+  &.progress-emerald {
     background: conic-gradient(theme("colors.emerald.500") var(--value, 0), var(--blank) 0);
   }
-  &.lime {
+  &.progress-lime {
     background: conic-gradient(theme("colors.lime.500") var(--value, 0), var(--blank) 0);
   }
-  &.amber {
+  &.progress-amber {
     background: conic-gradient(theme("colors.amber.500") var(--value, 0), var(--blank) 0);
   }
-  &.rose {
+  &.progress-rose {
     background: conic-gradient(theme("colors.rose.500") var(--value, 0), var(--blank) 0);
   }
-  &.sky {
+  &.progress-sky {
     background: conic-gradient(theme("colors.sky.500") var(--value, 0), var(--blank) 0);
   }
-  &.light {
+  &.progress-light {
     background: conic-gradient(theme("colors.slate.100") var(--value, 0), theme("colors.slate.700") 0);
   }
-  &.dark {
+  &.progress-dark {
     background: conic-gradient(theme("colors.slate.800") var(--value, 0), var(--blank) 0);
   }
-  &.transparent {
+  &.progress-transparent {
     background: conic-gradient(theme("colors.slate.800") var(--value, 0), rgb(40, 40, 40, .05) 0);
   }
 
-  &.large {
+  &.progress-large {
     @apply w-20 h-20 text-sm whitespace-nowrap;
     &:after {
       @apply w-[calc(5rem*0.75)] p-1;
     }
   }
-  &.medium {
+  &.progress-medium {
     @apply w-16 h-16 text-[.625rem];
     &:after {
       @apply w-[calc(4rem*0.775)] p-1;
     }
   }
-  &.small {
+  &.progress-small {
     @apply w-14 h-14 text-[.625rem] whitespace-nowrap;
     &:after {
       @apply w-[calc(3.5rem*0.725)] p-1;
     }
   }
-  &.xs {
-    @apply w-12 h-12 text-[.625rem] whitespace-nowrap;
-    &:after {
-      @apply w-[calc(3rem*0.725)] p-0.5;
-    }
-  }
-  &.show-percentage {
+  &.progress-show-percentage {
     &:after {
       @apply aspect-square grid bg-slate-50 place-content-center rounded-[50%];
       @apply text-zinc-950 font-medium;
       content: attr(data-progress);
-      &.light {
+      &.progress-light {
         @apply bg-slate-700 text-slate-100;
       }
     }
   }
-  &:not(.show-percentage) {
+  &:not(.progress-show-percentage) {
     &:after {
       @apply aspect-square grid bg-slate-50 place-content-center rounded-[50%];
       content: " ";

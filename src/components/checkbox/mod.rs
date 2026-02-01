@@ -22,7 +22,7 @@ pub struct Props {
   pub on_change: Callback<bool>,
   #[prop_or(Size::Medium)]
   pub size: Size,
-  #[prop_or(Color::Blue)]
+  #[prop_or(Color::Primary)]
   pub color: Color,
   #[prop_or(CheckboxVariant::Default)]
   pub variant: CheckboxVariant,
@@ -35,9 +35,9 @@ pub struct Props {
 #[function_component(Checkbox)]
 pub(crate) fn checkbox(props: &Props) -> Html {
   let HookResponse { on_change } = use_checkbox(HookParams { onchange: props.on_change.clone() });
-  let color_class = format!("{:?}", props.color).to_lowercase();
-  let variant_class = format!("{:?}", props.variant).to_lowercase();
-  let size_class = format!("{:?}", props.size).to_lowercase();
+  let color_class = format!("checkbox-{:?}", props.color).to_lowercase();
+  let variant_class = format!("checkbox-{:?}", props.variant).to_lowercase();
+  let size_class = format!("checkbox-{:?}", props.size).to_lowercase();
 
   html! {
     <label
@@ -47,8 +47,8 @@ pub(crate) fn checkbox(props: &Props) -> Html {
         variant_class,
         size_class,
         &color_class,
-        props.disabled.then_some("disabled"),
-        props.checked.then_some("checked"),
+        props.disabled.then_some("checkbox-disabled"),
+        props.checked.then_some("checkbox-checked"),
         &props.class,
       )}
     >
@@ -68,7 +68,7 @@ pub(crate) fn checkbox(props: &Props) -> Html {
       {html! {
         if props.variant == CheckboxVariant::Toggle {
           <span class={classes!(
-            "checkbox-toggle",
+            "checkbox-toggle-toggle",
             &color_class
           )}></span>
         }

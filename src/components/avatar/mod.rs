@@ -17,7 +17,7 @@ pub struct Props {
   pub with_border: bool,
   #[prop_or_default]
   pub title: AttrValue,
-  #[prop_or(Color::Blue)]
+  #[prop_or(Color::Primary)]
   pub color: Color,
   #[prop_or(2)]
   pub take: usize,
@@ -29,10 +29,10 @@ pub struct Props {
 
 #[function_component(Avatar)]
 pub(crate) fn avatar(props: &Props) -> Html {
-  let size_class = format!("{:?}", &props.size).to_lowercase();
-  let color_class = format!("{:?}", &props.color).to_lowercase();
-  let with_border_class = props.with_border.then_some("with-border");
-  let rounded_class = props.rounded.then_some("rounded");
+  let size_class = format!("avatar-{:?}", &props.size).to_lowercase();
+  let color_class = format!("avatar-{:?}", &props.color).to_lowercase();
+  let with_border_class = props.with_border.then_some("avatar-with-border");
+  let rounded_class = props.rounded.then_some("avatar-rounded");
   
   html! {
     if props.src != "" {

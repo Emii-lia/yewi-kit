@@ -1,6 +1,6 @@
 .Radio{
   @apply flex flex-row items-center gap-4 text-slate-950  transition-all duration-200 ease-in-out;
-  &.small {
+  &.radio-small {
     @apply gap-2;
     .radio-input {
       @apply w-3 h-3;
@@ -12,7 +12,7 @@
       @apply text-xs;
     }
   }
-  &.medium {
+  &.radio-medium {
     @apply gap-3;
     .radio-input {
       @apply w-4 h-4;
@@ -24,7 +24,7 @@
       @apply text-sm;
     }
   }
-  &.large {
+  &.radio-large {
     @apply gap-5;
     .radio-input {
       @apply w-6 h-6;
@@ -47,127 +47,133 @@
           @apply border-inherit;
         }
       }
-      &.purple {
+      &.radio-primary {
+        @apply bg-primary-500 border border-primary-500;
+        &:focus {
+          @apply ring-primary-500;
+        }
+      }
+      &.radio-purple {
         @apply bg-purple-500 border border-purple-500;
         &:focus {
           @apply ring-purple-500;
         }
       }
-      &.blue {
+      &.radio-blue {
         @apply bg-blue-500 border border-blue-500;
         &:focus {
           @apply ring-blue-500;
         }
       }
-      &.green {
+      &.radio-green {
         @apply bg-green-500 border border-green-500;
         &:focus {
           @apply ring-green-500;
         }
       }
-      &.red {
+      &.radio-red {
         @apply bg-red-500 border border-red-500;
         &:focus {
           @apply ring-red-500;
         }
       }
-      &.yellow {
+      &.radio-yellow {
         @apply bg-yellow-500 border border-yellow-500;
         &:focus {
           @apply ring-yellow-500;
         }
       }
-      &.gray {
+      &.radio-gray {
         @apply bg-gray-500 border border-gray-500;
         &:focus {
           @apply ring-gray-500;
         }
       }
-      &.orange {
+      &.radio-orange {
         @apply bg-orange-500 border border-orange-500;
         &:focus {
           @apply ring-orange-500;
         }
       }
-      &.pink {
+      &.radio-pink {
         @apply bg-pink-500 border border-pink-500;
         &:focus {
           @apply ring-pink-500;
         }
       }
-      &.fuchsia {
+      &.radio-fuchsia {
         @apply bg-fuchsia-500 border border-fuchsia-500;
         &:focus {
           @apply ring-fuchsia-500;
         }
       }
-      &.cyan {
+      &.radio-cyan {
         @apply bg-cyan-500 border border-cyan-500;
         &:focus {
           @apply ring-cyan-500;
         }
       }
-      &.teal {
+      &.radio-teal {
         @apply bg-teal-500 border border-teal-500;
         &:focus {
           @apply ring-teal-500;
         }
       }
-      &.indigo {
+      &.radio-indigo {
         @apply bg-indigo-500 border border-indigo-500;
         &:focus {
           @apply ring-indigo-500;
         }
       }
-      &.violet {
+      &.radio-violet {
         @apply bg-violet-500 border border-violet-500;
         &:focus {
           @apply ring-violet-500;
         }
       }
-      &.emerald {
+      &.radio-emerald {
         @apply bg-emerald-500 border border-emerald-500;
         &:focus {
           @apply ring-emerald-500;
         }
       }
-      &.lime {
+      &.radio-lime {
         @apply bg-lime-500 border border-lime-500;
         &:focus {
           @apply ring-lime-500;
         }
       }
-      &.amber {
+      &.radio-amber {
         @apply bg-amber-500 border border-amber-500;
         &:focus {
           @apply ring-amber-500;
         }
       }
-      &.rose {
+      &.radio-rose {
         @apply bg-rose-500 border border-rose-500;
         &:focus {
           @apply ring-rose-500;
         }
       }
-      &.sky {
+      &.radio-sky {
         @apply bg-sky-500 border border-sky-500;
         &:focus {
           @apply ring-sky-500;
         }
       }
-      &.light {
+      &.radio-light {
         @apply bg-slate-100 text-slate-700 border border-slate-300;
         &:focus {
           @apply bg-slate-100 ring-slate-500;
         }
       }
-      &.dark {
+      &.radio-dark {
         @apply bg-slate-700 border border-slate-100;
         &:focus {
           @apply ring-slate-100;
         }
       }
-      &.transparent {
+      &.radio-transparent {
         @apply bg-transparent text-slate-500 border border-slate-500;
         &:focus {
           @apply ring-slate-500;

@@ -56,9 +56,9 @@ pub(crate) fn button(props: &Props) -> Html {
         "Button",
         variant,
         size,
-        props.is_loading.then_some("loading"),
+        props.is_loading.then_some("btn-loading"),
         &props.class,
-        icon.is_some().then_some("with-icon")
+        icon.is_some().then_some("btn-with-icon")
       )}
         disabled={props.disabled || props.is_loading}
       >
@@ -75,9 +75,9 @@ pub(crate) fn button(props: &Props) -> Html {
           "Button",
           variant,
           size,
-          props.is_loading.then_some("loading"),
+          props.is_loading.then_some("btn-loading"),
           &props.class,
-          icon.is_some().then_some("with-icon")
+          icon.is_some().then_some("btn-with-icon")
       )}
         disabled={props.disabled || props.is_loading}
         onclick={on_click}
@@ -85,8 +85,8 @@ pub(crate) fn button(props: &Props) -> Html {
         {
           html! {
             if props.is_loading {
-              <div class="spinner-container">
-                <span class="spinner"></span>
+              <div class="btn-spinner-container">
+                <span class="btn-spinner"></span>
               </div>
             } else {
               <>

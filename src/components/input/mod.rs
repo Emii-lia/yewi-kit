@@ -25,8 +25,8 @@ pub(crate) fn input(props: &InputProps) -> Html {
         class={classes!(
           "input-container",
           size,
-          icon.is_some().then_some("with-icon"),
-          props.disabled.then_some("disabled")
+          icon.is_some().then_some("input-with-icon"),
+          props.disabled.then_some("input-disabled")
         )}
       >
         {html! {

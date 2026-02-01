@@ -18,9 +18,9 @@ pub struct HookResponse {
 pub(crate) fn use_badge(params: HookParams) -> HookResponse {
   let HookParams { color, variant } = params;
   
-  let variant = format!("{:?}", variant).to_lowercase();
+  let variant = format!("badge-{:?}", variant).to_lowercase();
   
-  let color_class = format!("{:?}", color).to_lowercase();
+  let color_class = format!("badge-{:?}", color).to_lowercase();
   
   HookResponse {
     variant,

@@ -9,7 +9,7 @@ use crate::types::{Size};
 
 #[function_component(PasswordInput)]
 pub(crate) fn password_input(props: &PasswordInputProps) -> Html {
-  let size_class = format!("{:?}", props.input_size).to_lowercase();
+  let size_class = format!("pass-input-{:?}", props.input_size).to_lowercase();
   let errors = &props.errors;
   let HookResponse {
     is_visible,
@@ -35,7 +35,7 @@ pub(crate) fn password_input(props: &PasswordInputProps) -> Html {
           class={classes!(
             "PasswordInput__label",
             size_class,
-            props.disabled.then_some("disabled")
+            props.disabled.then_some("pass-input-disabled")
           )}
       >
         <input
@@ -73,7 +73,7 @@ pub(crate) fn password_input(props: &PasswordInputProps) -> Html {
         <Button
           variant={ButtonVariant::Tertiary}
           size={Size::Small}
-          class="eye-toggle"
+          class="pass-input-eye-toggle"
           onclick={Callback::from(move |_|{
             toggle_visible.emit(());
           })}

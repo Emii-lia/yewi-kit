@@ -53,7 +53,7 @@ pub(crate) fn textarea(props: &Props) -> Html {
           class={classes!(
             "textarea",
             &props.class,
-            props.resize.then_some("resizable")
+            props.resize.then_some("textarea-resizable")
           )}
           value={props.value.clone()}
           onchange={props.on_change.clone()}

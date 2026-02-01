@@ -15,17 +15,17 @@
       5px 5px,
       1px 1.5em;
 
-    &.large{
+    &.select-large{
       @apply py-2 pr-14 pl-4 h-12;
     }
-    &.medium{
+    &.select-medium{
       @apply p-2 pr-14 pl-4 h-11;
     }
-    &.small{
+    &.select-small{
       @apply py-2 pr-12 pl-3 h-10 text-sm;
     }
     &:focus{
-      @apply outline-1 outline-blue-500;
+      @apply outline-1 outline-primary-500;
     }
     &:disabled {
       @apply bg-slate-100 cursor-not-allowed text-slate-500;

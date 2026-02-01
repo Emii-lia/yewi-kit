@@ -20,7 +20,7 @@ pub struct Props {
   pub on_change: Callback<bool>,
   #[prop_or(Size::Medium)]
   pub size: Size,
-  #[prop_or(Color::Blue)]
+  #[prop_or(Color::Primary)]
   pub color: Color,
   #[prop_or_default]
   pub class: Classes,
@@ -31,8 +31,8 @@ pub struct Props {
 #[function_component(Radio)]
 pub(crate) fn radio(props: &Props) -> Html {
   let HookResponse { on_change } = use_radio(HookParams { onchange: props.on_change.clone() });
-  let color_class = format!("{:?}", props.color).to_lowercase();
-  let size_class = format!("{:?}", props.size).to_lowercase();
+  let color_class = format!("radio-{:?}", props.color).to_lowercase();
+  let size_class = format!("radio-{:?}", props.size).to_lowercase();
 
   html! {
     <label
@@ -41,8 +41,8 @@ pub(crate) fn radio(props: &Props) -> Html {
         "Radio",
         size_class,
         &color_class,
-        props.disabled.then_some("disabled"),
-        props.checked.then_some("checked"),
+        props.disabled.then_some("radio-disabled"),
+        props.checked.then_some("radio-checked"),
         &props.class,
       )}
     >

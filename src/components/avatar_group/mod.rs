@@ -16,7 +16,7 @@ pub struct AvatarGroupProps {
   pub rounded: bool,
   #[prop_or_default]
   pub with_border: bool,
-  #[prop_or(Color::Blue)]
+  #[prop_or(Color::Primary)]
   pub color: Color,
   #[prop_or(4)]
   pub max: usize,
