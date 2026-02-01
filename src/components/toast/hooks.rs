@@ -1,5 +1,5 @@
 use gloo::timers::callback::Timeout;
-use yew::{hook, html, Callback, Children, Classes, use_state, use_effect_with};
+use yew::{hook, Callback, Children, Classes, use_state, use_effect_with};
 use crate::components::toast::types::{ToastItem, ToastPosition, ToastType};
 
 
