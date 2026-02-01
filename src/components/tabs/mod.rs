@@ -35,7 +35,7 @@ pub struct TabsProps {
 #[function_component(Tabs)]
 pub(crate) fn tabs(props: &TabsProps) -> Html {
   let HookResponse { active, tabs } = use_tabs(props);
-  let color_class = format!("{:?}", props.color).to_lowercase();
+  let color_class = format!("tab-{:?}", props.color).to_lowercase();
 
   html! {
     <div class="Tabs">
@@ -56,7 +56,7 @@ pub(crate) fn tabs(props: &TabsProps) -> Html {
             <button
               class={classes!(
                 "Tab",
-                is_active.then_some("is-active"),
+                is_active.then_some("tab-is-active"),
                 &color_class
               )}
               {onclick}

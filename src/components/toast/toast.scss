@@ -5,22 +5,22 @@
 .ToastStack {
   @apply absolute flex flex-col gap-2 pointer-events-none;
   @apply max-w-[calc(100vw-2rem)];
-  &.topleft {
+  &.toast-topleft {
     @apply top-4 left-4 items-start;
   }
-  &.topcenter {
+  &.toast-topcenter {
     @apply top-4 left-1/2 -translate-x-1/2 items-center;
   }
-  &.topright {
+  &.toast-topright {
     @apply top-4 right-4 items-end;
   }
-  &.bottomleft {
+  &.toast-bottomleft {
     @apply bottom-4 left-4 items-start flex-col-reverse;
   }
-  &.bottomcenter {
+  &.toast-bottomcenter {
     @apply bottom-4 left-1/2 -translate-x-1/2 items-center flex-col-reverse;
   }
-  &.bottomright {
+  &.toast-bottomright {
     @apply bottom-4 right-4 items-end flex-col-reverse;
   }
 }
@@ -30,27 +30,27 @@
   @apply transition-all duration-200 ease-in-out opacity-0;
   @apply pointer-events-auto;
 
-  &.open {
+  &.toast-open {
     @apply opacity-100;
   }
-  &.bottomleft,
-  &.bottomright,
-  &.bottomcenter,
-  &.topleft,
-  &.topright,
-  &.topcenter {
+  &.toast-bottomleft,
+  &.toast-bottomright,
+  &.toast-bottomcenter,
+  &.toast-topleft,
+  &.toast-topright,
+  &.toast-topcenter {
     @apply m-0;
   }
   &__content {
     @apply w-full text-slate-800 font-medium;
-    &.success {
+    &.toast-success {
       @apply flex items-center gap-3;
       &:before {
         @apply w-4 h-4 p-1.5 text-green-500 bg-green-100 rounded-full flex items-center justify-center;
         content: "\2713";
       }
     }
-    &.error {
+    &.toast-error {
       @apply flex items-center gap-3;
       &:before {
         @apply w-4 h-4 p-1.5 text-red-500 bg-red-100 rounded-full flex items-center justify-center;

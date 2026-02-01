@@ -22,14 +22,14 @@
       }
     }
   }
-  &.default {
+  &.table-default {
     .Table__body {
       .TableRow:not(:last-child) {
         @apply border-0 border-b border-slate-200;
       }
     }
   }
-  &.striped {
+  &.table-striped {
     .Table__body {
       .TableRow {
         &:nth-child(odd) {
@@ -45,7 +45,7 @@
 
     }
   }
-  &.bordered {
+  &.table-bordered {
     .Table__body {
       .TableRow:not(:last-child) {
         @apply border-b border-slate-200;
