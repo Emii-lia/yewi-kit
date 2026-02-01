@@ -4,6 +4,7 @@ mod store;
 
 use web_sys::MouseEvent;
 use yew::{classes, function_component, html, Callback, Html};
+use yew_icons::IconData;
 use crate::components::{Button, ButtonVariant};
 use crate::types::{Size};
 pub(crate) use hooks::*;
@@ -45,9 +46,8 @@ pub(crate) fn modal() -> Html {
                   on_close.emit(());
                 })
               }}
-            >
-              {"x"}
-            </Button>
+              icon={IconData::LUCIDE_X}
+            />
           </div>
           {children.clone()}
         </div>

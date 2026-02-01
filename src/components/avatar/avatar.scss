@@ -95,6 +95,12 @@
     &.avatar-large {
       @apply text-lg;
     }
+    &.avatar-primary {
+      @apply bg-primary-500;
+      &.avatar-with-border {
+        @apply border border-primary-700;
+      }
+    }
     &.avatar-purple {
       @apply bg-purple-500;
       &.avatar-with-border {
