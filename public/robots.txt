@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yewi.pages.dev/sitemap.xml
