@@ -46,7 +46,7 @@
   }
 }
 .btn-primary{
-  @apply bg-primary text-white shadow-inner;
+  @apply bg-primary text-white shadow-sm;
 
   &:hover{
     @apply bg-primary-700;
@@ -55,7 +55,7 @@
     @apply outline-none ring-2 ring-primary ring-offset-2;
   }
   &:disabled{
-    @apply bg-primary-200 cursor-not-allowed text-slate-200;
+    @apply bg-primary-300 cursor-not-allowed text-slate-50 shadow-none;
   }
 }
 .btn-danger {
