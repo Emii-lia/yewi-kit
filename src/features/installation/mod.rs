@@ -43,8 +43,8 @@ pub(crate) fn installation_section() -> Html {
           <pre class="code-block">
             <code>
             {r#"
-git clone https://github.com/Emii-lia/yewi-kit.git
-cd yewi-kit/cli
+git clone https://github.com/Emii-lia/yewi-cli.git
+cd yewi-cli
 cargo install --path .
             "#}
             </code>
