@@ -7,7 +7,7 @@ pub enum Size {
 
 #[derive(PartialEq, Clone, Debug)]
 pub(crate) enum Color {
-  None,
+  Primary,
   Purple,
   Blue,
   Green,
