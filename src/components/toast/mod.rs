@@ -30,7 +30,7 @@ pub(crate) struct ToastProps {
 pub(crate) fn toast_container() -> Html {
   let ctx = use_toast_store();
   let stack = |pos: ToastPosition| {
-    let stack_class = format!("{:?}", pos).to_lowercase();
+    let stack_class = format!("toast-{:?}", pos).to_lowercase();
 
     html! {
       <div class={classes!("ToastStack", &stack_class)}>
@@ -69,8 +69,8 @@ pub(crate) fn toast_container() -> Html {
 
 #[function_component(Toast)]
 pub(crate) fn toast(props: &ToastProps) -> Html {
-  let position = format!("{:?}", &props.position).to_lowercase();
-  let variant = format!("{:?}", &props.variant).to_lowercase();
+  let position = format!("toast-{:?}", &props.position).to_lowercase();
+  let variant = format!("toast-{:?}", &props.variant).to_lowercase();
 
   let HookResponse {
     is_open
@@ -84,7 +84,7 @@ pub(crate) fn toast(props: &ToastProps) -> Html {
     <div class={classes!(
       "Toast",
       position,
-      is_open.then_some("open"),
+      is_open.then_some("toast-open"),
       &props.class
     )}>
       <div class={classes!("Toast__content", variant)}>

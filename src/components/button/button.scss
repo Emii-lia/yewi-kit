@@ -1,11 +1,11 @@
 .Button{
   @apply inline-flex items-center justify-center gap-2 font-semibold whitespace-nowrap;
 
-  .spinner-container {
+  .btn-spinner-container {
     @apply relative flex items-center justify-center;
     min-width: 100px;
 
-    .spinner {
+    .btn-spinner {
       @apply absolute flex items-center justify-center;
       width: 15px;
       height: 15px;
@@ -36,29 +36,29 @@
 .btn-lg{
   @apply py-2.5 px-3.5 h-10 rounded-lg;
 }
-.rounded{
+.btn-rounded{
   @apply rounded-full !important;
 }
-.loading {
+.btn-loading {
   @apply cursor-wait;
   &:disabled {
     @apply cursor-wait;
   }
 }
-.primary{
-  @apply bg-blue-500 text-white shadow-inner;
+.btn-primary{
+  @apply bg-primary text-white shadow-inner;
 
   &:hover{
-    @apply bg-blue-700;
+    @apply bg-primary-700;
   }
   &:focus{
-    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+    @apply outline-none ring-2 ring-primary ring-offset-2;
   }
   &:disabled{
-    @apply bg-blue-200 cursor-not-allowed text-slate-200;
+    @apply bg-primary-200 cursor-not-allowed text-slate-200;
   }
 }
-.danger {
+.btn-danger {
   @apply bg-red-600 text-white;
   &:hover {
     @apply bg-red-700;
@@ -70,7 +70,7 @@
     @apply bg-red-300 text-slate-300 cursor-not-allowed;
   }
 }
-.success {
+.btn-success {
   @apply bg-emerald-600 text-white;
   &:hover {
     @apply bg-emerald-700;
@@ -82,25 +82,25 @@
     @apply bg-emerald-300 text-slate-300 cursor-not-allowed;
   }
 }
-.secondary {
+.btn-secondary {
   @apply bg-white text-slate-950 border border-solid border-slate-500 shadow-sm;
   &:hover{
     @apply bg-slate-200;
   }
   &:focus{
-    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+    @apply outline-none ring-2 ring-primary ring-offset-2;
   }
   &:disabled{
     @apply bg-slate-100 text-slate-500 cursor-not-allowed;
   }
 }
-.tertiary{
+.btn-tertiary{
   @apply bg-transparent text-slate-950;
   &:hover{
     @apply bg-slate-100;
   }
   &:focus{
-    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+    @apply outline-none ring-2 ring-primary ring-offset-2;
   }
   &:disabled{
     @apply bg-transparent text-slate-500 cursor-not-allowed;

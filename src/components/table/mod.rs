@@ -21,7 +21,7 @@ pub(crate) struct TableProps {
 }
 #[function_component(Table)]
 pub(crate) fn table(props: &TableProps) -> Html {
-  let variant_class = format!("{:?}", props.variant).to_lowercase();
+  let variant_class = format!("table-{:?}", props.variant).to_lowercase();
 
   html! {
     <table class={classes!("Table", variant_class, &props.class)}>

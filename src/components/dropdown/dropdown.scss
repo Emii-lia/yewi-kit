@@ -6,13 +6,13 @@
   &__menu {
     @apply absolute w-fit min-w-48 bg-white border border-slate-300 rounded-md shadow-lg z-50;
     @apply max-h-0 opacity-0 overflow-hidden transition-all duration-200 ease-in-out;
-    &.open {
+    &.dropdown-menu-open {
       @apply max-h-96 opacity-100 overflow-auto;
     }
-    &.top {
+    &.dropdown-menu-top {
       @apply bottom-full mb-2;
     }
-    &.bottom {
+    &.dropdown-menu-bottom {
       @apply top-full mt-2;
     }
   }

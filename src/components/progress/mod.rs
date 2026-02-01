@@ -14,7 +14,7 @@ pub struct Props {
   pub class: Classes,
   #[prop_or(10)]
   pub height: u32,
-  #[prop_or(Color::Blue)]
+  #[prop_or(Color::Primary)]
   pub color: Color,
   #[prop_or_default]
   pub show_percentage: bool,
@@ -27,8 +27,8 @@ pub struct Props {
 }
 #[function_component(Progress)]
 pub(crate) fn progress(props: &Props) -> Html {
-  let color_class = format!("{:?}", props.color).to_lowercase();
-  let size_class = format!("{:?}", props.radial_size).to_lowercase();
+  let color_class = format!("progress-{:?}", props.color).to_lowercase();
+  let size_class = format!("progress-{:?}", props.radial_size).to_lowercase();
   let progress_percentage = if props.max == 0 { 0.0 } else { (props.value.min(props.max) as f64 / props.max as f64) * 100.0 };
   let progress_value = if props.as_fraction {
     format!("{}/{}", props.value.min(props.max), props.max)
@@ -67,7 +67,7 @@ pub(crate) fn progress(props: &Props) -> Html {
           class={classes!(
             "RadialProgress",
             size_class,
-            props.show_percentage.then_some("show-percentage"),
+            props.show_percentage.then_some("progress-show-percentage"),
             color_class,
             &props.class
           )}

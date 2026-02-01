@@ -13,7 +13,7 @@ pub struct Props {
   pub label: AttrValue,
   #[prop_or(BadgeVariant::Default)]
   pub variant: BadgeVariant,
-  #[prop_or(Color::None)]
+  #[prop_or(Color::Primary)]
   pub color: Color,
   #[prop_or_default]
   pub class: Classes,
@@ -38,11 +38,11 @@ pub(crate) fn badge(props: &Props) -> Html {
   html! {
     <div class={classes!(
         "Badge",
-        props.rounded.then_some("rounded"),
-        props.with_border.then_some("with-border"),
+        props.rounded.then_some("badge-rounded"),
+        props.with_border.then_some("badge-with-border"),
         variant,
         color,
-        icon.is_some().then_some("with-icon"),
+        icon.is_some().then_some("badge-with-icon"),
         &props.class
       )}
       title={if !props.title.is_empty() { &props.title } else { &props.label }}

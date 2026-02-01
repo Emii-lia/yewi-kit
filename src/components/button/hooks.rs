@@ -25,11 +25,11 @@ pub(crate) fn use_button(params: HookParams) -> HookResponse {
   });
 
   let variant = match variant {
-    ButtonVariant::Primary => "primary",
-    ButtonVariant::Secondary => "secondary",
-    ButtonVariant::Tertiary => "tertiary",
-    ButtonVariant::Danger => "danger",
-    ButtonVariant::Success => "success",
+    ButtonVariant::Primary => "btn-primary",
+    ButtonVariant::Secondary => "btn-secondary",
+    ButtonVariant::Tertiary => "btn-tertiary",
+    ButtonVariant::Danger => "btn-danger",
+    ButtonVariant::Success => "btn-success",
   };
 
   let size = match size {

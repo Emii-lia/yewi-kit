@@ -16,8 +16,8 @@ pub(crate) fn divider(props: &Props) -> Html {
   html! {
     <div class={classes!(
       "Divider",
-      props.vertical.then_some("vertical"),
-      has_children.then_some("has-children"),
+      props.vertical.then_some("divider-vertical"),
+      has_children.then_some("divider-has-children"),
       &props.class
     )}>
       {props.children.clone()}

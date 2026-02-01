@@ -4,285 +4,297 @@
     @apply brightness-90;
   }
 
-  &.rounded {
+  &.badge-rounded {
     @apply rounded-full px-3;
   }
-  &.none{
-    @apply bg-inherit text-slate-500;
-  }
-  &.gray{
-    @apply text-slate-500;
-    &.with-border {
-      @apply border border-slate-300;
+  &.badge-primary{
+    @apply text-primary;
+    &.badge-with-border {
+      @apply border border-primary-300;
     }
-    &.default{
-      @apply bg-slate-100;
+    &.badge-default{
+      @apply bg-primary-200;
     }
-    &.plain{
+    &.badge-plain{
       @apply bg-transparent;
     }
-    &.filled {
+    &.badge-filled {
+      @apply text-white py-1 px-2.5 gap-2.5 bg-primary-500 bg-opacity-70;
+    }
+  }
+  &.badge-gray{
+    @apply text-slate-500;
+    &.badge-with-border {
+      @apply border border-slate-300;
+    }
+    &.badge-default{
+      @apply bg-slate-100;
+    }
+    &.badge-plain{
+      @apply bg-transparent;
+    }
+    &.badge-filled {
       @apply text-white py-1 px-2.5 gap-2.5 bg-slate-500 bg-opacity-70;
     }
   }
-  &.red{
+  &.badge-red{
     @apply text-red-700;
-    &.with-border {
+    &.badge-with-border {
       @apply border border-red-300;
     }
-    &.default{
+    &.badge-default{
       @apply bg-red-100;
     }
-    &.plain{
+    &.badge-plain{
       @apply bg-transparent;
     }
-    &.filled {
+    &.badge-filled {
       @apply text-white py-1 px-2.5 gap-2.5 bg-red-500 bg-opacity-70;
     }
   }
-  &.yellow{
+  &.badge-yellow{
     @apply text-yellow-700;
-    &.with-border {
+    &.badge-with-border {
       @apply border border-yellow-300;
     }
-    &.default{
+    &.badge-default{
       @apply bg-yellow-100;
     }
-    &.plain{
+    &.badge-plain{
       @apply bg-transparent;
     }
-    &.filled {
+    &.badge-filled {
       @apply text-white py-1 px-2.5 gap-2.5 bg-yellow-500 bg-opacity-70;
     }
   }
-  &.green{
+  &.badge-green{
     @apply text-green-700;
-    &.with-border {
+    &.badge-with-border {
       @apply border border-green-300;
     }
-    &.default{
+    &.badge-default{
       @apply bg-green-100;
     }
-    &.plain{
+    &.badge-plain{
       @apply bg-transparent;
     }
-    &.filled {
+    &.badge-filled {
       @apply text-white py-1 px-2.5 gap-2.5 bg-green-500 bg-opacity-70;
     }
   }
-  &.orange{
+  &.badge-orange{
     @apply text-orange-700;
-    &.with-border {
+    &.badge-with-border {
       @apply border border-orange-300;
     }
-    &.default{
+    &.badge-default{
       @apply bg-orange-100;
     }
-    &.plain{
+    &.badge-plain{
       @apply bg-transparent;
     }
-    &.filled {
+    &.badge-filled {
       @apply text-white py-1 px-2.5 gap-2.5 bg-orange-500 bg-opacity-70;
     }
   }
-  &.purple{
+  &.badge-purple{
     @apply text-purple-700;
-    &.with-border {
+    &.badge-with-border {
       @apply border border-purple-300;
     }
-    &.default{
+    &.badge-default{
       @apply bg-purple-100;
     }
-    &.plain{
+    &.badge-plain{
       @apply bg-transparent;
     }
-    &.filled {
+    &.badge-filled {
       @apply text-white py-1 px-2.5 gap-2.5 bg-purple-500 bg-opacity-70;
     }
   }
-  &.blue{
+  &.badge-blue{
     @apply text-blue-700;
-    &.with-border {
+    &.badge-with-border {
       @apply border border-blue-300;
     }
-    &.default{
+    &.badge-default{
       @apply bg-blue-100;
     }
-    &.plain{
+    &.badge-plain{
       @apply bg-transparent;
     }
-    &.filled {
+    &.badge-filled {
       @apply text-white py-1 px-2.5 gap-2.5 bg-blue-500 bg-opacity-70;
     }
   }
-  &.pink{
+  &.badge-pink{
     @apply text-pink-700;
-    &.with-border {
+    &.badge-with-border {
       @apply border border-pink-300;
     }
-    &.default{
+    &.badge-default{
       @apply bg-pink-100;
     }
-    &.plain{
+    &.badge-plain{
       @apply bg-transparent;
     }
-    &.filled {
+    &.badge-filled {
       @apply text-white py-1 px-2.5 gap-2.5 bg-pink-500 bg-opacity-70;
     }
   }
-  &.fuchsia{
+  &.badge-fuchsia{
     @apply text-fuchsia-700;
-    &.with-border {
+    &.badge-with-border {
       @apply border border-fuchsia-300;
     }
-    &.default{
+    &.badge-default{
       @apply bg-fuchsia-100;
     }
-    &.plain{
+    &.badge-plain{
       @apply bg-transparent;
     }
-    &.filled {
+    &.badge-filled {
       @apply text-white py-1 px-2.5 gap-2.5 bg-fuchsia-500 bg-opacity-70;
     }
   }
-  &.cyan{
+  &.badge-cyan{
     @apply text-cyan-700;
-    &.with-border {
+    &.badge-with-border {
       @apply border border-cyan-300;
     }
-    &.default{
+    &.badge-default{
       @apply bg-cyan-100;
     }
-    &.plain{
+    &.badge-plain{
       @apply bg-transparent;
     }
-    &.filled {
+    &.badge-filled {
       @apply text-white py-1 px-2.5 gap-2.5 bg-cyan-500 bg-opacity-70;
     }
   }
-  &.teal{
+  &.badge-teal{
     @apply text-teal-700;
-    &.with-border {
+    &.badge-with-border {
       @apply border border-teal-300;
     }
-    &.default{
+    &.badge-default{
       @apply bg-teal-100;
     }
-    &.plain{
+    &.badge-plain{
       @apply bg-transparent;
     }
-    &.filled {
+    &.badge-filled {
       @apply text-white py-1 px-2.5 gap-2.5 bg-teal-500 bg-opacity-70;
     }
   }
-  &.lime{
+  &.badge-lime{
     @apply text-lime-700;
-    &.with-border {
+    &.badge-with-border {
       @apply border border-lime-300;
     }
-    &.default{
+    &.badge-default{
       @apply bg-lime-100;
     }
-    &.plain{
+    &.badge-plain{
       @apply bg-transparent;
     }
-    &.filled {
+    &.badge-filled {
       @apply text-white py-1 px-2.5 gap-2.5 bg-lime-500 bg-opacity-70;
     }
   }
-  &.amber{
+  &.badge-amber{
     @apply text-amber-700;
-    &.with-border {
+    &.badge-with-border {
       @apply border border-amber-300;
     }
-    &.default{
+    &.badge-default{
       @apply bg-amber-100;
     }
-    &.plain{
+    &.badge-plain{
       @apply bg-transparent;
     }
-    &.filled {
+    &.badge-filled {
       @apply text-white py-1 px-2.5 gap-2.5 bg-amber-500 bg-opacity-70;
     }
   }
-  &.emerald{
+  &.badge-emerald{
     @apply text-emerald-700;
-    &.with-border {
+    &.badge-with-border {
       @apply border border-emerald-300;
     }
-    &.default{
+    &.badge-default{
       @apply bg-emerald-100;
     }
-    &.plain{
+    &.badge-plain{
       @apply bg-transparent;
     }
-    &.filled {
+    &.badge-filled {
       @apply text-white py-1 px-2.5 gap-2.5 bg-emerald-500 bg-opacity-70;
     }
   }
-  &.indigo{
+  &.badge-indigo{
     @apply text-indigo-700;
-    &.with-border {
+    &.badge-with-border {
       @apply border border-indigo-300;
     }
-    &.default{
+    &.badge-default{
       @apply bg-indigo-100;
     }
-    &.plain{
+    &.badge-plain{
       @apply bg-transparent;
     }
-    &.filled {
+    &.badge-filled {
       @apply text-white py-1 px-2.5 gap-2.5 bg-indigo-500 bg-opacity-70;
     }
   }
-  &.violet{
+  &.badge-violet{
     @apply text-violet-700;
-    &.with-border {
+    &.badge-with-border {
       @apply border border-violet-300;
     }
-    &.default{
+    &.badge-default{
       @apply bg-violet-100;
     }
-    &.plain{
+    &.badge-plain{
       @apply bg-transparent;
     }
-    &.filled {
+    &.badge-filled {
       @apply text-white py-1 px-2.5 gap-2.5 bg-violet-500 bg-opacity-70;
     }
   }
-  &.rose{
+  &.badge-rose{
     @apply text-rose-700;
-    &.with-border {
+    &.badge-with-border {
       @apply border border-rose-300;
     }
-    &.default{
+    &.badge-default{
       @apply bg-rose-100;
     }
-    &.plain{
+    &.badge-plain{
       @apply bg-transparent;
     }
-    &.filled {
+    &.badge-filled {
       @apply text-white py-1 px-2.5 gap-2.5 bg-rose-500 bg-opacity-70;
     }
   }
-  &.sky{
+  &.badge-sky{
     @apply text-sky-700;
-    &.with-border {
+    &.badge-with-border {
       @apply border border-sky-300;
     }
-    &.default{
+    &.badge-default{
       @apply bg-sky-100;
     }
-    &.plain{
+    &.badge-plain{
       @apply bg-transparent;
     }
-    &.filled {
+    &.badge-filled {
       @apply text-white py-1 px-2.5 gap-2.5 bg-sky-500 bg-opacity-70;
     }
   }
-  &.light {
+  &.badge-light {
     @apply bg-slate-50/20 text-white border-white;
-    &.filled {
+    &.badge-filled {
       @apply bg-white text-slate-950;
     }
   }

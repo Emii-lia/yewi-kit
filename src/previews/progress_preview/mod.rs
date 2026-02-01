@@ -32,27 +32,27 @@ pub(crate) fn progress_preview() -> Html {
             title={"Default"}
             code={r#"
     <Progress value={25} max={100} show_percentage=true />
-    <Progress value={50} max={100} color={Color::Green} show_percentage=true />
-    <Progress value={75} max={100} color={Color::Orange} show_percentage=true />
-    <Progress value={100} max={100} color={Color::Red} show_percentage=true />
+    <Progress value={50} max={100} color={Color::Purple} show_percentage=true />
+    <Progress value={75} max={100} color={Color::Teal} show_percentage=true />
+    <Progress value={100} max={100} color={Color::Blue} show_percentage=true />
             "#}
           >
             <Progress value={25} max={100} show_percentage=true />
-            <Progress value={50} max={100} color={Color::Green} show_percentage=true />
-            <Progress value={75} max={100} color={Color::Orange} show_percentage=true />
-            <Progress value={100} max={100} color={Color::Red} show_percentage=true />
+            <Progress value={50} max={100} color={Color::Purple} show_percentage=true />
+            <Progress value={75} max={100} color={Color::Teal} show_percentage=true />
+            <Progress value={100} max={100} color={Color::Blue} show_percentage=true />
           </PreviewContainer>
           <PreviewContainer
             title={"Radial"}
             code={r#"
     <Progress variant={ProgressVariant::Circular} radial_size={Size::Small} value={25} max={100} show_percentage=true />
-    <Progress variant={ProgressVariant::Circular} radial_size={Size::Medium} value={50} max={100} color={Color::Green} show_percentage=true />
-    <Progress variant={ProgressVariant::Circular} radial_size={Size::Large} value={75} max={100} color={Color::Orange} show_percentage=true />
+    <Progress variant={ProgressVariant::Circular} radial_size={Size::Medium} value={50} max={100} color={Color::Purple} show_percentage=true />
+    <Progress variant={ProgressVariant::Circular} radial_size={Size::Large} value={75} max={100} color={Color::Teal} show_percentage=true />
             "#}
           >
             <Progress variant={ProgressVariant::Circular} radial_size={Size::Small} value={25} max={100} show_percentage=true />
-            <Progress variant={ProgressVariant::Circular} radial_size={Size::Medium} value={50} max={100} color={Color::Green} show_percentage=true />
-            <Progress variant={ProgressVariant::Circular} radial_size={Size::Large} value={75} max={100} color={Color::Orange} show_percentage=true />
+            <Progress variant={ProgressVariant::Circular} radial_size={Size::Medium} value={50} max={100} color={Color::Purple} show_percentage=true />
+            <Progress variant={ProgressVariant::Circular} radial_size={Size::Large} value={75} max={100} color={Color::Teal} show_percentage=true />
           </PreviewContainer>
           <PreviewContainer
             title={"Custom Height"}
@@ -69,12 +69,12 @@ pub(crate) fn progress_preview() -> Html {
           <PreviewContainer
             title={"As fraction"}
             code={r#"
-    <Progress variant={ProgressVariant::Circular} radial_size={Size::Medium} value={50} max={100} color={Color::Green} show_percentage=true as_fraction=true />
-    <Progress value={75} max={100} color={Color::Orange} show_percentage=true as_fraction=true />
+    <Progress variant={ProgressVariant::Circular} radial_size={Size::Medium} value={50} max={100} show_percentage=true as_fraction=true />
+    <Progress value={75} max={100} show_percentage=true as_fraction=true />
             "#}
           >
-            <Progress variant={ProgressVariant::Circular} radial_size={Size::Medium} value={50} max={100} color={Color::Green} show_percentage=true as_fraction=true />
-            <Progress value={75} max={100} color={Color::Orange} show_percentage=true as_fraction=true />
+            <Progress variant={ProgressVariant::Circular} radial_size={Size::Medium} value={50} max={100} show_percentage=true as_fraction=true />
+            <Progress value={75} max={100} show_percentage=true as_fraction=true />
           </PreviewContainer>
           <PreviewContainer
             title={"Without Percentage"}
@@ -84,7 +84,7 @@ pub(crate) fn progress_preview() -> Html {
             "#}
           >
             <Progress variant={ProgressVariant::Circular} value={60} max={100} />
-            <Progress value={80} max={100} color={Color::Pink} />
+            <Progress value={80} max={100}/>
           </PreviewContainer>
           <PreviewContainer
             title={"Colours"}

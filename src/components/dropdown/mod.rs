@@ -80,13 +80,13 @@ pub(crate) struct DropdownMenuProps {
 
 #[function_component(DropdownMenu)]
 pub(crate) fn dropdown_menu(props: &DropdownMenuProps) -> Html {
-  let position_class = format!("{:?}", props.position).to_lowercase();
+  let position_class = format!("dropdown-menu-{:?}", props.position).to_lowercase();
   let ctx = use_dropdown_store();
 
   html! {
     <div class={classes!(
       "Dropdown__menu",
-      ctx.is_open.then_some("open"),
+      ctx.is_open.then_some("dropdown-menu-open"),
       position_class,
       &props.class
     )}>

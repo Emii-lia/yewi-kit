@@ -15,9 +15,9 @@ pub struct HookResponse {
 pub(crate) fn use_input(params: HookParams) -> HookResponse {
   let HookParams { size } = params;
   let size = match size {
-    Size::Small => "sm",
-    Size::Medium => "md",
-    Size::Large => "lg"
+    Size::Small => "input-sm",
+    Size::Medium => "input-md",
+    Size::Large => "input-lg"
   };
 
   HookResponse {

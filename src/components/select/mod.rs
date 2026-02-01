@@ -42,7 +42,7 @@ pub(crate) fn select(props: &Props) -> Html {
         class={classes!(
           "select",
           &props.class,
-          format!("{:?}", props.size).to_lowercase()
+          format!("select-{:?}", props.size).to_lowercase()
         )}
       >
         {html! {

@@ -8,11 +8,11 @@
     }
     .textarea {
       @apply border border-slate-500;
-      @apply focus:border-blue-500 focus:ring-blue-500 focus:outline-none focus:ring-1 focus:ring-inset block w-full rounded-md border-slate-400 shadow-sm p-2 text-slate-700;
+      @apply focus:border-primary-500 focus:ring-primary-500 focus:outline-none focus:ring-1 focus:ring-inset block w-full rounded-md border-slate-400 shadow-sm p-2 text-slate-700;
       &:disabled {
         @apply cursor-not-allowed;
       }
-      &:not(.resizable) {
+      &:not(.textarea-resizable) {
         @apply resize-none;
       }
     }

@@ -30,44 +30,44 @@ pub(crate) fn badge_preview() -> Html {
           <PreviewContainer
             title={"Default"}
             code={r#"
-    <Badge label="Default" color={Color::Red}/>
+    <Badge label="Default"/>
     <Badge label="Default" color={Color::Blue}/>
     <Badge label="Default" color={Color::Green}/>
-    <Badge label="Default" color={Color::Yellow}/>
+    <Badge label="Default" color={Color::Red}/>
             "#}
           >
-            <Badge label="Default" color={Color::Red}/>
+            <Badge label="Default"/>
             <Badge label="Default" color={Color::Blue}/>
             <Badge label="Default" color={Color::Green}/>
-            <Badge label="Default" color={Color::Yellow}/>
+            <Badge label="Default" color={Color::Red}/>
           </PreviewContainer>
           <PreviewContainer
             title={"Plain"}
             code={r#"
-    <Badge variant={BadgeVariant::Plain} label="Plain" color={Color::Red}/>
+    <Badge variant={BadgeVariant::Plain} label="Plain"/>
     <Badge variant={BadgeVariant::Plain} label="Plain" color={Color::Blue}/>
     <Badge variant={BadgeVariant::Plain} label="Plain" color={Color::Green}/>
-    <Badge variant={BadgeVariant::Plain} label="Plain" color={Color::Yellow}/>
+    <Badge variant={BadgeVariant::Plain} label="Plain" color={Color::Red}/>
             "#}
           >
-            <Badge variant={BadgeVariant::Plain} label="Plain" color={Color::Red}/>
+            <Badge variant={BadgeVariant::Plain} label="Plain"/>
             <Badge variant={BadgeVariant::Plain} label="Plain" color={Color::Blue}/>
             <Badge variant={BadgeVariant::Plain} label="Plain" color={Color::Green}/>
-            <Badge variant={BadgeVariant::Plain} label="Plain" color={Color::Yellow}/>
+            <Badge variant={BadgeVariant::Plain} label="Plain" color={Color::Red}/>
           </PreviewContainer>
           <PreviewContainer
             title={"Filled"}
             code={r#"
-    <Badge variant={BadgeVariant::Filled} label="Filled" color={Color::Red}/>
+    <Badge variant={BadgeVariant::Filled} label="Filled"/>
     <Badge variant={BadgeVariant::Filled} label="Filled" color={Color::Blue}/>
     <Badge variant={BadgeVariant::Filled} label="Filled" color={Color::Green}/>
-    <Badge variant={BadgeVariant::Filled} label="Filled" color={Color::Yellow}/>
+    <Badge variant={BadgeVariant::Filled} label="Filled" color={Color::Red}/>
             "#}
           >
-            <Badge variant={BadgeVariant::Filled} label="Filled" color={Color::Red}/>
+            <Badge variant={BadgeVariant::Filled} label="Filled"/>
             <Badge variant={BadgeVariant::Filled} label="Filled" color={Color::Blue}/>
             <Badge variant={BadgeVariant::Filled} label="Filled" color={Color::Green}/>
-            <Badge variant={BadgeVariant::Filled} label="Filled" color={Color::Yellow}/>
+            <Badge variant={BadgeVariant::Filled} label="Filled" color={Color::Red}/>
           </PreviewContainer>
           <PreviewContainer
             title={"With Icon"}
@@ -84,30 +84,30 @@ pub(crate) fn badge_preview() -> Html {
           <PreviewContainer
             title={"Rounded"}
             code={r#"
-    <Badge label="Rounded" color={Color::Red} rounded=true />
+    <Badge label="Rounded" rounded=true />
     <Badge label="Rounded" color={Color::Blue} rounded=true />
     <Badge label="Rounded" color={Color::Green} rounded=true />
-    <Badge label="Rounded" color={Color::Yellow} rounded=true />
+    <Badge label="Rounded" color={Color::Red} rounded=true />
             "#}
           >
-            <Badge label="Rounded" color={Color::Red} rounded=true />
+            <Badge label="Rounded" rounded=true />
             <Badge label="Rounded" color={Color::Blue} rounded=true />
             <Badge label="Rounded" color={Color::Green} rounded=true />
-            <Badge label="Rounded" color={Color::Yellow} rounded=true />
+            <Badge label="Rounded" color={Color::Red} rounded=true />
           </PreviewContainer>
           <PreviewContainer
             title={"Bordered"}
             code={r#"
-    <Badge label="Bordered" color={Color::Red} with_border=true/>
+    <Badge label="Bordered" with_border=true/>
     <Badge label="Bordered" color={Color::Blue} with_border=true/>
     <Badge label="Bordered" color={Color::Green} with_border=true/>
-    <Badge label="Bordered" color={Color::Yellow} with_border=true/>
+    <Badge label="Bordered" color={Color::Red} with_border=true/>
             "#}
           >
-            <Badge label="Bordered" color={Color::Red} with_border=true/>
+            <Badge label="Bordered" with_border=true/>
             <Badge label="Bordered" color={Color::Blue} with_border=true/>
             <Badge label="Bordered" color={Color::Green} with_border=true/>
-            <Badge label="Bordered" color={Color::Yellow} with_border=true/>
+            <Badge label="Bordered" color={Color::Red} with_border=true/>
           </PreviewContainer>
           <PreviewContainer
             title={"Colours"}
