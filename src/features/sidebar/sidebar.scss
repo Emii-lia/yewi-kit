@@ -1,18 +1,35 @@
 @use "./components/nav_item/nav_item";
 .Sidebar {
-  @apply flex flex-col gap-4 w-64 bg-slate-700 top-0 left-0 bottom-0 overflow-y-auto z-40 fixed py-4;
+  @apply w-56 border-r border-primary-100 bg-white p-6 max-h-screen overflow-y-auto;
+  @apply fixed top-0 bottom-0 left-0;
   &::-webkit-scrollbar {
     @apply invisible;
   }
   scrollbar-width: none;
   -ms-overflow-style: none;
   .sidebar-header {
-    @apply flex items-center justify-start gap-4 pl-6 pt-6;
-    .sidebar-title {
-      @apply text-2xl font-semibold text-slate-50;
+    @apply mb-8;
+    .sidebar-header-content {
+      @apply flex items-center gap-2 mb-6;
+      .sidebar-logo {
+        @apply w-6 h-6 rounded-lg bg-primary-600 flex items-center justify-center p-1;
+        @apply text-white font-bold text-xs;
+      }
+      .sidebar-title {
+        @apply font-semibold text-primary-800 text-sm;
+      }
     }
   }
   .sidebar-menu {
-    @apply flex flex-col gap-4 pl-3;
+    @apply flex flex-col gap-8;
+    .sidebar-section {
+      @apply flex flex-col gap-3;
+      .sidebar-section-title {
+        @apply text-xs font-semibold text-primary-500 uppercase tracking-wide px-2;
+      }
+      .sidebar-section-items {
+        @apply flex flex-col gap-1;
+      }
+    }
   }
 }
