@@ -22,6 +22,7 @@ mod carousel;
 mod dropdown;
 mod toast;
 mod table;
+mod installation;
 
 pub(crate) use button::*;
 pub(crate) use badge::*;
@@ -44,7 +45,6 @@ pub(crate) use textarea::*;
 use yew::{function_component, html, Html};
 use yew_router::prelude::{BrowserRouter, Switch};
 use crate::components::{Modal, ModalProvider, ToastContainer, ToastProvider};
-use crate::features::Sidebar;
 
 #[function_component(App)]
 pub fn app() -> Html {
@@ -55,7 +55,6 @@ pub fn app() -> Html {
           <div class="app">
             <ToastContainer/>
             <Modal/>
-            <Sidebar/>
             <Switch<AppRoute> render={switch}/>
           </div>
         </ToastProvider>
