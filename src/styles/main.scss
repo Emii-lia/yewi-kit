@@ -23,7 +23,7 @@
 html, body {
   font-family: 'Poppins', Abel, "Roboto Slab", sans-serif;
 }
-.app {
+.app, .docs-app {
   @apply h-screen w-screen flex flex-col;
 }
 .page-container {
