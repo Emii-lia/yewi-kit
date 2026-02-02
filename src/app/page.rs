@@ -5,7 +5,6 @@ use crate::features::InstallationSection;
 pub(crate) fn Home() -> Html {
   html! {
     <div class="Home page-container">
-      <InstallationSection/>
     </div>
   }
 }
