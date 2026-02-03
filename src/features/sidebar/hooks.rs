@@ -1,5 +1,5 @@
 use yew::hook;
-use crate::app::DocsRoute;
+use crate::app::docs::routes::DocsRoute;
 
 #[derive(Clone)]
 pub struct RouteSection {
