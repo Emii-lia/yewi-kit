@@ -22,16 +22,13 @@
 
 html, body {
   font-family: 'Poppins', Abel, "Roboto Slab", sans-serif;
+  @apply h-auto min-h-screen relative;
 }
 .app, .docs-app {
-  @apply h-screen w-screen flex flex-col;
+  @apply min-h-screen min-w-full w-full h-auto flex flex-col;
 }
-.page-container {
-  @apply w-full p-6 pl-96 pr-16 flex flex-col gap-4;
-}
-
 .Home {
-  @apply min-h-screen bg-white text-slate-950 relative;
-  @apply bg-no-repeat bg-center bg-cover;
+  @apply h-auto min-h-screen bg-white text-slate-950 relative;
+  @apply bg-center bg-cover;
   background-image: url("/images/hero-bg.svg");
 }
