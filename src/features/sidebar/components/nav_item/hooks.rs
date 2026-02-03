@@ -1,6 +1,6 @@
 use yew::{hook, Properties};
 use yew_router::hooks::use_route;
-use crate::app::DocsRoute;
+use crate::app::docs::routes::DocsRoute;
 
 #[derive(PartialEq, Properties, Clone)]
 pub struct HookParams {

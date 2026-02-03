@@ -6,7 +6,7 @@ mod components {
 
 use yew::{classes, function_component, html, Html};
 use yew_router::prelude::Link;
-use crate::app::AppRoute;
+use crate::app::routes::AppRoute;
 use crate::features::sidebar::components::nav_item::NavItem;
 use crate::features::sidebar::hooks::use_sidebar;
 

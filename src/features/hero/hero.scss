@@ -1,0 +1,24 @@
+.Hero {
+  @apply m-auto max-w-5xl px-6 py-28 text-center relative z-10 flex items-center justify-center h-[calc(100vh-6rem)];
+  .hero-container {
+    @apply flex flex-col gap-8;
+    .hero-text {
+      @apply flex flex-col gap-4;
+      .hero-title {
+        @apply text-5xl sm:text-7xl font-bold tracking-tighter text-slate-900 leading-tight;
+        &__primary {
+          @apply bg-gradient-to-r from-primary to-primary-800 bg-clip-text text-transparent;
+        }
+      }
+      .hero-subtitle {
+        @apply mx-auto max-w-2xl text-lg sm:text-xl text-slate-600 leading-relaxed;
+      }
+    }
+    .hero-ctas {
+      @apply flex flex-col sm:flex-row gap-4 justify-center pt-6;
+      .hero-cta {
+        @apply w-full sm:w-auto sm:px-8 max-sm:flex-shrink;
+      }
+    }
+  }
+}
