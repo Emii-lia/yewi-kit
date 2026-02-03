@@ -1,0 +1,22 @@
+.HomeHeader {
+  @apply sticky top-0 z-50 border-b border-primary-50 backdrop-blur supports-[backdrop-filter]:bg-white/95;
+  &__nav {
+    @apply mx-auto max-w-6xl px-6 py-4 flex items-center justify-between;
+    &--logo {
+      @apply flex items-center gap-2;
+      .nav-logo {
+        @apply w-7 h-7 rounded-lg bg-primary-600 flex items-center justify-center p-1;
+        @apply text-white font-bold text-sm;
+      }
+      .nav-title {
+        @apply font-semibold text-primary-800 max-md:hidden text-sm;
+      }
+    }
+    &--actions {
+      @apply flex items-center gap-6 max-md:hidden;
+    }
+    &--actions-md {
+      @apply items-center gap-2 hidden max-md:flex;
+    }
+  }
+}
