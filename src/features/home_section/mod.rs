@@ -60,7 +60,8 @@ pub fn home_section_description(props: &ChildrenPropsWithClass) -> Html {
 
 #[derive(Properties, PartialEq, Clone)]
 pub struct HomeSectionIllustrationProps {
-  pub command: String,
+  #[prop_or_default]
+  pub command: Option<String>,
   #[prop_or_default]
   pub output: Vec<String>,
   #[prop_or_default]
@@ -71,11 +72,15 @@ pub fn home_section_illustration(props: &HomeSectionIllustrationProps) -> Html {
   html! {
     <div class={classes!("HomeSectionIllustration", &props.class)}>
       <div class="illustration-content">
-        <div class="illustration-command">
-          <span class="primary-command">{"$ "}</span> {props.command.clone()}
-        </div>
+        {html! {
+          if let Some(command) = props.command.clone() {
+            <div class="illustration-command">
+              <span class="primary-command">{"$ "}</span> {command}
+            </div>
+          }
+        }}
         <div class="illustration-output">
-          {props.output.clone().into_iter().map(|output| html! {<p>{output}</p>}).collect::<Html>()}
+          {props.output.clone().into_iter().map(|output| html! {<pre>{output}</pre>}).collect::<Html>()}
         </div>
       </div>
     </div>
