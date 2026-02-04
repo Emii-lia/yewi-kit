@@ -1,33 +1,35 @@
 .HomeSection {
-  @apply m-auto max-w-5xl px-6 py-20 relative z-10 bg-inherit;
-  .HomeSectionContainer {
-    @apply grid lg:grid-cols-2 gap-12 items-center;
-    .HomeSectionContent {
-      @apply flex flex-col gap-6;
-      .HomeSectionText {
-        @apply flex flex-col gap-1;
-        .HomeSectionTitle {
-          @apply text-4xl font-bold text-primary-900 mb-4;
-        }
-        .HomeSectionDescription {
-          @apply text-lg text-slate-600 leading-relaxed;
-        }
+  @apply m-auto max-w-5xl px-4 py-20 relative z-10;
+}
+.HomeSectionContainer {
+  @apply flex gap-12 items-center px-2;
+  @apply max-lg:flex-col;
+}
+.HomeSectionContent {
+  @apply flex flex-col gap-6 w-full lg:w-1/2;
+}
+.HomeSectionText {
+  @apply flex flex-col gap-1;
+}
+.HomeSectionTitle {
+  @apply text-4xl font-bold text-primary-900 mb-4;
+}
+.HomeSectionDescription {
+  @apply text-lg text-slate-600 leading-relaxed;
+}
+.HomeSectionIllustration {
+  @apply rounded-lg border border-slate-200 bg-slate-50/40 backdrop-blur-lg p-6 hover:border-slate-300 transition-colors;
+  @apply max-w-full w-full lg:w-1/2;
+  .illustration-content {
+    @apply font-mono text-sm space-y-2;
+    .illustration-command {
+      @apply text-slate-900;
+      .primary-command {
+        @apply text-primary;
       }
     }
-    .HomeSectionIllustration {
-      @apply rounded-lg border border-slate-200 bg-slate-50/40 backdrop-blur-lg p-6 hover:border-slate-300 transition-colors;
-      .illustration-content {
-        @apply font-mono text-sm space-y-2;
-        .illustration-command {
-          @apply text-slate-900;
-          .primary-command {
-            @apply text-primary;
-          }
-        }
-        .illustration-output {
-          @apply text-slate-400 flex flex-col gap-1 text-xs;
-        }
-      }
+    .illustration-output {
+      @apply text-slate-400 flex flex-col gap-1 text-xs truncate max-w-[95%] max-sm:text-[11px];
     }
   }
 }
