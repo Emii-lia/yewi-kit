@@ -12,7 +12,6 @@ pub(crate) fn Home() -> Html {
     <div class="Home">
       <HomeHeader/>
       <Hero/>
-
       <HomeSection>
         <HomeSectionContainer>
           <HomeSectionContent>
@@ -25,7 +24,7 @@ pub(crate) fn Home() -> Html {
               </HomeSectionDescription>
             </HomeSectionText>
             <Link<DocsRoute>
-              to={DocsRoute::Installation}
+              to={DocsRoute::Docs}
             >
               <Button size={Size::Large}>
                 {"Get Started"}
@@ -33,7 +32,7 @@ pub(crate) fn Home() -> Html {
             </Link<DocsRoute>>
           </HomeSectionContent>
           <HomeSectionIllustration
-            command="yewi new my-project"
+            command={Some("yewi new my-project")}
             output={vec![
               "? Select a theme:".to_string(),
               "> Slate".to_string(),
@@ -50,20 +49,7 @@ pub(crate) fn Home() -> Html {
         </HomeSectionContainer>
       </HomeSection>
       <HomeSection>
-        <HomeSectionContainer>
-          <HomeSectionIllustration
-            command="yewi add button"
-            output={vec![
-              "Adding button component...".to_string(),
-              "Downloading button component from yewi-kit".to_string(),
-              "Downloaded file: button.scss".to_string(),
-              "Downloaded file: hooks.rs".to_string(),
-              "Downloaded file: mod.rs".to_string(),
-              "Downloaded file: types.rs".to_string(),
-              "Component 'button' downloaded to \"./utils/button\"".to_string(),
-              "Component 'button' added to your project.".to_string(),
-            ]}
-          />
+        <HomeSectionContainer class="home-section-reverse">
           <HomeSectionContent>
             <HomeSectionText>
               <HomeSectionTitle>
@@ -81,6 +67,63 @@ pub(crate) fn Home() -> Html {
               </Button>
             </Link<DocsRoute>>
           </HomeSectionContent>
+          <HomeSectionIllustration
+            command={Some("yewi add button")}
+            output={vec![
+            "Adding button component...".to_string(),
+            "Downloading button component from yewi-kit".to_string(),
+            "Downloaded file: button.scss".to_string(),
+            "Downloaded file: hooks.rs".to_string(),
+            "Downloaded file: mod.rs".to_string(),
+            "Downloaded file: types.rs".to_string(),
+            "Component 'button' added to your project.".to_string(),
+            ]}
+          />
+        </HomeSectionContainer>
+      </HomeSection>
+      <HomeSection>
+        <HomeSectionContainer>
+          <HomeSectionContent>
+            <HomeSectionText>
+              <HomeSectionTitle>
+                {"Clean architecture"}
+              </HomeSectionTitle>
+              <HomeSectionDescription>
+                {r#"Yewi projects follow modern framework patterns with a component-driven architecture. Consistent project layout, clear separation of concerns, and built-in best practices make it easy to scale your application from prototype to production."#}
+              </HomeSectionDescription>
+            </HomeSectionText>
+            <Link<DocsRoute>
+              to={DocsRoute::Installation}
+            >
+              <Button size={Size::Large}>
+                {"Install Guide"}
+              </Button>
+            </Link<DocsRoute>>
+          </HomeSectionContent>
+          <HomeSectionIllustration
+            output={vec![
+              "├── src/".to_string(),
+              "  ├── app/".to_string(),
+              "    ├── about/".to_string(),
+              "      ├── mod.rs".to_string(),
+              "      ├── routes.rs".to_string(),
+              "    ├── mod.rs".to_string(),
+              "    ├── routes.rs".to_string(),
+              "    ├── page.rs".to_string(),
+              "  ├── components/".to_string(),
+              "    ├── button/".to_string(),
+              "      ├── mod.rs".to_string(),
+              "      ├── hooks.rs".to_string(),
+              "      ├── (types|data|provider).rs".to_string(),
+              "      ├── button.scss".to_string(),
+              "  ├── styles/".to_string(),
+              "    ├── components.scss".to_string(),
+              "    ├── main.scss".to_string(),
+              "    ├── global.css".to_string(),
+              "  ├── types/".to_string(),
+              "  ├── main.rs".to_string(),
+            ]}
+          />
         </HomeSectionContainer>
       </HomeSection>
     </div>
