@@ -1,0 +1,18 @@
+.HomeCta {
+  @apply px-6 py-24 relative z-10 w-full;
+  &__container {
+    @apply rounded-xl p-12 text-center;
+    @apply flex flex-col items-center gap-3 mx-auto max-w-5xl;
+    @apply bg-transparent backdrop-blur-sm backdrop-brightness-95;
+    @apply border border-white/20 shadow-sm;
+    @apply transition-colors hover:border-white/30;
+  }
+
+  .home-cta-title {
+    @apply text-4xl font-bold text-primary-900;
+  }
+
+  .home-cta-description {
+    @apply text-lg text-slate-600 mb-5 max-w-2xl mx-auto;
+  }
+}

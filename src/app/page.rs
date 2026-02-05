@@ -2,7 +2,7 @@ use yew::{function_component, html, Html};
 use yew_router::prelude::Link;
 use crate::app::docs::routes::DocsRoute;
 use crate::components::Button;
-use crate::features::{Hero, HomeHeader};
+use crate::features::{Hero, HomeCta, HomeHeader, ThemeSection};
 use crate::features::home_section::{HomeSection, HomeSectionContainer, HomeSectionContent, HomeSectionDescription, HomeSectionIllustration, HomeSectionText, HomeSectionTitle};
 use crate::types::Size;
 
@@ -126,6 +126,10 @@ pub(crate) fn Home() -> Html {
           />
         </HomeSectionContainer>
       </HomeSection>
+      <div class="last-section-container">
+        <ThemeSection/>
+        <HomeCta/>
+      </div>
     </div>
   }
 }
