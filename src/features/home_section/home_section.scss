@@ -1,8 +1,8 @@
 .HomeSection {
-  @apply m-auto max-w-5xl px-4 py-20 relative z-10;
+  @apply m-auto max-w-6xl w-full px-4 py-20 relative z-10;
 }
 .HomeSectionContainer {
-  @apply flex gap-12 items-center px-2;
+  @apply flex gap-16 items-center px-2;
   @apply max-lg:flex-col;
 }
 .HomeSectionContent {
@@ -18,7 +18,9 @@
   @apply text-lg text-slate-600 leading-relaxed;
 }
 .HomeSectionIllustration {
-  @apply rounded-lg border border-slate-200 bg-slate-50/40 backdrop-blur-lg p-6 hover:border-slate-300 transition-colors;
+  @apply bg-transparent backdrop-blur-md backdrop-brightness-[.98] rounded-lg p-4;
+  @apply border border-slate-300/50 shadow-md;
+  @apply transition-colors hover:border-slate-300/60;
   @apply max-w-full w-full lg:w-1/2;
   .illustration-content {
     @apply font-mono text-sm space-y-2;
@@ -29,7 +31,7 @@
       }
     }
     .illustration-output {
-      @apply text-slate-400 flex flex-col gap-1 text-xs truncate max-w-[95%] max-sm:text-[11px];
+      @apply text-slate-500 flex flex-col gap-1 text-xs truncate max-w-[95%] max-sm:text-[11px];
     }
   }
 }

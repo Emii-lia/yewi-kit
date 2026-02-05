@@ -1,0 +1,18 @@
+.Footer {
+  @apply border-t border-slate-200/50 mt-24 py-8 relative z-10 backdrop-blur-md;
+  &__container {
+    @apply mx-auto px-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600;
+    .footer-left {
+      .footer-cp {
+        @apply text-center sm:text-left;
+      }
+    }
+    .footer-right {
+      @apply flex gap-6;
+      .footer-link {
+        @apply hover:text-primary-900 transition-colors;
+        text-decoration: none;
+      }
+    }
+  }
+}
