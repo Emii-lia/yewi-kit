@@ -83,7 +83,7 @@
   }
 }
 .btn-secondary {
-  @apply bg-white text-slate-950 border border-solid border-slate-500 shadow-sm;
+  @apply bg-white text-slate-700 border border-solid border-slate-500/70 shadow-sm;
   &:hover{
     @apply bg-slate-200;
   }

@@ -35,3 +35,6 @@ html, body {
     @apply lg:flex-row-reverse ;
   }
 }
+.page-container {
+  @apply py-16 pl-64 pr-10;
+}

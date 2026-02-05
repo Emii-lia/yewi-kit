@@ -26,7 +26,9 @@ pub struct Props {
   #[prop_or_default]
   pub is_loading: bool,
   #[prop_or_default]
-  pub icon: Option<IconData>
+  pub icon: Option<IconData>,
+  #[prop_or_default]
+  pub title: AttrValue
 }
 #[function_component(Button)]
 pub(crate) fn button(props: &Props) -> Html {
@@ -53,14 +55,15 @@ pub(crate) fn button(props: &Props) -> Html {
       <a
         href={&props.href}
         class={classes!(
-        "Button",
-        variant,
-        size,
-        props.is_loading.then_some("btn-loading"),
-        &props.class,
-        icon.is_some().then_some("btn-with-icon")
-      )}
+          "Button",
+          variant,
+          size,
+          props.is_loading.then_some("btn-loading"),
+          &props.class,
+          icon.is_some().then_some("btn-with-icon")
+        )}
         disabled={props.disabled || props.is_loading}
+        title={&props.title}
       >
         {html! {
           if let Some(icon) = icon {
@@ -80,6 +83,7 @@ pub(crate) fn button(props: &Props) -> Html {
           icon.is_some().then_some("btn-with-icon")
       )}
         disabled={props.disabled || props.is_loading}
+        title={&props.title}
         onclick={on_click}
       >
         {

@@ -1,54 +1,58 @@
 .InstallationSection {
-  @apply max-w-5xl mx-auto px-6 py-14 space-y-12 bg-white;
-  .doc-title {
-    @apply text-4xl font-bold text-slate-900;
+  @apply flex flex-col gap-12;
+  &__header {
+    @apply flex flex-col gap-4;
+    .installation-title {
+      @apply text-4xl font-bold text-primary-900;
+    }
+    .installation-subtitle {
+      @apply text-slate-500 text-lg;
+    }
   }
-}
-
-.doc-section {
-  @apply space-y-12;
-}
-
-.doc-section-title {
-  @apply text-3xl font-bold tracking-tight text-slate-900;
-}
-
-.doc-subsection {
-  @apply space-y-5;
-}
-
-.doc-subsection-title {
-  @apply text-xl font-semibold text-slate-800;
-}
-
-.doc-section-text {
-  @apply text-slate-700 leading-relaxed text-base max-w-prose;
-}
-
-.doc-section-text + .doc-section-text {
-  @apply mt-4;
-}
-
-.doc-section-text a {
-  @apply text-blue-600 hover:text-blue-700 underline underline-offset-4 transition;
-}
-
-.code-block {
-  @apply rounded-xl border border-slate-700 bg-slate-800 overflow-x-auto;
-}
-
-.code-block code {
-  @apply block p-4 text-sm font-mono text-slate-50 text-left leading-relaxed;
-}
-
-.doc-footer {
-  @apply pt-10 border-t border-slate-200;
-}
-
-.doc-footer-text {
-  @apply text-sm text-slate-500;
-}
-
-.doc-footer-text a {
-  @apply text-blue-600 hover:text-blue-700 underline underline-offset-4 transition;
+  .installation-steps {
+    @apply flex flex-col gap-6;
+    .installation-step {
+      @apply flex gap-6 pb-4;
+      &__number {
+        @apply flex-shrink-0 pt-1;
+        .number-text {
+          @apply flex items-center justify-center w-12 h-12 rounded-full;
+          @apply border-2 border-slate-200 text-slate-900 bg-slate-50 font-semibold text-sm;
+        }
+      }
+      &__content {
+        @apply flex-1 min-w-0 pt-1 flex flex-col gap-2;
+        .step-title {
+          @apply text-lg font-semibold text-slate-900;
+        }
+        .step-description {
+          @apply text-slate-500 mb-2 text-sm;
+        }
+        .step-hint {
+          @apply mt-1 text-sm text-slate-500;
+        }
+      }
+    }
+  }
+  .installation-source {
+    @apply flex flex-col gap-4 border-t border-slate-200/50 pt-8;
+    .source-title {
+      @apply text-2xl font-semibold text-primary-900;
+    }
+    .source-subtitle {
+      @apply text-slate-500;
+    }
+  }
+  .installation-footer {
+    @apply flex flex-col gap-3 border-t border-slate-200/50 pt-8;
+    .i-footer-title {
+      @apply text-lg font-semibold text-primary-900;
+    }
+    .i-footer-subtitle {
+      @apply text-slate-500 mb-1;
+    }
+    .i-footer-actions {
+      @apply flex flex-col sm:flex-row gap-3;
+    }
+  }
 }
