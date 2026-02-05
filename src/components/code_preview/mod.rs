@@ -1,9 +1,10 @@
 mod hooks;
 
 use yew::{function_component, html, AttrValue, Html, Properties};
+use yew_icons::IconData;
 use crate::components::{Button, ButtonVariant};
 use crate::components::code_preview::hooks::{use_code_preview, HookParams, HookResponse};
-use crate::types::{Size};
+use crate::types::Size;
 
 #[derive(PartialEq, Properties, Clone)]
 pub struct Props {
@@ -12,25 +13,24 @@ pub struct Props {
 #[function_component(CodePreview)]
 pub(crate) fn code_preview(props: &Props) -> Html {
   let HookResponse {
-    highlight_code,
     copied,
     on_copy
   } = use_code_preview(HookParams {
     code: props.code.clone(),
   });
-  let code = highlight_code(&props.code);
   html! {
     <div class="CodePreview">
-      <div class="CodePreview__header">
-        <Button variant={ButtonVariant::Secondary} size={Size::Small} onclick={on_copy.clone()} class="CodePreview__copy-button">
-          { if copied { "Copied!" } else { "Copy" } }
-        </Button>
-      </div>
       <pre class="CodePreview__code">
-        <code>
-          { code }
-        </code>
+        <code class="code-content">{&props.code}</code>
       </pre>
+      <Button
+        variant={ButtonVariant::Secondary}
+        title={"Copy to clipboard"}
+        icon={if copied { IconData::LUCIDE_CHECK } else { IconData::LUCIDE_COPY }}
+        onclick={on_copy}
+        size={Size::Small}
+        class="CodePreview__copy-button"
+      />
     </div>
   }
 }
