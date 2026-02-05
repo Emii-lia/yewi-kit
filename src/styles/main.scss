@@ -28,8 +28,8 @@ html, body {
   @apply min-h-screen min-w-full w-full h-auto flex flex-col;
 }
 .Home {
-  @apply h-auto min-h-screen bg-white text-slate-950 relative overflow-x-hidden;
-  @apply bg-center bg-cover;
+  @apply h-auto min-h-screen bg-slate-50 text-slate-950 relative overflow-x-hidden;
+  @apply bg-center bg-cover bg-no-repeat;
   background-image: url("/images/hero-bg.svg");
   .home-section-reverse {
     @apply lg:flex-row-reverse ;

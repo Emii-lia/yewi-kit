@@ -1,7 +1,7 @@
 .Hero {
-  @apply m-auto max-w-5xl px-6 py-28 text-center relative z-10 flex items-center justify-center h-[calc(100vh-6rem)];
+  @apply px-6 py-28 text-center relative z-10 flex items-center justify-center h-[calc(100vh-5rem)];
   .hero-container {
-    @apply flex flex-col gap-8;
+    @apply flex flex-col gap-8 m-auto max-w-5xl;
     .hero-text {
       @apply flex flex-col gap-4;
       .hero-title {
