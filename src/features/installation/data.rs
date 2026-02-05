@@ -1,5 +1,3 @@
-use std::fmt::format;
-
 #[derive(Clone)]
 pub struct Step {
   pub number: u8,

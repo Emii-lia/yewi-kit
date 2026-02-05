@@ -1,7 +1,7 @@
 use web_sys::{window, MouseEvent};
 use web_sys::wasm_bindgen::JsCast;
 use web_sys::wasm_bindgen::prelude::Closure;
-use yew::{hook, html, use_state, AttrValue, Callback, Html};
+use yew::{hook, use_state, AttrValue, Callback};
 
 #[derive(Clone, PartialEq)]
 pub(crate) struct HookParams {
