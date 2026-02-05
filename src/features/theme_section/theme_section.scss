@@ -1,0 +1,52 @@
+.ThemeSection {
+  @apply mx-auto max-w-5xl px-6 py-20 relative z-10;
+  .theme-section-container {
+    @apply flex flex-col gap-8;
+    .theme-section-text {
+      @apply text-center flex flex-col gap-3;
+      .theme-section-title {
+        @apply text-4xl font-bold text-primary-900;
+      }
+      .theme-section-description {
+        @apply text-slate-500;
+      }
+    }
+    .colour-list {
+      @apply flex justify-center gap-4 flex-wrap;
+      .colour-item {
+        @apply flex flex-col items-center gap-2 cursor-pointer;
+        .colour-square {
+          @apply w-12 h-12 rounded-lg shadow-sm hover:shadow-md transition-shadow;
+          &.slate {
+            @apply bg-gradient-to-tr from-slate-400 to-slate-700;
+          }
+          &.gray {
+            @apply bg-gradient-to-tr from-gray-400 to-gray-700;
+          }
+          &.zinc {
+            @apply bg-gradient-to-tr from-zinc-400 to-zinc-700;
+          }
+          &.neutral {
+            @apply bg-gradient-to-tr from-neutral-400 to-neutral-700;
+          }
+          &.stone {
+            @apply bg-gradient-to-tr from-stone-400 to-stone-700;
+          }
+          &.emerald {
+            @apply bg-gradient-to-tr from-emerald-400 to-emerald-700;
+          }
+          &.blue {
+            @apply bg-gradient-to-tr from-blue-400 to-blue-700;
+          }
+          &.sky {
+            @apply bg-gradient-to-tr from-sky-400 to-sky-700;
+          }
+
+        }
+        .colour-label {
+          @apply text-xs font-medium text-slate-600 hover:text-slate-800 transition-colors;
+        }
+      }
+    }
+  }
+}
