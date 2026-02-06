@@ -36,6 +36,8 @@ pub enum DocsRoute {
   PasswordInputPage,
   #[at("/docs/progress")]
   ProgressPage,
+  #[at("/docs/quick-start")]
+  QuickStartPage,
   #[at("/docs/radio")]
   RadioPage,
   #[at("/docs/select")]
@@ -68,6 +70,7 @@ impl DocsRoute {
       DocsRoute::ModalPage,
       DocsRoute::PasswordInputPage,
       DocsRoute::ProgressPage,
+      DocsRoute::QuickStartPage,
       DocsRoute::RadioPage,
       DocsRoute::SelectPage,
       DocsRoute::TablePage,
@@ -95,6 +98,7 @@ impl DocsRoute {
       DocsRoute::InputPage => "Input".to_string(),
       DocsRoute::PasswordInputPage => "Password Input".to_string(),
       DocsRoute::ProgressPage => "Progress".to_string(),
+      DocsRoute::QuickStartPage => "Quick Start".to_string(),
       DocsRoute::ModalPage => "Modal".to_string(),
       DocsRoute::RadioPage => "Radio".to_string(),
       DocsRoute::SelectPage => "Select".to_string(),

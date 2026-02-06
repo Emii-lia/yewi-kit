@@ -15,6 +15,7 @@ use crate::app::docs::installation::InstallationPage;
 use crate::app::docs::modal::ModalPage;
 use crate::app::docs::password_input::PasswordInputPage;
 use crate::app::docs::progress::ProgressPage;
+use crate::app::docs::quick_start::QuickStartPage;
 use crate::app::docs::radio::RadioPage;
 use crate::app::docs::routes::DocsRoute;
 use crate::app::docs::select::SelectPage;
@@ -47,6 +48,7 @@ mod toast;
 mod table;
 mod installation;
 pub mod routes;
+mod quick_start;
 
 pub fn switch_docs(route: DocsRoute) -> Html {
   let current_route = match route {
@@ -67,6 +69,7 @@ pub fn switch_docs(route: DocsRoute) -> Html {
     DocsRoute::ModalPage => html! {<ModalPage/>},
     DocsRoute::PasswordInputPage => html! {<PasswordInputPage/>},
     DocsRoute::ProgressPage => html! {<ProgressPage/>},
+    DocsRoute::QuickStartPage => html! {<QuickStartPage/>},
     DocsRoute::RadioPage => html! {<RadioPage/>},
     DocsRoute::SelectPage => html! {<SelectPage/>},
     DocsRoute::TablePage => html! {<TablePage/>},
