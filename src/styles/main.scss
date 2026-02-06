@@ -36,5 +36,17 @@ html, body {
   }
 }
 .page-container {
-  @apply py-16 pl-64 pr-10;
+  @apply p-16 max-w-7xl mx-auto w-full;
+  .page-title {
+    @apply text-4xl font-bold text-primary-900;
+  }
+  .page-subtitle {
+    @apply text-lg font-medium text-slate-500;
+  }
+}
+.code-highlight {
+  @apply bg-slate-100 text-slate-700 rounded px-2 py-1 text-sm;
+}
+*::selection {
+  @apply bg-slate-100/50 text-slate-900;
 }
