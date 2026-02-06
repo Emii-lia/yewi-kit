@@ -27,7 +27,7 @@
         .component-item {
           @apply w-full;
           .component-item-card {
-            @apply hover:border-primary-700 transition-colors w-full max-w-full;
+            @apply hover:border-primary-700 transition-colors w-full max-w-full h-full;
           }
         }
       }
