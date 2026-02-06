@@ -1,5 +1,5 @@
 use yew::{function_component, html, Html};
-use crate::components::Radio;
+use crate::components::{CodePreview, Radio};
 use crate::previews::PreviewContainer;
 use crate::types::{Color, Size};
 
@@ -15,11 +15,7 @@ pub(crate) fn radio_preview() -> Html {
         <div class="preview-header-description">
           {"Select one option from a set."}
         </div>
-        <pre class="code-block">
-          <code>
-    {"yewi add radio"}
-          </code>
-        </pre>
+        <CodePreview code={"yewi add radio"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

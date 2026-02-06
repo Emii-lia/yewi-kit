@@ -1,5 +1,5 @@
 use yew::{function_component, html, Html};
-use crate::components::{Avatar, Badge, Button, Tab, Tabs};
+use crate::components::{Avatar, Badge, Button, CodePreview, Tab, Tabs};
 use crate::previews::PreviewContainer;
 use crate::types::{Color, Size};
 
@@ -17,11 +17,7 @@ pub(crate) fn tabs_preview() -> Html {
         <div class="preview-header-description">
           {"Organize content into separate views."}
         </div>
-        <pre class="code-block">
-          <code>
-    {"yewi add tabs"}
-          </code>
-        </pre>
+        <CodePreview code={"yewi add tabs"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

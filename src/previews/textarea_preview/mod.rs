@@ -1,5 +1,5 @@
 use yew::{function_component, html, Html};
-use crate::components::Textarea;
+use crate::components::{CodePreview, Textarea};
 use crate::previews::PreviewContainer;
 
 #[function_component(TextareaPreview)]
@@ -14,11 +14,7 @@ pub(crate) fn textarea_preview() -> Html {
         <div class="preview-header-description">
           {"Use the Textarea component to allow users to input multi-line text."}
         </div>
-        <pre class="code-block">
-          <code>
-    {"yewi add textarea"}
-          </code>
-        </pre>
+        <CodePreview code={"yewi add textarea"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

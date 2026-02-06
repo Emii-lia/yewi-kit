@@ -1,5 +1,5 @@
 use yew::{function_component, html, Html};
-use crate::components::{Avatar, AvatarGroup, AvatarGroupVariant};
+use crate::components::{Avatar, AvatarGroup, AvatarGroupVariant, CodePreview};
 use crate::previews::PreviewContainer;
 use crate::types::{ Size };
 
@@ -15,11 +15,7 @@ pub(crate) fn avatar_group_preview() -> Html {
         <div class="preview-header-description">
           {"Display a collection of avatars in linear or stacked layouts."}
         </div>
-        <pre class="code-block">
-          <code>
-    {"yewi add avatar avatar_group"}
-          </code>
-        </pre>
+        <CodePreview code={"yewi add avatar avatar_group"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

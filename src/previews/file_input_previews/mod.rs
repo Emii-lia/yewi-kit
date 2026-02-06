@@ -1,5 +1,5 @@
 use yew::{function_component, html, Html};
-use crate::components::{ FileInput, FileInputType};
+use crate::components::{CodePreview, FileInput, FileInputType};
 use crate::previews::PreviewContainer;
 
 #[function_component(FileInputPreviews)]
@@ -14,11 +14,7 @@ pub(crate) fn file_input_previews() -> Html {
         <div class="preview-header-description">
           {"Display file upload inputs with different variants."}
         </div>
-        <pre class="code-block">
-          <code>
-    {"yewi add button file_input"}
-          </code>
-        </pre>
+        <CodePreview code={"yewi add file_input button"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

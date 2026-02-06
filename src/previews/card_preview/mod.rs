@@ -1,5 +1,5 @@
 use yew::{function_component, html, Html};
-use crate::components::{Button, ButtonVariant, Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, Input};
+use crate::components::{Button, ButtonVariant, Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, CodePreview, Input};
 use crate::previews::PreviewContainer;
 
 #[function_component(CardPreview)]
@@ -14,11 +14,7 @@ pub(crate) fn card_preview() -> Html {
         <div class="preview-header-description">
           {"Group related information in a container with a consistent layout."}
         </div>
-        <pre class="code-block">
-          <code>
-    {"yewi add card"}
-          </code>
-        </pre>
+        <CodePreview code={"yewi add card"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

@@ -1,7 +1,7 @@
 mod data;
 
 use yew::{function_component, html, Html};
-use crate::components::Select;
+use crate::components::{CodePreview, Select};
 use crate::previews::PreviewContainer;
 use crate::previews::select_preview::data::options;
 use crate::types::Size;
@@ -20,11 +20,7 @@ pub(crate) fn select_preview() -> Html {
         <div class="preview-header-description">
           {"Choose an option from a dropdown menu."}
         </div>
-        <pre class="code-block">
-          <code>
-  {"yewi add select"}
-          </code>
-        </pre>
+        <CodePreview code={"yewi add select"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

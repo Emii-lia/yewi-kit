@@ -4,7 +4,7 @@
     @apply mx-auto px-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600;
     .footer-left {
       .footer-cp {
-        @apply text-center sm:text-left;
+        @apply text-center sm:text-left text-sm;
       }
     }
     .footer-right {

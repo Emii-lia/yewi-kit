@@ -1,5 +1,5 @@
 use yew::{function_component, html, Html};
-use crate::components::{Collapse, CollapseVariant};
+use crate::components::{CodePreview, Collapse, CollapseVariant};
 use crate::previews::PreviewContainer;
 
 #[function_component(CollapsePreview)]
@@ -14,11 +14,7 @@ pub(crate) fn collapse_preview() -> Html {
         <div class="preview-header-description">
           {"Create expandable and collapsible sections of content."}
         </div>
-        <pre class="code-block">
-          <code>
-    {"yewi add collapse"}
-          </code>
-        </pre>
+        <CodePreview code={"yewi add collapse"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">
