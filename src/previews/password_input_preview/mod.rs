@@ -1,5 +1,5 @@
 use yew::{function_component, html, Html};
-use crate::components::PasswordInput;
+use crate::components::{CodePreview, PasswordInput};
 use crate::previews::PreviewContainer;
 use crate::types::Size;
 
@@ -17,11 +17,7 @@ pub(crate) fn password_input_preview() -> Html {
         <div class="preview-header-description">
           {"Display password input fields with various sizes and states."}
         </div>
-        <pre class="code-block">
-          <code>
-    {"yewi add button password_input"}
-          </code>
-        </pre>
+        <CodePreview code={"yewi add password_input button"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

@@ -1,5 +1,5 @@
 use yew::{function_component, html, Html};
-use crate::components::{Progress, ProgressVariant};
+use crate::components::{CodePreview, Progress, ProgressVariant};
 use crate::previews::PreviewContainer;
 use crate::types::{Color, Size};
 
@@ -17,11 +17,7 @@ pub(crate) fn progress_preview() -> Html {
         <div class="preview-header-description">
           {"Display progress bars and indicators to visualize task completion status."}
         </div>
-        <pre class="code-block">
-          <code>
-    {"yewi add progress"}
-          </code>
-        </pre>
+        <CodePreview code={"yewi add progress"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

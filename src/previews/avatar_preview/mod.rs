@@ -1,5 +1,5 @@
 use yew::{function_component, html, Html};
-use crate::components::Avatar;
+use crate::components::{Avatar, CodePreview};
 use crate::previews::PreviewContainer;
 use crate::types::{Color, Size};
 
@@ -15,11 +15,7 @@ pub(crate) fn avatar_preview() -> Html{
         <div class="preview-header-description">
           {"Display user profile pictures or initials."}
         </div>
-        <pre class="code-block">
-          <code>
-    {"yewi add avatar"}
-          </code>
-        </pre>
+        <CodePreview code={"yewi add avatar"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

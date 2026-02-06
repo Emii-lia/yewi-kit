@@ -1,6 +1,6 @@
 use yew::{function_component, html, Html};
 use yew_icons::IconData;
-use crate::components::{Button, ButtonVariant};
+use crate::components::{Button, ButtonVariant, CodePreview};
 use crate::previews::PreviewContainer;
 use crate::types::{Size};
 
@@ -16,11 +16,7 @@ pub(crate) fn button_preview () -> Html {
         <div class="preview-header-description">
           {"Display clickable buttons with various styles and sizes."}
         </div>
-        <pre class="code-block">
-          <code>
-    {"yewi add button"}
-          </code>
-        </pre>
+        <CodePreview code={"yewi add button"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

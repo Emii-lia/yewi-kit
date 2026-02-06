@@ -1,6 +1,6 @@
 use yew::{function_component, html, Html};
 use yew_icons::IconData;
-use crate::components::Input;
+use crate::components::{CodePreview, Input};
 use crate::previews::PreviewContainer;
 use crate::types::Size;
 
@@ -19,11 +19,7 @@ pub(crate) fn input_preview() -> Html {
         <div class="preview-header-description">
           {"Display input fields with various sizes and states."}
         </div>
-        <pre class="code-block">
-          <code>
-    {"yewi add input"}
-          </code>
-        </pre>
+        <CodePreview code={"yewi add input"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

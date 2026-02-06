@@ -1,5 +1,5 @@
 use yew::{function_component, html, Callback, Children, Html};
-use crate::components::{use_toast_store, Button, ButtonVariant, ToastPosition, ToastState};
+use crate::components::{use_toast_store, Button, ButtonVariant, CodePreview, ToastPosition, ToastState};
 use crate::previews::PreviewContainer;
 
 #[function_component(ToastPreview)]
@@ -16,11 +16,7 @@ pub(crate) fn toast_preview() -> Html {
         <div class="preview-header-description">
           {"Display pop up messages to notify users of events."}
         </div>
-        <pre class="code-block">
-          <code>
-    {"yewi add toast"}
-          </code>
-        </pre>
+        <CodePreview code={"yewi add toast"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

@@ -1,5 +1,5 @@
 use yew::{function_component, html, Html, Properties};
-use crate::components::{Carousel, CarouselContent, CarouselControls, CarouselItem, CarouselWrapper};
+use crate::components::{Carousel, CarouselContent, CarouselControls, CarouselItem, CarouselWrapper, CodePreview};
 use crate::previews::PreviewContainer;
 
 #[derive(Properties, PartialEq, Clone)]
@@ -33,11 +33,7 @@ pub(crate) fn carousel_preview() -> Html {
         <div class="preview-header-description">
           {"Create interactive slideshow."}
         </div>
-        <pre class="code-block">
-          <code>
-    {"yewi add carousel"}
-          </code>
-        </pre>
+        <CodePreview code={"yewi add carousel"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

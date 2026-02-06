@@ -1,5 +1,5 @@
 use yew::{function_component, html, Html};
-use crate::components::Divider;
+use crate::components::{CodePreview, Divider};
 use crate::previews::PreviewContainer;
 
 #[function_component(DividerPreview)]
@@ -14,11 +14,7 @@ pub(crate) fn divider_preview() -> Html {
         <div class="preview-header-description">
           {"Divide content with horizontal or vertical dividers."}
         </div>
-        <pre class="code-block">
-          <code>
-    {"yewi add divider"}
-          </code>
-        </pre>
+        <CodePreview code={"yewi add divider"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

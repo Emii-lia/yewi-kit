@@ -1,6 +1,6 @@
 use yew::{function_component, html, Html};
 use yew_icons::IconData;
-use crate::components::{Badge, BadgeVariant};
+use crate::components::{Badge, BadgeVariant, CodePreview};
 use crate::previews::PreviewContainer;
 use crate::types::Color;
 
@@ -16,11 +16,7 @@ pub(crate) fn badge_preview() -> Html {
         <div class="preview-header-description">
           {"Display small status descriptors for UI elements."}
         </div>
-        <pre class="code-block">
-          <code>
-    {"yewi add badge"}
-          </code>
-        </pre>
+        <CodePreview code={"yewi add badge"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

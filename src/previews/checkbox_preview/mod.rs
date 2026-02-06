@@ -1,5 +1,5 @@
 use yew::{function_component, html, use_state, Callback, Html};
-use crate::components::{Checkbox, CheckboxVariant};
+use crate::components::{Checkbox, CheckboxVariant, CodePreview};
 use crate::previews::PreviewContainer;
 use crate::types::{Color, Size};
 
@@ -22,11 +22,7 @@ pub fn checkbox_preview() -> Html {
         <div class="preview-header-description">
           {"Display checkboxes with various styles, variants and sizes."}
         </div>
-        <pre class="code-block">
-          <code>
-    {"yewi add checkbox"}
-          </code>
-        </pre>
+        <CodePreview code={"yewi add checkbox"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

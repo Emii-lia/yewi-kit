@@ -1,5 +1,5 @@
 use yew::{function_component, html, Html};
-use crate::components::{Table, TableBody, TableDataCell, TableHead, TableHeaderCell, TableRow, TableVariant};
+use crate::components::{CodePreview, Table, TableBody, TableDataCell, TableHead, TableHeaderCell, TableRow, TableVariant};
 use crate::previews::PreviewContainer;
 
 #[function_component(TablePreview)]
@@ -16,11 +16,7 @@ pub(crate) fn table_preview() -> Html {
         <div class="preview-header-description">
           {"Display data in a structured table format."}
         </div>
-        <pre class="code-block">
-          <code>
-    {"yewi add table"}
-          </code>
-        </pre>
+        <CodePreview code={"yewi add table"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

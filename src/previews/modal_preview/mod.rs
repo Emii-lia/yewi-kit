@@ -1,5 +1,5 @@
 use yew::{function_component, html, Callback, Html};
-use crate::components::{use_modal_store, Button, ModalHookResponse, OpenParams};
+use crate::components::{use_modal_store, Button, CodePreview, ModalHookResponse, OpenParams};
 use crate::previews::PreviewContainer;
 
 #[function_component(ModalPreview)]
@@ -26,11 +26,7 @@ pub(crate) fn modal_preview() -> Html {
         <div class="preview-header-description">
           {"Display floating content in a layer above the main application."}
         </div>
-        <pre class="code-block">
-          <code>
-    {"yewi add button modal"}
-          </code>
-        </pre>
+        <CodePreview code={"yewi add modal button"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

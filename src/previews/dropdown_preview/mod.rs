@@ -1,5 +1,5 @@
 use yew::{function_component, html, Html};
-use crate::components::{Button, Dropdown, DropdownItem, DropdownMenu, DropdownPosition, DropdownTrigger};
+use crate::components::{Button, CodePreview, Dropdown, DropdownItem, DropdownMenu, DropdownPosition, DropdownTrigger};
 use crate::previews::PreviewContainer;
 
 #[function_component(DropdownPreview)]
@@ -14,11 +14,7 @@ pub(crate) fn dropdown_preview() -> Html {
         <div class="preview-header-description">
           {"Use the Dropdown component to create a toggleable menu of options."}
         </div>
-        <pre class="code-block">
-          <code>
-    {"yewi add dropdown"}
-          </code>
-        </pre>
+        <CodePreview code={"yewi add dropdown"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">
