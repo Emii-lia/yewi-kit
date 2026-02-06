@@ -6,107 +6,122 @@
         <priority>1</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/avatar</loc>
+        <loc>https://yewi.pages.dev/docs</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/avatar-group</loc>
+        <loc>https://yewi.pages.dev/docs/installation</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/badge</loc>
+        <loc>https://yewi.pages.dev/docs/quick-start</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/button</loc>
+        <loc>https://yewi.pages.dev/docs/avatar</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/card</loc>
+        <loc>https://yewi.pages.dev/docs/avatar-group</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/carousel</loc>
+        <loc>https://yewi.pages.dev/docs/badge</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/checkbox</loc>
+        <loc>https://yewi.pages.dev/docs/button</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/collapse</loc>
+        <loc>https://yewi.pages.dev/docs/card</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/divider</loc>
+        <loc>https://yewi.pages.dev/docs/carousel</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/dropdown</loc>
+        <loc>https://yewi.pages.dev/docs/checkbox</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/file-input</loc>
+        <loc>https://yewi.pages.dev/docs/collapse</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/input</loc>
+        <loc>https://yewi.pages.dev/docs/divider</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/modal</loc>
+        <loc>https://yewi.pages.dev/docs/dropdown</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/password-input</loc>
+        <loc>https://yewi.pages.dev/docs/file-input</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/progress</loc>
+        <loc>https://yewi.pages.dev/docs/input</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/radio</loc>
+        <loc>https://yewi.pages.dev/docs/modal</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/select</loc>
+        <loc>https://yewi.pages.dev/docs/password-input</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/table</loc>
+        <loc>https://yewi.pages.dev/docs/progress</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/tabs</loc>
+        <loc>https://yewi.pages.dev/docs/radio</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/textarea</loc>
+        <loc>https://yewi.pages.dev/docs/select</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/toast</loc>
+        <loc>https://yewi.pages.dev/docs/table</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+      </url>
+      <url>
+        <loc>https://yewi.pages.dev/docs/tabs</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+      </url>
+      <url>
+        <loc>https://yewi.pages.dev/docs/textarea</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+      </url>
+      <url>
+        <loc>https://yewi.pages.dev/docs/toast</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
