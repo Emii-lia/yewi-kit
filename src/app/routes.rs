@@ -19,13 +19,7 @@ pub enum AppRoute {
 }
 
 impl AppRoute {
-  pub(crate) fn iter() -> impl Iterator<Item = AppRoute> {
-    vec![
-      AppRoute::Home,
-    ].into_iter()
-  }
-
-  pub fn to_string(&self) -> String {
+    pub fn to_string(&self) -> String {
     match self {
       AppRoute::Home => "Installation".to_string(),
       AppRoute::NotFound => "Not Found".to_string(),

@@ -31,7 +31,7 @@ pub fn get_steps() -> Vec<Step> {
 yarn install && yarn build
 trunk serve"#.to_string(),
       hint: Some(r#"Ensure you have yarn and trunk installed on your system.
-                    Your application will be available at http://localhost:8080."#.to_string())
+                    Your application will be available at http://localhost:8081."#.to_string())
     },
     Step {
       number: 4,
