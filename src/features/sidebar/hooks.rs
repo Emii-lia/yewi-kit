@@ -20,6 +20,7 @@ pub fn use_sidebar() -> Vec<RouteSection> {
   for route in routes {
     match route {
       DocsRoute::Installation => get_started.push(route),
+      DocsRoute::QuickStartPage => get_started.push(route),
       _ => components.push(route)
     }
   }
