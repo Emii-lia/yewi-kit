@@ -62,7 +62,7 @@ cargo install --path ."#}
               {"Explore Components"}
             </Button>
           </Link<DocsRoute>>
-          <Link<DocsRoute> to={DocsRoute::Docs}>
+          <Link<DocsRoute> to={DocsRoute::QuickStartPage}>
             <Button variant={ButtonVariant::Secondary} size={Size::Small}>
               {"Quick Start Guide"}
             </Button>
