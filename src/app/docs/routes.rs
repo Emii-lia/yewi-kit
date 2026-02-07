@@ -50,6 +50,8 @@ pub enum DocsRoute {
   TextareaPage,
   #[at("/docs/toast")]
   ToastPage,
+  #[at("/docs/404")]
+  NotFound,
 }
 impl DocsRoute {
   pub fn iter() -> impl Iterator<Item = DocsRoute> {
@@ -76,7 +78,8 @@ impl DocsRoute {
       DocsRoute::TablePage,
       DocsRoute::TabsPage,
       DocsRoute::TextareaPage,
-      DocsRoute::ToastPage
+      DocsRoute::ToastPage,
+      DocsRoute::NotFound
     ].into_iter()
   }
 
@@ -106,6 +109,7 @@ impl DocsRoute {
       DocsRoute::TabsPage => "Tabs".to_string(),
       DocsRoute::TextareaPage => "Textarea".to_string(),
       DocsRoute::ToastPage => "Toast".to_string(),
+      DocsRoute::NotFound => "Not Found".to_string(),
     }
   }
 }
