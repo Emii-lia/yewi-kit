@@ -1,0 +1,54 @@
+.Documentation {
+  @apply w-full flex flex-col gap-8;
+  .doc-header {
+    @apply flex flex-col gap-4;
+  }
+  .doc-section {
+    @apply flex flex-col gap-4;
+    .doc-section-title {
+      @apply text-2xl font-semibold text-primary-900;
+    }
+    .doc-section-content {
+      @apply flex flex-col gap-4;
+      .doc-section-text {
+        @apply text-slate-500;
+      }
+      .get-started {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-4 w-full;
+        .gs-link {
+          @apply w-full;
+          .gs-card {
+            @apply max-w-full shadow-none border-slate-200 transition-colors duration-200 ease-in-out;
+            &:hover {
+              @apply border-primary-400 shadow-sm;
+            }
+          }
+        }
+      }
+      .components-list {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+        .comp-link {
+          @apply w-full;
+          .comp-card {
+            @apply max-w-full shadow-none border-slate-200 transition-colors duration-200 ease-in-out;
+            &:hover {
+              @apply border-primary-400 shadow-sm;
+            }
+          }
+        }
+      }
+    }
+  }
+  .doc-footer {
+    @apply flex flex-col gap-2 p-6  bg-slate-100/40 rounded-lg border border-slate-200;
+    .doc-footer-title {
+      @apply font-semibold text-primary-900;
+    }
+    .doc-footer-subtitle {
+      @apply text-slate-500 text-sm mb-2;
+    }
+    .doc-footer-actions {
+      @apply flex flex-col sm:flex-row gap-3;
+    }
+  }
+}
