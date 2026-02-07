@@ -1,4 +1,5 @@
 use yew::{html, Html};
+use yew_router::prelude::Redirect;
 use crate::app::docs::avatar::AvatarPage;
 use crate::app::docs::avatar_group::AvatarGroupPage;
 use crate::app::docs::badge::BadgePage;
@@ -24,6 +25,7 @@ use crate::app::docs::table::TablePage;
 use crate::app::docs::tabs::TabsPage;
 use crate::app::docs::textarea::TextareaPage;
 use crate::app::docs::toast::ToastPage;
+use crate::app::routes::AppRoute;
 use crate::features::Sidebar;
 
 mod button;
@@ -78,6 +80,7 @@ pub fn switch_docs(route: DocsRoute) -> Html {
     DocsRoute::TabsPage => html! {<TabsPage/>},
     DocsRoute::TextareaPage => html! {<TextareaPage/>},
     DocsRoute::ToastPage => html! {<ToastPage/>},
+    DocsRoute::NotFound => html! {<Redirect<AppRoute> to={AppRoute::NotFound} />}
   };
 
   html! {

@@ -42,7 +42,12 @@ pub fn documentation() -> Html {
           <div class="components-list">
             {
               for DocsRoute::iter()
-              .filter(|r| *r != DocsRoute::Docs && *r != DocsRoute::Installation && *r != DocsRoute::QuickStartPage)
+              .filter(|r| 
+                *r != DocsRoute::Docs 
+                && *r != DocsRoute::Installation
+                && *r != DocsRoute::QuickStartPage
+                && *r != DocsRoute::NotFound
+            )
               .map(|route| {
                 html! {
                   <Link<DocsRoute> to={route.clone()} classes="comp-link">
