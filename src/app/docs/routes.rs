@@ -50,6 +50,7 @@ pub enum DocsRoute {
   TextareaPage,
   #[at("/docs/toast")]
   ToastPage,
+  #[not_found]
   #[at("/docs/404")]
   NotFound,
 }
