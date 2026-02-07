@@ -61,7 +61,7 @@ html, body {
     @apply text-4xl font-bold text-primary-900;
   }
   .page-subtitle {
-    @apply text-lg font-medium text-slate-500;
+    @apply text-lg text-slate-500;
   }
 }
 .code-highlight {
@@ -70,5 +70,5 @@ html, body {
 
 
 *::selection {
-  @apply bg-slate-100/50 text-slate-900;
+  @apply bg-slate-300/50 text-slate-900;
 }
