@@ -9,7 +9,7 @@ pub struct RouteSection {
 #[hook]
 pub fn use_sidebar() -> Vec<RouteSection> {
   let routes: Vec<DocsRoute> = DocsRoute::iter()
-    .filter(|route| *route != DocsRoute::Docs)
+    .filter(|route| *route != DocsRoute::Docs && *route != DocsRoute::NotFound)
     .map(|route| route.clone())
     .collect();
 
