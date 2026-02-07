@@ -13,6 +13,7 @@ use crate::app::docs::file_input::FileInputPage;
 use crate::app::docs::input::InputPage;
 use crate::app::docs::installation::InstallationPage;
 use crate::app::docs::modal::ModalPage;
+use crate::app::docs::page::DocumentationPage;
 use crate::app::docs::password_input::PasswordInputPage;
 use crate::app::docs::progress::ProgressPage;
 use crate::app::docs::quick_start::QuickStartPage;
@@ -49,10 +50,11 @@ mod table;
 mod installation;
 pub mod routes;
 mod quick_start;
+mod page;
 
 pub fn switch_docs(route: DocsRoute) -> Html {
   let current_route = match route {
-    DocsRoute::Docs => html! {<InstallationPage/>},
+    DocsRoute::Docs => html! {<DocumentationPage/>},
     DocsRoute::Installation => html! {<InstallationPage/>},
     DocsRoute::AvatarPage => html! {<AvatarPage/>},
     DocsRoute::AvatarGroupPage => html! {<AvatarGroupPage/>},
