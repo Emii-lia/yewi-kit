@@ -8,6 +8,7 @@ mod home_cta;
 mod footer;
 mod quick_start;
 mod documentation;
+mod why_section;
 
 pub(crate) use sidebar::*;
 pub(crate) use installation::*;
@@ -18,3 +19,4 @@ pub(crate) use home_cta::*;
 pub(crate) use footer::*;
 pub(crate) use quick_start::*;
 pub(crate) use documentation::*;
+pub(crate) use why_section::*;
