@@ -2,7 +2,7 @@
 
 Official component source and documentation website for **Yewi UI**.
 
-Live documentation:\
+Live documentation:
 https://yewi.pages.dev
 
 
@@ -12,12 +12,12 @@ https://yewi.pages.dev
 
 This repository:
 
--   Defines and maintains official components\
--   Provides implementation references\
--   Powers the documentation website\
+-   Defines and maintains official components
+-   Provides implementation references
+-   Powers the documentation website
 -   Supplies templates consumed by `yewi-cli`
 
-It is not intended to be installed as a dependency.\
+It is not intended to be installed as a dependency.
 End users generate and own their components through the CLI.
 
 
@@ -50,11 +50,11 @@ Each component is self contained and exportable.
 
 ## Tech Stack
 
--   Rust\
--   Yew\
--   SCSS\
--   Tailwind CSS\
--   Trunk\
+-   Rust
+-   Yew
+-   SCSS
+-   Tailwind CSS
+-   Trunk
 -   wasm32-unknown-unknown target
 
 
@@ -64,18 +64,18 @@ Each component is self contained and exportable.
 
 Workflow:
 
-1.  Components are authored and maintained in this repository.\
-2.  `yewi-cli` pulls component templates.\
-3.  The CLI injects selected components into the user project.\
+1.  Components are authored and maintained in this repository.
+2.  `yewi-cli` pulls component templates.
+3.  The CLI injects selected components into the user project.
 4.  The user owns the generated code.
 
 There is no runtime dependency on `yewi-kit`.
 
 This ensures:
 
--   Full control over component code\
--   No vendor lock in\
--   Clean project structure\
+-   Full control over component code
+-   No vendor lock in
+-   Clean project structure
 -   Direct customisation
 
 
@@ -109,9 +109,9 @@ yarn build
 
 This command:
 
--   Creates a Yew project\
--   Configures Tailwind\
--   Sets up Trunk\
+-   Creates a Yew project
+-   Configures Tailwind
+-   Sets up Trunk
 -   Prepares the project structure
 
 Run the project:
@@ -133,9 +133,9 @@ yewi add card
 
 The CLI will:
 
--   Copy component source into your project\
--   Register modules\
--   Inject required styles\
+-   Copy component source into your project
+-   Register modules
+-   Inject required styles
 -   Keep everything local
 
 You can modify the generated code freely.
