@@ -23,8 +23,6 @@ End users generate and own their components through the CLI.
 
 ## Architecture Overview
 
-### Component Source
-
 All components live in isolated folders under `src/components`.
 
 Example structure:
