@@ -3,8 +3,11 @@
 Official component source and documentation website for **Yewi UI**.
 
 Live documentation:
-https://yewi.pages.dev
+[https://yewi.pages.dev](https://yewi.pages.dev)
 
+Crate:
+
+[https://crates.io/crates/yewi-cli](https://crates.io/crates/yewi-cli)
 
 ## Purpose
 
@@ -58,7 +61,7 @@ Each component is self contained and exportable.
 
 ## Relationship with yewi-cli
 
-`yewi-cli` is the official way to use Yewi in real projects.
+[yewi-cli](https://crates.io/crates/yewi-cli) is the official way to use Yewi in real projects.
 
 Workflow:
 
