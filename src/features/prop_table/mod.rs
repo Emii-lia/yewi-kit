@@ -1,7 +1,7 @@
 pub mod types;
 
 use yew::{function_component, html, Classes, Html, Properties};
-use crate::components::{Table, TableBody, TableDataCell, TableHead, TableHeaderCell, TableRow, TableVariant};
+use crate::components::{Table, TableBody, TableDataCell, TableHead, TableHeaderCell, TableRow};
 use crate::features::prop_table::types::PropRow;
 
 #[derive(Properties, Clone, PartialEq)]
