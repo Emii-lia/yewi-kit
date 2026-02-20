@@ -1,4 +1,4 @@
-use yew::{classes, function_component, html, AttrValue, Html, Properties};
+use yew::{classes, function_component, html, AttrValue, Classes, Html, Properties};
 use crate::types::{Color, Size};
 
 #[derive(Properties, PartialEq, Clone)]
@@ -8,7 +8,7 @@ pub struct Props {
   #[prop_or_default]
   pub src: AttrValue,
   #[prop_or_default]
-  pub class: String,
+  pub class: Classes,
   #[prop_or_default]
   pub rounded: bool,
   #[prop_or(Size::Medium)]
