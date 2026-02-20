@@ -1,10 +1,15 @@
+mod data;
+
 use yew::{function_component, html, Html};
 use crate::components::{Avatar, CodePreview};
+use crate::features::PropTable;
+use crate::previews::avatar_preview::data::get_props;
 use crate::previews::PreviewContainer;
 use crate::types::{Color, Size};
 
 #[function_component(AvatarPreview)]
 pub(crate) fn avatar_preview() -> Html{
+  let props = get_props();
   html! {
     <div class="PreviewSection">
       <h1 class="preview-title">{"Avatar"}</h1>
@@ -90,6 +95,7 @@ pub(crate) fn avatar_preview() -> Html{
           </PreviewContainer>
         </div>
       </div>
+      <PropTable props={props}/>
     </div>
   }
 }

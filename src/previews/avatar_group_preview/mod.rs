@@ -1,10 +1,15 @@
+mod data;
+
 use yew::{function_component, html, Html};
 use crate::components::{Avatar, AvatarGroup, AvatarGroupVariant, CodePreview};
+use crate::features::PropTable;
+use crate::previews::avatar_group_preview::data::get_props;
 use crate::previews::PreviewContainer;
 use crate::types::{ Size };
 
 #[function_component(AvatarGroupPreview)]
 pub(crate) fn avatar_group_preview() -> Html {
+  let props = get_props();
   html! {
     <div class="PreviewSection">
       <h1 class="preview-title">{"AvatarGroup"}</h1>
@@ -109,6 +114,7 @@ pub(crate) fn avatar_group_preview() -> Html {
           </PreviewContainer>
         </div>
       </div>
+      <PropTable props={props}/>
     </div>
   }
 }

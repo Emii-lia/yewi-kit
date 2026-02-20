@@ -1,0 +1,21 @@
+.PropTable {
+  @apply flex flex-col gap-3 w-full pt-4;
+  &__title {
+    @apply text-slate-900 font-semibold;
+  }
+  &__item {
+    @apply text-slate-500 text-sm font-medium;
+    &.prop-name {
+      @apply font-mono text-slate-900 bg-slate-50 px-1 py-0.5 w-fit;
+    }
+    &.prop-type {
+      @apply font-mono text-slate-900;
+    }
+  }
+  .prop-description {
+    @apply min-w-[40%] w-full text-xs;
+  }
+  .TableRow__DataCell:not(.prop-description) {
+    @apply min-w-[20%] w-full;
+  }
+}
