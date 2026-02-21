@@ -1,9 +1,17 @@
+mod data;
+
 use yew::{function_component, html, Html};
 use crate::components::{Button, ButtonVariant, Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, CodePreview, Input};
+use crate::features::component_table::ComponentTable;
+use crate::features::prop_table::PropTable;
+use crate::previews::card_preview::data::{get_components, get_props};
 use crate::previews::PreviewContainer;
 
 #[function_component(CardPreview)]
 pub(crate) fn card_preview() -> Html {
+  let components = get_components();
+  let props = get_props();
+  
   html! {
     <div class="PreviewSection">
       <h1 class="preview-title">{ "Card" }</h1>
@@ -119,6 +127,8 @@ pub(crate) fn card_preview() -> Html {
           </PreviewContainer>
         </div>
       </div>
+      <ComponentTable components={components} />
+      <PropTable props={props} />
     </div>
   }
 }
