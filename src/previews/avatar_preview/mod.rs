@@ -2,7 +2,7 @@ mod data;
 
 use yew::{function_component, html, Html};
 use crate::components::{Avatar, CodePreview};
-use crate::features::PropTable;
+use crate::features::prop_table::PropTable;
 use crate::previews::avatar_preview::data::get_props;
 use crate::previews::PreviewContainer;
 use crate::types::{Color, Size};

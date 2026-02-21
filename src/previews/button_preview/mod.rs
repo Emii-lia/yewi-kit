@@ -1,11 +1,16 @@
+mod data;
+
 use yew::{function_component, html, Html};
 use yew_icons::IconData;
 use crate::components::{Button, ButtonVariant, CodePreview};
+use crate::features::prop_table::PropTable;
+use crate::previews::button_preview::data::get_props;
 use crate::previews::PreviewContainer;
 use crate::types::{Size};
 
 #[function_component(ButtonPreview)]
 pub(crate) fn button_preview () -> Html {
+  let props = get_props();
   html! {
     <div class="PreviewSection">
       <h1 class="preview-title">{"Button"}</h1>
@@ -229,6 +234,7 @@ pub(crate) fn button_preview () -> Html {
           </PreviewContainer>
         </div>
       </div>
+      <PropTable props={props}/>
     </div>
   }
 }
