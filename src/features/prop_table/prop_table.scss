@@ -13,9 +13,6 @@
     }
   }
   .prop-description {
-    @apply min-w-[40%] w-full text-xs;
-  }
-  .TableRow__DataCell:not(.prop-description) {
-    @apply min-w-[20%] w-full;
+    @apply text-xs;
   }
 }

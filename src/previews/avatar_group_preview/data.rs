@@ -1,11 +1,11 @@
-use crate::features::types::PropRow;
+use crate::features::prop_table::types::PropRow;
 
 pub(crate) fn get_props() -> Vec<PropRow> {
   vec![
     PropRow {
       name: "children".to_string(),
       r#type: "ChildrenWithProps<Avatar>".to_string(),
-      description: "Avatars component within AvatarGroup".to_string(),
+      description: "Avatar components within AvatarGroup".to_string(),
       default: None
     },
     PropRow {
@@ -23,7 +23,7 @@ pub(crate) fn get_props() -> Vec<PropRow> {
     PropRow {
       name: "max".to_string(),
       r#type: "usize".to_string(),
-      description: "Maximum children to show (the rest will displayed as +rest)".to_string(),
+      description: "Maximum children to show".to_string(),
       default: Some("4".to_string()),
     },
     PropRow {

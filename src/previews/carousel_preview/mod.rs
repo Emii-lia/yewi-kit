@@ -1,5 +1,10 @@
+mod data;
+
 use yew::{function_component, html, Html, Properties};
 use crate::components::{Carousel, CarouselContent, CarouselControls, CarouselItem, CarouselWrapper, CodePreview};
+use crate::features::component_table::ComponentTable;
+use crate::features::prop_table::PropTable;
+use crate::previews::carousel_preview::data::{get_components, get_props};
 use crate::previews::PreviewContainer;
 
 #[derive(Properties, PartialEq, Clone)]
@@ -23,6 +28,8 @@ fn image_slide(props: &Props) -> Html {
 }
 #[function_component(CarouselPreview)]
 pub(crate) fn carousel_preview() -> Html {
+  let components = get_components();
+  let props = get_props();
   html! {
     <div class="PreviewSection">
       <h2 class="preview-title">{ "Carousel" }</h2>
@@ -174,6 +181,8 @@ pub(crate) fn carousel_preview() -> Html {
           </PreviewContainer>
         </div>
       </div>
+      <ComponentTable components={components}/>
+      <PropTable props={props}/>
     </div>
   }
 }

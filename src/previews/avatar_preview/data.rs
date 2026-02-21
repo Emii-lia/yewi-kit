@@ -1,4 +1,4 @@
-use crate::features::types::PropRow;
+use crate::features::prop_table::types::PropRow;
 
 pub(crate) fn get_props() -> Vec<PropRow> {
   vec![
