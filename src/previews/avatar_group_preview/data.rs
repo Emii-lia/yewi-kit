@@ -41,7 +41,7 @@ pub(crate) fn get_props() -> Vec<PropRow> {
     PropRow {
       name: "variant".to_string(),
       r#type: "AvatarGroupVariant".to_string(),
-      description: "Display variant".to_string(),
+      description: "Linear, Stacked".to_string(),
       default: Some("AvatarGroupVariant::Linear".to_string()),
     },
     PropRow {

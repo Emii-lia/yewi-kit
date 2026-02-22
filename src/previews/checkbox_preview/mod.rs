@@ -1,5 +1,9 @@
+mod data;
+
 use yew::{function_component, html, use_state, Callback, Html};
 use crate::components::{Checkbox, CheckboxVariant, CodePreview};
+use crate::features::prop_table::PropTable;
+use crate::previews::checkbox_preview::data::get_props;
 use crate::previews::PreviewContainer;
 use crate::types::{Color, Size};
 
@@ -11,6 +15,7 @@ pub fn checkbox_preview() -> Html {
     let checked = checked.clone();
     Callback::from(move |check: bool| checked.set(check))
   };
+  let props = get_props();
 
   html! {
     <div class="PreviewSection">
@@ -278,6 +283,7 @@ pub fn checkbox_preview() -> Html {
           </PreviewContainer>
         </div>
       </div>
+      <PropTable props={props}/>
     </div>
   }
 }

@@ -1,9 +1,16 @@
+mod data;
+
 use yew::{function_component, html, Html};
 use crate::components::{Button, CodePreview, Dropdown, DropdownItem, DropdownMenu, DropdownPosition, DropdownTrigger};
+use crate::features::component_table::ComponentTable;
+use crate::features::prop_table::PropTable;
+use crate::previews::dropdown_preview::data::{get_components, get_props};
 use crate::previews::PreviewContainer;
 
 #[function_component(DropdownPreview)]
 pub(crate) fn dropdown_preview() -> Html {
+  let props = get_props();
+  let components = get_components();
   html! {
     <div class="PreviewSection">
       <h1 class="preview-title">{"Dropdown"}</h1>
@@ -75,6 +82,8 @@ pub(crate) fn dropdown_preview() -> Html {
         </PreviewContainer>
         </div>
       </div>
+      <ComponentTable components={components} />
+      <PropTable props={props} />
     </div>
   }
 }

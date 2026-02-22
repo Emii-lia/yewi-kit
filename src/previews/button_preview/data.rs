@@ -59,7 +59,7 @@ pub(crate) fn get_props() -> Vec<PropRow> {
     PropRow {
       name: "variant".to_string(),
       r#type: "ButtonVariant".to_string(),
-      description: "Variant type".to_string(),
+      description: "Primary, Secondary, Tertiary, Success, Danger".to_string(),
       default: Some("ButtonVariant::Primary".to_string()),
     }
   ]
