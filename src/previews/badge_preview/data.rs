@@ -41,7 +41,7 @@ pub(crate) fn get_props() -> Vec<PropRow> {
     PropRow {
       name: "variant".to_string(),
       r#type: "BadgeVariant".to_string(),
-      description: "Variant type".to_string(),
+      description: "Default, Plain, Filled".to_string(),
       default: Some("BadgeVariant::Default".to_string()),
     },
     PropRow {
