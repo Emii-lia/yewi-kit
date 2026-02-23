@@ -1,5 +1,9 @@
+mod data;
+
 use yew::{function_component, html, Html};
 use crate::components::{CodePreview, PasswordInput};
+use crate::features::prop_table::PropTable;
+use crate::previews::password_input_preview::data::get_props;
 use crate::previews::PreviewContainer;
 use crate::types::Size;
 
@@ -7,6 +11,8 @@ use crate::types::Size;
 pub(crate) fn password_input_preview() -> Html {
   let mut errors: Vec<String> = Vec::new();
   errors.push("Invalid input".to_string());
+  let props = get_props();
+  
   html! {
     <div class="PreviewSection">
       <h1 class="preview-title">{"Password Input"}</h1>
@@ -62,6 +68,7 @@ pub(crate) fn password_input_preview() -> Html {
           </PreviewContainer>
         </div>
       </div>
+      <PropTable props={props}/>
     </div>
   }
 }
