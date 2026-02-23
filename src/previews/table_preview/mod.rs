@@ -1,9 +1,17 @@
+mod data;
+
 use yew::{function_component, html, Html};
 use crate::components::{CodePreview, Table, TableBody, TableDataCell, TableHead, TableHeaderCell, TableRow, TableVariant};
+use crate::features::component_table::ComponentTable;
+use crate::features::prop_table::PropTable;
 use crate::previews::PreviewContainer;
+use crate::previews::table_preview::data::{get_components, get_props};
 
 #[function_component(TablePreview)]
 pub(crate) fn table_preview() -> Html {
+  let components = get_components();
+  let props = get_props();
+
   html! {
     <div  class="PreviewSection">
       <h1 class="preview-title">
@@ -190,6 +198,8 @@ pub(crate) fn table_preview() -> Html {
           </PreviewContainer>
         </div>
       </div>
+      <ComponentTable components={components}/>
+      <PropTable props={props} />
     </div>
   }
 }
