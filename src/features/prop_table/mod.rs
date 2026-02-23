@@ -9,12 +9,14 @@ pub struct Props {
   pub props: Vec<PropRow>,
   #[prop_or_default]
   pub class: Classes,
+  #[prop_or("Props".to_string())]
+  pub title: String
 }
 #[function_component(PropTable)]
 pub fn prop_table(props: &Props) -> Html {
   html! {
     <div class="PropTable">
-      <h3 class="PropTable__title">{"Props"}</h3>
+      <h3 class="PropTable__title">{&props.title}</h3>
       <Table >
         <TableHead>
           <TableRow>
