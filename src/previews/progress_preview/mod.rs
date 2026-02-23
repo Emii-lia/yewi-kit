@@ -1,10 +1,16 @@
+mod data;
+
 use yew::{function_component, html, Html};
 use crate::components::{CodePreview, Progress, ProgressVariant};
+use crate::features::prop_table::PropTable;
 use crate::previews::PreviewContainer;
+use crate::previews::progress_preview::data::get_props;
 use crate::types::{Color, Size};
 
 #[function_component(ProgressPreview)]
 pub(crate) fn progress_preview() -> Html {
+  let props = get_props();
+
   html! {
     <div class="PreviewSection">
       <h1 class="preview-title">
@@ -96,6 +102,7 @@ pub(crate) fn progress_preview() -> Html {
           </PreviewContainer>
         </div>
       </div>
+      <PropTable props={props}/>
     </div>
   }
 }
