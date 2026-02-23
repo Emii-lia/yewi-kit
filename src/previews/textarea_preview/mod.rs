@@ -1,9 +1,15 @@
+mod data;
+
 use yew::{function_component, html, Html};
 use crate::components::{CodePreview, Textarea};
+use crate::features::prop_table::PropTable;
 use crate::previews::PreviewContainer;
+use crate::previews::textarea_preview::data::get_props;
 
 #[function_component(TextareaPreview)]
 pub(crate) fn textarea_preview() -> Html {
+  let props = get_props();
+  
   html! {
     <div class="PreviewSection">
       <h1 class="preview-title">{"Textarea"}</h1>
@@ -63,6 +69,7 @@ pub(crate) fn textarea_preview() -> Html {
           </PreviewContainer>
         </div>
       </div>
+      <PropTable props={props} />
     </div>
   }
 }
