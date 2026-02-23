@@ -1,6 +1,10 @@
+mod data;
+
 use yew::{function_component, html, Html};
 use yew_icons::IconData;
 use crate::components::{CodePreview, Input};
+use crate::features::prop_table::PropTable;
+use crate::previews::input_preview::data::get_props;
 use crate::previews::PreviewContainer;
 use crate::types::Size;
 
@@ -8,6 +12,7 @@ use crate::types::Size;
 pub(crate) fn input_preview() -> Html {
   let mut errors: Vec<String> = Vec::new();
   errors.push("Invalid input".to_string());
+  let props = get_props();
 
   html! {
     <div class="PreviewSection">
@@ -76,6 +81,7 @@ pub(crate) fn input_preview() -> Html {
           </PreviewContainer>
         </div>
       </div>
+      <PropTable props={props} />
     </div>
   }
 }
