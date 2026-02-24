@@ -14,7 +14,7 @@ pub(crate) fn card_preview() -> Html {
   
   html! {
     <div class="PreviewSection">
-      <h1 class="preview-title">{ "Card" }</h1>
+      <h2 class="preview-title">{ "Card" }</h2>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">
           {"Installation"}

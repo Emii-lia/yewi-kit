@@ -16,7 +16,7 @@ pub(crate) fn input_preview() -> Html {
 
   html! {
     <div class="PreviewSection">
-      <h1 class="preview-title">{"Input"}</h1>
+      <h2 class="preview-title">{"Input"}</h2>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">
           {"Installation"}

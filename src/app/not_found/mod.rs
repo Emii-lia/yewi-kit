@@ -6,9 +6,9 @@ pub(crate) fn not_found() -> Html {
     <main class="NotFound">
       <div class="not-found-container">
         <div class="not-found-header">
-          <h1 class="not-found-title">
+          <h2 class="not-found-title">
             {"404"}
-          </h1>
+          </h2>
           <div class="not-found-line" />
         </div>
 

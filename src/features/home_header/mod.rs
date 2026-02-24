@@ -16,7 +16,7 @@ pub fn home_header() -> Html {
           to={AppRoute::Home}
         >
           <span class="nav-logo">{"Y"}</span>
-          <span class="nav-title">{"Yewi-kit"}</span>
+          <h1 class="nav-title">{"Yewi-kit"}</h1>
         </Link<AppRoute>>
         <div class="HomeHeader__nav--actions">
           <Link<DocsRoute>

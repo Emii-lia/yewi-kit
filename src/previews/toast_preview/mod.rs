@@ -8,7 +8,7 @@ pub(crate) fn toast_preview() -> Html {
 
   html! {
     <div class="PreviewSection">
-      <h1 class="preview-title">{"Toast"}</h1>
+      <h2 class="preview-title">{"Toast"}</h2>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">
           {"Installation"}

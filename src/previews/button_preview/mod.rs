@@ -13,7 +13,7 @@ pub(crate) fn button_preview () -> Html {
   let props = get_props();
   html! {
     <div class="PreviewSection">
-      <h1 class="preview-title">{"Button"}</h1>
+      <h2 class="preview-title">{"Button"}</h2>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">
           {"Installation"}
