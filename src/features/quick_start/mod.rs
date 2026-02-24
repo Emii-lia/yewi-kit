@@ -61,7 +61,7 @@ fn App() -> Html {
   html! {
     <div class="p-4">
       <Card>
-        <h1>{"Welcome to Yewi-kit"}</h1>
+        <h2>{"Welcome to Yewi-kit"}</h2>
         <Button {onclick}>
           {"Click me"}
         </Button>

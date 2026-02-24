@@ -14,9 +14,9 @@ pub(crate) fn table_preview() -> Html {
 
   html! {
     <div  class="PreviewSection">
-      <h1 class="preview-title">
+      <h2 class="preview-title">
         {"Table"}
-      </h1>
+      </h2>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">
           {"Installation"}

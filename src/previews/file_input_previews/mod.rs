@@ -12,7 +12,7 @@ pub(crate) fn file_input_previews() -> Html {
   
   html! {
     <div class="PreviewSection">
-      <h1 class="preview-title">{"File Input"}</h1>
+      <h2 class="preview-title">{"File Input"}</h2>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">
           {"Installation"}

@@ -15,7 +15,7 @@ pub(crate) fn password_input_preview() -> Html {
   
   html! {
     <div class="PreviewSection">
-      <h1 class="preview-title">{"Password Input"}</h1>
+      <h2 class="preview-title">{"Password Input"}</h2>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">
           {"Installation"}

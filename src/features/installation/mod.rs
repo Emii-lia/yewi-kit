@@ -14,7 +14,7 @@ pub(crate) fn installation_section() -> Html {
   html! {
     <div class="InstallationSection">
       <div class="InstallationSection__header">
-        <h1 class="installation-title">{"Installation"}</h1>
+        <h2 class="installation-title">{"Installation"}</h2>
         <p class="installation-subtitle">
           {r#"Setup and run Yewi-kit project in just a few simple steps."#}
         </p>

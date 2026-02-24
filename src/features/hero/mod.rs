@@ -33,7 +33,7 @@ pub fn hero() -> Html {
               </Button>
             </Link<DocsRoute>>
             <Link<DocsRoute>
-              to={DocsRoute::ButtonPage}
+              to={DocsRoute::AvatarPage}
             >
               <Button
                 class={"hero-cta"}

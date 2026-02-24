@@ -13,9 +13,9 @@ pub(crate) fn progress_preview() -> Html {
 
   html! {
     <div class="PreviewSection">
-      <h1 class="preview-title">
+      <h2 class="preview-title">
         {"Progress"}
-      </h1>
+      </h2>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">
           {"Installation"}

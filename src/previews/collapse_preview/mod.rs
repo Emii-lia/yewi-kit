@@ -12,7 +12,7 @@ pub(crate) fn collapse_preview() -> Html {
 
   html! {
     <div class="PreviewSection">
-      <h1 class="preview-title">{"Collapse"}</h1>
+      <h2 class="preview-title">{"Collapse"}</h2>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">
           {"Installation"}
