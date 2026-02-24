@@ -67,6 +67,12 @@ html, body {
 .code-highlight {
   @apply bg-slate-100 text-slate-700 rounded px-2 py-1 text-sm;
 }
+.mono {
+  @apply font-mono;
+  &__highlight {
+    @apply bg-slate-100 text-slate-800 rounded px-1.5 py-0.5 text-[0.8em] font-mono;
+  }
+}
 
 
 *::selection {

@@ -27,4 +27,28 @@
       @apply w-full flex items-center justify-center gap-4 p-6;
     }
   }
+  .preview-usages {
+    @apply flex flex-col gap-6 w-full;
+
+    .preview-usage {
+      @apply flex flex-col gap-3;
+    }
+
+    .preview-usage-list {
+      @apply flex flex-col gap-1 pl-4 text-sm text-slate-600;
+
+      li {
+        @apply flex items-baseline gap-1;
+
+        &::before {
+          content: "–";
+          @apply text-slate-400 mr-1;
+        }
+      }
+    }
+  }
+  .preview-text {
+    @apply text-sm text-slate-600;
+    @apply inline;
+  }
 }
