@@ -20,6 +20,7 @@ mod code_preview;
 mod dropdown;
 mod toast;
 mod table;
+mod breadcrumbs;
 
 pub use button::*;
 pub(crate) use input::*;
@@ -43,3 +44,4 @@ pub use code_preview::*;
 pub(crate) use dropdown::*;
 pub(crate) use toast::*;
 pub(crate) use table::*;
+pub use breadcrumbs::*;

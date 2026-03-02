@@ -12,6 +12,8 @@ pub enum DocsRoute {
   AvatarGroupPage,
   #[at("/docs/badge")]
   BadgePage,
+  #[at("/docs/breadcrumbs")]
+  BreadcrumbsPage,
   #[at("/docs/button")]
   ButtonPage,
   #[at("/docs/card")]
@@ -61,6 +63,7 @@ impl DocsRoute {
       DocsRoute::AvatarPage,
       DocsRoute::AvatarGroupPage,
       DocsRoute::BadgePage,
+      DocsRoute::BreadcrumbsPage,
       DocsRoute::ButtonPage,
       DocsRoute::CardPage,
       DocsRoute::CarouselPage,
@@ -91,6 +94,7 @@ impl DocsRoute {
       DocsRoute::AvatarPage => "Avatar".to_string(),
       DocsRoute::AvatarGroupPage => "Avatar Group".to_string(),
       DocsRoute::BadgePage => "Badge".to_string(),
+      DocsRoute::BreadcrumbsPage => "Breadcrumbs".to_string(),
       DocsRoute::ButtonPage => "Button".to_string(),
       DocsRoute::CardPage => "Card".to_string(),
       DocsRoute::CarouselPage => "Carousel".to_string(),
