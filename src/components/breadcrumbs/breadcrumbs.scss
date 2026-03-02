@@ -1,0 +1,21 @@
+.Breadcrumbs {
+  @apply flex items-center gap-2 text-sm font-medium py-3 px-4;
+  --separator-dt: var(--separator, '/');
+}
+
+.BreadCrumbs__item {
+  @apply relative text-slate-600 hover:text-primary-900 transition-colors duration-200;
+  @apply flex items-center gap-2;
+
+  &:hover {
+    @apply text-primary-900;
+  }
+  &:not(:last-child)::after {
+    @apply text-slate-400 ml-2 select-none pointer-events-none font-normal;
+    content: var(--separator-dt);
+  }
+
+  &:focus-visible {
+    @apply outline-none ring-2 ring-slate-400 ring-offset-2 rounded;
+  }
+}
