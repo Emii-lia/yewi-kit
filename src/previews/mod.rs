@@ -20,6 +20,7 @@ mod carousel_preview;
 mod dropdown_preview;
 mod toast_preview;
 mod table_preview;
+mod breadcrumbs_preview;
 
 pub(crate) use button_preview::*;
 pub(crate) use preview_container::*;
@@ -43,3 +44,4 @@ pub(crate) use carousel_preview::*;
 pub(crate) use dropdown_preview::*;
 pub(crate) use toast_preview::*;
 pub(crate) use table_preview::*;
+pub(crate) use breadcrumbs_preview::*;
