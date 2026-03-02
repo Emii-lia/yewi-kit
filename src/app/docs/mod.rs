@@ -3,6 +3,7 @@ use yew_router::prelude::Redirect;
 use crate::app::docs::avatar::AvatarPage;
 use crate::app::docs::avatar_group::AvatarGroupPage;
 use crate::app::docs::badge::BadgePage;
+use crate::app::docs::breadcrumbs::BreadcrumbsPage;
 use crate::app::docs::button::ButtonPage;
 use crate::app::docs::card::CardPage;
 use crate::app::docs::carousel::CarouselPage;
@@ -53,6 +54,7 @@ mod installation;
 pub mod routes;
 mod quick_start;
 mod page;
+mod breadcrumbs;
 
 pub fn switch_docs(route: DocsRoute) -> Html {
   let current_route = match route {
@@ -61,6 +63,7 @@ pub fn switch_docs(route: DocsRoute) -> Html {
     DocsRoute::AvatarPage => html! {<AvatarPage/>},
     DocsRoute::AvatarGroupPage => html! {<AvatarGroupPage/>},
     DocsRoute::BadgePage => html! {<BadgePage/>},
+    DocsRoute::BreadcrumbsPage => html! {<BreadcrumbsPage/>},
     DocsRoute::ButtonPage => html! {<ButtonPage/>},
     DocsRoute::CardPage => html! {<CardPage/>},
     DocsRoute::CarouselPage => html! {<CarouselPage/>},
