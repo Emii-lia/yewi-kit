@@ -92,10 +92,11 @@ Requires Rust stable.
 cargo install yewi-cli
 ```
 
-Install the wasm target:
+Install the wasm target and trunk:
 
 ``` bash
 rustup target add wasm32-unknown-unknown
+cargo install --locked trunk
 ```
 
 
