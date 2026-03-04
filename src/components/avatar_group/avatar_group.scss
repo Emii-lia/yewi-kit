@@ -2,7 +2,7 @@
   @apply relative flex items-center gap-2 w-fit h-fit;
   &.linear {
     .avatar-group-item {
-      @apply relative z-10 -ml-6 hover:z-[11];
+      @apply relative z-[2] -ml-6 hover:z-[3];
       &:nth-child(1){
         @apply ml-0;
       }
@@ -11,7 +11,7 @@
   &.stacked {
     @apply pr-8;
     .avatar-group-item {
-      @apply z-10 absolute inset-0 hover:z-[11];
+      @apply z-[2] absolute inset-0 hover:z-[3];
       &:nth-child(1){
         @apply ml-0 mt-0 relative;
       }
