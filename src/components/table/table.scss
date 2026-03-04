@@ -1,5 +1,5 @@
 .Table {
-  @apply w-full border-collapse overflow-x-auto shadow-md;
+  @apply w-full border-collapse overflow-x-auto shadow-md max-w-full;
 
   &__head {
     @apply bg-white border-b border-slate-200;
@@ -7,6 +7,8 @@
     .TableRow {
       &__header-cell {
         @apply px-5 py-2.5 text-left text-sm font-semibold text-slate-600 whitespace-nowrap;
+        @apply max-lg:px-3 max-lg:py-2;
+        @apply max-sm:px-2 max-sm:py-1;
       }
     }
   }
@@ -19,6 +21,8 @@
       }
       &__data-cell {
         @apply px-6 py-4 text-sm font-medium text-slate-950;
+        @apply max-lg:px-4 max-lg:py-3;
+        @apply max-sm:px-3 max-sm:py-2;
       }
     }
   }

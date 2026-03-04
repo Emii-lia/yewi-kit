@@ -4,20 +4,24 @@
     @apply flex flex-col gap-4;
     .installation-title {
       @apply text-4xl font-bold text-primary-900;
+      @apply max-md:text-3xl;
     }
     .installation-subtitle {
       @apply text-slate-500 text-lg;
+      @apply max-md:text-base;
     }
   }
   .installation-steps {
     @apply flex flex-col gap-6;
     .installation-step {
       @apply flex gap-6 pb-4;
+      @apply max-md:gap-4;
       &__number {
         @apply flex-shrink-0 pt-1;
         .number-text {
           @apply flex items-center justify-center w-12 h-12 rounded-full;
           @apply border border-slate-200 shadow-sm text-slate-900 bg-white font-semibold text-sm;
+          @apply max-md:w-9 max-md:h-9 max-md:text-xs;
         }
       }
       &__content {

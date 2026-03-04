@@ -22,15 +22,17 @@
 
 html, body {
   font-family: 'Poppins', Abel, "Roboto Slab", sans-serif;
-  @apply h-auto min-h-screen relative;
+  @apply h-auto min-h-screen relative overflow-hidden;
 }
 .app, .docs-app {
-  @apply min-h-screen min-w-full w-full h-auto flex flex-col;
+  @apply min-h-screen min-w-full w-full h-auto flex flex-col overflow-hidden;
 }
 .Home {
-  @apply h-auto min-h-screen bg-slate-50 text-slate-950 relative overflow-x-hidden;
-  @apply bg-center bg-cover bg-no-repeat;
-  background-image: url("/images/hero-bg.svg");
+  @apply h-auto min-h-screen max-h-screen bg-slate-50 text-slate-950 relative overflow-x-hidden overflow-y-auto;
+  &__container {
+    @apply bg-center bg-cover bg-no-repeat bg-slate-50 w-full h-full;
+    background-image: url("/images/hero-bg.svg");
+  }
   .home-section-reverse {
     @apply lg:flex-row-reverse ;
   }
@@ -56,12 +58,21 @@ html, body {
   }
 }
 .page-container {
-  @apply p-16 pl-64 max-w-6xl mx-auto w-full;
+  @apply p-16 pl-64 max-w-6xl mx-auto w-full overflow-x-hidden overflow-y-auto max-h-screen h-full;
+  @apply max-lg:p-6 max-lg:pl-14 max-lg:max-w-full max-lg:mx-0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    @apply invisible;
+  }
   .page-title {
     @apply text-4xl font-bold text-primary-900;
+    @apply max-md:text-3xl;
   }
   .page-subtitle {
     @apply text-lg text-slate-500;
+    @apply max-md:text-base;
   }
 }
 .code-highlight {

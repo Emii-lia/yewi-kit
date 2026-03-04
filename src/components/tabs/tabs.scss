@@ -2,6 +2,7 @@
   @apply w-full h-full flex flex-col gap-4;
   .tab-list {
     @apply flex items-center gap-2 p-2 rounded-xl bg-slate-100 border border-slate-200 shadow-inner w-fit;
+    @apply max-md:rounded-lg;
     &:has(.Tab.tab-light) {
       @apply border-slate-800 bg-slate-700;
       .Tab {
@@ -11,6 +12,7 @@
     .Tab {
       @apply px-4 py-2 rounded-xl cursor-pointer bg-transparent text-slate-900 transition-all duration-200 ease-in-out;
       @apply font-semibold;
+      @apply max-md:text-sm max-md:px-2.5 max-md:py-1.5 max-md:rounded-lg;
       &.tab-is-active {
         @apply shadow-md;
       }

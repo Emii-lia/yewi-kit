@@ -1,4 +1,6 @@
 mod hooks;
+pub mod provider;
+mod store;
 
 mod components {
   pub mod nav_item;
@@ -7,22 +9,38 @@ mod components {
 use yew::{classes, function_component, html, Html};
 use yew_router::prelude::Link;
 use crate::app::routes::AppRoute;
+use crate::components::{Button};
+use crate::features::provider::SidebarContext;
 use crate::features::sidebar::components::nav_item::NavItem;
-use crate::features::sidebar::hooks::use_sidebar;
+use crate::features::sidebar::store::use_sidebar_store;
+use crate::types::Size;
 
 #[function_component(Sidebar)]
 pub(crate) fn sidebar() -> Html {
-  let route_group = use_sidebar();
+  let SidebarContext { route_group, is_open, toggle_open } = use_sidebar_store();
   html! {
-    <aside class="Sidebar">
+    <aside class={classes!(
+      "Sidebar",
+      is_open.then_some("sidebar-open")
+    )}>
       <div class="sidebar-header">
-        <Link<AppRoute>
-          classes={classes!("sidebar-header-content")}
-          to={AppRoute::Home}
+        <div
+          class={classes!("sidebar-header-content")}
         >
-          <span class="sidebar-logo">{"Y"}</span>
-          <span class="sidebar-title">{"Yewi-kit"}</span>
-        </Link<AppRoute>>
+          <Button
+            size={Size::Small}
+            onclick={toggle_open}
+            title={"Toggle Sidebar"}
+          >
+            {"Y"}
+          </Button>
+          <Link<AppRoute>
+            to={AppRoute::Home}
+            classes="sidebar-title"
+          >
+            {"Yewi-kit"}
+          </Link<AppRoute>>
+        </div>
       </div>
       <div class="sidebar-menu">
         {for route_group.iter().map(|rs| {

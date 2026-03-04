@@ -1,14 +1,42 @@
 @use "./components/nav_item/nav_item";
+
+.sidebar-toggle-btn {
+  @apply absolute top-4 left-4 w-fit;
+  @apply lg:hidden;
+}
 .Sidebar {
   @apply w-56 border-r border-primary-100 bg-white p-6 max-h-screen overflow-y-auto;
   @apply fixed top-0 bottom-0 left-0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
   &::-webkit-scrollbar {
     @apply invisible;
   }
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  @media screen and (max-width: 1024px) {
+    @apply w-12 absolute z-10 inset-0 transition-all duration-300 ease-in-out px-2 py-4;
+    .sidebar-header {
+      .sidebar-title {
+        @apply hidden;
+      }
+    }
+    .sidebar-menu {
+      @apply hidden w-0;
+    }
+    &.sidebar-open {
+      @apply w-full p-4;
+      .sidebar-header {
+        .sidebar-title {
+          @apply inline;
+        }
+      }
+      .sidebar-menu {
+        @apply flex w-full;
+      }
+    }
+  }
   .sidebar-header {
-    @apply mb-8;
+    @apply mb-8 flex flex-col gap-3;
     .sidebar-header-content {
       @apply flex items-center gap-2 mb-6;
       .sidebar-logo {
@@ -20,16 +48,16 @@
       }
     }
   }
-  .sidebar-menu {
-    @apply flex flex-col gap-8;
-    .sidebar-section {
-      @apply flex flex-col gap-3;
-      .sidebar-section-title {
-        @apply text-xs font-semibold text-primary-500 uppercase tracking-wide px-2;
-      }
-      .sidebar-section-items {
-        @apply flex flex-col gap-1;
-      }
+}
+.sidebar-menu {
+  @apply flex flex-col gap-8;
+  .sidebar-section {
+    @apply flex flex-col gap-3;
+    .sidebar-section-title {
+      @apply text-xs font-semibold text-primary-500 uppercase tracking-wide px-2;
+    }
+    .sidebar-section-items {
+      @apply flex flex-col gap-1;
     }
   }
 }

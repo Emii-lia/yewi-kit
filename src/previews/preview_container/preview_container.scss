@@ -1,7 +1,12 @@
 .PreviewContainer {
   @apply w-full rounded-xl border border-slate-200 bg-white p-4 shadow-sm;
+  @apply max-lg:p-0 max-lg:rounded-none max-lg:border-0;
+  @apply max-lg:pt-4 max-lg:pb-4 max-lg:border-b max-lg:border-slate-200;
+
   .preview-content {
     @apply flex flex-wrap items-center justify-center gap-4
     rounded-lg bg-slate-50 px-6 py-8 border border-slate-50 shadow-inner;
+    @apply max-lg:p-0 max-lg:rounded-none max-lg:border-0 max-lg:shadow-none max-lg:bg-transparent;
+    @apply max-lg:p-3 max-lg:pb-0 max-lg:border-t max-lg:border-slate-200;
   }
 }

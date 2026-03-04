@@ -1,7 +1,7 @@
 @use "./modal_preview/modal_preview";
 @use "./collapse_preview/collapse_preview";
 .PreviewSection {
-  @apply w-full flex flex-col gap-8 pt-4 pb-6;
+  @apply w-full h-fit flex flex-col gap-8 pt-4 pb-6 px-2;
   .preview-subsection {
     @apply w-full flex flex-col gap-3;
     .preview-subsection-title {

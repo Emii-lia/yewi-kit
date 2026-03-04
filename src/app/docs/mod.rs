@@ -27,6 +27,7 @@ use crate::app::docs::tabs::TabsPage;
 use crate::app::docs::textarea::TextareaPage;
 use crate::app::docs::toast::ToastPage;
 use crate::app::routes::AppRoute;
+use crate::features::provider::SidebarProvider;
 use crate::features::Sidebar;
 
 mod button;
@@ -87,9 +88,11 @@ pub fn switch_docs(route: DocsRoute) -> Html {
   };
 
   html! {
-    <div class="docs-app">
-      <Sidebar/>
-      {current_route}
-    </div>
+    <SidebarProvider>
+      <div class="docs-app">
+        <Sidebar/>
+        {current_route}
+      </div>
+    </SidebarProvider>
   }
 }
