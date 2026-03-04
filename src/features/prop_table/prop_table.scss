@@ -1,5 +1,5 @@
 .PropTable {
-  @apply flex flex-col gap-3 w-full pt-4;
+  @apply flex flex-col gap-3 w-full pt-4 max-w-full overflow-x-auto;
   &__title {
     @apply text-slate-900 font-semibold;
   }
