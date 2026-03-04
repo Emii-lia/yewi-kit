@@ -7,7 +7,6 @@ mod components {
 }
 
 use yew::{classes, function_component, html, Html};
-use yew_icons::IconData;
 use yew_router::prelude::Link;
 use crate::app::routes::AppRoute;
 use crate::components::{Button};

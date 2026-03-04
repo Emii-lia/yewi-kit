@@ -1,7 +1,6 @@
 mod hooks;
 
 use yew::{classes, function_component, html, Html, Properties};
-use yew_router::prelude::Link;
 use crate::app::docs::routes::DocsRoute;
 use crate::features::sidebar::components::nav_item::hooks::{use_nav_item, HookParams, HookResponse};
 
