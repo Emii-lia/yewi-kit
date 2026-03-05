@@ -91,6 +91,11 @@
         <priority>0.8</priority>
       </url>
       <url>
+        <loc>https://yewi.pages.dev/docs/pagination</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+      </url>
+      <url>
         <loc>https://yewi.pages.dev/docs/password-input</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
