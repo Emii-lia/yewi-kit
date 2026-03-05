@@ -45,6 +45,12 @@ pub(crate) fn get_props() -> Vec<PropRow> {
       default: None
     },
     PropRow {
+      name: "rounded".to_string(),
+      r#type: "bool".to_string(),
+      description: "Rounded button".to_string(),
+      default: Some("false".to_string()),
+    },
+    PropRow {
       name: "size".to_string(),
       r#type: "Size".to_string(),
       description: "Button size".to_string(),

@@ -1,0 +1,9 @@
+.Pagination {
+  @apply flex items-center gap-4;
+  &__numbers {
+    @apply flex items-center gap-2;
+    &__ellipsis {
+      @apply text-slate-600 text-sm;
+    }
+  }
+}

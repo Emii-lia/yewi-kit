@@ -34,6 +34,8 @@ pub enum DocsRoute {
   InputPage,
   #[at("/docs/modal")]
   ModalPage,
+  #[at("/docs/pagination")]
+  PaginationPage,
   #[at("/docs/password-input")]
   PasswordInputPage,
   #[at("/docs/progress")]
@@ -74,6 +76,7 @@ impl DocsRoute {
       DocsRoute::FileInput,
       DocsRoute::InputPage,
       DocsRoute::ModalPage,
+      DocsRoute::PaginationPage,
       DocsRoute::PasswordInputPage,
       DocsRoute::ProgressPage,
       DocsRoute::QuickStartPage,
@@ -104,6 +107,7 @@ impl DocsRoute {
       DocsRoute::DropdownPage => "Dropdown".to_string(),
       DocsRoute::FileInput => "File Input".to_string(),
       DocsRoute::InputPage => "Input".to_string(),
+      DocsRoute::PaginationPage => "Pagination".to_string(),
       DocsRoute::PasswordInputPage => "Password Input".to_string(),
       DocsRoute::ProgressPage => "Progress".to_string(),
       DocsRoute::QuickStartPage => "Quick Start".to_string(),

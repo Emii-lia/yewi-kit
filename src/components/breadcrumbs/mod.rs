@@ -1,5 +1,4 @@
 use yew::{classes, function_component, html, Classes, Html, Properties};
-use yew::html::IntoPropValue;
 use yew_router::components::Link;
 use yew_router::Routable;
 
