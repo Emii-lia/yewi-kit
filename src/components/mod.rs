@@ -21,6 +21,7 @@ mod dropdown;
 mod toast;
 mod table;
 mod breadcrumbs;
+mod pagination;
 
 pub use button::*;
 pub(crate) use input::*;
@@ -45,3 +46,4 @@ pub(crate) use dropdown::*;
 pub(crate) use toast::*;
 pub(crate) use table::*;
 pub use breadcrumbs::*;
+pub use pagination::*;
