@@ -6,7 +6,6 @@ use crate::features::prop_table::PropTable;
 use crate::previews::pagination_preview::data::get_props;
 use crate::previews::PreviewContainer;
 use crate::types::Size;
-use yew::Callback;
 use crate::components::types::PaginationVariant;
 
 #[function_component(PaginationPreview)]

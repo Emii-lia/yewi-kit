@@ -1,4 +1,3 @@
-use web_sys::MouseEvent;
 use yew::{hook, use_state, Callback};
 
 #[derive(Clone)]
