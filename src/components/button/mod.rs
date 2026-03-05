@@ -28,7 +28,9 @@ pub struct Props {
   #[prop_or_default]
   pub icon: Option<IconData>,
   #[prop_or_default]
-  pub title: AttrValue
+  pub title: AttrValue,
+  #[prop_or(false)]
+  pub rounded: bool
 }
 #[function_component(Button)]
 pub(crate) fn button(props: &Props) -> Html {
@@ -60,7 +62,8 @@ pub(crate) fn button(props: &Props) -> Html {
           size,
           props.is_loading.then_some("btn-loading"),
           &props.class,
-          icon.is_some().then_some("btn-with-icon")
+          icon.is_some().then_some("btn-with-icon"),
+          props.rounded.then_some("btn-rounded")
         )}
         disabled={props.disabled || props.is_loading}
         title={&props.title}
@@ -80,7 +83,8 @@ pub(crate) fn button(props: &Props) -> Html {
           size,
           props.is_loading.then_some("btn-loading"),
           &props.class,
-          icon.is_some().then_some("btn-with-icon")
+          icon.is_some().then_some("btn-with-icon"),
+          props.rounded.then_some("btn-rounded")
       )}
         disabled={props.disabled || props.is_loading}
         title={&props.title}
