@@ -27,13 +27,12 @@ pub(crate) fn sidebar() -> Html {
         <div
           class={classes!("sidebar-header-content")}
         >
-          <Button
-            size={Size::Small}
+          <div
             onclick={toggle_open}
             title={"Toggle Sidebar"}
-          >
-            {"Y"}
-          </Button>
+            class="sidebar-logo"
+            style={"--logo: url('/icons/logo.png');"}
+          />
           <Link<AppRoute>
             to={AppRoute::Home}
             classes="sidebar-title"
