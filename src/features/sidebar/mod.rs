@@ -9,11 +9,9 @@ mod components {
 use yew::{classes, function_component, html, Html};
 use yew_router::prelude::Link;
 use crate::app::routes::AppRoute;
-use crate::components::{Button};
 use crate::features::provider::SidebarContext;
 use crate::features::sidebar::components::nav_item::NavItem;
 use crate::features::sidebar::store::use_sidebar_store;
-use crate::types::Size;
 
 #[function_component(Sidebar)]
 pub(crate) fn sidebar() -> Html {
@@ -27,13 +25,12 @@ pub(crate) fn sidebar() -> Html {
         <div
           class={classes!("sidebar-header-content")}
         >
-          <Button
-            size={Size::Small}
+          <div
             onclick={toggle_open}
             title={"Toggle Sidebar"}
-          >
-            {"Y"}
-          </Button>
+            class="sidebar-logo"
+            style={"--logo: url('/icons/logo.png');"}
+          />
           <Link<AppRoute>
             to={AppRoute::Home}
             classes="sidebar-title"

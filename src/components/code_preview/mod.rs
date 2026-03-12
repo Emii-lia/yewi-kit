@@ -8,7 +8,9 @@ use crate::types::Size;
 
 #[derive(PartialEq, Properties, Clone)]
 pub struct Props {
-  pub code: AttrValue
+  pub code: AttrValue,
+  #[prop_or(false)]
+  pub hide_copy: bool
 }
 #[function_component(CodePreview)]
 pub(crate) fn code_preview(props: &Props) -> Html {
@@ -23,14 +25,18 @@ pub(crate) fn code_preview(props: &Props) -> Html {
       <pre class="CodePreview__code">
         <code class="code-content">{&props.code}</code>
       </pre>
-      <Button
-        variant={ButtonVariant::Secondary}
-        title={"Copy to clipboard"}
-        icon={if copied { IconData::LUCIDE_CHECK } else { IconData::LUCIDE_COPY }}
-        onclick={on_copy}
-        size={Size::Small}
-        class="CodePreview__copy-button"
-      />
+      {html! {
+        if !props.hide_copy {
+          <Button
+            variant={ButtonVariant::Secondary}
+            title={"Copy to clipboard"}
+            icon={if copied { IconData::LUCIDE_CHECK } else { IconData::LUCIDE_COPY }}
+            onclick={on_copy}
+            size={Size::Small}
+            class="CodePreview__copy-button"
+          />
+        }
+      }}
     </div>
   }
 }

@@ -1,6 +1,6 @@
 .NavItem {
   @apply block px-3 py-2 rounded-md text-sm transition-colors;
-  @apply text-slate-500 hover:text-primary-600 hover:bg-primary-100;
+  @apply text-slate-500 hover:text-primary-600 hover:bg-primary-100 whitespace-nowrap;
   &.nav-active {
     @apply bg-primary-200 text-primary-800;
   }
