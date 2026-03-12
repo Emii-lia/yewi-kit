@@ -1,7 +1,7 @@
 use std::fs;
 use std::path::Path;
 
-const BASE_URL: &str = "https://yewi.pages.dev";
+const BASE_URL: &str = "https://yewi.fiaro.app";
 
 fn main() {
   let routes = &[

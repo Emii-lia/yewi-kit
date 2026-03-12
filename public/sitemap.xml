@@ -1,137 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://yewi.pages.dev/</loc>
+        <loc>https://yewi.fiaro.app/</loc>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs</loc>
+        <loc>https://yewi.fiaro.app/docs</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/installation</loc>
+        <loc>https://yewi.fiaro.app/docs/installation</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/quick-start</loc>
+        <loc>https://yewi.fiaro.app/docs/quick-start</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/avatar</loc>
+        <loc>https://yewi.fiaro.app/docs/avatar</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/avatar-group</loc>
+        <loc>https://yewi.fiaro.app/docs/avatar-group</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/badge</loc>
+        <loc>https://yewi.fiaro.app/docs/badge</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/breadcrumbs</loc>
+        <loc>https://yewi.fiaro.app/docs/breadcrumbs</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/button</loc>
+        <loc>https://yewi.fiaro.app/docs/button</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/card</loc>
+        <loc>https://yewi.fiaro.app/docs/card</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/carousel</loc>
+        <loc>https://yewi.fiaro.app/docs/carousel</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/checkbox</loc>
+        <loc>https://yewi.fiaro.app/docs/checkbox</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/collapse</loc>
+        <loc>https://yewi.fiaro.app/docs/collapse</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/divider</loc>
+        <loc>https://yewi.fiaro.app/docs/divider</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/dropdown</loc>
+        <loc>https://yewi.fiaro.app/docs/dropdown</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/file-input</loc>
+        <loc>https://yewi.fiaro.app/docs/file-input</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/input</loc>
+        <loc>https://yewi.fiaro.app/docs/input</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/modal</loc>
+        <loc>https://yewi.fiaro.app/docs/modal</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/pagination</loc>
+        <loc>https://yewi.fiaro.app/docs/pagination</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/password-input</loc>
+        <loc>https://yewi.fiaro.app/docs/password-input</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/progress</loc>
+        <loc>https://yewi.fiaro.app/docs/progress</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/radio</loc>
+        <loc>https://yewi.fiaro.app/docs/radio</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/select</loc>
+        <loc>https://yewi.fiaro.app/docs/select</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/table</loc>
+        <loc>https://yewi.fiaro.app/docs/table</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/tabs</loc>
+        <loc>https://yewi.fiaro.app/docs/tabs</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/textarea</loc>
+        <loc>https://yewi.fiaro.app/docs/textarea</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
       <url>
-        <loc>https://yewi.pages.dev/docs/toast</loc>
+        <loc>https://yewi.fiaro.app/docs/toast</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>

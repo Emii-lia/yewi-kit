@@ -3,7 +3,7 @@
 Official component source and documentation website for **Yewi UI**.
 
 Live documentation:
-[https://yewi.pages.dev](https://yewi.pages.dev)
+[https://yewi.fiaro.app](https://yewi.fiaro.app)
 
 Crate:
 
