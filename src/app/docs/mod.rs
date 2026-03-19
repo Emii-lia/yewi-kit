@@ -14,6 +14,7 @@ use crate::app::docs::dropdown::DropdownPage;
 use crate::app::docs::file_input::FileInputPage;
 use crate::app::docs::input::InputPage;
 use crate::app::docs::installation::InstallationPage;
+use crate::app::docs::link::LinkPage;
 use crate::app::docs::modal::ModalPage;
 use crate::app::docs::page::DocumentationPage;
 use crate::app::docs::pagination::PaginationPage;
@@ -58,6 +59,7 @@ mod quick_start;
 mod page;
 mod breadcrumbs;
 mod pagination;
+pub mod link;
 
 pub fn switch_docs(route: DocsRoute) -> Html {
   let current_route = match route {
@@ -76,6 +78,7 @@ pub fn switch_docs(route: DocsRoute) -> Html {
     DocsRoute::DropdownPage => html! {<DropdownPage/>},
     DocsRoute::FileInput => html! {<FileInputPage/>},
     DocsRoute::InputPage => html! {<InputPage/>},
+    DocsRoute::LinkPage => html! {<LinkPage/>},
     DocsRoute::ModalPage => html! {<ModalPage/>},
     DocsRoute::PaginationPage => html! {<PaginationPage/>},
     DocsRoute::PasswordInputPage => html! {<PasswordInputPage/>},

@@ -22,6 +22,7 @@ mod toast;
 mod table;
 mod breadcrumbs;
 mod pagination;
+pub mod link;
 
 pub use button::*;
 pub(crate) use input::*;

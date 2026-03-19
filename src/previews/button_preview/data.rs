@@ -17,7 +17,7 @@ pub(crate) fn get_props() -> Vec<PropRow> {
     PropRow {
       name: "disabled".to_string(),
       r#type: "bool".to_string(),
-      description: "Disbaled state".to_string(),
+      description: "Disabled state".to_string(),
       default: Some("false".to_string())
     },
     PropRow {
