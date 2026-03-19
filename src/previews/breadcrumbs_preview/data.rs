@@ -31,7 +31,7 @@ pub(crate) fn get_props() -> Vec<PropRow> {
       name: "class".to_string(),
       r#type: "Classes".to_string(),
       description: "Component custom class".to_string(),
-      default: Some("Classes::default()".to_string())
+      default: None
     },
     PropRow {
       name: "href".to_string(),
