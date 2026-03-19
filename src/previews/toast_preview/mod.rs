@@ -209,7 +209,10 @@ pub(crate) fn toast_preview() -> Html {
         let on_click = {
           let toast = toast.clone();
           Callback::from(move |_| {
-            toast.success((html! { <span>{"Saved!"}</span> }, None));
+            toast.success.emit(((
+              Children::new(vec![html! { <span>{"Saved!"}</span> }]),
+              None
+            )));
           })
         };
 
