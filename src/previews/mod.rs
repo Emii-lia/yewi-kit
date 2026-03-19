@@ -22,6 +22,7 @@ mod toast_preview;
 mod table_preview;
 mod breadcrumbs_preview;
 mod pagination_preview;
+pub mod link_preview;
 
 pub(crate) use button_preview::*;
 pub(crate) use preview_container::*;
