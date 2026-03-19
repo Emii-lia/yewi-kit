@@ -1,5 +1,3 @@
-use std::fmt::Display;
-
 #[derive(PartialEq, Clone)]
 pub enum LinkVariant {
   Default,

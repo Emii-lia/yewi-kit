@@ -1,4 +1,3 @@
-use std::any::Any;
 use crate::features::prop_table::types::PropRow;
 
 pub fn get_props() -> Vec<PropRow> {
