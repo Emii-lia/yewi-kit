@@ -10,7 +10,8 @@ env:
   CARGO_TERM_COLOR: always
   
 jobs:
-  deploy:
+  build:
+    name: Build App
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -20,6 +21,24 @@ jobs:
           docker create --name builder yewi-builder
           docker cp builder:/app/dist ./dist
           docker rm builder
+      - name: Upload build artifact
+        uses: action/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+  deploy:
+    name: Deploy App
+    needs: build
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/checkout@v4
+      - name: Download build arctifacts
+        uses: action/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+          
       - name: Deploy to Cloudflare Pages
         run: npx wrangler pages deploy dist --project-name=yewi
         env:
