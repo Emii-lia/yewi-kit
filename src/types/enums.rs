@@ -30,3 +30,13 @@ pub(crate) enum Color {
   Dark,
   Transparent,
 }
+
+impl Size {
+  pub fn as_str(&self) -> &'static str {
+    match self {
+      Size::Small => "small",
+      Size::Medium => "medium",
+      Size::Large => "large",
+    }
+  }
+}
