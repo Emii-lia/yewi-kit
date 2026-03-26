@@ -1,0 +1,10 @@
+services:
+  yewi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: builder
+    volumes:
+      - ./dist:/app/dist
+volumes:
+    dist:

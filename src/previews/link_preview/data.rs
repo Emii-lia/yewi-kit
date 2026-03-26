@@ -35,7 +35,7 @@ pub fn get_props() -> Vec<PropRow> {
     PropRow {
       name: "variant".to_string(),
       r#type: "LinkVariant".to_string(),
-      description: "Default, Button".to_string(),
+      description: "Default, Button(variant, size)".to_string(),
       default: Some("LinkVariant::Default".to_string())
     }
   ]

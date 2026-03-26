@@ -47,7 +47,37 @@ pub fn link_preview() -> Html {
             code={r#"
   <Link<DocsRoute>
     href={DocsRoute::AvatarPage}
-    variant={LinkVariant::Button}
+    variant={LinkVariant::primary()}
+  >
+    {"View avatar"}
+  </Link<DocsRoute>>
+  <Link<DocsRoute>
+    href={DocsRoute::AvatarPage}
+    variant={LinkVariant::secondary()}
+  >
+    {"View avatar"}
+  </Link<DocsRoute>>
+  <Link<DocsRoute>
+    href={DocsRoute::AvatarPage}
+    variant={LinkVariant::tertiary()}
+  >
+    {"View avatar"}
+  </Link<DocsRoute>>
+  <Link<DocsRoute>
+    href={DocsRoute::AvatarPage}
+    variant={LinkVariant::tertiary()}
+  >
+    {"View avatar"}
+  </Link<DocsRoute>>
+  <Link<DocsRoute>
+    href={DocsRoute::AvatarPage}
+    variant={LinkVariant::danger()}
+  >
+    {"View avatar"}
+  </Link<DocsRoute>>
+  <Link<DocsRoute>
+    href={DocsRoute::AvatarPage}
+    variant={LinkVariant::success()}
   >
     {"View avatar"}
   </Link<DocsRoute>>
@@ -55,7 +85,37 @@ pub fn link_preview() -> Html {
           >
             <Link<DocsRoute>
               href={DocsRoute::AvatarPage}
-              variant={LinkVariant::Button}
+              variant={LinkVariant::primary()}
+            >
+              {"View avatar"}
+            </Link<DocsRoute>>
+            <Link<DocsRoute>
+              href={DocsRoute::AvatarPage}
+              variant={LinkVariant::secondary()}
+            >
+              {"View avatar"}
+            </Link<DocsRoute>>
+            <Link<DocsRoute>
+              href={DocsRoute::AvatarPage}
+              variant={LinkVariant::tertiary()}
+            >
+              {"View avatar"}
+            </Link<DocsRoute>>
+            <Link<DocsRoute>
+              href={DocsRoute::AvatarPage}
+              variant={LinkVariant::tertiary()}
+            >
+              {"View avatar"}
+            </Link<DocsRoute>>
+            <Link<DocsRoute>
+              href={DocsRoute::AvatarPage}
+              variant={LinkVariant::danger()}
+            >
+              {"View avatar"}
+            </Link<DocsRoute>>
+            <Link<DocsRoute>
+              href={DocsRoute::AvatarPage}
+              variant={LinkVariant::success()}
             >
               {"View avatar"}
             </Link<DocsRoute>>
@@ -71,7 +131,35 @@ pub fn link_preview() -> Html {
   </Link<DocsRoute>>
   <Link<DocsRoute>
     href={DocsRoute::AvatarPage}
-    variant={LinkVariant::Button}
+    variant={LinkVariant::primary()}
+    icon={IconData::LUCIDE_USER}
+  >
+    {"View avatar"}
+  </Link<DocsRoute>>
+  <Link<DocsRoute>
+    href={DocsRoute::AvatarPage}
+    variant={LinkVariant::secondary()}
+    icon={IconData::LUCIDE_USER}
+  >
+    {"View avatar"}
+  </Link<DocsRoute>>
+  <Link<DocsRoute>
+    href={DocsRoute::AvatarPage}
+    variant={LinkVariant::tertiary()}
+    icon={IconData::LUCIDE_USER}
+  >
+    {"View avatar"}
+  </Link<DocsRoute>>
+  <Link<DocsRoute>
+    href={DocsRoute::AvatarPage}
+    variant={LinkVariant::danger()}
+    icon={IconData::LUCIDE_USER}
+  >
+    {"View avatar"}
+  </Link<DocsRoute>>
+  <Link<DocsRoute>
+    href={DocsRoute::AvatarPage}
+    variant={LinkVariant::success()}
     icon={IconData::LUCIDE_USER}
   >
     {"View avatar"}
@@ -86,7 +174,35 @@ pub fn link_preview() -> Html {
             </Link<DocsRoute>>
             <Link<DocsRoute>
               href={DocsRoute::AvatarPage}
-              variant={LinkVariant::Button}
+              variant={LinkVariant::primary()}
+              icon={IconData::LUCIDE_USER}
+            >
+              {"View avatar"}
+            </Link<DocsRoute>>
+            <Link<DocsRoute>
+              href={DocsRoute::AvatarPage}
+              variant={LinkVariant::secondary()}
+              icon={IconData::LUCIDE_USER}
+            >
+              {"View avatar"}
+            </Link<DocsRoute>>
+            <Link<DocsRoute>
+              href={DocsRoute::AvatarPage}
+              variant={LinkVariant::tertiary()}
+              icon={IconData::LUCIDE_USER}
+            >
+              {"View avatar"}
+            </Link<DocsRoute>>
+            <Link<DocsRoute>
+              href={DocsRoute::AvatarPage}
+              variant={LinkVariant::danger()}
+              icon={IconData::LUCIDE_USER}
+            >
+              {"View avatar"}
+            </Link<DocsRoute>>
+            <Link<DocsRoute>
+              href={DocsRoute::AvatarPage}
+              variant={LinkVariant::success()}
               icon={IconData::LUCIDE_USER}
             >
               {"View avatar"}
