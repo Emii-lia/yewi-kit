@@ -22,7 +22,7 @@ jobs:
           docker cp builder:/app/dist ./dist
           docker rm builder
       - name: Upload build artifact
-        uses: action/upload-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           name: dist
           path: dist
@@ -32,9 +32,9 @@ jobs:
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout@v4
+      - uses: actions/checkout@v4
       - name: Download build arctifacts
-        uses: action/download-artifact@v4
+        uses: actions/download-artifact@v4
         with:
           name: dist
           path: dist
