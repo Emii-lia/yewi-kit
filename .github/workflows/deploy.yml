@@ -1,0 +1,27 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+env:
+  CARGO_TERM_COLOR: always
+  
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build with Docker
+        run: |
+          docker build --target builder -t yewi-builder .
+          docker create --name builder yewi-builder
+          docker cp builder:/app/dist ./dist
+          docker rm builder
+      - name: Deploy to Cloudflare Pages
+        run: npx wrangler pages deploy dist --project-name=yewi
+        env:
+            CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+            CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
