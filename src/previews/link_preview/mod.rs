@@ -5,10 +5,11 @@ use yew_icons::IconData;
 use crate::app::docs::routes::DocsRoute;
 use crate::components::CodePreview;
 use crate::components::link::Link;
-use crate::components::link::types::LinkVariant;
+use crate::components::link::types::{LinkVariant};
 use crate::features::prop_table::PropTable;
 use crate::previews::link_preview::data::get_props;
 use crate::previews::PreviewContainer;
+use crate::types::Size;
 
 #[function_component(LinkPreview)]
 pub fn link_preview() -> Html {
@@ -116,6 +117,48 @@ pub fn link_preview() -> Html {
             <Link<DocsRoute>
               href={DocsRoute::AvatarPage}
               variant={LinkVariant::success()}
+            >
+              {"View avatar"}
+            </Link<DocsRoute>>
+          </PreviewContainer>
+          <PreviewContainer
+            title={"Size"}
+            code={r#"
+  <Link<DocsRoute>
+    href={DocsRoute::AvatarPage}
+    variant={LinkVariant::primary().with_size(Size::Small)}
+  >
+    {"View avatar"}
+  </Link<DocsRoute>>
+  <Link<DocsRoute>
+    href={DocsRoute::AvatarPage}
+    variant={LinkVariant::primary().with_size(Size::Medium)}
+  >
+    {"View avatar"}
+  </Link<DocsRoute>>
+  <Link<DocsRoute>
+    href={DocsRoute::AvatarPage}
+    variant={LinkVariant::primary().with_size(Size::Large)}
+  >
+    {"View avatar"}
+  </Link<DocsRoute>>
+            "#}
+          >
+            <Link<DocsRoute>
+              href={DocsRoute::AvatarPage}
+              variant={LinkVariant::primary().with_size(Size::Small)}
+            >
+              {"View avatar"}
+            </Link<DocsRoute>>
+            <Link<DocsRoute>
+              href={DocsRoute::AvatarPage}
+              variant={LinkVariant::primary().with_size(Size::Medium)}
+            >
+              {"View avatar"}
+            </Link<DocsRoute>>
+            <Link<DocsRoute>
+              href={DocsRoute::AvatarPage}
+              variant={LinkVariant::primary().with_size(Size::Large)}
             >
               {"View avatar"}
             </Link<DocsRoute>>
