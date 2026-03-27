@@ -5,7 +5,7 @@ use yew_icons::IconData;
 use crate::app::docs::routes::DocsRoute;
 use crate::components::CodePreview;
 use crate::components::link::Link;
-use crate::components::link::types::{LinkButtonVariant, LinkVariant};
+use crate::components::link::types::{LinkVariant};
 use crate::features::prop_table::PropTable;
 use crate::previews::link_preview::data::get_props;
 use crate::previews::PreviewContainer;
