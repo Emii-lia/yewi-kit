@@ -3,11 +3,23 @@ name: Build & Deploy
 on:
   push:
     branches: [ "master" ]
+    paths-ignore:
+      - '.github/workflows/**'
+      - 'LICENSE'
+      - '*.md'
+      - '.gitignore'
+      - '.dockerignore'
   pull_request:
     branches: [ "master" ]
+    paths-ignore:
+      - 'LICENSE'
+      - '*.md'
+      - '.gitignore'
+      - '.dockerignore'
 
 env:
   CARGO_TERM_COLOR: always
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   
 jobs:
   build:
