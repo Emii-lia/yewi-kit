@@ -1,7 +1,7 @@
 use yew::{function_component, html, Html};
 use yew_router::prelude::Link;
 use crate::app::docs::routes::DocsRoute;
-use crate::components::{Button, ButtonVariant};
+use crate::components::{Button, ButtonVariant, CodePreview};
 use crate::types::Size;
 
 #[function_component(Hero)]
@@ -20,6 +20,12 @@ pub fn hero() -> Html {
             <p class="hero-subtitle">
               {"A Rust-first UI kit and CLI for building clean, scalable Yew frontends. Fast to start, easy to grow."}
             </p>
+          </div>
+          <div class={"hero-command-container"}>
+            <CodePreview
+              code={"cargo install yewi-cli"}
+              class={"hero-command"}
+            />
           </div>
           <div class="hero-ctas">
             <Link<DocsRoute>
