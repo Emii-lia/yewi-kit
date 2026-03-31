@@ -1,6 +1,6 @@
 mod hooks;
 
-use yew::{function_component, html, AttrValue, Html, Properties};
+use yew::{classes, function_component, html, AttrValue, Classes, Html, Properties};
 use yew_icons::IconData;
 use crate::components::{Button, ButtonVariant};
 use crate::components::code_preview::hooks::{use_code_preview, HookParams, HookResponse};
@@ -10,19 +10,21 @@ use crate::types::Size;
 pub struct Props {
   pub code: AttrValue,
   #[prop_or(false)]
-  pub hide_copy: bool
+  pub hide_copy: bool,
+  #[prop_or_default]
+  pub class: Classes
 }
 #[function_component(CodePreview)]
 pub(crate) fn code_preview(props: &Props) -> Html {
   let HookResponse {
     copied,
-    on_copy
+    on_copy,
   } = use_code_preview(HookParams {
     code: props.code.clone(),
   });
   html! {
-    <div class="CodePreview">
-      <pre class="CodePreview__code">
+    <div class={classes!("CodePreview", &props.class)}>
+      <pre class={"CodePreview__code"}>
         <code class="code-content">{&props.code}</code>
       </pre>
       {html! {
