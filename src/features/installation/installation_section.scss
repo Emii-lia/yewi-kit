@@ -35,6 +35,12 @@
         .step-hint {
           @apply mt-1 text-sm text-slate-500;
         }
+        .step-children {
+          @apply w-full;
+          .custom-install {
+            @apply text-slate-500 text-sm;
+          }
+        }
       }
     }
   }
