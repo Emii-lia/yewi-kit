@@ -39,6 +39,11 @@ pub(crate) fn installation_section() -> Html {
                     <p class="step-hint">{hint}</p>
                   }
                 }}
+                {html! {
+                  if let Some(children) = step.children.clone() {
+                    <div class="step-children">{children}</div>
+                  }
+                }}
               </div>
             </div>
           }
