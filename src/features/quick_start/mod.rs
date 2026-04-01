@@ -171,6 +171,24 @@ fn App() -> Html {
           </p>
         </div>
       </div>
+      <div class={"QuickStart__section"}>
+        <h3 class="qs-section-title">{"Update theme"}</h3>
+        <div class="qs-section-content">
+          <p class="qs-section-content-text">
+            {"You can update the theme of your application with the command: "}
+          </p>
+          <CodePreview code={"yewi set --theme <theme-name>|<hex>"}/>
+        </div>
+      </div>
+      <div class={"QuickStart__section"}>
+        <h3 class="qs-section-title">{"Hex shade converter"}</h3>
+        <div class="qs-section-content">
+          <p class="qs-section-content-text">
+            {"If you want to know in advance the shades generated from a custom hex theme, run the following command: "}
+          </p>
+          <CodePreview code={"yewi convert <hex>"}/>
+        </div>
+      </div>
       <div class="QuickStart__footer">
         <h3 class="qs-footer-title">{"Need help?"}</h3>
         <p class="qs-footer-subtitle">{"Check out the component documentation for detailed examples and API documentation."}</p>
