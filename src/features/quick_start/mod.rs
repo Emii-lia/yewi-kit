@@ -1,6 +1,6 @@
 mod data;
 
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use yew_icons::{Icon, IconData};
 use yew_router::prelude::Link;
 use crate::app::docs::routes::DocsRoute;
@@ -8,7 +8,7 @@ use crate::components::{Button, ButtonVariant, Card, CardContent, CardDescriptio
 use crate::features::quick_start::data::get_common_components;
 use crate::types::Size;
 
-#[function_component(QuickStart)]
+#[component(QuickStart)]
 pub fn quick_start() -> Html {
   let common_components = get_common_components();
   html! {
@@ -49,7 +49,7 @@ pub fn quick_start() -> Html {
           <CodePreview code={r#"use yew::prelude::*;
 use crate::components::{Button, Card};
 
-#[function_component]
+#[component]
 fn App() -> Html {
   let onclick = Callback::from(|_| {
     web_sys::window()

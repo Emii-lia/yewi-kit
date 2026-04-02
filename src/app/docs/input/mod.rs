@@ -1,7 +1,7 @@
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use crate::previews::InputPreview;
 
-#[function_component(InputPage)]
+#[component(InputPage)]
 pub(crate) fn input_page() -> Html {
   html! {
     <div class="InputPage page-container">

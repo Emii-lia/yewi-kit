@@ -1,8 +1,8 @@
-use yew::{function_component, html, Callback, Children, Html};
+use yew::{component, html, Callback, Children, Html};
 use crate::components::{use_toast_store, Button, ButtonVariant, CodePreview, ToastPosition, ToastState};
 use crate::previews::PreviewContainer;
 
-#[function_component(ToastPreview)]
+#[component(ToastPreview)]
 pub(crate) fn toast_preview() -> Html {
   let toast = use_toast_store();
 
@@ -167,7 +167,7 @@ pub(crate) fn toast_preview() -> Html {
               {" at the root level."}
             </p>
             <CodePreview code={r#"
-      #[function_component(App)]
+      #[component(App)]
       pub fn app() -> Html {
         html! {
           <BrowserRouter>
@@ -202,7 +202,7 @@ pub(crate) fn toast_preview() -> Html {
               {" to configure position, duration, and class."}
             </p>
             <CodePreview code={r#"
-      #[function_component(MyComponent)]
+      #[component(MyComponent)]
       pub fn my_component() -> Html {
         let toast = use_toast_store();
 

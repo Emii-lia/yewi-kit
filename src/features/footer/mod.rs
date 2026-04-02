@@ -1,6 +1,6 @@
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 
-#[function_component(Footer)]
+#[component(Footer)]
 pub fn footer() -> Html {
   html! {
     <footer class="Footer">

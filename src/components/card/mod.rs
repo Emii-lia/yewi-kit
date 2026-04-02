@@ -1,4 +1,4 @@
-use yew::{classes, function_component, html, Classes, Html, Properties};
+use yew::{classes, component, html, Classes, Html, Properties};
 
 #[derive(Properties, Clone, PartialEq)]
 pub struct CardDescriptionProps {
@@ -6,7 +6,7 @@ pub struct CardDescriptionProps {
   #[prop_or_default]
   pub class: Classes,
 }
-#[function_component(CardDescription)]
+#[component(CardDescription)]
 pub(crate) fn card_description(props: &CardDescriptionProps) -> Html {
   html! {
     <div
@@ -24,7 +24,7 @@ pub struct  CardTitleProps {
   #[prop_or_default]
   pub class: Classes,
 }
-#[function_component(CardTitle)]
+#[component(CardTitle)]
 pub(crate) fn card_title(props: &CardTitleProps) -> Html {
   html! {
     <div
@@ -42,7 +42,7 @@ pub struct CardFooterProps {
   #[prop_or_default]
   pub class: Classes,
 }
-#[function_component(CardFooter)]
+#[component(CardFooter)]
 pub(crate) fn card_footer(props: &CardFooterProps) -> Html {
   html! {
     <div
@@ -60,7 +60,7 @@ pub struct CardContentProps {
   #[prop_or_default]
   pub class: Classes,
 }
-#[function_component(CardContent)]
+#[component(CardContent)]
 pub(crate) fn card_content(props: &CardContentProps) -> Html {
   html! {
     <div
@@ -78,7 +78,7 @@ pub struct CardHeaderProps {
   #[prop_or_default]
   pub class: Classes,
 }
-#[function_component(CardHeader)]
+#[component(CardHeader)]
 pub(crate) fn card_content(props: &CardHeaderProps) -> Html {
   html! {
     <div
@@ -97,7 +97,7 @@ pub struct CardActionProps {
   pub class: Classes,
 }
 
-#[function_component(CardAction)]
+#[component(CardAction)]
 pub(crate) fn card_action(props: &CardActionProps) -> Html {
   html! {
     <div
@@ -115,7 +115,7 @@ pub struct CardProps {
   #[prop_or_default]
   pub class: Classes,
 }
-#[function_component(Card)]
+#[component(Card)]
 pub(crate) fn card(props: &CardProps) -> Html {
   html! {
     <div

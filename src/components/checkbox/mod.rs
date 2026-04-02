@@ -1,7 +1,7 @@
 mod types;
 mod hooks;
 
-use yew::{classes, function_component, html, AttrValue, Callback, Classes, Html, Properties};
+use yew::{classes, component, html, AttrValue, Callback, Classes, Html, Properties};
 use crate::components::checkbox::hooks::{use_checkbox, HookParams, HookResponse};
 use crate::types::{Color, Size};
 pub use types::*;
@@ -32,7 +32,7 @@ pub struct Props {
   pub id: AttrValue,
 }
 
-#[function_component(Checkbox)]
+#[component(Checkbox)]
 pub(crate) fn checkbox(props: &Props) -> Html {
   let HookResponse { on_change } = use_checkbox(HookParams { onchange: props.on_change.clone() });
   let color_class = format!("checkbox-{:?}", props.color).to_lowercase();

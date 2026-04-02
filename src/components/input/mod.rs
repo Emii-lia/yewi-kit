@@ -1,4 +1,4 @@
-use yew::{classes, function_component, html, Html};
+use yew::{classes, component, html, Html};
 use yew_icons::Icon;
 use crate::components::input::types::InputProps;
 use crate::components::input::hooks::{use_input, HookParams, HookResponse};
@@ -7,7 +7,7 @@ use crate::types::Size;
 mod types;
 mod hooks;
 
-#[function_component(Input)]
+#[component(Input)]
 pub(crate) fn input(props: &InputProps) -> Html {
   let HookResponse { size } = use_input(HookParams { size: props.input_size.clone() });
   let errors = &props.errors;

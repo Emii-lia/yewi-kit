@@ -1,5 +1,5 @@
 use web_sys::Event;
-use yew::{classes, function_component, html, AttrValue, Callback, Classes, Html, Properties};
+use yew::{classes, component, html, AttrValue, Callback, Classes, Html, Properties};
 
 #[derive(Properties, Clone, PartialEq)]
 pub struct Props {
@@ -31,7 +31,7 @@ pub struct Props {
   pub on_change: Callback<Event>
 }
 
-#[function_component(Textarea)]
+#[component(Textarea)]
 pub(crate) fn textarea(props: &Props) -> Html {
   html! {
     <div class="Textarea">

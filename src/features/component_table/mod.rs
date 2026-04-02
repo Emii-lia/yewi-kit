@@ -1,6 +1,6 @@
 pub mod types;
 
-use yew::{function_component, html, Html, Properties};
+use yew::{component, html, Html, Properties};
 use crate::components::{Table, TableBody, TableDataCell, TableHead, TableHeaderCell, TableRow};
 use crate::features::component_table::types::ComponentRow;
 
@@ -9,7 +9,7 @@ use crate::features::component_table::types::ComponentRow;
 pub struct Props {
   pub components: Vec<ComponentRow>
 }
-#[function_component(ComponentTable)]
+#[component(ComponentTable)]
 pub fn component_table(props: &Props) -> Html {
   html! {
     <div class="PropTable">

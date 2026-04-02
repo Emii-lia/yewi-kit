@@ -1,13 +1,13 @@
 mod types;
 mod hooks;
 
-use yew::{classes, function_component, html, Callback, Html};
+use yew::{classes, component, html, Callback, Html};
 use crate::components::{Button, ButtonVariant};
 use crate::components::password_input::hooks::{use_password_input, HookResponse};
 use crate::components::password_input::types::PasswordInputProps;
 use crate::types::{Size};
 
-#[function_component(PasswordInput)]
+#[component(PasswordInput)]
 pub(crate) fn password_input(props: &PasswordInputProps) -> Html {
   let size_class = format!("pass-input-{:?}", props.input_size).to_lowercase();
   let errors = &props.errors;

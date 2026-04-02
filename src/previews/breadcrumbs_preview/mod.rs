@@ -1,6 +1,6 @@
 mod data;
 
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use crate::app::docs::routes::DocsRoute;
 use crate::components::{Breadcrumbs, BreadCrumb, CodePreview};
 use crate::features::component_table::ComponentTable;
@@ -8,7 +8,7 @@ use crate::features::prop_table::PropTable;
 use crate::previews::breadcrumbs_preview::data::{get_components, get_props};
 use crate::previews::PreviewContainer;
 
-#[function_component(BreadcrumbsPreview)]
+#[component(BreadcrumbsPreview)]
 pub(crate) fn breadcrumbs_preview() -> Html {
   let components = get_components();
   let props = get_props();

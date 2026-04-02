@@ -1,12 +1,12 @@
 mod data;
 
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use crate::components::{CodePreview, Textarea};
 use crate::features::prop_table::PropTable;
 use crate::previews::PreviewContainer;
 use crate::previews::textarea_preview::data::get_props;
 
-#[function_component(TextareaPreview)]
+#[component(TextareaPreview)]
 pub(crate) fn textarea_preview() -> Html {
   let props = get_props();
   

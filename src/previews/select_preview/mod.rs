@@ -1,13 +1,13 @@
 mod data;
 
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use crate::components::{CodePreview, Select};
 use crate::features::prop_table::PropTable;
 use crate::previews::PreviewContainer;
 use crate::previews::select_preview::data::{get_props, options};
 use crate::types::Size;
 
-#[function_component(SelectPreview)]
+#[component(SelectPreview)]
 pub(crate) fn select_preview() -> Html {
   let props = get_props();
   

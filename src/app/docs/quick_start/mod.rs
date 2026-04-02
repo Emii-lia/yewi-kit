@@ -1,7 +1,7 @@
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use crate::features::QuickStart;
 
-#[function_component(QuickStartPage)]
+#[component(QuickStartPage)]
 pub(crate) fn quick_start_page() -> Html {
   html! {
     <div class="QuickStartPage page-container">

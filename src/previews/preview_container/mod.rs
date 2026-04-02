@@ -1,4 +1,4 @@
-use yew::{classes, function_component, html, AttrValue, Classes, Html, Properties};
+use yew::{classes, component, html, AttrValue, Classes, Html, Properties};
 use crate::components::{CodePreview, Tab, Tabs};
 use crate::types::Color;
 
@@ -12,7 +12,7 @@ pub struct Props {
   pub class: Classes
 }
 
-#[function_component(PreviewContainer)]
+#[component(PreviewContainer)]
 pub(crate) fn preview_container (Props {
   children,
   code,

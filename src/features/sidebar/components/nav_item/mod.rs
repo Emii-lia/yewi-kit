@@ -1,6 +1,6 @@
 mod hooks;
 
-use yew::{classes, function_component, html, Html, Properties};
+use yew::{classes, component, html, Html, Properties};
 use yew_router::prelude::Link;
 use yew_router::Routable;
 use crate::app::docs::routes::DocsRoute;
@@ -12,7 +12,7 @@ pub struct Props {
   pub href: DocsRoute,
 }
 
-#[function_component(NavItem)]
+#[component(NavItem)]
 pub(crate) fn nav_item(props: &Props) -> Html {
   let HookResponse { is_active, go } = use_nav_item(HookParams { href: props.href.clone() });
   

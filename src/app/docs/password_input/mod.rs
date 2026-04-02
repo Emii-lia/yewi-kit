@@ -1,7 +1,7 @@
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use crate::previews::PasswordInputPreview;
 
-#[function_component(PasswordInputPage)]
+#[component(PasswordInputPage)]
 pub(crate) fn password_input_page() -> Html {
   html! {
     <div class="PasswordInputPage page-container">

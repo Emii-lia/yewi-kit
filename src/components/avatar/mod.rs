@@ -1,4 +1,4 @@
-use yew::{classes, function_component, html, AttrValue, Classes, Html, Properties};
+use yew::{classes, component, html, AttrValue, Classes, Html, Properties};
 use crate::types::{Color, Size};
 
 #[derive(Properties, PartialEq, Clone)]
@@ -27,7 +27,7 @@ pub struct Props {
   pub style: String,
 }
 
-#[function_component(Avatar)]
+#[component(Avatar)]
 pub(crate) fn avatar(props: &Props) -> Html {
   let size_class = format!("avatar-{:?}", &props.size).to_lowercase();
   let color_class = format!("avatar-{:?}", &props.color).to_lowercase();

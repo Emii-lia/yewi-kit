@@ -1,4 +1,4 @@
-use yew::{classes, function_component, html, Classes, Html, Properties};
+use yew::{classes, component, html, Classes, Html, Properties};
 use yew_router::components::Link;
 use yew_router::Routable;
 
@@ -11,7 +11,7 @@ pub struct BreadcrumbsProps {
   pub separator: String
 }
 
-#[function_component(Breadcrumbs)]
+#[component(Breadcrumbs)]
 pub fn breadcrumbs(props: &BreadcrumbsProps) -> Html {
   html! {
     <div class={classes!("Breadcrumbs", &props.class)} style={format!("--separator: '{}';", props.separator)}>
@@ -31,7 +31,7 @@ where
   pub class: Classes
 }
 
-#[function_component(BreadCrumb)]
+#[component(BreadCrumb)]
 pub fn bread_crumb<R>(props: &BreadCrumbProps<R>) -> Html
 where
   R: Routable + 'static

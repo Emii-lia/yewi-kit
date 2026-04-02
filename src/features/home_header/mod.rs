@@ -1,4 +1,4 @@
-use yew::{classes, function_component, html, Html};
+use yew::{classes, component, html, Html};
 use yew_icons::IconData;
 use yew_router::prelude::Link as RouterLink;
 use crate::app::docs::routes::DocsRoute;
@@ -7,7 +7,7 @@ use crate::components::{Button, ButtonVariant, link::Link};
 use crate::components::link::types::LinkVariant;
 use crate::types::Size;
 
-#[function_component(HomeHeader)]
+#[component(HomeHeader)]
 pub fn home_header() -> Html {
   html! {
     <header class="HomeHeader">

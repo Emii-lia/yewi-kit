@@ -1,6 +1,6 @@
 mod data;
 
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use crate::components::{Pagination, CodePreview};
 use crate::features::prop_table::PropTable;
 use crate::previews::pagination_preview::data::get_props;
@@ -8,7 +8,7 @@ use crate::previews::PreviewContainer;
 use crate::types::Size;
 use crate::components::types::PaginationVariant;
 
-#[function_component(PaginationPreview)]
+#[component(PaginationPreview)]
 pub(crate) fn pagination_preview() -> Html {
   let props = get_props();
   html! {

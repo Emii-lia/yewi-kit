@@ -1,6 +1,6 @@
 pub mod types;
 
-use yew::{function_component, html, Classes, Html, Properties};
+use yew::{component, html, Classes, Html, Properties};
 use crate::components::{Table, TableBody, TableDataCell, TableHead, TableHeaderCell, TableRow};
 use crate::features::prop_table::types::PropRow;
 
@@ -12,7 +12,7 @@ pub struct Props {
   #[prop_or("Props".to_string())]
   pub title: String
 }
-#[function_component(PropTable)]
+#[component(PropTable)]
 pub fn prop_table(props: &Props) -> Html {
   html! {
     <div class="PropTable">

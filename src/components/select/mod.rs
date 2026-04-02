@@ -2,7 +2,7 @@ mod types;
 
 pub use types::*;
 
-use yew::{classes, function_component, html, AttrValue, Callback, Classes, Html, Properties};
+use yew::{classes, component, html, AttrValue, Callback, Classes, Html, Properties};
 use yew::html::onchange::Event;
 use crate::types::Size;
 
@@ -29,7 +29,7 @@ pub struct Props {
   #[prop_or_default]
   pub errors: Vec<String>,
 }
-#[function_component(Select)]
+#[component(Select)]
 pub(crate) fn select(props: &Props) -> Html {
   html! {
     <div class={classes!("Select", &props.main_class)}>

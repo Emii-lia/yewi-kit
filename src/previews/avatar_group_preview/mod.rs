@@ -1,13 +1,13 @@
 mod data;
 
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use crate::components::{Avatar, AvatarGroup, AvatarGroupVariant, CodePreview};
 use crate::features::prop_table::PropTable;
 use crate::previews::avatar_group_preview::data::get_props;
 use crate::previews::PreviewContainer;
 use crate::types::{ Size };
 
-#[function_component(AvatarGroupPreview)]
+#[component(AvatarGroupPreview)]
 pub(crate) fn avatar_group_preview() -> Html {
   let props = get_props();
   html! {

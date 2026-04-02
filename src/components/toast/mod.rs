@@ -1,4 +1,4 @@
-use yew::{classes, function_component, html, Callback, Children, Classes, Html, Properties};
+use yew::{classes, component, html, Callback, Children, Classes, Html, Properties};
 use crate::components::toast::hooks::{use_toast_item, HookParams, HookResponse};
 
 mod types;
@@ -26,7 +26,7 @@ pub(crate) struct ToastProps {
   pub on_close: Callback<()>
 }
 
-#[function_component(ToastContainer)]
+#[component(ToastContainer)]
 pub(crate) fn toast_container() -> Html {
   let ctx = use_toast_store();
   let stack = |pos: ToastPosition| {
@@ -67,7 +67,7 @@ pub(crate) fn toast_container() -> Html {
   }
 }
 
-#[function_component(Toast)]
+#[component(Toast)]
 pub(crate) fn toast(props: &ToastProps) -> Html {
   let position = format!("toast-{:?}", &props.position).to_lowercase();
   let variant = format!("toast-{:?}", &props.variant).to_lowercase();

@@ -1,7 +1,7 @@
 mod hooks;
 mod types;
 
-use yew::{classes, function_component, html, AttrValue, Callback, Classes, Html, MouseEvent, Properties};
+use yew::{classes, component, html, AttrValue, Callback, Classes, Html, MouseEvent, Properties};
 use yew_icons::{Icon, IconData};
 use crate::components::button::hooks::{use_button, HookParams, HookResponse};
 use crate::types::{Size};
@@ -32,7 +32,7 @@ pub struct Props {
   #[prop_or(false)]
   pub rounded: bool
 }
-#[function_component(Button)]
+#[component(Button)]
 pub(crate) fn button(props: &Props) -> Html {
   
   let HookResponse {

@@ -1,7 +1,7 @@
 mod types;
 mod hooks;
 
-use yew::{classes, function_component, html, AttrValue, Callback, Classes, Html, Properties};
+use yew::{classes, component, html, AttrValue, Callback, Classes, Html, Properties};
 pub(crate) use types::*;
 use crate::components::collapse::hooks::{use_collapse, HookResponse};
 
@@ -15,7 +15,7 @@ pub struct Props {
   #[prop_or(CollapseVariant::Focus)]
   pub variant: CollapseVariant,
 }
-#[function_component(Collapse)]
+#[component(Collapse)]
 pub(crate) fn collapse(props: &Props) -> Html {
   let HookResponse { is_open, toggle,checkbox_ref } = use_collapse();
 

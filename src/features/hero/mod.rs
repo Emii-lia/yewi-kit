@@ -1,10 +1,10 @@
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use yew_router::prelude::Link;
 use crate::app::docs::routes::DocsRoute;
 use crate::components::{Button, ButtonVariant, CodePreview};
 use crate::types::Size;
 
-#[function_component(Hero)]
+#[component(Hero)]
 pub fn hero() -> Html {
   html! {
     <div class="Hero">

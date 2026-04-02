@@ -1,5 +1,5 @@
 use std::collections::HashMap;
-use yew::{function_component, html, use_memo, use_state, Callback, Children, ContextProvider, Html, Properties};
+use yew::{component, html, use_memo, use_state, Callback, Children, ContextProvider, Html, Properties};
 use crate::components::carousel::hooks::{use_carousel, HookParams};
 
 #[derive(Clone, Debug, PartialEq)]
@@ -21,7 +21,7 @@ pub(crate) struct CarouselProviderProps {
   pub auto_play_interval: Option<f64>,
 }
 
-#[function_component(CarouselProvider)]
+#[component(CarouselProvider)]
 pub(crate) fn carousel_provider(props: &CarouselProviderProps) -> Html {
   let item_count = use_state(|| 0);
   let item_map = use_state(|| HashMap::<String, usize>::new());

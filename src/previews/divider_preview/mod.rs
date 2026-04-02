@@ -1,12 +1,12 @@
 mod data;
 
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use crate::components::{CodePreview, Divider};
 use crate::features::prop_table::PropTable;
 use crate::previews::divider_preview::data::get_props;
 use crate::previews::PreviewContainer;
 
-#[function_component(DividerPreview)]
+#[component(DividerPreview)]
 pub(crate) fn divider_preview() -> Html {
   let props = get_props();
   html! {

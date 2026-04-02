@@ -1,9 +1,9 @@
 mod data;
 
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use crate::features::why_section::data::get_why_data;
 
-#[function_component(WhySection)]
+#[component(WhySection)]
 pub fn why_section() -> Html {
   let why_data = get_why_data();
 
