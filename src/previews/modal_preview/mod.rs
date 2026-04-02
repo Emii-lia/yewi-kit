@@ -26,7 +26,7 @@ pub(crate) fn modal_preview() -> Html {
         <div class="preview-header-description">
           {"Display floating content in a layer above the main application."}
         </div>
-        <CodePreview code={"yewi add modal button"}/>
+        <CodePreview code={"yewi add modal"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

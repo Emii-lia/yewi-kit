@@ -20,7 +20,7 @@ pub(crate) fn file_input_previews() -> Html {
         <div class="preview-header-description">
           {"Display file upload inputs with different variants."}
         </div>
-        <CodePreview code={"yewi add file_input button"}/>
+        <CodePreview code={"yewi add file_input"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

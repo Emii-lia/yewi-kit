@@ -23,7 +23,7 @@ pub(crate) fn password_input_preview() -> Html {
         <div class="preview-header-description">
           {"Display password input fields with various sizes and states."}
         </div>
-        <CodePreview code={"yewi add password_input button"}/>
+        <CodePreview code={"yewi add password_input"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

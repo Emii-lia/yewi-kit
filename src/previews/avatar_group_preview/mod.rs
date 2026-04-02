@@ -20,7 +20,7 @@ pub(crate) fn avatar_group_preview() -> Html {
         <div class="preview-header-description">
           {"Display a collection of avatars in linear or stacked layouts."}
         </div>
-        <CodePreview code={"yewi add avatar avatar_group"}/>
+        <CodePreview code={"yewi add avatar_group"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">
