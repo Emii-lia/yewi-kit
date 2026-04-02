@@ -44,7 +44,7 @@ pub(crate) fn use_pagination (params: PaginationHookParams)
   let go_to_page = {
     let current_page = current_page.clone();
     Callback::from(move |page: usize| {
-      if (page > 0 && page <= count) {
+      if page > 0 && page <= count {
         current_page.set(page);
         on_change.emit(page);
       }

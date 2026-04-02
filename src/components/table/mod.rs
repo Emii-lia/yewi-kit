@@ -1,6 +1,6 @@
 mod types;
 
-use yew::{classes, function_component, html, Children, Classes, Html, Properties};
+use yew::{classes, component, html, Children, Classes, Html, Properties};
 pub(crate) use types::*;
 
 #[derive(PartialEq, Clone, Properties)]
@@ -19,7 +19,7 @@ pub(crate) struct TableProps {
   #[prop_or(TableVariant::Default)]
   pub variant: TableVariant
 }
-#[function_component(Table)]
+#[component(Table)]
 pub(crate) fn table(props: &TableProps) -> Html {
   let variant_class = format!("table-{:?}", props.variant).to_lowercase();
 
@@ -30,7 +30,7 @@ pub(crate) fn table(props: &TableProps) -> Html {
   }
 }
 
-#[function_component(TableHead)]
+#[component(TableHead)]
 pub(crate) fn table_head(props: &ChildrenWithClassProps) -> Html {
   html! {
     <thead class={classes!("Table__head", &props.class)}>
@@ -39,7 +39,7 @@ pub(crate) fn table_head(props: &ChildrenWithClassProps) -> Html {
   }
 }
 
-#[function_component(TableBody)]
+#[component(TableBody)]
 pub(crate) fn table_body(props: &ChildrenWithClassProps) -> Html {
   html! {
     <tbody class={classes!("Table__body", &props.class)}>
@@ -48,7 +48,7 @@ pub(crate) fn table_body(props: &ChildrenWithClassProps) -> Html {
   }
 }
 
-#[function_component(TableRow)]
+#[component(TableRow)]
 pub(crate) fn table_row(props: &ChildrenWithClassProps) -> Html {
   html! {
     <tr class={classes!("TableRow", &props.class)}>
@@ -57,7 +57,7 @@ pub(crate) fn table_row(props: &ChildrenWithClassProps) -> Html {
   }
 }
 
-#[function_component(TableHeaderCell)]
+#[component(TableHeaderCell)]
 pub(crate) fn table_header_cell(props: &ChildrenWithClassProps) -> Html {
   html! {
     <th class={classes!("TableRow__header-cell", &props.class)}>
@@ -66,7 +66,7 @@ pub(crate) fn table_header_cell(props: &ChildrenWithClassProps) -> Html {
   }
 }
 
-#[function_component(TableDataCell)]
+#[component(TableDataCell)]
 pub(crate) fn table_data_cell(props: &ChildrenWithClassProps) -> Html {
   html! {
     <td class={classes!("TableRow__data-cell", &props.class)}>

@@ -1,10 +1,10 @@
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use yew_router::prelude::Link;
 use crate::app::docs::routes::DocsRoute;
 use crate::components::{Button, ButtonVariant, Card, CardContent, CardDescription, CardTitle};
 use crate::types::Size;
 
-#[function_component(Documentation)]
+#[component(Documentation)]
 pub fn documentation() -> Html {
   html! {
     <div class="Documentation">

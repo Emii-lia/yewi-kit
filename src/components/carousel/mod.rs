@@ -1,4 +1,4 @@
-use yew::{function_component, html, Callback, Children, Html, Properties};
+use yew::{component, html, Callback, Children, Html, Properties};
 use yew::html::ChildrenProps;
 use crate::components::carousel::provider::CarouselProvider;
 use crate::components::carousel::store::use_carousel_store;
@@ -12,7 +12,7 @@ pub(crate) struct CarouselItemProps {
   pub id: String,
   pub children: Children
 }
-#[function_component(CarouselItem)]
+#[component(CarouselItem)]
 pub(crate) fn carousel_item(props: &CarouselItemProps) -> Html {
   let carousel = use_carousel_store();
   let index: usize = carousel.register_item.emit(props.id.clone());
@@ -32,7 +32,7 @@ pub(crate) struct CarouselContentProps {
   pub children: Children
 }
 
-#[function_component(CarouselContent)]
+#[component(CarouselContent)]
 pub(crate) fn carousel_content(props: &CarouselContentProps) -> Html {
   html! {
     <div class="CarouselContent">
@@ -51,7 +51,7 @@ pub(crate) struct CarouselControlsProps {
   pub show_auto_play_toggle: bool,
 }
 
-#[function_component(CarouselControls)]
+#[component(CarouselControls)]
 pub(crate) fn carousel_controls(props: &CarouselControlsProps) -> Html {
   let carousel = use_carousel_store();
   html! {
@@ -125,7 +125,7 @@ pub(crate) fn carousel_controls(props: &CarouselControlsProps) -> Html {
   }
 }
 
-#[function_component(CarouselWrapper)]
+#[component(CarouselWrapper)]
 pub(crate) fn carousel_wrapper(props: &ChildrenProps) -> Html {
   html! {
     <div class="CarouselWrapper">
@@ -143,7 +143,7 @@ pub(crate) struct CarouselProps {
   pub auto_play_interval: f64,
 }
 
-#[function_component(Carousel)]
+#[component(Carousel)]
 pub(crate) fn carousel(props: &CarouselProps) -> Html {
   html! {
     <CarouselProvider

@@ -1,12 +1,12 @@
 mod data;
 
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use crate::components::{CodePreview, Collapse, CollapseVariant};
 use crate::features::prop_table::PropTable;
 use crate::previews::collapse_preview::data::get_props;
 use crate::previews::PreviewContainer;
 
-#[function_component(CollapsePreview)]
+#[component(CollapsePreview)]
 pub(crate) fn collapse_preview() -> Html {
   let props = get_props();
 

@@ -1,6 +1,6 @@
 mod data;
 
-use yew::{function_component, html, Html, Properties};
+use yew::{component, html, Html, Properties};
 use crate::components::{Carousel, CarouselContent, CarouselControls, CarouselItem, CarouselWrapper, CodePreview};
 use crate::features::component_table::ComponentTable;
 use crate::features::prop_table::PropTable;
@@ -14,7 +14,7 @@ struct Props {
   pub alt: String,
 }
 
-#[function_component(ImageSlide)]
+#[component(ImageSlide)]
 fn image_slide(props: &Props) -> Html {
   html! {
     <div class="flex justify-center items-center w-full h-full bg-gray-200">
@@ -26,7 +26,7 @@ fn image_slide(props: &Props) -> Html {
     </div>
   }
 }
-#[function_component(CarouselPreview)]
+#[component(CarouselPreview)]
 pub(crate) fn carousel_preview() -> Html {
   let components = get_components();
   let props = get_props();

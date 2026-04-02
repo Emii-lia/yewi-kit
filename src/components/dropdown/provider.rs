@@ -1,4 +1,4 @@
-use yew::{function_component, html, use_state, Callback, ContextProvider, Html};
+use yew::{component, html, use_state, Callback, ContextProvider, Html};
 use yew::html::ChildrenProps;
 
 #[derive(Clone, Debug, PartialEq)]
@@ -8,7 +8,7 @@ pub(crate) struct DropDownContextType {
   pub(crate) close: Callback<()>,
 }
 
-#[function_component(DropdownProvider)]
+#[component(DropdownProvider)]
 pub(crate) fn dropdown_provider(props: &ChildrenProps) -> Html {
   let is_open = use_state(|| false);
   

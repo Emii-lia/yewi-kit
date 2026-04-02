@@ -4,7 +4,7 @@ mod store;
 mod hooks;
 
 use web_sys::MouseEvent;
-use yew::{classes, function_component, html, Callback, Children, Classes, Html, Properties};
+use yew::{classes, component, html, Callback, Children, Classes, Html, Properties};
 pub(crate) use types::*;
 pub(crate) use store::*;
 use crate::components::dropdown::hooks::{use_dropdown, HookResponse};
@@ -16,7 +16,7 @@ struct DropdownWrapperProps {
   #[prop_or_default]
   class: Classes,
 }
-#[function_component(DropdownWrapper)]
+#[component(DropdownWrapper)]
 fn dropdown_wrapper(props: &DropdownWrapperProps) -> Html {
   let HookResponse {  dropdown_ref } = use_dropdown();
   html! {
@@ -32,7 +32,7 @@ pub(crate) struct DropDownProps {
   pub class: Classes,
 }
 
-#[function_component(Dropdown)]
+#[component(Dropdown)]
 pub(crate) fn dropdown(props: &DropDownProps) -> Html {
   html! {
     <DropdownProvider>
@@ -50,7 +50,7 @@ pub(crate) struct DropdownTriggerProps {
   pub class: Classes
 }
 
-#[function_component(DropdownTrigger)]
+#[component(DropdownTrigger)]
 pub(crate) fn dropdown_trigger(props: &DropdownTriggerProps) -> Html {
   let ctx = use_dropdown_store();
 
@@ -78,7 +78,7 @@ pub(crate) struct DropdownMenuProps {
   pub position: DropdownPosition
 }
 
-#[function_component(DropdownMenu)]
+#[component(DropdownMenu)]
 pub(crate) fn dropdown_menu(props: &DropdownMenuProps) -> Html {
   let position_class = format!("dropdown-menu-{:?}", props.position).to_lowercase();
   let ctx = use_dropdown_store();
@@ -104,7 +104,7 @@ pub(crate) struct DropdownItemProps {
   pub on_click: Option<Callback<()>>,
 }
 
-#[function_component(DropdownItem)]
+#[component(DropdownItem)]
 pub(crate) fn dropdown_item(props: &DropdownItemProps) -> Html {
   let ctx = use_dropdown_store();
   let on_click = {

@@ -2,7 +2,7 @@ mod types;
 mod hooks;
 
 use std::rc::Rc;
-use yew::{classes, function_component, html, ChildrenWithProps, Classes, Html, Properties};
+use yew::{classes, component, html, ChildrenWithProps, Classes, Html, Properties};
 use crate::components::Avatar;
 use crate::components::avatar_group::hooks::{use_avatar_group, HookParams, HookResponse};
 use crate::types::{Color, Size};
@@ -26,7 +26,7 @@ pub struct AvatarGroupProps {
   pub class: Classes,
   pub children: ChildrenWithProps<Avatar>,
 }
-#[function_component(AvatarGroup)]
+#[component(AvatarGroup)]
 pub(crate) fn avatar_group(props: &AvatarGroupProps) -> Html {
   let variant_class = format!("{:?}", props.variant).to_lowercase();
   let HookResponse {

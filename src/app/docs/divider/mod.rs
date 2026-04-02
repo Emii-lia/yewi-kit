@@ -1,7 +1,7 @@
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use crate::previews::DividerPreview;
 
-#[function_component(DividerPage)]
+#[component(DividerPage)]
 pub(crate) fn divider_page() -> Html {
   html! {
     <div class="DividerPage page-container">

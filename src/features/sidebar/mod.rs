@@ -6,14 +6,14 @@ mod components {
   pub mod nav_item;
 }
 
-use yew::{classes, function_component, html, Html};
+use yew::{classes, component, html, Html};
 use yew_router::prelude::Link;
 use crate::app::routes::AppRoute;
 use crate::features::provider::SidebarContext;
 use crate::features::sidebar::components::nav_item::NavItem;
 use crate::features::sidebar::store::use_sidebar_store;
 
-#[function_component(Sidebar)]
+#[component(Sidebar)]
 pub(crate) fn sidebar() -> Html {
   let SidebarContext { route_group, is_open, toggle_open } = use_sidebar_store();
   html! {

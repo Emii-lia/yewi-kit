@@ -1,13 +1,13 @@
 mod data;
 
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use crate::components::{CodePreview, PasswordInput};
 use crate::features::prop_table::PropTable;
 use crate::previews::password_input_preview::data::get_props;
 use crate::previews::PreviewContainer;
 use crate::types::Size;
 
-#[function_component(PasswordInputPreview)]
+#[component(PasswordInputPreview)]
 pub(crate) fn password_input_preview() -> Html {
   let mut errors: Vec<String> = Vec::new();
   errors.push("Invalid input".to_string());
@@ -23,7 +23,7 @@ pub(crate) fn password_input_preview() -> Html {
         <div class="preview-header-description">
           {"Display password input fields with various sizes and states."}
         </div>
-        <CodePreview code={"yewi add password_input button"}/>
+        <CodePreview code={"yewi add password_input"}/>
       </div>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">

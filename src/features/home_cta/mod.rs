@@ -1,10 +1,10 @@
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use yew_router::prelude::Link;
 use crate::app::docs::routes::DocsRoute;
 use crate::components::Button;
 use crate::types::Size;
 
-#[function_component(HomeCta)]
+#[component(HomeCta)]
 pub fn home_cta() -> Html {
   html! {
     <div class="HomeCta">

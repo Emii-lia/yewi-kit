@@ -1,6 +1,6 @@
 mod types;
 
-use yew::{classes, function_component, html, Classes, Html, Properties};
+use yew::{classes, component, html, Classes, Html, Properties};
 use crate::types::{Color, Size};
 pub use types::*;
 
@@ -25,7 +25,7 @@ pub struct Props {
   #[prop_or_default]
   pub as_fraction: bool,
 }
-#[function_component(Progress)]
+#[component(Progress)]
 pub(crate) fn progress(props: &Props) -> Html {
   let color_class = format!("progress-{:?}", props.color).to_lowercase();
   let size_class = format!("progress-{:?}", props.radial_size).to_lowercase();

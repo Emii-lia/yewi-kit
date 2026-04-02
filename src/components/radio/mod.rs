@@ -1,6 +1,6 @@
 mod hooks;
 
-use yew::{classes, function_component, html, AttrValue, Callback, Classes, Html, Properties};
+use yew::{classes, component, html, AttrValue, Callback, Classes, Html, Properties};
 use crate::types::{Color, Size};
 use crate::components::radio::hooks::{use_radio, HookParams, HookResponse};
 
@@ -28,7 +28,7 @@ pub struct Props {
   pub id: AttrValue,
 }
 
-#[function_component(Radio)]
+#[component(Radio)]
 pub(crate) fn radio(props: &Props) -> Html {
   let HookResponse { on_change } = use_radio(HookParams { onchange: props.on_change.clone() });
   let color_class = format!("radio-{:?}", props.color).to_lowercase();

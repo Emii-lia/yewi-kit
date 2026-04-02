@@ -1,13 +1,13 @@
 mod data;
 
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use crate::components::{CodePreview, Radio};
 use crate::features::prop_table::PropTable;
 use crate::previews::PreviewContainer;
 use crate::previews::radio_preview::data::get_props;
 use crate::types::{Color, Size};
 
-#[function_component(RadioPreview)]
+#[component(RadioPreview)]
 pub(crate) fn radio_preview() -> Html {
   let props = get_props();
   html! {

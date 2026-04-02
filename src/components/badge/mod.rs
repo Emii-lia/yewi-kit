@@ -1,7 +1,7 @@
 mod types;
 mod hooks;
 
-use yew::{classes, function_component, html, AttrValue, Classes, Html, Properties};
+use yew::{classes, component, html, AttrValue, Classes, Html, Properties};
 use yew_icons::{Icon, IconData};
 pub(crate) use types::*;
 use crate::components::badge::hooks::{use_badge, HookParams, HookResponse};
@@ -27,7 +27,7 @@ pub struct Props {
   pub icon: Option<IconData>,
 }
 
-#[function_component(Badge)]
+#[component(Badge)]
 pub(crate) fn badge(props: &Props) -> Html {
   let HookResponse { color, variant } = use_badge(HookParams {
     variant: props.variant.clone(),

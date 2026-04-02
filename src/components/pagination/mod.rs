@@ -1,7 +1,7 @@
 mod use_pagination;
 pub(crate) mod types;
 
-use yew::{classes, function_component, html, Callback, Classes, Html, Properties};
+use yew::{classes, component, html, Callback, Classes, Html, Properties};
 use yew_icons::IconData;
 use crate::components::{Button, ButtonVariant};
 use crate::components::pagination::types::PaginationVariant;
@@ -25,7 +25,7 @@ pub struct Props {
   pub size: Size
 }
 
-#[function_component(Pagination)]
+#[component(Pagination)]
 pub fn pagination(props: &Props) -> Html {
   let (
     current_page,

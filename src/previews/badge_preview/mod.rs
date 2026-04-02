@@ -1,6 +1,6 @@
 mod data;
 
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use yew_icons::IconData;
 use crate::components::{Badge, BadgeVariant, CodePreview};
 use crate::features::prop_table::PropTable;
@@ -8,7 +8,7 @@ use crate::previews::badge_preview::data::get_props;
 use crate::previews::PreviewContainer;
 use crate::types::Color;
 
-#[function_component(BadgePreview)]
+#[component(BadgePreview)]
 pub(crate) fn badge_preview() -> Html {
   let props = get_props();
 

@@ -1,6 +1,6 @@
 pub mod data;
 
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use yew_icons::IconData;
 use crate::app::docs::routes::DocsRoute;
 use crate::components::CodePreview;
@@ -11,7 +11,7 @@ use crate::previews::link_preview::data::get_props;
 use crate::previews::PreviewContainer;
 use crate::types::Size;
 
-#[function_component(LinkPreview)]
+#[component(LinkPreview)]
 pub fn link_preview() -> Html {
   let props = get_props();
   html! {

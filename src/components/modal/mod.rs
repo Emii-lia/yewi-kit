@@ -3,7 +3,7 @@ mod provider;
 mod store;
 
 use web_sys::MouseEvent;
-use yew::{classes, function_component, html, Callback, Html};
+use yew::{classes, component, html, Callback, Html};
 use yew_icons::IconData;
 use crate::components::{Button, ButtonVariant};
 use crate::types::{Size};
@@ -11,7 +11,7 @@ pub(crate) use hooks::*;
 pub(crate) use provider::*;
 pub(crate) use store::*;
 
-#[function_component(Modal)]
+#[component(Modal)]
 pub(crate) fn modal() -> Html {
   let modal_vars = use_modal_store();
   let ModalHookResponse {

@@ -1,6 +1,6 @@
 pub mod types;
 
-use yew::{classes, function_component, html, Classes, Html, NodeRef, Properties};
+use yew::{classes, component, html, Classes, Html, NodeRef, Properties};
 use yew_icons::{Icon, IconData};
 use yew_router::{
   Routable,
@@ -26,7 +26,7 @@ where
   pub icon: Option<IconData>
 }
 
-#[function_component(Link)]
+#[component(Link)]
 pub fn link<R>(props: &Props<R>) -> Html
 where
   R: Routable + 'static,

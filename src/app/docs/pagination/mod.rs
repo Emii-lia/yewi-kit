@@ -1,7 +1,7 @@
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use crate::previews::PaginationPreview;
 
-#[function_component(PaginationPage)]
+#[component(PaginationPage)]
 pub(crate) fn pagination_page() -> Html {
   html! {
     <div class="PaginationPage page-container">

@@ -1,7 +1,7 @@
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use crate::previews::CollapsePreview;
 
-#[function_component(CollapsePage)]
+#[component(CollapsePage)]
 pub(crate) fn collapse_page() -> Html {
   html! {
     <div class="CollapsePage page-container">

@@ -1,6 +1,6 @@
 mod data;
 
-use yew::{function_component, html, Html};
+use yew::{component, html, Html};
 use crate::components::{Avatar, Badge, Button, CodePreview, Tab, Tabs};
 use crate::features::component_table::ComponentTable;
 use crate::features::prop_table::PropTable;
@@ -8,7 +8,7 @@ use crate::previews::PreviewContainer;
 use crate::previews::tabs_preview::data::{get_components, get_props};
 use crate::types::{Color, Size};
 
-#[function_component(TabsPreview)]
+#[component(TabsPreview)]
 pub(crate) fn tabs_preview() -> Html {
   let components = get_components();
   let props = get_props();

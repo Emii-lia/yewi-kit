@@ -1,4 +1,4 @@
-use yew::{classes, function_component, html, Children, Classes, Html, Properties};
+use yew::{classes, component, html, Children, Classes, Html, Properties};
 
 #[derive(Properties, PartialEq)]
 pub struct ChildrenPropsWithClass {
@@ -6,7 +6,7 @@ pub struct ChildrenPropsWithClass {
   #[prop_or_default]
   pub class: Classes,
 }
-#[function_component(HomeSection)]
+#[component(HomeSection)]
 pub fn home_section(props: &ChildrenPropsWithClass) -> Html {
   html! {
     <div class={classes!("HomeSection", &props.class)}>
@@ -14,7 +14,7 @@ pub fn home_section(props: &ChildrenPropsWithClass) -> Html {
     </div>
   }
 }
-#[function_component(HomeSectionText)]
+#[component(HomeSectionText)]
 pub fn home_section_text(props: &ChildrenPropsWithClass) -> Html {
   html! {
     <div class={classes!("HomeSectionText", &props.class)}>
@@ -22,7 +22,7 @@ pub fn home_section_text(props: &ChildrenPropsWithClass) -> Html {
     </div>
   }
 }
-#[function_component(HomeSectionContent)]
+#[component(HomeSectionContent)]
 pub fn home_section_content(props: &ChildrenPropsWithClass) -> Html {
   html! {
     <div class={classes!("HomeSectionContent", &props.class)}>
@@ -31,7 +31,7 @@ pub fn home_section_content(props: &ChildrenPropsWithClass) -> Html {
   }
 }
 
-#[function_component(HomeSectionContainer)]
+#[component(HomeSectionContainer)]
 pub fn home_section_container(props: &ChildrenPropsWithClass) -> Html {
   html! {
     <div class={classes!("HomeSectionContainer", &props.class)}>
@@ -40,7 +40,7 @@ pub fn home_section_container(props: &ChildrenPropsWithClass) -> Html {
   }
 }
 
-#[function_component(HomeSectionTitle)]
+#[component(HomeSectionTitle)]
 pub fn home_section_title(props: &ChildrenPropsWithClass) -> Html {
   html! {
     <h2 class={classes!("HomeSectionTitle", &props.class)}>
@@ -49,7 +49,7 @@ pub fn home_section_title(props: &ChildrenPropsWithClass) -> Html {
   }
 }
 
-#[function_component(HomeSectionDescription)]
+#[component(HomeSectionDescription)]
 pub fn home_section_description(props: &ChildrenPropsWithClass) -> Html {
   html! {
     <p class={classes!("HomeSectionDescription", &props.class)}>
@@ -67,7 +67,7 @@ pub struct HomeSectionIllustrationProps {
   #[prop_or_default]
   pub class: Classes,
 }
-#[function_component(HomeSectionIllustration)]
+#[component(HomeSectionIllustration)]
 pub fn home_section_illustration(props: &HomeSectionIllustrationProps) -> Html {
   html! {
     <div class={classes!("HomeSectionIllustration", &props.class)}>

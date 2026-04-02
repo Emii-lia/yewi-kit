@@ -1,13 +1,13 @@
 mod data;
 
-use yew::{function_component, html, use_state, Callback, Html};
+use yew::{component, html, use_state, Callback, Html};
 use crate::components::{Checkbox, CheckboxVariant, CodePreview};
 use crate::features::prop_table::PropTable;
 use crate::previews::checkbox_preview::data::get_props;
 use crate::previews::PreviewContainer;
 use crate::types::{Color, Size};
 
-#[function_component(CheckboxPreview)]
+#[component(CheckboxPreview)]
 pub fn checkbox_preview() -> Html {
   let checked = use_state(||true);
 

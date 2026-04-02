@@ -1,6 +1,6 @@
 mod hooks;
 
-use yew::{classes, function_component, html, Callback, Children, ChildrenWithProps, Classes, Html, Properties};
+use yew::{classes, component, html, Callback, Children, ChildrenWithProps, Classes, Html, Properties};
 use crate::components::tabs::hooks::{use_tabs, HookResponse};
 use crate::types::Color;
 
@@ -14,7 +14,7 @@ pub struct TabProps {
   pub classes: Classes,
 }
 
-#[function_component(Tab)]
+#[component(Tab)]
 pub fn tab(_props: &TabProps) -> Html {
   Html::default()
 }
@@ -32,7 +32,7 @@ pub struct TabsProps {
   pub color: Color
 }
 
-#[function_component(Tabs)]
+#[component(Tabs)]
 pub(crate) fn tabs(props: &TabsProps) -> Html {
   let HookResponse { active, tabs } = use_tabs(props);
   let color_class = format!("tab-{:?}", props.color).to_lowercase();
