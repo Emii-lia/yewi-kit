@@ -7,7 +7,8 @@ pub mod routes;
 use yew::{component, html, Html};
 use yew_router::prelude::{BrowserRouter, Switch};
 use crate::app::routes::{switch_main, AppRoute};
-use crate::components::{Modal, ModalProvider, ToastContainer, ToastProvider};
+use crate::components::modal::{Modal, ModalProvider};
+use crate::components::toast::{ToastContainer, ToastProvider};
 
 #[component(App)]
 pub fn app() -> Html {

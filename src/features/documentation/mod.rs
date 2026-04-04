@@ -1,7 +1,8 @@
 use yew::{component, html, Html};
 use yew_router::prelude::Link;
 use crate::app::docs::routes::DocsRoute;
-use crate::components::{Button, ButtonVariant, Card, CardContent, CardDescription, CardTitle};
+use crate::components::button::{Button, ButtonVariant};
+use crate::components::card::{Card, CardContent, CardDescription, CardTitle};
 use crate::types::Size;
 
 #[component(Documentation)]

@@ -1,7 +1,7 @@
 use yew::{component, html, Html};
 use yew_router::prelude::Link;
 use crate::app::docs::routes::DocsRoute;
-use crate::components::Button;
+use crate::components::button::Button;
 use crate::features::{Footer, Hero, HomeCta, HomeHeader, ThemeSection, WhySection};
 use crate::features::home_section::{HomeSection, HomeSectionContainer, HomeSectionContent, HomeSectionDescription, HomeSectionIllustration, HomeSectionText, HomeSectionTitle};
 use crate::types::Size;
