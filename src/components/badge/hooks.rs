@@ -1,5 +1,5 @@
 use yew::{hook, Properties};
-use crate::components::{BadgeVariant};
+use crate::components::badge::{BadgeVariant};
 use crate::types::Color;
 
 #[derive(PartialEq, Properties, Clone)]

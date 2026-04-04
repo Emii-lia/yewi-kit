@@ -1,5 +1,5 @@
 use yew::{hook, use_context};
-use crate::components::ModalHookResponse;
+use crate::components::modal::ModalHookResponse;
 
 #[hook]
 pub(crate) fn use_modal_store() -> ModalHookResponse {

@@ -1,6 +1,6 @@
 use yew::{hook, ChildrenWithProps, Properties};
 use yew::virtual_dom::VChild;
-use crate::components::{Avatar};
+use crate::components::avatar::{Avatar};
 
 #[derive(Clone, PartialEq)]
 pub struct HookResponse {

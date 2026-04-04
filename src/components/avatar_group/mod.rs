@@ -3,10 +3,10 @@ mod hooks;
 
 use std::rc::Rc;
 use yew::{classes, component, html, ChildrenWithProps, Classes, Html, Properties};
-use crate::components::Avatar;
 use crate::components::avatar_group::hooks::{use_avatar_group, HookParams, HookResponse};
 use crate::types::{Color, Size};
 pub(crate) use types::AvatarGroupVariant;
+use crate::components::avatar::Avatar;
 
 #[derive(Clone, PartialEq, Properties)]
 pub struct AvatarGroupProps {

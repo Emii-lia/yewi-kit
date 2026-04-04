@@ -2,7 +2,7 @@ mod types;
 
 use web_sys::{DragEvent, Event, FileList, HtmlInputElement};
 use yew::{classes, component, html, use_node_ref, AttrValue, Callback, Classes, Html, Properties, TargetCast};
-use crate::components::{Button, ButtonVariant};
+use crate::components::button::{Button, ButtonVariant};
 use crate::types::{Size};
 pub use types::FileInputType;
 

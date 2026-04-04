@@ -1,7 +1,7 @@
 use yew::{component, html, ContextProvider, Html};
 use yew::html::ChildrenProps;
 use crate::components::toast::hooks::ToastContext;
-use crate::components::use_toast;
+use crate::components::toast::use_toast;
 
 #[component(ToastProvider)]
 pub(crate) fn toast_provider(props: &ChildrenProps) -> Html {
