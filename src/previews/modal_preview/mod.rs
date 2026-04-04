@@ -1,5 +1,7 @@
 use yew::{component, html, Callback, Html};
-use crate::components::{use_modal_store, Button, CodePreview, ModalHookResponse, OpenParams};
+use crate::components::button::Button;
+use crate::components::code_preview::CodePreview;
+use crate::components::modal::{use_modal_store, ModalHookResponse, OpenParams};
 use crate::previews::PreviewContainer;
 
 #[component(ModalPreview)]

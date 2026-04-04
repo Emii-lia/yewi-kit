@@ -2,7 +2,8 @@ mod data;
 
 use yew::{component, html, Html};
 use yew_icons::IconData;
-use crate::components::{CodePreview, Input};
+use crate::components::code_preview::CodePreview;
+use crate::components::input::Input;
 use crate::features::prop_table::PropTable;
 use crate::previews::input_preview::data::get_props;
 use crate::previews::PreviewContainer;

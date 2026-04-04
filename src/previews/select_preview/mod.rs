@@ -1,7 +1,8 @@
 mod data;
 
 use yew::{component, html, Html};
-use crate::components::{CodePreview, Select};
+use crate::components::code_preview::CodePreview;
+use crate::components::select::Select;
 use crate::features::prop_table::PropTable;
 use crate::previews::PreviewContainer;
 use crate::previews::select_preview::data::{get_props, options};

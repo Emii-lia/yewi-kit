@@ -1,7 +1,8 @@
 mod data;
 
 use yew::{component, html, Html};
-use crate::components::{CodePreview, Table, TableBody, TableDataCell, TableHead, TableHeaderCell, TableRow, TableVariant};
+use crate::components::code_preview::CodePreview;
+use crate::components::table::{Table, TableBody, TableDataCell, TableHead, TableHeaderCell, TableRow, TableVariant};
 use crate::features::component_table::ComponentTable;
 use crate::features::prop_table::PropTable;
 use crate::previews::PreviewContainer;

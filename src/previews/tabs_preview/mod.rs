@@ -1,7 +1,11 @@
 mod data;
 
 use yew::{component, html, Html};
-use crate::components::{Avatar, Badge, Button, CodePreview, Tab, Tabs};
+use crate::components::avatar::Avatar;
+use crate::components::badge::Badge;
+use crate::components::button::Button;
+use crate::components::code_preview::CodePreview;
+use crate::components::tabs::{Tab, Tabs};
 use crate::features::component_table::ComponentTable;
 use crate::features::prop_table::PropTable;
 use crate::previews::PreviewContainer;

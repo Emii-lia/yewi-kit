@@ -1,7 +1,9 @@
 mod data;
 
 use yew::{component, html, Html};
-use crate::components::{Button, CodePreview, Dropdown, DropdownItem, DropdownMenu, DropdownPosition, DropdownTrigger};
+use crate::components::button::Button;
+use crate::components::code_preview::CodePreview;
+use crate::components::dropdown::{Dropdown, DropdownItem, DropdownMenu, DropdownPosition, DropdownTrigger};
 use crate::features::component_table::ComponentTable;
 use crate::features::prop_table::PropTable;
 use crate::previews::dropdown_preview::data::{get_components, get_props};

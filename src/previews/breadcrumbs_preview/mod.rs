@@ -2,7 +2,8 @@ mod data;
 
 use yew::{component, html, Html};
 use crate::app::docs::routes::DocsRoute;
-use crate::components::{Breadcrumbs, BreadCrumb, CodePreview};
+use crate::components::breadcrumbs::{Breadcrumbs, BreadCrumb};
+use crate::components::code_preview::CodePreview;
 use crate::features::component_table::ComponentTable;
 use crate::features::prop_table::PropTable;
 use crate::previews::breadcrumbs_preview::data::{get_components, get_props};

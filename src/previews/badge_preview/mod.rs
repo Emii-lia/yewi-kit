@@ -2,7 +2,8 @@ mod data;
 
 use yew::{component, html, Html};
 use yew_icons::IconData;
-use crate::components::{Badge, BadgeVariant, CodePreview};
+use crate::components::badge::{Badge, BadgeVariant};
+use crate::components::code_preview::CodePreview;
 use crate::features::prop_table::PropTable;
 use crate::previews::badge_preview::data::get_props;
 use crate::previews::PreviewContainer;

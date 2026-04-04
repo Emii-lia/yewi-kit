@@ -1,7 +1,10 @@
 mod data;
 
 use yew::{component, html, Html};
-use crate::components::{Button, ButtonVariant, Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, CodePreview, Input};
+use crate::components::button::{Button, ButtonVariant};
+use crate::components::card::{Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle};
+use crate::components::code_preview::CodePreview;
+use crate::components::input::Input;
 use crate::features::component_table::ComponentTable;
 use crate::features::prop_table::PropTable;
 use crate::previews::card_preview::data::{get_components, get_props};
@@ -86,7 +89,7 @@ pub(crate) fn card_preview() -> Html {
                   {"Enter your email below to login to your account"}
                 </CardDescription>
                 <CardAction>
-                  <Button href={"/card#"} variant={ButtonVariant::Secondary}>{"Sign Up"}</Button>
+                  <Button href={"/docs/card#"} variant={ButtonVariant::Secondary}>{"Sign Up"}</Button>
                 </CardAction>
               </CardHeader>
               <CardContent>

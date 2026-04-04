@@ -1,5 +1,6 @@
 use yew::{classes, component, html, AttrValue, Classes, Html, Properties};
-use crate::components::{CodePreview, Tab, Tabs};
+use crate::components::code_preview::CodePreview;
+use crate::components::tabs::{Tab, Tabs};
 use crate::types::Color;
 
 #[derive(Properties, PartialEq)]

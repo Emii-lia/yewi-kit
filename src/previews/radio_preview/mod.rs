@@ -1,7 +1,8 @@
 mod data;
 
 use yew::{component, html, Html};
-use crate::components::{CodePreview, Radio};
+use crate::components::code_preview::CodePreview;
+use crate::components::radio::Radio;
 use crate::features::prop_table::PropTable;
 use crate::previews::PreviewContainer;
 use crate::previews::radio_preview::data::get_props;

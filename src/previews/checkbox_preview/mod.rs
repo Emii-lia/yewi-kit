@@ -1,7 +1,8 @@
 mod data;
 
 use yew::{component, html, use_state, Callback, Html};
-use crate::components::{Checkbox, CheckboxVariant, CodePreview};
+use crate::components::checkbox::{Checkbox, CheckboxVariant};
+use crate::components::code_preview::CodePreview;
 use crate::features::prop_table::PropTable;
 use crate::previews::checkbox_preview::data::get_props;
 use crate::previews::PreviewContainer;

@@ -1,7 +1,8 @@
 mod data;
 
 use yew::{component, html, Html};
-use crate::components::{CodePreview, Divider};
+use crate::components::code_preview::CodePreview;
+use crate::components::divider::Divider;
 use crate::features::prop_table::PropTable;
 use crate::previews::divider_preview::data::get_props;
 use crate::previews::PreviewContainer;
