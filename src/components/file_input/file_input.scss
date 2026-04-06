@@ -36,6 +36,9 @@
     @apply hidden;
   }
 
+  &:has(.file-input-button) {
+    @apply w-fit;
+  }
   .file-input-button {
     @apply inline-block cursor-pointer;
 
