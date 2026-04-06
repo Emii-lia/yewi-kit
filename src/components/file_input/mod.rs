@@ -1,9 +1,8 @@
 mod types;
 
 use web_sys::{DragEvent, Event, FileList, HtmlInputElement};
-use yew::{classes, component, html, use_node_ref, AttrValue, Callback, Classes, Html, Properties, TargetCast};
-use crate::components::button::{Button, ButtonVariant};
-use crate::types::{Size};
+use yew::{classes, component, html, use_node_ref, AttrValue, Callback, Children, Classes, Html, Properties, TargetCast};
+use crate::components::button::{Button};
 pub use types::FileInputType;
 
 #[derive(Properties, Clone, PartialEq)]
@@ -22,12 +21,8 @@ pub struct Props {
   pub value: Option<FileList>,
   #[prop_or(FileInputType::Input)]
   pub r#type: FileInputType,
-  #[prop_or(ButtonVariant::Primary)]
-  pub button_variant: ButtonVariant,
   #[prop_or_default]
-  pub children: Html,
-  #[prop_or(Size::Medium)]
-  pub button_size: Size,
+  pub children: Children,
 }
 
 #[component(FileInput)]
@@ -36,7 +31,7 @@ pub(crate) fn file_input(props: &Props) -> Html {
   html! {
     <div class="FileInput">
       {
-        match props.r#type {
+        match props.r#type.clone() {
           FileInputType::Input => html! {
             <input
               class={classes!("file-input-element", &props.class)}
@@ -89,14 +84,15 @@ pub(crate) fn file_input(props: &Props) -> Html {
               />
             </label>
           },
-          FileInputType::Button => html! {
+          FileInputType::Button(variant, size, icon) => html! {
             <label
               class="file-input-button"
               for="file-input-button"
             >
               <Button
-                variant={props.button_variant.clone()}
-                size={props.button_size.clone()}
+                variant={variant.clone()}
+                size={size.clone()}
+                {icon}
                 disabled={props.disabled}
                 onclick={
                   let file_input_ref = file_input_ref.clone();
