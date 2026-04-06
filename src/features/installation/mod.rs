@@ -3,7 +3,8 @@ mod data;
 use yew::{component, html, Html};
 use yew_router::prelude::Link;
 use crate::app::docs::routes::DocsRoute;
-use crate::components::{Button, ButtonVariant, CodePreview};
+use crate::components::button::{Button, ButtonVariant};
+use crate::components::code_preview::CodePreview;
 use crate::features::installation::data::get_steps;
 use crate::types::Size;
 

@@ -1,7 +1,7 @@
 pub mod types;
 
 use yew::{component, html, Html, Properties};
-use crate::components::{Table, TableBody, TableDataCell, TableHead, TableHeaderCell, TableRow};
+use crate::components::table::{Table, TableBody, TableDataCell, TableHead, TableHeaderCell, TableRow};
 use crate::features::component_table::types::ComponentRow;
 
 

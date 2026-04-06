@@ -4,7 +4,9 @@ use yew::{component, html, Html};
 use yew_icons::{Icon, IconData};
 use yew_router::prelude::Link;
 use crate::app::docs::routes::DocsRoute;
-use crate::components::{Button, ButtonVariant, Card, CardContent, CardDescription, CardTitle, CodePreview};
+use crate::components::button::{Button, ButtonVariant};
+use crate::components::card::{Card, CardContent, CardDescription, CardTitle};
+use crate::components::code_preview::CodePreview;
 use crate::features::quick_start::data::get_common_components;
 use crate::types::Size;
 

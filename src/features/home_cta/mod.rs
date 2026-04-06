@@ -1,7 +1,7 @@
 use yew::{component, html, Html};
 use yew_router::prelude::Link;
 use crate::app::docs::routes::DocsRoute;
-use crate::components::Button;
+use crate::components::button::Button;
 use crate::types::Size;
 
 #[component(HomeCta)]

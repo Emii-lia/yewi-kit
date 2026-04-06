@@ -2,7 +2,7 @@ mod types;
 mod hooks;
 
 use yew::{classes, component, html, Callback, Html};
-use crate::components::{Button, ButtonVariant};
+use crate::components::button::{Button, ButtonVariant};
 use crate::components::password_input::hooks::{use_password_input, HookResponse};
 use crate::components::password_input::types::PasswordInputProps;
 use crate::types::{Size};

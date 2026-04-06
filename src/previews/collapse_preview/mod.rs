@@ -1,7 +1,8 @@
 mod data;
 
 use yew::{component, html, Html};
-use crate::components::{CodePreview, Collapse, CollapseVariant};
+use crate::components::code_preview::CodePreview;
+use crate::components::collapse::{Collapse, CollapseVariant};
 use crate::features::prop_table::PropTable;
 use crate::previews::collapse_preview::data::get_props;
 use crate::previews::PreviewContainer;

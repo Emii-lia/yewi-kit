@@ -1,7 +1,9 @@
 mod data;
 
 use yew::{component, html, Html};
-use crate::components::{Avatar, AvatarGroup, AvatarGroupVariant, CodePreview};
+use crate::components::avatar::Avatar;
+use crate::components::avatar_group::{AvatarGroup, AvatarGroupVariant};
+use crate::components::code_preview::CodePreview;
 use crate::features::prop_table::PropTable;
 use crate::previews::avatar_group_preview::data::get_props;
 use crate::previews::PreviewContainer;

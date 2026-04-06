@@ -1,7 +1,8 @@
 mod data;
 
 use yew::{component, html, Html, Properties};
-use crate::components::{Carousel, CarouselContent, CarouselControls, CarouselItem, CarouselWrapper, CodePreview};
+use crate::components::carousel::{Carousel, CarouselContent, CarouselControls, CarouselItem, CarouselWrapper};
+use crate::components::code_preview::CodePreview;
 use crate::features::component_table::ComponentTable;
 use crate::features::prop_table::PropTable;
 use crate::previews::carousel_preview::data::{get_components, get_props};

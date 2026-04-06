@@ -1,7 +1,8 @@
 mod data;
 
 use yew::{component, html, Html};
-use crate::components::{CodePreview, Progress, ProgressVariant};
+use crate::components::code_preview::CodePreview;
+use crate::components::progress::{Progress, ProgressVariant};
 use crate::features::prop_table::PropTable;
 use crate::previews::PreviewContainer;
 use crate::previews::progress_preview::data::get_props;

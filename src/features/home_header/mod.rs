@@ -3,7 +3,8 @@ use yew_icons::IconData;
 use yew_router::prelude::Link as RouterLink;
 use crate::app::docs::routes::DocsRoute;
 use crate::app::routes::AppRoute;
-use crate::components::{Button, ButtonVariant, link::Link};
+use crate::components::button::{Button, ButtonVariant};
+use crate::components::link::Link;
 use crate::components::link::types::LinkVariant;
 use crate::types::Size;
 

@@ -1,11 +1,11 @@
-mod use_pagination;
-pub(crate) mod types;
+mod hooks;
+mod types;
 
 use yew::{classes, component, html, Callback, Classes, Html, Properties};
 use yew_icons::IconData;
-use crate::components::{Button, ButtonVariant};
-use crate::components::pagination::types::PaginationVariant;
-use crate::components::pagination::use_pagination::{use_pagination, PaginationHookParams};
+use crate::components::button::{Button, ButtonVariant};
+pub use crate::components::pagination::types::PaginationVariant;
+use crate::components::pagination::hooks::{use_pagination, PaginationHookParams};
 use crate::types::Size;
 
 #[derive(Properties, PartialEq ,Clone)]

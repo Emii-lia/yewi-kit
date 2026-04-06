@@ -1,7 +1,8 @@
 mod data;
 
 use yew::{component, html, Html};
-use crate::components::{CodePreview, PasswordInput};
+use crate::components::code_preview::CodePreview;
+use crate::components::password_input::PasswordInput;
 use crate::features::prop_table::PropTable;
 use crate::previews::password_input_preview::data::get_props;
 use crate::previews::PreviewContainer;

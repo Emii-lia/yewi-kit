@@ -1,5 +1,5 @@
 use yew::{Callback, MouseEvent, Properties, prelude::*};
-use crate::components::ButtonVariant;
+use crate::components::button::ButtonVariant;
 use crate::types::{Size};
 
 #[derive(Properties, PartialEq)]

@@ -1,4 +1,4 @@
-use crate::components::SelectOption;
+use crate::components::select::SelectOption;
 use crate::features::prop_table::types::PropRow;
 
 pub fn options() -> Vec<SelectOption> {

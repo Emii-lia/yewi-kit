@@ -1,5 +1,7 @@
 use yew::{component, html, Callback, Children, Html};
-use crate::components::{use_toast_store, Button, ButtonVariant, CodePreview, ToastPosition, ToastState};
+use crate::components::button::{Button, ButtonVariant};
+use crate::components::code_preview::CodePreview;
+use crate::components::toast::{use_toast_store, ToastPosition, ToastState};
 use crate::previews::PreviewContainer;
 
 #[component(ToastPreview)]

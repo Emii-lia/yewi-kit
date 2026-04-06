@@ -2,7 +2,7 @@ mod hooks;
 
 use yew::{classes, component, html, AttrValue, Classes, Html, Properties};
 use yew_icons::IconData;
-use crate::components::{Button, ButtonVariant};
+use crate::components::button::{Button, ButtonVariant};
 use crate::components::code_preview::hooks::{use_code_preview, HookParams, HookResponse};
 use crate::types::Size;
 
