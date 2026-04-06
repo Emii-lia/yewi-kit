@@ -1,11 +1,14 @@
 mod data;
 
 use yew::{component, html, Html};
+use yew_icons::IconData;
+use crate::components::button::ButtonVariant;
 use crate::components::code_preview::CodePreview;
 use crate::components::file_input::{FileInput, FileInputType};
 use crate::features::prop_table::PropTable;
 use crate::previews::file_input_previews::data::get_props;
 use crate::previews::PreviewContainer;
+use crate::types::Size;
 
 #[component(FileInputPreviews)]
 pub(crate) fn file_input_previews() -> Html {
@@ -47,12 +50,30 @@ pub(crate) fn file_input_previews() -> Html {
           <PreviewContainer
             title={"Button"}
             code={r#"
-    <FileInput r#type={FileInputType::Button}>
+    <FileInput r#type={FileInputType::button()}>
+      {"Upload files"}
+    </FileInput>
+    <FileInput r#type={FileInputType::button().with_variant(ButtonVariant::Secondary)}>
+      {"Upload files"}
+    </FileInput>
+    <FileInput r#type={FileInputType::button().with_icon(Some(IconData::LUCIDE_UPLOAD))}>
+      {"Upload files"}
+    </FileInput>
+    <FileInput r#type={FileInputType::button().with_variant(ButtonVariant::Secondary).with_size(Size::Large)}>
       {"Upload files"}
     </FileInput>
             "#}
           >
-            <FileInput r#type={FileInputType::Button}>
+            <FileInput r#type={FileInputType::button()}>
+              {"Upload files"}
+            </FileInput>
+            <FileInput r#type={FileInputType::button().with_variant(ButtonVariant::Secondary)}>
+              {"Upload files"}
+            </FileInput>
+            <FileInput r#type={FileInputType::button().with_icon(Some(IconData::LUCIDE_UPLOAD))}>
+              {"Upload files"}
+            </FileInput>
+            <FileInput r#type={FileInputType::button().with_variant(ButtonVariant::Secondary).with_size(Size::Large)}>
               {"Upload files"}
             </FileInput>
           </PreviewContainer>
@@ -61,14 +82,14 @@ pub(crate) fn file_input_previews() -> Html {
             code={r#"
     <FileInput disabled=true/>
     <FileInput r#type={FileInputType::DnD} disabled=true/>
-    <FileInput r#type={FileInputType::Button} disabled=true>
+    <FileInput r#type={FileInputType::button()} disabled=true>
       {"Upload files"}
     </FileInput>
             "#}
           >
             <FileInput disabled=true/>
             <FileInput r#type={FileInputType::DnD} disabled=true/>
-            <FileInput r#type={FileInputType::Button} disabled=true>
+            <FileInput r#type={FileInputType::button()} disabled=true>
               {"Upload files"}
             </FileInput>
           </PreviewContainer>
