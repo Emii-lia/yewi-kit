@@ -81,6 +81,11 @@
         <priority>0.8</priority>
       </url>
       <url>
+        <loc>https://yewi.fiaro.app/docs/file-preview</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+      </url>
+      <url>
         <loc>https://yewi.fiaro.app/docs/input</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
