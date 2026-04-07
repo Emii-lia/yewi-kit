@@ -12,6 +12,7 @@ use crate::app::docs::collapse::CollapsePage;
 use crate::app::docs::divider::DividerPage;
 use crate::app::docs::dropdown::DropdownPage;
 use crate::app::docs::file_input::FileInputPage;
+use crate::app::docs::file_preview::FilePreviewPage;
 use crate::app::docs::input::InputPage;
 use crate::app::docs::installation::InstallationPage;
 use crate::app::docs::link::LinkPage;
@@ -60,6 +61,7 @@ mod page;
 mod breadcrumbs;
 mod pagination;
 pub mod link;
+pub mod file_preview;
 
 pub fn switch_docs(route: DocsRoute) -> Html {
   let current_route = match route {
@@ -77,6 +79,7 @@ pub fn switch_docs(route: DocsRoute) -> Html {
     DocsRoute::DividerPage => html! {<DividerPage/>},
     DocsRoute::DropdownPage => html! {<DropdownPage/>},
     DocsRoute::FileInput => html! {<FileInputPage/>},
+    DocsRoute::FilePreview => html! {<FilePreviewPage/>},
     DocsRoute::InputPage => html! {<InputPage/>},
     DocsRoute::LinkPage => html! {<LinkPage/>},
     DocsRoute::ModalPage => html! {<ModalPage/>},
