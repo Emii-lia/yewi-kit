@@ -21,6 +21,7 @@ fn main() {
     "/docs/divider",
     "/docs/dropdown",
     "/docs/file-input",
+    "/docs/file-preview",
     "/docs/input",
     "/docs/link",
     "/docs/modal",

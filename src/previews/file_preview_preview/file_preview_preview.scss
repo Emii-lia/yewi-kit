@@ -1,0 +1,6 @@
+.file-preview-field {
+  @apply w-full flex flex-col gap-6;
+  .file-preview-list {
+    @apply w-full grid grid-cols-2 gap-4;
+  }
+}
