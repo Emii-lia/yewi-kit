@@ -1,6 +1,6 @@
 mod types;
 
-use web_sys::{DragEvent, Event, FileList, HtmlInputElement};
+use web_sys::{DragEvent, Event, File, HtmlInputElement};
 use yew::{classes, component, html, use_node_ref, AttrValue, Callback, Children, Classes, Html, Properties, TargetCast};
 use crate::components::button::{Button};
 pub use types::FileInputType;
@@ -12,13 +12,13 @@ pub struct Props {
   #[prop_or_default]
   pub accept: AttrValue,
   #[prop_or_default]
-  pub onchange: Callback<FileList>,
+  pub onchange: Callback<Vec<File>>,
   #[prop_or_default]
   pub class: Classes,
   #[prop_or_default]
   pub disabled: bool,
   #[prop_or_default]
-  pub value: Option<FileList>,
+  pub value: Option<Vec<File>>,
   #[prop_or(FileInputType::Input)]
   pub r#type: FileInputType,
   #[prop_or_default]
@@ -44,7 +44,13 @@ pub(crate) fn file_input(props: &Props) -> Html {
                 Callback::from(move |e: Event| {
                   let input: HtmlInputElement = e.target_unchecked_into();
                   if let Some(files) = input.files() {
-                    onchange.emit(files);
+                    let mut vec_files: Vec<File> = Vec::new();
+                    for i in 0..files.length() {
+                      if let Some(file) = files.get(i) {
+                        vec_files.push(file);
+                      }
+                    }
+                    onchange.emit(vec_files);
                   }
                 })
               }
@@ -66,7 +72,13 @@ pub(crate) fn file_input(props: &Props) -> Html {
                 Callback::from(move |e: DragEvent| {
                   e.prevent_default();
                   if let Some(files) = e.data_transfer().and_then(|dt| dt.files()) {
-                    onchange.emit(files);
+                    let mut vec_files: Vec<File> = Vec::new();
+                    for i in 0..files.length() {
+                      if let Some(file) = files.get(i) {
+                        vec_files.push(file);
+                      }
+                    }
+                    onchange.emit(vec_files);
                   }
                 })
               }
@@ -119,7 +131,13 @@ pub(crate) fn file_input(props: &Props) -> Html {
                   Callback::from(move |e: Event| {
                     let input: HtmlInputElement = e.target_unchecked_into();
                     if let Some(files) = input.files() {
-                      onchange.emit(files);
+                      let mut vec_files: Vec<File> = Vec::new();
+                      for i in 0..files.length() {
+                        if let Some(file) = files.get(i) {
+                          vec_files.push(file);
+                        }
+                      }
+                      onchange.emit(vec_files);
                     }
                   })
                 }
