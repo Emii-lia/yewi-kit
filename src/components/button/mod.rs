@@ -38,7 +38,7 @@ pub(crate) fn button(props: &Props) -> Html {
   let HookResponse {
     variant,
     size,
-    on_click
+    onclick
   } = use_button(HookParams {
     size: props.size.clone(),
     variant: props.variant.clone(),
@@ -88,7 +88,7 @@ pub(crate) fn button(props: &Props) -> Html {
       )}
         disabled={props.disabled || props.is_loading}
         title={&props.title}
-        onclick={on_click}
+        {onclick}
       >
         {
           html! {

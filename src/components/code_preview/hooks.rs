@@ -10,14 +10,14 @@ pub(crate) struct HookParams {
 
 pub(crate) struct HookResponse {
   pub copied: bool,
-  pub on_copy: Callback<MouseEvent>
+  pub oncopy: Callback<MouseEvent>
 }
 
 #[hook]
 pub(crate) fn use_code_preview(params: HookParams) -> HookResponse {
   let copied = use_state(|| false);
 
-  let on_copy = {
+  let oncopy = {
     let code = params.code.clone();
     let copied = copied.clone();
     Callback::from(move |_| {
@@ -38,6 +38,6 @@ pub(crate) fn use_code_preview(params: HookParams) -> HookResponse {
 
   HookResponse {
     copied: *copied,
-    on_copy,
+    oncopy,
   }
 }

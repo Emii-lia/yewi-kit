@@ -23,7 +23,7 @@ pub(crate) struct ToastProps {
   pub duration: usize,
   #[prop_or_default]
   pub class: Classes,
-  pub on_close: Callback<()>
+  pub onclose: Callback<()>
 }
 
 #[component(ToastContainer)]
@@ -35,7 +35,7 @@ pub(crate) fn toast_container() -> Html {
     html! {
       <div class={classes!("ToastStack", &stack_class)}>
         {for ctx.items.iter().filter(|item| item.position == pos).map(|item| {
-          let onclose = ctx.on_remove.clone();
+          let onclose = ctx.onremove.clone();
           let id = item.id;
 
           html! {
@@ -46,7 +46,7 @@ pub(crate) fn toast_container() -> Html {
               variant={item.variant.clone()}
               duration={item.duration}
               class={item.class.clone()}
-              on_close={Callback::from(move |_| onclose.emit(id))}
+              onclose={Callback::from(move |_| onclose.emit(id))}
             >
               {item.children.clone()}
             </Toast>
@@ -76,7 +76,7 @@ pub(crate) fn toast(props: &ToastProps) -> Html {
     is_open
   } = use_toast_item(HookParams {
     duration: props.duration,
-    on_close: props.on_close.clone(),
+    onclose: props.onclose.clone(),
     id: props.id
   });
 
@@ -91,7 +91,7 @@ pub(crate) fn toast(props: &ToastProps) -> Html {
         {props.children.clone()}
       </div>
       <button class="Toast__close" onclick={{
-        let onclose = props.on_close.clone();
+        let onclose = props.onclose.clone();
         Callback::from(move |_| onclose.emit(()))
       }}>
         {"x"}

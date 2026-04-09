@@ -18,7 +18,7 @@ pub struct Props {
 pub(crate) fn code_preview(props: &Props) -> Html {
   let HookResponse {
     copied,
-    on_copy,
+    oncopy,
   } = use_code_preview(HookParams {
     code: props.code.clone(),
   });
@@ -33,7 +33,7 @@ pub(crate) fn code_preview(props: &Props) -> Html {
             variant={ButtonVariant::Secondary}
             title={"Copy to clipboard"}
             icon={if copied { IconData::LUCIDE_CHECK } else { IconData::LUCIDE_COPY }}
-            onclick={on_copy}
+            onclick={oncopy}
             size={Size::Small}
             class="CodePreview__copy-button"
           />

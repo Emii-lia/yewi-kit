@@ -16,7 +16,7 @@ pub(crate) struct ToastContext {
   pub success: Callback<(Children, Option<ToastState>)>,
   pub error: Callback<(Children, Option<ToastState>)>,
   pub items: Vec<ToastItem>,
-  pub on_remove: Callback<usize>
+  pub onremove: Callback<usize>
 }
 
 #[hook]
@@ -24,7 +24,7 @@ pub fn use_toast() -> ToastContext {
   let items = use_state(Vec::<ToastItem>::new);
   let next_id = use_state(|| 0usize);
 
-  let on_remove = {
+  let onremove = {
     let items = items.clone();
     Callback::from(move |ide: usize| {
       let mut new_items = (*items).clone();
@@ -70,7 +70,7 @@ pub fn use_toast() -> ToastContext {
     success,
     error,
     items: (*items).clone(),
-    on_remove
+    onremove
   }
 }
 
@@ -79,7 +79,7 @@ pub fn use_toast() -> ToastContext {
 pub(crate) struct HookParams {
   pub(crate) id: usize,
   pub(crate) duration: usize,
-  pub(crate) on_close: Callback<()>
+  pub(crate) onclose: Callback<()>
 }
 
 pub(crate) struct HookResponse {
@@ -87,7 +87,7 @@ pub(crate) struct HookResponse {
 }
 #[hook]
 pub(crate) fn use_toast_item(params: HookParams) -> HookResponse {
-  let HookParams { duration, on_close, id } = params;
+  let HookParams { duration, onclose, id } = params;
 
   let is_open = use_state(|| true);
 
@@ -101,7 +101,7 @@ pub(crate) fn use_toast_item(params: HookParams) -> HookResponse {
 
   {
     let is_open = is_open.clone();
-    let on_close = on_close.clone();
+    let onclose = onclose.clone();
 
     use_effect_with(
       (duration, id),
@@ -109,11 +109,11 @@ pub(crate) fn use_toast_item(params: HookParams) -> HookResponse {
         let mut timeout: Option<Timeout> = None;
         if *duration > 0 {
           let is_open = is_open.clone();
-          let on_close = on_close.clone();
+          let onclose = onclose.clone();
 
           timeout = Some(Timeout::new(*duration as u32, move || {
             is_open.set(false);
-            on_close.emit(());
+            onclose.emit(());
           }));
         }
         move || drop(timeout)

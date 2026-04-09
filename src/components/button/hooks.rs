@@ -13,13 +13,13 @@ pub struct HookParams {
 pub struct HookResponse {
   pub variant: String,
   pub size: String,
-  pub on_click: Callback<MouseEvent>
+  pub onclick: Callback<MouseEvent>
 }
 
 #[hook]
 pub(crate) fn use_button(params: HookParams) -> HookResponse {
   let HookParams { variant, size, onclick } = params;
-  let onclick = onclick;
+  
   let on_click = Callback::from(move |e: MouseEvent| {
     onclick.emit(e);
   });
@@ -41,6 +41,6 @@ pub(crate) fn use_button(params: HookParams) -> HookResponse {
   HookResponse {
     variant: variant.to_string(),
     size: size.to_string(),
-    on_click
+    onclick: on_click
   }
 }

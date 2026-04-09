@@ -17,7 +17,7 @@ pub struct Props {
   #[prop_or_default]
   pub value: AttrValue,
   #[prop_or_default]
-  pub on_change: Callback<bool>,
+  pub onchange: Callback<bool>,
   #[prop_or(Size::Medium)]
   pub size: Size,
   #[prop_or(Color::Primary)]
@@ -30,7 +30,7 @@ pub struct Props {
 
 #[component(Radio)]
 pub(crate) fn radio(props: &Props) -> Html {
-  let HookResponse { on_change } = use_radio(HookParams { onchange: props.on_change.clone() });
+  let HookResponse { onchange } = use_radio(HookParams { onchange: props.onchange.clone() });
   let color_class = format!("radio-{:?}", props.color).to_lowercase();
   let size_class = format!("radio-{:?}", props.size).to_lowercase();
 
@@ -57,7 +57,7 @@ pub(crate) fn radio(props: &Props) -> Html {
         id={&props.id}
         checked={props.checked}
         value={&props.value}
-        onchange={on_change.clone()}
+        {onchange}
       />
       {html! {
         if !props.label.is_empty() {

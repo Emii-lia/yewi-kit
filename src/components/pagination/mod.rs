@@ -14,7 +14,7 @@ pub struct Props {
   #[prop_or(1)]
   pub current: usize,
   #[prop_or_default]
-  pub on_change: Callback<usize>,
+  pub onchange: Callback<usize>,
   #[prop_or_default]
   pub class: Classes,
   #[prop_or(PaginationVariant::Default)]
@@ -33,7 +33,7 @@ pub fn pagination(props: &Props) -> Html {
     page_numbers
   ) = use_pagination(PaginationHookParams {
     current: props.current,
-    on_change: props.on_change.clone(),
+    onchange: props.onchange.clone(),
     count: props.count
   });
 
