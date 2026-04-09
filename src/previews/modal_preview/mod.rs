@@ -7,7 +7,7 @@ use crate::previews::PreviewContainer;
 #[component(ModalPreview)]
 pub(crate) fn modal_preview() -> Html {
   let ModalHookResponse {
-    on_open,
+    onopen,
     ..
   } = use_modal_store();
 
@@ -40,12 +40,12 @@ pub(crate) fn modal_preview() -> Html {
             code={r#"
     // Callback
     let ModalHookResponse {
-      on_open,
+      onopen,
       ..
     } = use_modal_store();
 
     <Button onclick={Callback::from(move |_| {
-        on_open.clone().emit(OpenParams {
+        onopen.clone().emit(OpenParams {
           children: children.clone(),
           class: Some("".into()),
         });
@@ -64,7 +64,7 @@ pub(crate) fn modal_preview() -> Html {
             "#}
           >
             <Button onclick={Callback::from(move |_| {
-                on_open.clone().emit(OpenParams {
+                onopen.clone().emit(OpenParams {
                   children: children.clone(),
                   class: Some("".into()),
                 });
@@ -107,19 +107,19 @@ pub(crate) fn modal_preview() -> Html {
           <div class="preview-usage">
             <p class="preview-text">
               {"To open a modal, use the"}
-              <span class="mono__highlight">{" on_open "}</span>
+              <span class="mono__highlight">{" onopen "}</span>
               {"callback from the"}
               <span class="mono__highlight">{" use_modal_store "}</span>
               {"hook."}
             </p>
             <CodePreview code={r#"
   let ModalHookResponse {
-    on_open,
+    onopen,
     ..
   } = use_modal_store();
 
   <Button onclick={Callback::from(move |_| {
-      on_open.clone().emit(OpenParams {
+      onopen.clone().emit(OpenParams {
         children: children.clone(),
         class: Some("".into()),
       });
@@ -133,16 +133,16 @@ pub(crate) fn modal_preview() -> Html {
             <p class="preview-text">
               <span class="mono__highlight">{" use_modal_store "}</span>
               {"hook also returns the"}
-              <span class="mono__highlight">{" on_close "}</span>
+              <span class="mono__highlight">{" onclose "}</span>
               {"callback, which can be used to close the modal."}
             </p>
             <CodePreview code={r#"
   let ModalHookResponse {
-    on_close,
+    onclose,
     ..
   } = use_modal_store();
   <Button onclick={Callback::from(move |_| {
-      on_close.clone().emit(());
+      onclose.clone().emit(());
     })}
     icon={IconData::LUCIDE_X}
   />

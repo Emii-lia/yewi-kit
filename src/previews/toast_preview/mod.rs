@@ -223,7 +223,6 @@ pub(crate) fn toast_preview() -> Html {
         }
       }"#}/>
           </div>
-
         </div>
       </div>
     </div>

@@ -21,7 +21,7 @@ pub(crate) fn get_props() -> Vec<PropRow> {
       default: Some("1".to_string()),
     },
     PropRow {
-      name: "on_change".to_string(),
+      name: "onchange".to_string(),
       r#type: "Callback<usize>".to_string(),
       description: "Callback fired when page changes, receives the new page number".to_string(),
       default: None
