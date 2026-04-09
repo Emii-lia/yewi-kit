@@ -7,8 +7,8 @@ pub struct OpenParams {
 }
 #[derive(PartialEq, Clone, Debug)]
 pub struct ModalHookResponse {
-  pub on_close: Callback<()>,
-  pub on_open: Callback<OpenParams>,
+  pub onclose: Callback<()>,
+  pub onopen: Callback<OpenParams>,
   pub is_open: bool,
   pub children: Html,
   pub classes: Classes,
@@ -21,11 +21,11 @@ pub(crate) fn use_modal() -> ModalHookResponse {
   let children = use_state(|| html! {});
   let classes = use_state(|| Classes::from("Modal-content"));
 
-  let on_close = {
+  let onclose = {
     let is_open = is_open.clone();
     Callback::from(move |_| is_open.set(false))
   };
-  let on_open = {
+  let onopen = {
     let is_open = is_open.clone();
     let children = children.clone();
     let classes = classes.clone();
@@ -35,5 +35,5 @@ pub(crate) fn use_modal() -> ModalHookResponse {
       classes.set(params.class.unwrap_or_default());
     })
   };
-  ModalHookResponse { on_close, on_open, is_open: *is_open, children: (*children).clone(), classes: (*classes).clone() }
+  ModalHookResponse { onclose, onopen, is_open: *is_open, children: (*children).clone(), classes: (*classes).clone() }
 }

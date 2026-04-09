@@ -177,135 +177,69 @@
     input:checked ~ .checkbox-toggle-toggle {
       &.checkbox-primary {
         @apply bg-primary-500 border-primary-700;
-        &::after {
-          @apply left-6;
-        }
       }
       &.checkbox-purple {
         @apply bg-purple-500 border-purple-700;
-        &::after {
-          @apply left-6;
-        }
       }
       &.checkbox-blue {
         @apply bg-blue-500 border-blue-700;
-        &::after {
-          @apply left-6;
-        }
       }
       &.checkbox-green {
         @apply bg-green-500 border-green-700;
-        &::after {
-          @apply left-6;
-        }
       }
       &.checkbox-red {
         @apply bg-red-500 border-red-700;
-        &::after {
-          @apply left-6;
-        }
       }
       &.checkbox-yellow {
         @apply bg-yellow-500 border-yellow-700;
-        &::after {
-          @apply left-6;
-        }
       }
       &.checkbox-gray {
         @apply bg-gray-500 border-gray-700;
-        &::after {
-          @apply left-6;
-        }
       }
       &.checkbox-orange {
         @apply bg-orange-500 border-orange-700;
-        &::after {
-          @apply left-6;
-        }
       }
       &.checkbox-pink {
         @apply bg-pink-500 border-pink-700;
-        &::after {
-          @apply left-6;
-        }
       }
       &.checkbox-fuchsia {
         @apply bg-fuchsia-500 border-fuchsia-700;
-        &::after {
-          @apply left-6;
-        }
       }
       &.checkbox-cyan {
         @apply bg-cyan-500 border-cyan-700;
-        &::after {
-          @apply left-6;
-        }
       }
       &.checkbox-teal {
         @apply bg-teal-500 border-teal-700;
-        &::after {
-          @apply left-6;
-        }
       }
       &.checkbox-indigo {
         @apply bg-indigo-500 border-indigo-700;
-        &::after {
-          @apply left-6;
-        }
       }
       &.checkbox-violet {
         @apply bg-violet-500 border-violet-700;
-        &::after {
-          @apply left-6;
-        }
       }
       &.checkbox-emerald {
         @apply bg-emerald-500 border-emerald-700;
-        &::after {
-          @apply left-6;
-        }
       }
       &.checkbox-lime {
         @apply bg-lime-500 border-lime-700;
-        &::after {
-          @apply left-6;
-        }
       }
       &.checkbox-amber {
         @apply bg-amber-500 border-amber-700;
-        &::after {
-          @apply left-6;
-        }
       }
       &.checkbox-rose {
         @apply bg-rose-500 border-rose-700;
-        &::after {
-          @apply left-6;
-        }
       }
       &.checkbox-sky {
         @apply bg-sky-500 border-sky-700;
-        &::after {
-          @apply left-6;
-        }
       }
       &.checkbox-light {
         @apply bg-slate-100 border-slate-300;
-        &::after {
-          @apply left-6;
-        }
       }
       &.checkbox-dark {
         @apply bg-slate-700 border-slate-900;
-        &::after {
-          @apply left-6;
-        }
       }
       &.checkbox-transparent {
         @apply bg-slate-400 border-slate-500;
-        &::after {
-          @apply left-6;
-        }
       }
     }
     input:disabled ~ .checkbox-toggle-toggle {
@@ -387,7 +321,7 @@
   &.checkbox-small {
     @apply gap-2;
     .checkbox-input {
-      @apply w-3.5 h-3.5;
+      @apply w-4 h-4;
       &::after {
         @apply text-xs;
       }
@@ -398,9 +332,10 @@
         @apply w-3 h-3;
       }
     }
-    input:checked ~ .checkbox-toggle::after {
+    input:checked ~ .checkbox-toggle-toggle::after {
       @apply left-4;
     }
+
     .checkbox-label {
       @apply text-xs;
     }
@@ -408,11 +343,15 @@
   &.checkbox-medium {
     @apply gap-3;
     .checkbox-input {
-      @apply w-4 h-4;
+      @apply w-5 h-5;
       &::after {
         @apply text-sm;
       }
     }
+    input:checked ~ .checkbox-toggle-toggle::after {
+      @apply left-6;
+    }
+
     .checkbox-label {
       @apply text-sm;
     }
@@ -422,16 +361,14 @@
     .checkbox-input {
       @apply w-6 h-6;
     }
-    &.checkbox-toggle {
-      &__toggle {
-        @apply w-14 h-7;
-        &::after {
-          @apply w-[1.375rem] h-[1.375rem];
-        }
+    .checkbox-toggle-toggle {
+      @apply w-14 h-7;
+      &::after {
+        @apply w-[1.375rem] h-[1.375rem];
       }
-      input:checked ~ .checkbox-toggle::after {
-        @apply left-7;
-      }
+    }
+    input:checked ~ .checkbox-toggle-toggle::after {
+      @apply left-[1.635rem];
     }
     .checkbox-label {
       @apply text-lg;
@@ -439,7 +376,16 @@
   }
   &.checkbox-default {
     .checkbox-input{
-      @apply w-5 h-5 aspect-square border rounded-md appearance-none flex;
+      @apply aspect-square border rounded-md appearance-none flex;
+      &.checkbox-small {
+        @apply w-5 h-5 rounded-sm text-sm;
+      }
+      &.checkbox-medium {
+        @apply w-[1.375rem] h-[1.375rem];
+      }
+      &.checkbox-large {
+        @apply w-6 h-6;
+      }
       &:checked{
         @apply flex items-center justify-center;
         &::after {

@@ -4,7 +4,7 @@ use yew::{hook, use_state, Callback};
 pub(crate) struct PaginationHookParams {
   pub(crate) count: usize,
   pub(crate) current: usize,
-  pub(crate) on_change: Callback<usize>
+  pub(crate) onchange: Callback<usize>
 }
 
 fn get_page_numbers(count: usize, current: usize) -> Vec<String> {
@@ -38,7 +38,7 @@ fn get_page_numbers(count: usize, current: usize) -> Vec<String> {
 #[hook]
 pub(crate) fn use_pagination (params: PaginationHookParams)
  -> ( usize, Callback<usize>, Vec<String> ) {
-  let PaginationHookParams { count, current, on_change } = params.clone();
+  let PaginationHookParams { count, current, onchange } = params.clone();
   let current_page = use_state(|| current);
 
   let go_to_page = {
@@ -46,7 +46,7 @@ pub(crate) fn use_pagination (params: PaginationHookParams)
     Callback::from(move |page: usize| {
       if page > 0 && page <= count {
         current_page.set(page);
-        on_change.emit(page);
+        onchange.emit(page);
       }
     })
   };

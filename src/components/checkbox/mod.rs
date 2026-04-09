@@ -19,7 +19,7 @@ pub struct Props {
   #[prop_or_default]
   pub value: AttrValue,
   #[prop_or_default]
-  pub on_change: Callback<bool>,
+  pub onchange: Callback<bool>,
   #[prop_or(Size::Medium)]
   pub size: Size,
   #[prop_or(Color::Primary)]
@@ -34,10 +34,10 @@ pub struct Props {
 
 #[component(Checkbox)]
 pub(crate) fn checkbox(props: &Props) -> Html {
-  let HookResponse { on_change } = use_checkbox(HookParams { onchange: props.on_change.clone() });
+  let HookResponse { onchange } = use_checkbox(HookParams { onchange: props.onchange.clone() });
   let color_class = format!("checkbox-{:?}", props.color).to_lowercase();
   let variant_class = format!("checkbox-{:?}", props.variant).to_lowercase();
-  let size_class = format!("checkbox-{:?}", props.size).to_lowercase();
+  let size_class = format!("checkbox-{}", props.size.as_str());
 
   html! {
     <label
@@ -63,7 +63,7 @@ pub(crate) fn checkbox(props: &Props) -> Html {
         id={&props.id}
         checked={props.checked}
         value={&props.value}
-        onchange={on_change.clone()}
+        {onchange}
       />
       {html! {
         if props.variant == CheckboxVariant::Toggle {

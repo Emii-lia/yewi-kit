@@ -39,40 +39,37 @@ pub fn checkbox_preview() -> Html {
             title={"Default"}
             code={r#"
     <Checkbox
-      checked={*checked}
-      on_change={onchange.clone()}
       name={"checkbox_default_1"}
       id={"checkbox_default_1"}
-      size={Size::Small} />
+      size={Size::Small}
+    />
     <Checkbox
-      checked={*checked}
-      on_change={onchange.clone()}
       name={"checkbox_default_2"}
       id={"checkbox_default_2"}
-      size={Size::Medium} />
+      size={Size::Medium}
+    />
     <Checkbox
-      checked={*checked}
-      on_change={onchange.clone()}
       name={"checkbox_default_3"}
       id={"checkbox_default_3"}
-      size={Size::Large} />
+      size={Size::Large}
+    />
             "#}
           >
             <Checkbox
               checked={*checked}
-              on_change={onchange.clone()}
+              onchange={onchange.clone()}
               name={"checkbox_default_1"}
               id={"checkbox_default_1"}
               size={Size::Small} />
             <Checkbox
               checked={*checked}
-              on_change={onchange.clone()}
+              onchange={onchange.clone()}
               name={"checkbox_default_2"}
               id={"checkbox_default_2"}
               size={Size::Medium} />
             <Checkbox
               checked={*checked}
-              on_change={onchange.clone()}
+              onchange={onchange.clone()}
               name={"checkbox_default_3"}
               id={"checkbox_default_3"}
               size={Size::Large} />
@@ -81,40 +78,43 @@ pub fn checkbox_preview() -> Html {
             title={"Button"}
             code={r#"
     <Checkbox
-      checked={*checked}
-      on_change={onchange.clone()}
       name={"checkbox_button_1"}
       id={"checkbox_button_1"}
-      label={"Check"} size={Size::Small}  variant={CheckboxVariant::Button}/>
+      label={"Check"}
+      size={Size::Small}
+      variant={CheckboxVariant::Button}
+    />
     <Checkbox
-      checked={*checked}
-      on_change={onchange.clone()}
       name={"checkbox_button_2"}
       id={"checkbox_button_2"}
-      label={"Check"} size={Size::Medium}  variant={CheckboxVariant::Button}/>
+      label={"Check"}
+      size={Size::Medium} 
+      variant={CheckboxVariant::Button}
+    />
     <Checkbox
-      checked={*checked}
-      on_change={onchange.clone()}
       name={"checkbox_button_3"}
       id={"checkbox_button_3"}
-      label={"Check"} size={Size::Large}  variant={CheckboxVariant::Button}/>
+      label={"Check"}
+      size={Size::Large} 
+      variant={CheckboxVariant::Button}
+    />
             "#}
           >
             <Checkbox
               checked={*checked}
-              on_change={onchange.clone()}
+              onchange={onchange.clone()}
               name={"checkbox_button_1"}
               id={"checkbox_button_1"}
               label={"Check"} size={Size::Small}  variant={CheckboxVariant::Button}/>
             <Checkbox
               checked={*checked}
-              on_change={onchange.clone()}
+              onchange={onchange.clone()}
               name={"checkbox_button_2"}
               id={"checkbox_button_2"}
               label={"Check"} size={Size::Medium}  variant={CheckboxVariant::Button}/>
             <Checkbox
               checked={*checked}
-              on_change={onchange.clone()}
+              onchange={onchange.clone()}
               name={"checkbox_button_3"}
               id={"checkbox_button_3"}
               label={"Check"} size={Size::Large}  variant={CheckboxVariant::Button}/>
@@ -123,40 +123,40 @@ pub fn checkbox_preview() -> Html {
             title={"Toggle"}
             code={r#"
     <Checkbox
-      checked={*checked}
-      on_change={onchange.clone()}
       name={"checkbox_toggle_1"}
       id={"checkbox_toggle_1"}
-      size={Size::Small}  variant={CheckboxVariant::Toggle}/>
+      size={Size::Small}
+      variant={CheckboxVariant::Toggle}
+    />
     <Checkbox
-      checked={*checked}
-      on_change={onchange.clone()}
       name={"checkbox_toggle_2"}
       id={"checkbox_toggle_2"}
-      size={Size::Medium}  variant={CheckboxVariant::Toggle}/>
+      size={Size::Medium} 
+      variant={CheckboxVariant::Toggle}
+    />
     <Checkbox
-      checked={*checked}
-      on_change={onchange.clone()}
       name={"checkbox_toggle_3"}
       id={"checkbox_toggle_3"}
-      size={Size::Large}  variant={CheckboxVariant::Toggle}/>
+      size={Size::Large} 
+      variant={CheckboxVariant::Toggle}
+    />
             "#}
           >
             <Checkbox
               checked={*checked}
-              on_change={onchange.clone()}
+              onchange={onchange.clone()}
               name={"checkbox_toggle_1"}
               id={"checkbox_toggle_1"}
               size={Size::Small}  variant={CheckboxVariant::Toggle}/>
             <Checkbox
               checked={*checked}
-              on_change={onchange.clone()}
+              onchange={onchange.clone()}
               name={"checkbox_toggle_2"}
               id={"checkbox_toggle_2"}
               size={Size::Medium}  variant={CheckboxVariant::Toggle}/>
             <Checkbox
               checked={*checked}
-              on_change={onchange.clone()}
+              onchange={onchange.clone()}
               name={"checkbox_toggle_3"}
               id={"checkbox_toggle_3"}
               size={Size::Large}  variant={CheckboxVariant::Toggle}/>
@@ -165,40 +165,44 @@ pub fn checkbox_preview() -> Html {
             title={"Disabled"}
             code={r#"
     <Checkbox
-      checked={*checked}
-      on_change={onchange.clone()}
       name={"checkbox_disabled_1"}
       id={"checkbox_disabled_1"}
-      variant={CheckboxVariant::Default} disabled=true checked=true/>
+      variant={CheckboxVariant::Default}
+      disabled=true
+      checked=true
+    />
     <Checkbox
-      checked={*checked}
-      on_change={onchange.clone()}
       name={"checkbox_disabled_2"}
       id={"checkbox_disabled_2"}
-      label={"Check"} variant={CheckboxVariant::Button} disabled=true checked=true/>
+      label={"Check"}
+      variant={CheckboxVariant::Button}
+      disabled=true
+      checked=true
+    />
     <Checkbox
-      checked={*checked}
-      on_change={onchange.clone()}
       name={"checkbox_disabled_3"}
       id={"checkbox_disabled_3"}
-      variant={CheckboxVariant::Toggle} disabled=true checked=true/>
+      variant={CheckboxVariant::Toggle}
+      disabled=true
+      checked=true
+    />
             "#}
           >
             <Checkbox
               checked={*checked}
-              on_change={onchange.clone()}
+              onchange={onchange.clone()}
               name={"checkbox_disabled_1"}
               id={"checkbox_disabled_1"}
               variant={CheckboxVariant::Default} disabled=true checked=true/>
             <Checkbox
               checked={*checked}
-              on_change={onchange.clone()}
+              onchange={onchange.clone()}
               name={"checkbox_disabled_2"}
               id={"checkbox_disabled_2"}
               label={"Check"} variant={CheckboxVariant::Button} disabled=true checked=true/>
             <Checkbox
               checked={*checked}
-              on_change={onchange.clone()}
+              onchange={onchange.clone()}
               name={"checkbox_disabled_3"}
               id={"checkbox_disabled_3"}
               variant={CheckboxVariant::Toggle} disabled=true checked=true/>
@@ -208,76 +212,78 @@ pub fn checkbox_preview() -> Html {
             title={"Colours"}
             code={r#"
     <Checkbox
-      checked={*checked}
-      on_change={onchange.clone()}
       name={"checkbox_color_1"}
       id={"checkbox_color_1"}
-      variant={CheckboxVariant::Default} color={Color::Rose}/>
+      variant={CheckboxVariant::Default}
+      color={Color::Rose}
+    />
     <Checkbox
-      checked={*checked}
-      on_change={onchange.clone()}
       name={"checkbox_color_2"}
       id={"checkbox_color_2"}
-      variant={CheckboxVariant::Default} color={Color::Teal}/>
+      variant={CheckboxVariant::Default}
+      color={Color::Teal}
+    />
     <Checkbox
-      checked={*checked}
-      on_change={onchange.clone()}
       name={"checkbox_color_3"}
       id={"checkbox_color_3"}
-      variant={CheckboxVariant::Button} label={"Check"} color={Color::Rose}/>
+      variant={CheckboxVariant::Button} 
+      label={"Check"}
+      color={Color::Rose}
+    />
     <Checkbox
-      checked={*checked}
-      on_change={onchange.clone()}
       name={"checkbox_color_4"}
       id={"checkbox_color_4"}
-      variant={CheckboxVariant::Button} label={"Check"} color={Color::Teal}/>
+      variant={CheckboxVariant::Button}
+      label={"Check"}
+      color={Color::Teal}
+    />
     <Checkbox
-      checked={*checked}
-      on_change={onchange.clone()}
       name={"checkbox_color_5"}
       id={"checkbox_color_5"}
-      variant={CheckboxVariant::Toggle} color={Color::Rose}/>
+      variant={CheckboxVariant::Toggle}
+      color={Color::Rose}
+    />
     <Checkbox
-      checked={*checked}
-      on_change={onchange.clone()}
       name={"checkbox_color_6"}
       id={"checkbox_color_6"}
-      variant={CheckboxVariant::Toggle} color={Color::Teal}/>
+      variant={CheckboxVariant::Toggle}
+      color={Color::Teal}
+    />
             "#}
           >
             <Checkbox
               checked={*checked}
-              on_change={onchange.clone()}
+              onchange={onchange.clone()}
               name={"checkbox_color_1"}
               id={"checkbox_color_1"}
               variant={CheckboxVariant::Default} color={Color::Rose}/>
             <Checkbox
               checked={*checked}
-              on_change={onchange.clone()}
+              onchange={onchange.clone()}
               name={"checkbox_color_2"}
               id={"checkbox_color_2"}
               variant={CheckboxVariant::Default} color={Color::Teal}/>
             <Checkbox
               checked={*checked}
-              on_change={onchange.clone()}
+              onchange={onchange.clone()}
               name={"checkbox_color_3"}
               id={"checkbox_color_3"}
               variant={CheckboxVariant::Button} label={"Check"} color={Color::Rose}/>
             <Checkbox
               checked={*checked}
-              on_change={onchange.clone()}
+              onchange={onchange.clone()}
               name={"checkbox_color_4"}
               id={"checkbox_color_4"}
               variant={CheckboxVariant::Button} label={"Check"} color={Color::Teal}/>
             <Checkbox
               checked={*checked}
-              on_change={onchange.clone()}
+              onchange={onchange.clone()}
               name={"checkbox_color_5"}
               id={"checkbox_color_5"}
               variant={CheckboxVariant::Toggle} color={Color::Rose}/>
             <Checkbox
               checked={*checked}
-              on_change={onchange.clone()}
+              onchange={onchange.clone()}
               name={"checkbox_color_6"}
               id={"checkbox_color_6"}
               variant={CheckboxVariant::Toggle} color={Color::Teal}/>

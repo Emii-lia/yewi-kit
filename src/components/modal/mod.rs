@@ -15,7 +15,7 @@ pub(crate) use store::*;
 pub(crate) fn modal() -> Html {
   let modal_vars = use_modal_store();
   let ModalHookResponse {
-    on_close,
+    onclose,
     classes,
     is_open,
     children,
@@ -27,8 +27,8 @@ pub(crate) fn modal() -> Html {
       <div
         class={classes!("Modal")}
         onclick={{
-          let on_close = on_close.clone();
-          move |_| { on_close.emit(()); }
+          let onclose = onclose.clone();
+          move |_| { onclose.emit(()); }
         }}
       >
         <div
@@ -40,10 +40,10 @@ pub(crate) fn modal() -> Html {
               variant={ButtonVariant::Tertiary}
               size={Size::Small}
               onclick={{
-                let on_close = on_close.clone();
+                let onclose = onclose.clone();
                 Callback::from(move |e: MouseEvent| {
                   e.stop_propagation();
-                  on_close.emit(());
+                  onclose.emit(());
                 })
               }}
               icon={IconData::LUCIDE_X}

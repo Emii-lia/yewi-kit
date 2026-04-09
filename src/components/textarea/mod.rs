@@ -28,7 +28,7 @@ pub struct Props {
   #[prop_or_default]
   pub errors: Vec<String>,
   #[prop_or_default]
-  pub on_change: Callback<Event>
+  pub onchange: Callback<Event>
 }
 
 #[component(Textarea)]
@@ -56,7 +56,7 @@ pub(crate) fn textarea(props: &Props) -> Html {
             props.resize.then_some("textarea-resizable")
           )}
           value={props.value.clone()}
-          onchange={props.on_change.clone()}
+          onchange={props.onchange.clone()}
           disabled={props.disabled}
           maxlength={&props.max_length}
         />

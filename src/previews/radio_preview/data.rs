@@ -45,7 +45,7 @@ pub(crate) fn get_props() -> Vec<PropRow> {
       default: None,
     },
     PropRow {
-      name: "on_change".to_string(),
+      name: "onchange".to_string(),
       r#type: "Callback<bool>".to_string(),
       description: "Change event handler".to_string(),
       default: None,

@@ -9,7 +9,7 @@ pub struct HookParams {
 
 #[derive(Clone, PartialEq)]
 pub struct HookResponse {
-  pub on_change: Callback<Event>,
+  pub onchange: Callback<Event>,
 }
 
 #[hook]
@@ -28,6 +28,6 @@ pub fn use_radio(props: HookParams) -> HookResponse {
   };
 
   HookResponse {
-    on_change,
+    onchange: on_change,
   }
 }

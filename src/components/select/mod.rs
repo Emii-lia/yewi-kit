@@ -23,7 +23,7 @@ pub struct Props {
   #[prop_or(Size::Medium)]
   pub size: Size,
   #[prop_or_default]
-  pub on_change: Option<Callback<Event>>,
+  pub onchange: Option<Callback<Event>>,
   #[prop_or_default]
   pub options: Vec<SelectOption>,
   #[prop_or_default]
@@ -38,7 +38,7 @@ pub(crate) fn select(props: &Props) -> Html {
         name={&props.name}
         id={&props.name}
         value={props.value.clone()}
-        onchange={props.on_change.clone()}
+        onchange={props.onchange.clone()}
         class={classes!(
           "select",
           &props.class,
