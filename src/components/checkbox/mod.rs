@@ -37,7 +37,7 @@ pub(crate) fn checkbox(props: &Props) -> Html {
   let HookResponse { onchange } = use_checkbox(HookParams { onchange: props.onchange.clone() });
   let color_class = format!("checkbox-{:?}", props.color).to_lowercase();
   let variant_class = format!("checkbox-{:?}", props.variant).to_lowercase();
-  let size_class = format!("checkbox-{:?}", props.size).to_lowercase();
+  let size_class = format!("checkbox-{}", props.size.as_str());
 
   html! {
     <label
