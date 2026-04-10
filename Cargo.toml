@@ -7,7 +7,7 @@ edition = "2024"
 yew = { version = "0.23.0", features = ["csr", "serde"] }
 wasm-logger = "0.2.0"
 yew-router = "0.20.0"
-web-sys = { version = "0.3.83", features = ["DataTransfer", "Navigator", "Clipboard"] }
+web-sys = { version = "0.3.83", features = ["DataTransfer", "Navigator", "Clipboard", "MediaQueryList"] }
 gloo = "0.12.0"
 yew_icons = { version = "0.10.0", features = ["lucide"] }
 
