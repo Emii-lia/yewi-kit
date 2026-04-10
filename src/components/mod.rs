@@ -24,3 +24,4 @@ pub mod breadcrumbs;
 pub mod pagination;
 pub mod link;
 pub mod file_preview;
+pub mod sidebar;
