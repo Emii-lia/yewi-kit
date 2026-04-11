@@ -1,7 +1,7 @@
 use web_sys::wasm_bindgen::JsCast;
 use web_sys::wasm_bindgen::prelude::Closure;
 use web_sys::window;
-use yew::{hook, use_effect_with, use_state, Callback};
+use yew::{hook, use_effect_with, use_memo, use_state, Callback};
 use crate::components::sidebar::provider::SidebarContextType;
 use crate::components::sidebar::types::SidebarState;
 
@@ -74,12 +74,22 @@ pub fn use_sidebar_provider(params: SidebarProviderHookParams) -> SidebarContext
     })
   };
 
+  let state = use_memo(is_open, move |is_open| {
+    if *is_open {
+      SidebarState::Expanded
+    } else {
+      SidebarState::Collapsed
+    }
+  });
+
   let toggle_sidebar = {
     let open = open.clone();
     let open_mobile = open_mobile.clone();
+    let state = state.clone();
     Callback::from(move |_| {
       let open = open.clone();
       let open_mobile = open_mobile.clone();
+      let state = state.clone();
       if is_mobile {
         open_mobile.set(!*open_mobile);
       } else {
@@ -96,10 +106,9 @@ pub fn use_sidebar_provider(params: SidebarProviderHookParams) -> SidebarContext
     })
   };
 
-  let state = if is_open { SidebarState::Expanded } else { SidebarState::Collapsed };
 
   SidebarContextType {
-    state,
+    state: (*state).clone(),
     open: is_open,
     set_open,
     open_mobile: (*open_mobile).clone(),
