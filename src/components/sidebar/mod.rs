@@ -1,3 +1,4 @@
+use web_sys::MouseEvent;
 use yew::{classes, component, html, Callback, Classes, Html, Properties};
 use yew_icons::IconData;
 use crate::components::sidebar::provider::SidebarContextType;
@@ -100,5 +101,112 @@ pub fn sidebar_trigger(props: &SidebarTriggerProps) -> Html {
       class={classes!("SidebarTrigger", &props.class)}
       title={"Toggle Sidebar"}
     />
+  }
+}
+
+#[derive(Properties, Debug, PartialEq)]
+pub struct SidebarChildrenWithClassProps {
+  pub children: Html,
+  #[prop_or_default]
+  pub class: Classes,
+}
+#[component(SidebarHeader)]
+pub fn sidebar_header(props: &SidebarChildrenWithClassProps) -> Html {
+  html! {
+    <div class={classes!("SidebarHeader", &props.class)}>
+      {props.children.clone()}
+    </div>
+  }
+}
+
+#[component(SidebarFooter)]
+pub fn sidebar_footer(props: &SidebarChildrenWithClassProps) -> Html {
+  html! {
+    <div class={classes!("SidebarFooter", &props.class)}>
+      {props.children.clone()}
+    </div>
+  }
+}
+
+#[component(SidebarContent)]
+pub fn sidebar_content(props: &SidebarChildrenWithClassProps) -> Html {
+  html! {
+    <div class={classes!("SidebarContent", "no-scrollbar", &props.class)}>
+      {props.children.clone()}
+    </div>
+  }
+}
+
+#[component(SidebarGroup)]
+pub fn sidebar_group(props: &SidebarChildrenWithClassProps) -> Html {
+  html! {
+    <div class={classes!("SidebarGroup", &props.class)}>
+      {props.children.clone()}
+    </div>
+  }
+}
+
+#[component(SidebarGroupTitle)]
+pub fn sidebar_group_title(props: &SidebarChildrenWithClassProps) -> Html {
+  html! {
+    <div class={classes!("SidebarGroupTitle", &props.class)}>
+      {props.children.clone()}
+    </div>
+  }
+}
+
+#[component(SidebarGroupContent)]
+pub fn sidebar_group_content(props: &SidebarChildrenWithClassProps) -> Html {
+  html! {
+    <div class={classes!("SidebarGroupContent", &props.class)}>
+      {props.children.clone()}
+    </div>
+  }
+}
+
+#[component(SidebarMenu)]
+pub fn sidebar_menu(props: &SidebarChildrenWithClassProps) -> Html {
+  html! {
+    <div class={classes!("SidebarMenu", &props.class)}>
+      {props.children.clone()}
+    </div>
+  }
+}
+
+#[derive(Properties, Debug, PartialEq)]
+pub struct SidebarMenuItemProps {
+  #[prop_or_default]
+  pub class: Classes,
+  #[prop_or_default]
+  pub children: Html,
+  #[prop_or_default]
+  pub active: bool,
+  #[prop_or_default]
+  pub onclick: Callback<()>,
+  #[prop_or_default]
+  pub action: Html
+}
+#[component(SidebarMenuItem)]
+pub fn sidebar_menu_item(props: &SidebarMenuItemProps) -> Html {
+  html! {
+    <div 
+      class={classes!(
+        "SidebarMenuItem", 
+        &props.class,
+      )}
+      data-active={props.active.to_string()}
+      onclick={{
+        let onclick = props.onclick.clone();
+        Callback::from(move |e: MouseEvent| {
+          e.stop_propagation();
+          onclick.emit(());
+        })
+      }}
+    >
+      {props.children.clone()}
+      <div class={"SidebarMenuItemAction"}>
+        {props.action.clone()}
+      </div>
+    </div>
   }
 }
