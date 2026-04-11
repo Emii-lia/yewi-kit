@@ -85,11 +85,9 @@ pub fn use_sidebar_provider(params: SidebarProviderHookParams) -> SidebarContext
   let toggle_sidebar = {
     let open = open.clone();
     let open_mobile = open_mobile.clone();
-    let state = state.clone();
     Callback::from(move |_| {
       let open = open.clone();
       let open_mobile = open_mobile.clone();
-      let state = state.clone();
       if is_mobile {
         open_mobile.set(!*open_mobile);
       } else {
