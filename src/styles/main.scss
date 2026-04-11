@@ -87,6 +87,13 @@ html, body {
   }
 }
 
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    @apply invisible;
+  }
+}
 
 *::selection {
   @apply bg-slate-300/50 text-slate-900;
