@@ -25,6 +25,7 @@ use crate::app::docs::quick_start::QuickStartPage;
 use crate::app::docs::radio::RadioPage;
 use crate::app::docs::routes::DocsRoute;
 use crate::app::docs::select::SelectPage;
+use crate::app::docs::sidebar::SidebarPage;
 use crate::app::docs::table::TablePage;
 use crate::app::docs::tabs::TabsPage;
 use crate::app::docs::textarea::TextareaPage;
@@ -62,6 +63,7 @@ mod breadcrumbs;
 mod pagination;
 pub mod link;
 pub mod file_preview;
+pub mod sidebar;
 
 pub fn switch_docs(route: DocsRoute) -> Html {
   let current_route = match route {
@@ -89,6 +91,7 @@ pub fn switch_docs(route: DocsRoute) -> Html {
     DocsRoute::QuickStartPage => html! {<QuickStartPage/>},
     DocsRoute::RadioPage => html! {<RadioPage/>},
     DocsRoute::SelectPage => html! {<SelectPage/>},
+    DocsRoute::Sidebar => html! {<SidebarPage/>},
     DocsRoute::TablePage => html! {<TablePage/>},
     DocsRoute::TabsPage => html! {<TabsPage/>},
     DocsRoute::TextareaPage => html! {<TextareaPage/>},

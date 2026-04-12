@@ -126,6 +126,11 @@
         <priority>0.8</priority>
       </url>
       <url>
+        <loc>https://yewi.fiaro.app/docs/sidebar</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+      </url>
+      <url>
         <loc>https://yewi.fiaro.app/docs/table</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>

@@ -18,7 +18,7 @@ pub(crate) fn sidebar() -> Html {
   let SidebarContext { route_group, is_open, toggle_open } = use_sidebar_store();
   html! {
     <aside class={classes!(
-      "Sidebar",
+      "YewiSidebar",
       is_open.then_some("sidebar-open")
     )}>
       <div class="sidebar-header">

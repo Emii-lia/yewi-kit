@@ -24,6 +24,7 @@ mod breadcrumbs_preview;
 mod pagination_preview;
 pub mod link_preview;
 pub mod file_preview_preview;
+pub mod sidebar_preview;
 
 pub(crate) use button_preview::*;
 pub(crate) use preview_container::*;
