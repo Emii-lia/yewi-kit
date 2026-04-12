@@ -1,7 +1,10 @@
 .SidebarProvider {
   @apply flex min-h-svh w-full;
+  &:has(.Sidebar[data-position="right"]) {
+    @apply flex-row-reverse;
+  }
   .Sidebar {
-    @apply flex h-full w-[var(--sidebar-width)] flex-col border-r border-primary-100 bg-white p-6 max-h-screen min-h-svh;
+    @apply flex h-full w-[var(--sidebar-width)] flex-col border-r border-primary-100 bg-white p-4 max-h-screen min-h-svh;
     //@apply fixed top-0 bottom-0 left-0;
 
     &[data-state="collapsed"] {
@@ -25,6 +28,10 @@
 
 .SidebarHeader {
   @apply flex flex-col gap-2 p-2 w-full;
+}
+
+.SidebarTitle {
+  @apply font-semibold text-primary-800 text-lg whitespace-nowrap;
 }
 
 .SidebarFooter {

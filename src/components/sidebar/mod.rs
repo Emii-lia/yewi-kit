@@ -13,7 +13,7 @@ pub mod hooks;
 pub mod store;
 
 #[derive(Properties, Debug, PartialEq)]
-pub struct Props {
+pub struct SidebarProps {
   pub children: Html,
   #[prop_or_default]
   pub class: Classes,
@@ -21,7 +21,7 @@ pub struct Props {
   pub position: SidebarPosition
 }
 #[component(Sidebar)]
-pub fn sidebar(props: &Props) -> Html {
+pub fn sidebar(props: &SidebarProps) -> Html {
   let SidebarContextType {
     is_mobile,
     state,
@@ -116,6 +116,15 @@ pub fn sidebar_header(props: &SidebarChildrenWithClassProps) -> Html {
     <div class={classes!("SidebarHeader", &props.class)}>
       {props.children.clone()}
     </div>
+  }
+}
+
+#[component(SidebarTitle)]
+pub fn sidebar_title(props: &SidebarChildrenWithClassProps) -> Html {
+  html! {
+    <h2 class={classes!("SidebarTitle", &props.class)}>
+      {props.children.clone()}
+    </h2>
   }
 }
 
