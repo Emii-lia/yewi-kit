@@ -30,6 +30,7 @@ fn main() {
     "/docs/progress",
     "/docs/radio",
     "/docs/select",
+    "/docs/sidebar",
     "/docs/table",
     "/docs/tabs",
     "/docs/textarea",
