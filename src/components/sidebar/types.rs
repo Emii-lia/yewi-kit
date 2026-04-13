@@ -53,6 +53,6 @@ impl SidebarConfig {
   }
 
   pub fn default() -> Self {
-    Self::new("16rem".to_string(), "100%".to_string(), "2.5rem".to_string())
+    Self::new("16rem".to_string(), "75%".to_string(), "2.5rem".to_string())
   }
 }
