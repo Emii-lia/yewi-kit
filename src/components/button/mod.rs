@@ -16,6 +16,8 @@ pub struct Props {
   #[prop_or_default]
   pub class: Classes,
   #[prop_or_default]
+  pub id: AttrValue,
+  #[prop_or_default]
   pub onclick: Callback<MouseEvent>,
   #[prop_or_default]
   pub disabled: bool,
@@ -65,6 +67,7 @@ pub(crate) fn button(props: &Props) -> Html {
           icon.is_some().then_some("btn-with-icon"),
           props.rounded.then_some("btn-rounded")
         )}
+        id={&props.id}
         disabled={props.disabled || props.is_loading}
         title={&props.title}
       >

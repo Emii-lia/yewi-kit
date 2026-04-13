@@ -6,18 +6,32 @@
   .Sidebar {
     @apply flex h-full w-[var(--sidebar-width)] flex-col border-r border-primary-100 bg-white p-4 max-h-screen min-h-svh;
     //@apply fixed top-0 bottom-0 left-0;
-
     &[data-state="collapsed"] {
       @apply w-0 invisible;
     }
     &[data-state="expanded"] {
-      @apply w-[var(--sidebar-width)];
+      @apply w-[var(--sidebar-width)] visible;
     }
     &[data-mobile="true"]{
-      @apply w-0 absolute z-50 top-0 bottom-0 left-0 transition-all duration-300 ease-in-out;
-      &[data-open-mobile="true"]{
-        @apply w-[var(--sidebar-width)] p-4;
+      @apply w-0 fixed z-50 top-0 bottom-0 left-0 transition-all duration-300 ease-in-out invisible;
+      &~.sidebar-overlay {
+        @apply hidden;
       }
+      &[data-position="right"]{
+        @apply right-0 left-auto;
+      }
+
+      &[data-open-mobile="true"]{
+        @apply w-[var(--sidebar-width)] p-4 visible;
+        &~.sidebar-overlay {
+          @apply fixed top-0 bottom-0 left-0 w-full h-full bg-black/50 z-30 flex;
+        }
+      }
+    }
+  }
+  &:has(.Sidebar[data-mobile="true"]) {
+    &[data-open-mobile="true"]{
+      @apply overflow-hidden backdrop-brightness-75;
     }
   }
 }
@@ -47,7 +61,7 @@
 }
 
 .SidebarGroupTitle {
-  @apply flex h-8 shrink-0 rounded-md px-2 text-xs font-medium text-slate-500;
+  @apply flex h-8 shrink-0 rounded-md px-2 text-xs font-medium text-slate-400;
 }
 
 .SidebarGroupContent {
@@ -59,7 +73,7 @@
 }
 
 .SidebarMenuItem {
-  @apply w-full rounded-lg px-3 py-2 relative transition-all text-slate-700 cursor-pointer;
+  @apply w-full rounded-lg px-3 py-2 relative transition-all text-slate-600 cursor-pointer text-sm font-medium;
   &:hover {
     @apply text-slate-800 bg-primary-100;
   }
@@ -69,4 +83,17 @@
 }
 .SidebarMenuItemAction {
   @apply absolute right-2 top-1/2 -translate-y-1/2;
+}
+
+.SidebarSubMenu {
+  @apply w-full rounded-lg p-0 relative transition-all text-slate-700 cursor-default bg-inherit border-none shadow-none;
+}
+.SidebarSubMenuTitle {
+  @apply font-medium text-sm px-3 py-2 cursor-pointer rounded-lg text-slate-700;
+  &:hover {
+    @apply text-slate-800 bg-primary-100;
+  }
+}
+.SidebarSubMenuContent {
+  @apply flex flex-col gap-1 shadow-none pb-0;
 }

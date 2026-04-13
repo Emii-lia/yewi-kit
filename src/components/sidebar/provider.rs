@@ -1,4 +1,4 @@
-use yew::{classes, component, html, Callback, Classes, ContextProvider, Html, Properties};
+use yew::{classes, component, html, Callback, Classes, ContextProvider, Html, NodeRef, Properties};
 use crate::components::sidebar::hooks::{use_sidebar_provider, SidebarProviderHookParams};
 use crate::components::sidebar::types::{SidebarConfig, SidebarState};
 
@@ -11,6 +11,7 @@ pub struct SidebarContextType {
   pub set_open_mobile: Callback<bool>,
   pub is_mobile: bool,
   pub toggle_sidebar: Callback<()>,
+  pub sidebar_ref: NodeRef,
 }
 
 #[derive(Properties, Debug, PartialEq)]

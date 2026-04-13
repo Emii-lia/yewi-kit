@@ -4,7 +4,7 @@ use yew::{component, html, Html};
 use yew_icons::IconData;
 use crate::components::button::{Button, ButtonVariant};
 use crate::components::code_preview::CodePreview;
-use crate::components::sidebar::{Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupTitle, SidebarHeader, SidebarMenu, SidebarMenuItem, SidebarTitle, SidebarTrigger};
+use crate::components::sidebar::{Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupTitle, SidebarHeader, SidebarMenu, SidebarMenuItem, SidebarSubMenu, SidebarSubMenuContent, SidebarSubMenuTitle, SidebarTitle, SidebarTrigger};
 use crate::components::sidebar::provider::SidebarProvider;
 use crate::components::sidebar::types::SidebarPosition;
 use crate::features::component_table::ComponentTable;
@@ -21,14 +21,14 @@ pub fn sidebar_preview() -> Html {
   html! {
     <div  class="PreviewSection">
       <h2 class="preview-title">
-        {"Table"}
+        {"Sidebar"}
       </h2>
       <div class="preview-subsection">
         <h2 class="preview-subsection-title">
           {"Installation"}
         </h2>
         <div class="preview-header-description">
-          {""}
+          {"Add a sidebar to your application for navigation or additional content."}
         </div>
         <CodePreview code={"yewi add sidebar"}/>
       </div>
@@ -77,8 +77,52 @@ pub fn sidebar_preview() -> Html {
                   {"Button"}
                 </SidebarMenuItem>
                 <SidebarMenuItem>
-                  {"Checkbox"}
+                  {"Carousel"}
                 </SidebarMenuItem>
+                <SidebarSubMenu>
+                  <SidebarSubMenuTitle>
+                    {"Layout"}
+                  </SidebarSubMenuTitle>
+                  <SidebarSubMenuContent>
+                    <SidebarMenuItem>
+                      {"Collapse"}
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                      {"Modal"}
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                      {"Tabs"}
+                    </SidebarMenuItem>
+                  </SidebarSubMenuContent>
+                </SidebarSubMenu>
+                <SidebarSubMenu>
+                  <SidebarSubMenuTitle>
+                    {"Form"}
+                  </SidebarSubMenuTitle>
+                  <SidebarSubMenuContent>
+                    <SidebarMenuItem>
+                      {"Checkbox"}
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                      {"File Input"}
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                      {"Input"}
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                      {"PasswordInput"}
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                      {"Radio"}
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                      {"Select"}
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                      {"Textarea"}
+                    </SidebarMenuItem>
+                  </SidebarSubMenuContent>
+                </SidebarSubMenu>
               </SidebarMenu>
             </SidebarGroupContent>
           </SidebarGroup>
@@ -135,8 +179,52 @@ pub fn sidebar_preview() -> Html {
                           {"Button"}
                         </SidebarMenuItem>
                         <SidebarMenuItem>
-                          {"Checkbox"}
+                          {"Carousel"}
                         </SidebarMenuItem>
+                        <SidebarSubMenu>
+                          <SidebarSubMenuTitle>
+                            {"Layout"}
+                          </SidebarSubMenuTitle>
+                          <SidebarSubMenuContent>
+                            <SidebarMenuItem>
+                              {"Collapse"}
+                            </SidebarMenuItem>
+                            <SidebarMenuItem>
+                              {"Modal"}
+                            </SidebarMenuItem>
+                            <SidebarMenuItem>
+                              {"Tabs"}
+                            </SidebarMenuItem>
+                          </SidebarSubMenuContent>
+                        </SidebarSubMenu>
+                        <SidebarSubMenu>
+                          <SidebarSubMenuTitle>
+                            {"Form"}
+                          </SidebarSubMenuTitle>
+                          <SidebarSubMenuContent>
+                            <SidebarMenuItem>
+                              {"Checkbox"}
+                            </SidebarMenuItem>
+                            <SidebarMenuItem>
+                              {"File Input"}
+                            </SidebarMenuItem>
+                            <SidebarMenuItem>
+                              {"Input"}
+                            </SidebarMenuItem>
+                            <SidebarMenuItem>
+                              {"PasswordInput"}
+                            </SidebarMenuItem>
+                            <SidebarMenuItem>
+                              {"Radio"}
+                            </SidebarMenuItem>
+                            <SidebarMenuItem>
+                              {"Select"}
+                            </SidebarMenuItem>
+                            <SidebarMenuItem>
+                              {"Textarea"}
+                            </SidebarMenuItem>
+                          </SidebarSubMenuContent>
+                        </SidebarSubMenu>
                       </SidebarMenu>
                     </SidebarGroupContent>
                   </SidebarGroup>
@@ -194,8 +282,52 @@ pub fn sidebar_preview() -> Html {
                   {"Button"}
                 </SidebarMenuItem>
                 <SidebarMenuItem>
-                  {"Checkbox"}
+                  {"Carousel"}
                 </SidebarMenuItem>
+                <SidebarSubMenu>
+                  <SidebarSubMenuTitle>
+                    {"Layout"}
+                  </SidebarSubMenuTitle>
+                  <SidebarSubMenuContent>
+                    <SidebarMenuItem>
+                      {"Collapse"}
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                      {"Modal"}
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                      {"Tabs"}
+                    </SidebarMenuItem>
+                  </SidebarSubMenuContent>
+                </SidebarSubMenu>
+                <SidebarSubMenu>
+                  <SidebarSubMenuTitle>
+                    {"Form"}
+                  </SidebarSubMenuTitle>
+                  <SidebarSubMenuContent>
+                    <SidebarMenuItem>
+                      {"Checkbox"}
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                      {"File Input"}
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                      {"Input"}
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                      {"PasswordInput"}
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                      {"Radio"}
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                      {"Select"}
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                      {"Textarea"}
+                    </SidebarMenuItem>
+                  </SidebarSubMenuContent>
+                </SidebarSubMenu>
               </SidebarMenu>
             </SidebarGroupContent>
           </SidebarGroup>
@@ -252,8 +384,52 @@ pub fn sidebar_preview() -> Html {
                           {"Button"}
                         </SidebarMenuItem>
                         <SidebarMenuItem>
-                          {"Checkbox"}
+                          {"Carousel"}
                         </SidebarMenuItem>
+                        <SidebarSubMenu>
+                          <SidebarSubMenuTitle>
+                            {"Layout"}
+                          </SidebarSubMenuTitle>
+                          <SidebarSubMenuContent>
+                            <SidebarMenuItem>
+                              {"Collapse"}
+                            </SidebarMenuItem>
+                            <SidebarMenuItem>
+                              {"Modal"}
+                            </SidebarMenuItem>
+                            <SidebarMenuItem>
+                              {"Tabs"}
+                            </SidebarMenuItem>
+                          </SidebarSubMenuContent>
+                        </SidebarSubMenu>
+                        <SidebarSubMenu>
+                          <SidebarSubMenuTitle>
+                            {"Form"}
+                          </SidebarSubMenuTitle>
+                          <SidebarSubMenuContent>
+                            <SidebarMenuItem>
+                              {"Checkbox"}
+                            </SidebarMenuItem>
+                            <SidebarMenuItem>
+                              {"File Input"}
+                            </SidebarMenuItem>
+                            <SidebarMenuItem>
+                              {"Input"}
+                            </SidebarMenuItem>
+                            <SidebarMenuItem>
+                              {"PasswordInput"}
+                            </SidebarMenuItem>
+                            <SidebarMenuItem>
+                              {"Radio"}
+                            </SidebarMenuItem>
+                            <SidebarMenuItem>
+                              {"Select"}
+                            </SidebarMenuItem>
+                            <SidebarMenuItem>
+                              {"Textarea"}
+                            </SidebarMenuItem>
+                          </SidebarSubMenuContent>
+                        </SidebarSubMenu>
                       </SidebarMenu>
                     </SidebarGroupContent>
                   </SidebarGroup>

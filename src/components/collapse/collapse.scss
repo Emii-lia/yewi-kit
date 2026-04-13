@@ -1,51 +1,56 @@
+.CollapseTrigger {
+  @apply w-full flex items-center justify-between gap-4 cursor-pointer  px-4 py-3;
+  @apply text-slate-950 font-semibold text-lg;
+  .collapse-trigger-content {
+    @apply w-full flex items-center gap-4;
+  }
+  .collapse-trigger-icon {
+    @apply w-5 h-5 aspect-square flex-shrink-0;
+  }
+  &[data-indicator="plus"] {
+    --indicator: "\002B";
+    --rotate: 135deg;
+  }
+  &[data-indicator="chevron"] {
+    --indicator: "\003E";
+    --rotate: 90deg;
+  }
+  &:after {
+    content: var(--indicator);
+    @apply w-auto h-full aspect-square text-slate-800 font-medium flex justify-center items-center transition-transform duration-200 ease-in-out text-inherit;
+  }
+}
 .Collapse {
   @apply w-full flex flex-col border border-slate-200 rounded-lg bg-white shadow-sm transition-all duration-200 ease-in-out;
-  .collapse-trigger {
-    @apply w-full flex items-center justify-between gap-4 cursor-pointer  px-4 py-3;
-    @apply text-slate-950 font-semibold text-lg;
-    &:after {
-      content: "\002B";
-      @apply h-full aspect-square text-slate-800 text-lg font-medium flex justify-center items-center transition-transform duration-200 ease-in-out;
-    }
-  }
-  &__toggle {
-    @apply w-full flex flex-col border border-slate-200 rounded-lg bg-white shadow-sm transition-all duration-200 ease-in-out;
+  &.toggle {
     &.open {
-      .collapse-trigger {
+      .CollapseTrigger {
         &:after {
-          @apply rotate-[135deg];
+          @apply rotate-[var(--rotate)];
         }
       }
-      .collapse-content {
+      .CollapseContent {
         @apply opacity-100 max-h-screen overflow-visible px-4 pb-3 mt-2;
-      }
-    }
-    .collapse-trigger {
-      @apply w-full h-full flex items-center justify-between gap-4 cursor-pointer  px-4 py-3;
-      @apply text-slate-950 font-semibold text-lg;
-      &:after {
-        content: "\002B";
-        @apply h-full w-auto aspect-square text-slate-800 text-xl font-medium flex justify-center items-center transition-transform duration-200 ease-in-out;
       }
     }
     .collapse-state {
       @apply hidden;
     }
-    .collapse-content {
+    .CollapseContent {
       @apply w-full opacity-0 max-h-0 overflow-hidden transition-all duration-200 ease-in-out px-4;
     }
   }
-  &:not(&__toggle) {
-    .collapse-content {
+  &:not(&.toggle) {
+    .CollapseContent {
       @apply w-full opacity-0 max-h-0 overflow-hidden transition-all duration-200 ease-in-out px-4;
     }
     &:focus-within {
-      .collapse-trigger {
+      .CollapseTrigger {
         &:after {
-          @apply rotate-[135deg];
+          @apply rotate-[var(--rotate)];
         }
       }
-      .collapse-content {
+      .CollapseContent {
         @apply opacity-100 max-h-screen overflow-visible px-4 pb-3;
       }
     }

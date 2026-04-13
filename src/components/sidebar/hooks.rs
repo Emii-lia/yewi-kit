@@ -1,7 +1,7 @@
 use web_sys::wasm_bindgen::JsCast;
 use web_sys::wasm_bindgen::prelude::Closure;
 use web_sys::window;
-use yew::{hook, use_effect_with, use_memo, use_state, Callback};
+use yew::{hook, use_effect_with, use_memo, use_node_ref, use_state, Callback};
 use crate::components::sidebar::provider::SidebarContextType;
 use crate::components::sidebar::types::SidebarState;
 
@@ -60,6 +60,7 @@ pub fn use_sidebar_provider(params: SidebarProviderHookParams) -> SidebarContext
   let open_mobile = use_state(|| false);
   let open = use_state(|| params.default_open);
   let is_open = params.open.unwrap_or_else(|| *open);
+  let sidebar_ref = use_node_ref();
 
   let set_open = {
     let onopenchange = params.onopenchange.clone();
@@ -104,7 +105,6 @@ pub fn use_sidebar_provider(params: SidebarProviderHookParams) -> SidebarContext
     })
   };
 
-
   SidebarContextType {
     state: (*state).clone(),
     open: is_open,
@@ -113,5 +113,6 @@ pub fn use_sidebar_provider(params: SidebarProviderHookParams) -> SidebarContext
     set_open_mobile,
     is_mobile,
     toggle_sidebar,
+    sidebar_ref: sidebar_ref.clone(),
   }
 }
