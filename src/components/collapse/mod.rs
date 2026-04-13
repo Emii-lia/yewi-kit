@@ -1,7 +1,7 @@
 mod types;
 mod hooks;
 
-use yew::{classes, component, html, AttrValue, Callback, Classes, Html, Properties};
+use yew::{classes, component, html, Callback, Classes, Html, Properties};
 use yew_icons::{Icon, IconData};
 pub(crate) use types::*;
 use crate::components::collapse::hooks::{use_collapse, HookResponse};
