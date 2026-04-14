@@ -106,6 +106,7 @@ pub fn get_components() -> Vec<ComponentRow> {
         "active".to_string(),
         "children".to_string(),
         "class".to_string(),
+        "icon".to_string(),
         "onclick".to_string(),
       ]
     }
