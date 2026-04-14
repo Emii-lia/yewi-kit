@@ -73,12 +73,29 @@
 }
 
 .SidebarMenuItem {
+  @apply flex items-center justify-between gap-2;
   @apply w-full rounded-lg px-3 py-2 relative transition-all text-slate-600 cursor-pointer text-sm font-medium;
   &:hover {
     @apply text-slate-800 bg-primary-100;
+    .sidebar-menu-item-content {
+      .sidebar-menu-item-icon {
+        @apply text-slate-800;
+      }
+    }
   }
   &[data-active="true"] {
     @apply text-primary-800 bg-primary-200;
+    .sidebar-menu-item-content {
+      .sidebar-menu-item-icon {
+        @apply text-primary-800;
+      }
+    }
+  }
+  .sidebar-menu-item-content {
+    @apply flex items-center gap-2;
+    .sidebar-menu-item-icon {
+      @apply text-slate-600 w-3.5 h-3.5;
+    }
   }
 }
 .SidebarMenuItemAction {

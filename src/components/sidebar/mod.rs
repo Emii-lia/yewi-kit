@@ -1,6 +1,6 @@
 use web_sys::MouseEvent;
 use yew::{classes, component, html, Callback, Classes, Html, Properties};
-use yew_icons::IconData;
+use yew_icons::{Icon, IconData};
 use crate::components::sidebar::provider::SidebarContextType;
 use store::use_sidebar_store;
 use crate::components::button::{Button, ButtonVariant};
@@ -212,7 +212,9 @@ pub struct SidebarMenuItemProps {
   #[prop_or_default]
   pub onclick: Callback<()>,
   #[prop_or_default]
-  pub action: Html
+  pub action: Html,
+  #[prop_or_default]
+  pub icon: Option<IconData>,
 }
 #[component(SidebarMenuItem)]
 pub fn sidebar_menu_item(props: &SidebarMenuItemProps) -> Html {
@@ -231,7 +233,14 @@ pub fn sidebar_menu_item(props: &SidebarMenuItemProps) -> Html {
         })
       }}
     >
-      {props.children.clone()}
+      <div class={"sidebar-menu-item-content"}>
+        {html! {
+          if let Some(icon) = props.icon.clone() {
+            <Icon data={icon} class={"sidebar-menu-item-icon"}/>
+          }
+        }}
+        {props.children.clone()}
+      </div>
       <div class={"SidebarMenuItemAction"}>
         {props.action.clone()}
       </div>
