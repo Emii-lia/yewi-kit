@@ -129,6 +129,16 @@ pub struct SidebarChildrenWithClassProps {
   #[prop_or_default]
   pub class: Classes,
 }
+
+#[derive(Properties, Debug, PartialEq)]
+pub struct SidebarChildrenWithClassWithIconProps {
+  pub children: Html,
+  #[prop_or_default]
+  pub class: Classes,
+  #[prop_or_default]
+  pub icon: Option<IconData>,
+}
+
 #[component(SidebarHeader)]
 pub fn sidebar_header(props: &SidebarChildrenWithClassProps) -> Html {
   html! {
@@ -175,9 +185,14 @@ pub fn sidebar_group(props: &SidebarChildrenWithClassProps) -> Html {
 }
 
 #[component(SidebarGroupTitle)]
-pub fn sidebar_group_title(props: &SidebarChildrenWithClassProps) -> Html {
+pub fn sidebar_group_title(props: &SidebarChildrenWithClassWithIconProps) -> Html {
   html! {
     <div class={classes!("SidebarGroupTitle", &props.class)}>
+      {html! {
+        if let Some(icon) = props.icon.clone() {
+          <Icon data={icon} class={"sidebar-group-title-icon"}/>
+        }
+      }}
       {props.children.clone()}
     </div>
   }
@@ -261,11 +276,12 @@ pub fn sidebar_sub_menu(props: &SidebarChildrenWithClassProps) -> Html {
 }
 
 #[component(SidebarSubMenuTitle)]
-pub fn sidebar_sub_menu_title(props: &SidebarChildrenWithClassProps) -> Html {
+pub fn sidebar_sub_menu_title(props: &SidebarChildrenWithClassWithIconProps) -> Html {
   html! {
     <CollapseTrigger
       class={classes!("SidebarSubMenuTitle", &props.class)}
       indicator={CollapseIndicator::Chevron}
+      icon={props.icon.clone()}
     >
       {props.children.clone()}
     </CollapseTrigger>
