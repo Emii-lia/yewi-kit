@@ -152,6 +152,12 @@ pub fn get_props() -> Vec<PropRow> {
       default: Some("IconData::LUCIDE_SIDEBAR".to_string())
     },
     PropRow {
+      name: "icon".to_string(),
+      r#type: "Optoin<IconData>".to_string(),
+      description: "Sidebar item icon".to_string(),
+      default: None
+    },
+    PropRow {
       name: "onclick".to_string(),
       r#type: "Callback<()>".to_string(),
       description: "Menu item or Sidebar trigger onclick callback".to_string(),
