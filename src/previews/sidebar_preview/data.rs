@@ -80,6 +80,7 @@ pub fn get_components() -> Vec<ComponentRow> {
       props: vec![
         "children".to_string(),
         "class".to_string(),
+        "icon".to_string(),
       ]
     },
     ComponentRow {
@@ -147,15 +148,15 @@ pub fn get_props() -> Vec<PropRow> {
     },
     PropRow {
       name: "icon".to_string(),
+      r#type: "Option<IconData>".to_string(),
+      description: "Sidebar item icon".to_string(),
+      default: None
+    },
+    PropRow {
+      name: "icon (SidebarTrigger)".to_string(),
       r#type: "IconData".to_string(),
       description: "Sidebar trigger icon".to_string(),
       default: Some("IconData::LUCIDE_SIDEBAR".to_string())
-    },
-    PropRow {
-      name: "icon".to_string(),
-      r#type: "Optoin<IconData>".to_string(),
-      description: "Sidebar item icon".to_string(),
-      default: None
     },
     PropRow {
       name: "onclick".to_string(),

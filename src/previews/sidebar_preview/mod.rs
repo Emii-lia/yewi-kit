@@ -47,22 +47,22 @@ pub fn sidebar_preview() -> Html {
         </SidebarHeader>
         <SidebarContent>
           <SidebarGroup>
-            <SidebarGroupTitle>
+            <SidebarGroupTitle icon={IconData::LUCIDE_BOX}>
               {"Get Started"}
             </SidebarGroupTitle>
             <SidebarGroupContent>
               <SidebarMenu>
-                <SidebarMenuItem>
+                <SidebarMenuItem icon={IconData::LUCIDE_CODE_2}>
                   {"Installation"}
                 </SidebarMenuItem>
-                <SidebarMenuItem>
+                <SidebarMenuItem icon={IconData::LUCIDE_COMPONENT}>
                   {"Quick Start"}
                 </SidebarMenuItem>
               </SidebarMenu>
             </SidebarGroupContent>
           </SidebarGroup>
           <SidebarGroup>
-            <SidebarGroupTitle>
+            <SidebarGroupTitle icon={IconData::LUCIDE_PUZZLE}>
               {"Components"}
             </SidebarGroupTitle>
             <SidebarGroupContent>
@@ -80,7 +80,7 @@ pub fn sidebar_preview() -> Html {
                   {"Carousel"}
                 </SidebarMenuItem>
                 <SidebarSubMenu>
-                  <SidebarSubMenuTitle>
+                  <SidebarSubMenuTitle icon={IconData::LUCIDE_LAYOUT_DASHBOARD}>
                     {"Layout"}
                   </SidebarSubMenuTitle>
                   <SidebarSubMenuContent>
@@ -96,7 +96,7 @@ pub fn sidebar_preview() -> Html {
                   </SidebarSubMenuContent>
                 </SidebarSubMenu>
                 <SidebarSubMenu>
-                  <SidebarSubMenuTitle>
+                  <SidebarSubMenuTitle icon={IconData::LUCIDE_FORM_INPUT}>
                     {"Form"}
                   </SidebarSubMenuTitle>
                   <SidebarSubMenuContent>
@@ -149,22 +149,22 @@ pub fn sidebar_preview() -> Html {
                 </SidebarHeader>
                 <SidebarContent>
                   <SidebarGroup>
-                    <SidebarGroupTitle>
+                    <SidebarGroupTitle icon={IconData::LUCIDE_BOX}>
                       {"Get Started"}
                     </SidebarGroupTitle>
                     <SidebarGroupContent>
                       <SidebarMenu>
-                        <SidebarMenuItem>
+                        <SidebarMenuItem icon={IconData::LUCIDE_CODE_2}>
                           {"Installation"}
                         </SidebarMenuItem>
-                        <SidebarMenuItem>
+                        <SidebarMenuItem icon={IconData::LUCIDE_COMPONENT}>
                           {"Quick Start"}
                         </SidebarMenuItem>
                       </SidebarMenu>
                     </SidebarGroupContent>
                   </SidebarGroup>
                   <SidebarGroup>
-                    <SidebarGroupTitle>
+                    <SidebarGroupTitle icon={IconData::LUCIDE_PUZZLE}>
                       {"Components"}
                     </SidebarGroupTitle>
                     <SidebarGroupContent>
@@ -182,7 +182,7 @@ pub fn sidebar_preview() -> Html {
                           {"Carousel"}
                         </SidebarMenuItem>
                         <SidebarSubMenu>
-                          <SidebarSubMenuTitle>
+                          <SidebarSubMenuTitle icon={IconData::LUCIDE_LAYOUT_DASHBOARD}>
                             {"Layout"}
                           </SidebarSubMenuTitle>
                           <SidebarSubMenuContent>
@@ -198,7 +198,7 @@ pub fn sidebar_preview() -> Html {
                           </SidebarSubMenuContent>
                         </SidebarSubMenu>
                         <SidebarSubMenu>
-                          <SidebarSubMenuTitle>
+                          <SidebarSubMenuTitle icon={IconData::LUCIDE_FORM_INPUT}>
                             {"Form"}
                           </SidebarSubMenuTitle>
                           <SidebarSubMenuContent>
@@ -252,22 +252,22 @@ pub fn sidebar_preview() -> Html {
         </SidebarHeader>
         <SidebarContent>
           <SidebarGroup>
-            <SidebarGroupTitle>
+            <SidebarGroupTitle icon={IconData::LUCIDE_BOX}>
               {"Get Started"}
             </SidebarGroupTitle>
             <SidebarGroupContent>
               <SidebarMenu>
-                <SidebarMenuItem>
+                <SidebarMenuItem icon={IconData::LUCIDE_CODE_2}>
                   {"Installation"}
                 </SidebarMenuItem>
-                <SidebarMenuItem>
+                <SidebarMenuItem icon={IconData::LUCIDE_COMPONENT}>
                   {"Quick Start"}
                 </SidebarMenuItem>
               </SidebarMenu>
             </SidebarGroupContent>
           </SidebarGroup>
           <SidebarGroup>
-            <SidebarGroupTitle>
+            <SidebarGroupTitle icon={IconData::LUCIDE_PUZZLE}>
               {"Components"}
             </SidebarGroupTitle>
             <SidebarGroupContent>
@@ -285,7 +285,7 @@ pub fn sidebar_preview() -> Html {
                   {"Carousel"}
                 </SidebarMenuItem>
                 <SidebarSubMenu>
-                  <SidebarSubMenuTitle>
+                  <SidebarSubMenuTitle icon={IconData::LUCIDE_LAYOUT_DASHBOARD}>
                     {"Layout"}
                   </SidebarSubMenuTitle>
                   <SidebarSubMenuContent>
@@ -301,7 +301,7 @@ pub fn sidebar_preview() -> Html {
                   </SidebarSubMenuContent>
                 </SidebarSubMenu>
                 <SidebarSubMenu>
-                  <SidebarSubMenuTitle>
+                  <SidebarSubMenuTitle icon={IconData::LUCIDE_FORM_INPUT}>
                     {"Form"}
                   </SidebarSubMenuTitle>
                   <SidebarSubMenuContent>
@@ -354,22 +354,22 @@ pub fn sidebar_preview() -> Html {
                 </SidebarHeader>
                 <SidebarContent>
                   <SidebarGroup>
-                    <SidebarGroupTitle>
+                    <SidebarGroupTitle icon={IconData::LUCIDE_BOX}>
                       {"Get Started"}
                     </SidebarGroupTitle>
                     <SidebarGroupContent>
                       <SidebarMenu>
-                        <SidebarMenuItem>
+                        <SidebarMenuItem icon={IconData::LUCIDE_CODE_2}>
                           {"Installation"}
                         </SidebarMenuItem>
-                        <SidebarMenuItem>
+                        <SidebarMenuItem icon={IconData::LUCIDE_COMPONENT}>
                           {"Quick Start"}
                         </SidebarMenuItem>
                       </SidebarMenu>
                     </SidebarGroupContent>
                   </SidebarGroup>
                   <SidebarGroup>
-                    <SidebarGroupTitle>
+                    <SidebarGroupTitle icon={IconData::LUCIDE_PUZZLE}>
                       {"Components"}
                     </SidebarGroupTitle>
                     <SidebarGroupContent>
@@ -387,7 +387,7 @@ pub fn sidebar_preview() -> Html {
                           {"Carousel"}
                         </SidebarMenuItem>
                         <SidebarSubMenu>
-                          <SidebarSubMenuTitle>
+                          <SidebarSubMenuTitle icon={IconData::LUCIDE_LAYOUT_DASHBOARD}>
                             {"Layout"}
                           </SidebarSubMenuTitle>
                           <SidebarSubMenuContent>
@@ -403,7 +403,7 @@ pub fn sidebar_preview() -> Html {
                           </SidebarSubMenuContent>
                         </SidebarSubMenu>
                         <SidebarSubMenu>
-                          <SidebarSubMenuTitle>
+                          <SidebarSubMenuTitle icon={IconData::LUCIDE_FORM_INPUT}>
                             {"Form"}
                           </SidebarSubMenuTitle>
                           <SidebarSubMenuContent>
