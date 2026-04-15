@@ -1,4 +1,3 @@
-mod sidebar;
 mod installation;
 mod home_header;
 mod hero;
@@ -11,8 +10,8 @@ mod documentation;
 mod why_section;
 pub(crate) mod prop_table;
 pub(crate) mod component_table;
+pub mod yewi_sidebar;
 
-pub(crate) use sidebar::*;
 pub(crate) use installation::*;
 pub(crate) use home_header::*;
 pub(crate) use hero::*;
