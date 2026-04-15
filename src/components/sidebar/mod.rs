@@ -1,6 +1,6 @@
 use web_sys::MouseEvent;
 use yew::{classes, component, html, Callback, Classes, Html, Properties};
-use yew_icons::IconData;
+use yew_icons::{Icon, IconData};
 use crate::components::sidebar::provider::SidebarContextType;
 use store::use_sidebar_store;
 use crate::components::button::{Button, ButtonVariant};
@@ -129,6 +129,16 @@ pub struct SidebarChildrenWithClassProps {
   #[prop_or_default]
   pub class: Classes,
 }
+
+#[derive(Properties, Debug, PartialEq)]
+pub struct SidebarChildrenWithClassWithIconProps {
+  pub children: Html,
+  #[prop_or_default]
+  pub class: Classes,
+  #[prop_or_default]
+  pub icon: Option<IconData>,
+}
+
 #[component(SidebarHeader)]
 pub fn sidebar_header(props: &SidebarChildrenWithClassProps) -> Html {
   html! {
@@ -175,9 +185,14 @@ pub fn sidebar_group(props: &SidebarChildrenWithClassProps) -> Html {
 }
 
 #[component(SidebarGroupTitle)]
-pub fn sidebar_group_title(props: &SidebarChildrenWithClassProps) -> Html {
+pub fn sidebar_group_title(props: &SidebarChildrenWithClassWithIconProps) -> Html {
   html! {
     <div class={classes!("SidebarGroupTitle", &props.class)}>
+      {html! {
+        if let Some(icon) = props.icon.clone() {
+          <Icon data={icon} class={"sidebar-group-title-icon"}/>
+        }
+      }}
       {props.children.clone()}
     </div>
   }
@@ -212,7 +227,9 @@ pub struct SidebarMenuItemProps {
   #[prop_or_default]
   pub onclick: Callback<()>,
   #[prop_or_default]
-  pub action: Html
+  pub action: Html,
+  #[prop_or_default]
+  pub icon: Option<IconData>,
 }
 #[component(SidebarMenuItem)]
 pub fn sidebar_menu_item(props: &SidebarMenuItemProps) -> Html {
@@ -231,7 +248,14 @@ pub fn sidebar_menu_item(props: &SidebarMenuItemProps) -> Html {
         })
       }}
     >
-      {props.children.clone()}
+      <div class={"sidebar-menu-item-content"}>
+        {html! {
+          if let Some(icon) = props.icon.clone() {
+            <Icon data={icon} class={"sidebar-menu-item-icon"}/>
+          }
+        }}
+        {props.children.clone()}
+      </div>
       <div class={"SidebarMenuItemAction"}>
         {props.action.clone()}
       </div>
@@ -252,11 +276,12 @@ pub fn sidebar_sub_menu(props: &SidebarChildrenWithClassProps) -> Html {
 }
 
 #[component(SidebarSubMenuTitle)]
-pub fn sidebar_sub_menu_title(props: &SidebarChildrenWithClassProps) -> Html {
+pub fn sidebar_sub_menu_title(props: &SidebarChildrenWithClassWithIconProps) -> Html {
   html! {
     <CollapseTrigger
       class={classes!("SidebarSubMenuTitle", &props.class)}
       indicator={CollapseIndicator::Chevron}
+      icon={props.icon.clone()}
     >
       {props.children.clone()}
     </CollapseTrigger>

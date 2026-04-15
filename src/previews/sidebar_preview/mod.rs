@@ -47,78 +47,78 @@ pub fn sidebar_preview() -> Html {
         </SidebarHeader>
         <SidebarContent>
           <SidebarGroup>
-            <SidebarGroupTitle>
+            <SidebarGroupTitle icon={IconData::LUCIDE_BOX}>
               {"Get Started"}
             </SidebarGroupTitle>
             <SidebarGroupContent>
               <SidebarMenu>
-                <SidebarMenuItem>
+                <SidebarMenuItem icon={IconData::LUCIDE_CODE_2}>
                   {"Installation"}
                 </SidebarMenuItem>
-                <SidebarMenuItem>
+                <SidebarMenuItem icon={IconData::LUCIDE_COMPONENT}>
                   {"Quick Start"}
                 </SidebarMenuItem>
               </SidebarMenu>
             </SidebarGroupContent>
           </SidebarGroup>
           <SidebarGroup>
-            <SidebarGroupTitle>
+            <SidebarGroupTitle icon={IconData::LUCIDE_PUZZLE}>
               {"Components"}
             </SidebarGroupTitle>
             <SidebarGroupContent>
               <SidebarMenu>
-                <SidebarMenuItem active=true>
+                <SidebarMenuItem active=true icon={IconData::LUCIDE_USER}>
                   {"Avatar"}
                 </SidebarMenuItem>
-                <SidebarMenuItem>
+                <SidebarMenuItem icon={IconData::LUCIDE_INFO}>
                   {"Badge"}
                 </SidebarMenuItem>
-                <SidebarMenuItem>
+                <SidebarMenuItem icon={IconData::LUCIDE_MOUSE_POINTER_CLICK}>
                   {"Button"}
                 </SidebarMenuItem>
-                <SidebarMenuItem>
+                <SidebarMenuItem icon={IconData::LUCIDE_LAYERS}>
                   {"Carousel"}
                 </SidebarMenuItem>
                 <SidebarSubMenu>
-                  <SidebarSubMenuTitle>
+                  <SidebarSubMenuTitle icon={IconData::LUCIDE_LAYOUT_DASHBOARD}>
                     {"Layout"}
                   </SidebarSubMenuTitle>
                   <SidebarSubMenuContent>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem icon={IconData::LUCIDE_PLUS}>
                       {"Collapse"}
                     </SidebarMenuItem>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem icon={IconData::LUCIDE_RECTANGLE_HORIZONTAL}>
                       {"Modal"}
                     </SidebarMenuItem>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem icon={IconData::LUCIDE_COMPONENT}>
                       {"Tabs"}
                     </SidebarMenuItem>
                   </SidebarSubMenuContent>
                 </SidebarSubMenu>
                 <SidebarSubMenu>
-                  <SidebarSubMenuTitle>
+                  <SidebarSubMenuTitle icon={IconData::LUCIDE_FORM_INPUT}>
                     {"Form"}
                   </SidebarSubMenuTitle>
                   <SidebarSubMenuContent>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem icon={IconData::LUCIDE_CHECK_SQUARE}>
                       {"Checkbox"}
                     </SidebarMenuItem>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem icon={IconData::LUCIDE_FILE_INPUT}>
                       {"File Input"}
                     </SidebarMenuItem>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem icon={IconData::LUCIDE_FORM_INPUT}>
                       {"Input"}
                     </SidebarMenuItem>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem icon={IconData::LUCIDE_KEY}>
                       {"PasswordInput"}
                     </SidebarMenuItem>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem icon={IconData::LUCIDE_CHECK_CIRCLE}>
                       {"Radio"}
                     </SidebarMenuItem>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem icon={IconData::LUCIDE_LIST_CHECKS}>
                       {"Select"}
                     </SidebarMenuItem>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem icon={IconData::LUCIDE_TEXT_CURSOR_INPUT}>
                       {"Textarea"}
                     </SidebarMenuItem>
                   </SidebarSubMenuContent>
@@ -149,78 +149,78 @@ pub fn sidebar_preview() -> Html {
                 </SidebarHeader>
                 <SidebarContent>
                   <SidebarGroup>
-                    <SidebarGroupTitle>
+                    <SidebarGroupTitle icon={IconData::LUCIDE_BOX}>
                       {"Get Started"}
                     </SidebarGroupTitle>
                     <SidebarGroupContent>
                       <SidebarMenu>
-                        <SidebarMenuItem>
+                        <SidebarMenuItem icon={IconData::LUCIDE_CODE_2}>
                           {"Installation"}
                         </SidebarMenuItem>
-                        <SidebarMenuItem>
+                        <SidebarMenuItem icon={IconData::LUCIDE_COMPONENT}>
                           {"Quick Start"}
                         </SidebarMenuItem>
                       </SidebarMenu>
                     </SidebarGroupContent>
                   </SidebarGroup>
                   <SidebarGroup>
-                    <SidebarGroupTitle>
+                    <SidebarGroupTitle icon={IconData::LUCIDE_PUZZLE}>
                       {"Components"}
                     </SidebarGroupTitle>
                     <SidebarGroupContent>
                       <SidebarMenu>
-                        <SidebarMenuItem active=true>
+                        <SidebarMenuItem active=true icon={IconData::LUCIDE_USER}>
                           {"Avatar"}
                         </SidebarMenuItem>
-                        <SidebarMenuItem>
+                        <SidebarMenuItem icon={IconData::LUCIDE_INFO}>
                           {"Badge"}
                         </SidebarMenuItem>
-                        <SidebarMenuItem>
+                        <SidebarMenuItem icon={IconData::LUCIDE_MOUSE_POINTER_CLICK}>
                           {"Button"}
                         </SidebarMenuItem>
-                        <SidebarMenuItem>
+                        <SidebarMenuItem icon={IconData::LUCIDE_LAYERS}>
                           {"Carousel"}
                         </SidebarMenuItem>
                         <SidebarSubMenu>
-                          <SidebarSubMenuTitle>
+                          <SidebarSubMenuTitle icon={IconData::LUCIDE_LAYOUT_DASHBOARD}>
                             {"Layout"}
                           </SidebarSubMenuTitle>
                           <SidebarSubMenuContent>
-                            <SidebarMenuItem>
+                            <SidebarMenuItem icon={IconData::LUCIDE_PLUS}>
                               {"Collapse"}
                             </SidebarMenuItem>
-                            <SidebarMenuItem>
+                            <SidebarMenuItem icon={IconData::LUCIDE_RECTANGLE_HORIZONTAL}>
                               {"Modal"}
                             </SidebarMenuItem>
-                            <SidebarMenuItem>
+                            <SidebarMenuItem icon={IconData::LUCIDE_COMPONENT}>
                               {"Tabs"}
                             </SidebarMenuItem>
                           </SidebarSubMenuContent>
                         </SidebarSubMenu>
                         <SidebarSubMenu>
-                          <SidebarSubMenuTitle>
+                          <SidebarSubMenuTitle icon={IconData::LUCIDE_FORM_INPUT}>
                             {"Form"}
                           </SidebarSubMenuTitle>
                           <SidebarSubMenuContent>
-                            <SidebarMenuItem>
+                            <SidebarMenuItem icon={IconData::LUCIDE_CHECK_SQUARE}>
                               {"Checkbox"}
                             </SidebarMenuItem>
-                            <SidebarMenuItem>
+                            <SidebarMenuItem icon={IconData::LUCIDE_FILE_INPUT}>
                               {"File Input"}
                             </SidebarMenuItem>
-                            <SidebarMenuItem>
+                            <SidebarMenuItem icon={IconData::LUCIDE_FORM_INPUT}>
                               {"Input"}
                             </SidebarMenuItem>
-                            <SidebarMenuItem>
+                            <SidebarMenuItem icon={IconData::LUCIDE_KEY}>
                               {"PasswordInput"}
                             </SidebarMenuItem>
-                            <SidebarMenuItem>
+                            <SidebarMenuItem icon={IconData::LUCIDE_CHECK_CIRCLE}>
                               {"Radio"}
                             </SidebarMenuItem>
-                            <SidebarMenuItem>
+                            <SidebarMenuItem icon={IconData::LUCIDE_LIST_CHECKS}>
                               {"Select"}
                             </SidebarMenuItem>
-                            <SidebarMenuItem>
+                            <SidebarMenuItem icon={IconData::LUCIDE_TEXT_CURSOR_INPUT}>
                               {"Textarea"}
                             </SidebarMenuItem>
                           </SidebarSubMenuContent>
@@ -252,78 +252,78 @@ pub fn sidebar_preview() -> Html {
         </SidebarHeader>
         <SidebarContent>
           <SidebarGroup>
-            <SidebarGroupTitle>
+            <SidebarGroupTitle icon={IconData::LUCIDE_BOX}>
               {"Get Started"}
             </SidebarGroupTitle>
             <SidebarGroupContent>
               <SidebarMenu>
-                <SidebarMenuItem>
+                <SidebarMenuItem icon={IconData::LUCIDE_CODE_2}>
                   {"Installation"}
                 </SidebarMenuItem>
-                <SidebarMenuItem>
+                <SidebarMenuItem icon={IconData::LUCIDE_COMPONENT}>
                   {"Quick Start"}
                 </SidebarMenuItem>
               </SidebarMenu>
             </SidebarGroupContent>
           </SidebarGroup>
           <SidebarGroup>
-            <SidebarGroupTitle>
+            <SidebarGroupTitle icon={IconData::LUCIDE_PUZZLE}>
               {"Components"}
             </SidebarGroupTitle>
             <SidebarGroupContent>
               <SidebarMenu>
-                <SidebarMenuItem active=true>
+                <SidebarMenuItem active=true icon={IconData::LUCIDE_USER}>
                   {"Avatar"}
                 </SidebarMenuItem>
-                <SidebarMenuItem>
+                <SidebarMenuItem icon={IconData::LUCIDE_INFO}>
                   {"Badge"}
                 </SidebarMenuItem>
-                <SidebarMenuItem>
+                <SidebarMenuItem icon={IconData::LUCIDE_MOUSE_POINTER_CLICK}>
                   {"Button"}
                 </SidebarMenuItem>
-                <SidebarMenuItem>
+                <SidebarMenuItem icon={IconData::LUCIDE_LAYERS}>
                   {"Carousel"}
                 </SidebarMenuItem>
                 <SidebarSubMenu>
-                  <SidebarSubMenuTitle>
+                  <SidebarSubMenuTitle icon={IconData::LUCIDE_LAYOUT_DASHBOARD}>
                     {"Layout"}
                   </SidebarSubMenuTitle>
                   <SidebarSubMenuContent>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem icon={IconData::LUCIDE_PLUS}>
                       {"Collapse"}
                     </SidebarMenuItem>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem icon={IconData::LUCIDE_RECTANGLE_HORIZONTAL}>
                       {"Modal"}
                     </SidebarMenuItem>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem icon={IconData::LUCIDE_COMPONENT}>
                       {"Tabs"}
                     </SidebarMenuItem>
                   </SidebarSubMenuContent>
                 </SidebarSubMenu>
                 <SidebarSubMenu>
-                  <SidebarSubMenuTitle>
+                  <SidebarSubMenuTitle icon={IconData::LUCIDE_FORM_INPUT}>
                     {"Form"}
                   </SidebarSubMenuTitle>
                   <SidebarSubMenuContent>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem icon={IconData::LUCIDE_CHECK_SQUARE}>
                       {"Checkbox"}
                     </SidebarMenuItem>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem icon={IconData::LUCIDE_FILE_INPUT}>
                       {"File Input"}
                     </SidebarMenuItem>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem icon={IconData::LUCIDE_FORM_INPUT}>
                       {"Input"}
                     </SidebarMenuItem>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem icon={IconData::LUCIDE_KEY}>
                       {"PasswordInput"}
                     </SidebarMenuItem>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem icon={IconData::LUCIDE_CHECK_CIRCLE}>
                       {"Radio"}
                     </SidebarMenuItem>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem icon={IconData::LUCIDE_LIST_CHECKS}>
                       {"Select"}
                     </SidebarMenuItem>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem icon={IconData::LUCIDE_TEXT_CURSOR_INPUT}>
                       {"Textarea"}
                     </SidebarMenuItem>
                   </SidebarSubMenuContent>
@@ -354,78 +354,78 @@ pub fn sidebar_preview() -> Html {
                 </SidebarHeader>
                 <SidebarContent>
                   <SidebarGroup>
-                    <SidebarGroupTitle>
+                    <SidebarGroupTitle icon={IconData::LUCIDE_BOX}>
                       {"Get Started"}
                     </SidebarGroupTitle>
                     <SidebarGroupContent>
                       <SidebarMenu>
-                        <SidebarMenuItem>
+                        <SidebarMenuItem icon={IconData::LUCIDE_CODE_2}>
                           {"Installation"}
                         </SidebarMenuItem>
-                        <SidebarMenuItem>
+                        <SidebarMenuItem icon={IconData::LUCIDE_COMPONENT}>
                           {"Quick Start"}
                         </SidebarMenuItem>
                       </SidebarMenu>
                     </SidebarGroupContent>
                   </SidebarGroup>
                   <SidebarGroup>
-                    <SidebarGroupTitle>
+                    <SidebarGroupTitle icon={IconData::LUCIDE_PUZZLE}>
                       {"Components"}
                     </SidebarGroupTitle>
                     <SidebarGroupContent>
                       <SidebarMenu>
-                        <SidebarMenuItem active=true>
+                        <SidebarMenuItem active=true icon={IconData::LUCIDE_USER}>
                           {"Avatar"}
                         </SidebarMenuItem>
-                        <SidebarMenuItem>
+                        <SidebarMenuItem icon={IconData::LUCIDE_INFO}>
                           {"Badge"}
                         </SidebarMenuItem>
-                        <SidebarMenuItem>
+                        <SidebarMenuItem icon={IconData::LUCIDE_MOUSE_POINTER_CLICK}>
                           {"Button"}
                         </SidebarMenuItem>
-                        <SidebarMenuItem>
+                        <SidebarMenuItem icon={IconData::LUCIDE_LAYERS}>
                           {"Carousel"}
                         </SidebarMenuItem>
                         <SidebarSubMenu>
-                          <SidebarSubMenuTitle>
+                          <SidebarSubMenuTitle icon={IconData::LUCIDE_LAYOUT_DASHBOARD}>
                             {"Layout"}
                           </SidebarSubMenuTitle>
                           <SidebarSubMenuContent>
-                            <SidebarMenuItem>
+                            <SidebarMenuItem icon={IconData::LUCIDE_PLUS}>
                               {"Collapse"}
                             </SidebarMenuItem>
-                            <SidebarMenuItem>
+                            <SidebarMenuItem icon={IconData::LUCIDE_RECTANGLE_HORIZONTAL}>
                               {"Modal"}
                             </SidebarMenuItem>
-                            <SidebarMenuItem>
+                            <SidebarMenuItem icon={IconData::LUCIDE_COMPONENT}>
                               {"Tabs"}
                             </SidebarMenuItem>
                           </SidebarSubMenuContent>
                         </SidebarSubMenu>
                         <SidebarSubMenu>
-                          <SidebarSubMenuTitle>
+                          <SidebarSubMenuTitle icon={IconData::LUCIDE_FORM_INPUT}>
                             {"Form"}
                           </SidebarSubMenuTitle>
                           <SidebarSubMenuContent>
-                            <SidebarMenuItem>
+                            <SidebarMenuItem icon={IconData::LUCIDE_CHECK_SQUARE}>
                               {"Checkbox"}
                             </SidebarMenuItem>
-                            <SidebarMenuItem>
+                            <SidebarMenuItem icon={IconData::LUCIDE_FILE_INPUT}>
                               {"File Input"}
                             </SidebarMenuItem>
-                            <SidebarMenuItem>
+                            <SidebarMenuItem icon={IconData::LUCIDE_FORM_INPUT}>
                               {"Input"}
                             </SidebarMenuItem>
-                            <SidebarMenuItem>
+                            <SidebarMenuItem icon={IconData::LUCIDE_KEY}>
                               {"PasswordInput"}
                             </SidebarMenuItem>
-                            <SidebarMenuItem>
+                            <SidebarMenuItem icon={IconData::LUCIDE_CHECK_CIRCLE}>
                               {"Radio"}
                             </SidebarMenuItem>
-                            <SidebarMenuItem>
+                            <SidebarMenuItem icon={IconData::LUCIDE_LIST_CHECKS}>
                               {"Select"}
                             </SidebarMenuItem>
-                            <SidebarMenuItem>
+                            <SidebarMenuItem icon={IconData::LUCIDE_TEXT_CURSOR_INPUT}>
                               {"Textarea"}
                             </SidebarMenuItem>
                           </SidebarSubMenuContent>
