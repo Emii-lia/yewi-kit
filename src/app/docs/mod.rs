@@ -31,8 +31,9 @@ use crate::app::docs::tabs::TabsPage;
 use crate::app::docs::textarea::TextareaPage;
 use crate::app::docs::toast::ToastPage;
 use crate::app::routes::AppRoute;
-use crate::features::provider::SidebarProvider;
-use crate::features::Sidebar;
+use crate::components::sidebar::provider::SidebarProvider;
+use crate::components::sidebar::SidebarTrigger;
+use crate::features::yewi_sidebar::YewiSidebar;
 
 mod button;
 mod badge;
@@ -91,7 +92,7 @@ pub fn switch_docs(route: DocsRoute) -> Html {
     DocsRoute::QuickStartPage => html! {<QuickStartPage/>},
     DocsRoute::RadioPage => html! {<RadioPage/>},
     DocsRoute::SelectPage => html! {<SelectPage/>},
-    DocsRoute::Sidebar => html! {<SidebarPage/>},
+    DocsRoute::SidebarPage => html! {<SidebarPage/>},
     DocsRoute::TablePage => html! {<TablePage/>},
     DocsRoute::TabsPage => html! {<TabsPage/>},
     DocsRoute::TextareaPage => html! {<TextareaPage/>},
@@ -100,11 +101,12 @@ pub fn switch_docs(route: DocsRoute) -> Html {
   };
 
   html! {
-    <SidebarProvider>
-      <div class="docs-app">
-        <Sidebar/>
+    <div class="docs-app">
+      <SidebarProvider>
+        <YewiSidebar/>
+        <SidebarTrigger/>
         {current_route}
-      </div>
-    </SidebarProvider>
+      </SidebarProvider>
+    </div>
   }
 }
