@@ -22,9 +22,15 @@ pub(crate) fn get_props() -> Vec<PropRow> {
       default: None,
     },
     PropRow {
+      name: "indicator".to_string(),
+      r#type: "CollapseIndicator".to_string(),
+      description: "Plus, Chevron".to_string(),
+      default: Some("CollapseIndicator::Plus".to_string())
+    },
+    PropRow {
       name: "variant".to_string(),
       r#type: "CollapseVariant".to_string(),
-      description: "Focus, Toggle".to_string(),
+      description: "Focus, Toggle(bool)".to_string(),
       default: Some("CollapseVariant::Focus".to_string())
     }
   ]
@@ -48,6 +54,7 @@ pub(crate) fn get_components() -> Vec<ComponentRow> {
         "children".to_string(),
         "class".to_string(),
         "icon".to_string(),
+        "indicator".to_string(),
       ]
     },
     ComponentRow {
