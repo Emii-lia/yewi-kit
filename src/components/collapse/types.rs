@@ -1,7 +1,13 @@
 #[derive(Debug, Clone, PartialEq)]
 pub(crate) enum CollapseVariant {
-  Toggle,
+  Toggle(bool),
   Focus
+}
+
+impl CollapseVariant {
+  pub fn toggle() -> Self {
+    Self::Toggle(false)
+  }
 }
 
 #[derive(Debug, Clone, PartialEq)]

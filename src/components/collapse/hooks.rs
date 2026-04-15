@@ -1,4 +1,5 @@
 use yew::{hook, use_node_ref, use_state, Callback, NodeRef};
+use crate::components::collapse::CollapseVariant;
 
 #[derive(Clone, PartialEq)]
 pub(crate) struct HookResponse {
@@ -7,9 +8,20 @@ pub(crate) struct HookResponse {
   pub(crate) checkbox_ref: NodeRef,
 }
 
+#[derive(Clone, PartialEq)]
+pub(crate) struct HookParams {
+  pub(crate) variant: CollapseVariant,
+}
+
 #[hook]
-pub(crate) fn use_collapse() -> HookResponse {
-  let is_open = use_state(|| false);
+pub(crate) fn use_collapse(params: HookParams) -> HookResponse {
+  let HookParams { variant } = params;
+
+  let is_open = use_state(|| match variant {
+    CollapseVariant::Focus => false,
+    CollapseVariant::Toggle(default_open) => default_open,
+  });
+
   let checkbox_ref = use_node_ref();
 
   let toggle = {
