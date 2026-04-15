@@ -225,7 +225,7 @@ pub struct SidebarMenuItemProps {
   #[prop_or_default]
   pub active: bool,
   #[prop_or_default]
-  pub onclick: Callback<()>,
+  pub onclick: Callback<MouseEvent>,
   #[prop_or_default]
   pub action: Html,
   #[prop_or_default]
@@ -244,7 +244,7 @@ pub fn sidebar_menu_item(props: &SidebarMenuItemProps) -> Html {
         let onclick = props.onclick.clone();
         Callback::from(move |e: MouseEvent| {
           e.stop_propagation();
-          onclick.emit(());
+          onclick.emit(e);
         })
       }}
     >
@@ -263,11 +263,20 @@ pub fn sidebar_menu_item(props: &SidebarMenuItemProps) -> Html {
   }
 }
 
+#[derive(Properties, Debug, PartialEq)]
+pub struct SidebarSubMenuProps {
+  pub children: Html,
+  #[prop_or_default]
+  pub class: Classes,
+  #[prop_or(true)]
+  pub default_open: bool,
+}
+
 #[component(SidebarSubMenu)]
-pub fn sidebar_sub_menu(props: &SidebarChildrenWithClassProps) -> Html {
+pub fn sidebar_sub_menu(props: &SidebarSubMenuProps) -> Html {
   html! {
     <Collapse
-      variant={CollapseVariant::Toggle}
+      variant={CollapseVariant::Toggle(props.default_open)}
       class={classes!("SidebarSubMenu", &props.class)}
     >
       {props.children.clone()}

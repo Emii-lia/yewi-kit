@@ -5,12 +5,13 @@
   }
   .Sidebar {
     @apply flex h-full w-[var(--sidebar-width)] flex-col border-r border-primary-100 bg-white p-4 max-h-screen min-h-svh;
+    @apply transition-all duration-300 ease-in-out;
     //@apply fixed top-0 bottom-0 left-0;
     &[data-state="collapsed"] {
-      @apply w-0 invisible;
+      @apply w-0 invisible opacity-0;
     }
     &[data-state="expanded"] {
-      @apply w-[var(--sidebar-width)] visible;
+      @apply w-[var(--sidebar-width)] visible opacity-100;
     }
     &[data-mobile="true"]{
       @apply w-0 fixed z-50 top-0 bottom-0 left-0 transition-all duration-300 ease-in-out invisible;
