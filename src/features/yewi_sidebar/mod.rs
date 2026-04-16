@@ -4,13 +4,14 @@ use yew::{component, html, Callback, Html};
 use yew_router::prelude::Link;
 use crate::app::routes::AppRoute;
 use crate::components::sidebar::{Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupTitle, SidebarHeader, SidebarMenu, SidebarMenuItem, SidebarSubMenu, SidebarSubMenuContent, SidebarSubMenuTitle};
+use crate::components::sidebar::types::SidebarPosition;
 use crate::features::yewi_sidebar::hooks::use_yewi_sidebar;
 
 #[component(YewiSidebar)]
 pub fn yewi_sidebar() -> Html {
   let (get_stated, components, on_navigate, is_active) = use_yewi_sidebar();
   html! {
-    <Sidebar class={"YewiSidebar"}>
+    <Sidebar class={"YewiSidebar"} position={SidebarPosition::Left}>
       <SidebarHeader class={"sidebar-header"}>
         <div
           class="sidebar-logo"
