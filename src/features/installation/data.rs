@@ -13,11 +13,31 @@ pub struct Step {
 pub fn get_steps() -> Vec<Step> {
   vec![
     Step {
+      number: 0,
+      title: "Install Wasm target and Trunk".to_string(),
+      description: "You'll first need to install wasm target and trunk in order to compile and run Yew application".to_string(),
+      command: r#"rustup target add wasm32-unknown-unknown
+cargo install --locked trunk"#.to_string(),
+      hint: Some("".to_string()),
+      children: Some(html! {
+        <div class="custom-install">
+          {"If you don't have Rust and Cargo installed, please visit "}
+          <a
+            href="https://www.rust-lang.org/tools/install"
+            target="_blank"
+            class="install-link"
+            rel="noopener noreferrer"
+          >{"Rust installation guide"}</a>
+          {" to set up your Rust environment."}
+        </div>
+      })
+    },
+    Step {
       number: 1,
       title: "Install Yewi CLI".to_string(),
       description: "The easiest way to get started with Yewi-kit is using the Yewi CLI tool.".to_string(),
       command: "cargo install yewi-cli".to_string(),
-      hint: Some("Ensure you have Rust and Cargo installed on your system.".to_string()),
+      hint: Some("This command installs the Yewi CLI globally on your system, allowing you to create and manage Yewi projects easily.".to_string()),
       children: None
     },
     Step {

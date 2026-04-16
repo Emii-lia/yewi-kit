@@ -39,6 +39,9 @@
           @apply w-full;
           .custom-install {
             @apply text-slate-500 text-sm;
+            .install-link {
+              @apply text-primary-800 underline underline-offset-2 inline;
+            }
           }
         }
       }
