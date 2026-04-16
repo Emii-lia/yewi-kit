@@ -447,7 +447,6 @@ pub fn sidebar_preview() -> Html {
               <SidebarTrigger/>
             </SidebarProvider>
           </PreviewContainer>
-
         </div>
       </div>
       <ComponentTable components={components}/>

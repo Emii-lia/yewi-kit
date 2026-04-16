@@ -3,6 +3,9 @@
   &:has(.Sidebar[data-position="right"]) {
     @apply flex-row-reverse;
   }
+  &:has(.Sidebar[data-position="left"]) {
+    @apply flex-row;
+  }
   .Sidebar {
     @apply flex h-full w-[var(--sidebar-width)] flex-col border-r border-primary-100 bg-white p-4 max-h-screen min-h-svh;
     @apply transition-all duration-300 ease-in-out;
@@ -20,6 +23,9 @@
       }
       &[data-position="right"]{
         @apply right-0 left-auto;
+      }
+      &[data-position="left"]{
+        @apply left-0 right-auto;
       }
 
       &[data-open-mobile="true"]{
