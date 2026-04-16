@@ -333,7 +333,7 @@
       }
     }
     input:checked ~ .checkbox-toggle-toggle::after {
-      @apply left-4;
+      @apply left-[1.375rem];
     }
 
     .checkbox-label {
