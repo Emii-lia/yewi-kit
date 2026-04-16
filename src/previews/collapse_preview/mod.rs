@@ -62,7 +62,18 @@ pub(crate) fn collapse_preview() -> Html {
           <PreviewContainer
             title={"Toggle"}
             code={r#"
-    <Collapse variant={CollapseVariant::Toggle}>
+    <Collapse variant={CollapseVariant::toggle()}>
+      <CollapseTrigger>
+        {"See more details"}
+      </CollapseTrigger>
+      <CollapseContent>
+        <div class="ex-collapse-content">
+          <h2 class="ex-collapse-title">{ "This is a Collapse" }</h2>
+          <p class="ex-collapse-description">{ "Collapse toggles its content vibisi- vilisibili- vibilisi-... visibilility" }</p>
+        </div>
+      </CollapseContent>
+    </Collapse>
+    <Collapse variant={CollapseVariant::Toggle(true)}>
       <CollapseTrigger>
         {"See more details"}
       </CollapseTrigger>
@@ -75,7 +86,18 @@ pub(crate) fn collapse_preview() -> Html {
     </Collapse>
             "#}
           >
-            <Collapse variant={CollapseVariant::Toggle}>
+            <Collapse variant={CollapseVariant::toggle()}>
+              <CollapseTrigger>
+                {"See more details"}
+              </CollapseTrigger>
+              <CollapseContent>
+                <div class="ex-collapse-content">
+                  <h2 class="ex-collapse-title">{ "This is a Collapse" }</h2>
+                  <p class="ex-collapse-description">{ "Collapse toggles its content vibisi- vilisibili- vibilisi-... visibilility" }</p>
+                </div>
+              </CollapseContent>
+            </Collapse>
+            <Collapse variant={CollapseVariant::Toggle(true)}>
               <CollapseTrigger>
                 {"See more details"}
               </CollapseTrigger>
@@ -103,17 +125,17 @@ pub(crate) fn collapse_preview() -> Html {
     </Collapse>
             "#}
           >
-            <Collapse>
-              <CollapseTrigger icon={Some(IconData::LUCIDE_MORE_VERTICAL)}>
-                {"See more details"}
-              </CollapseTrigger>
-              <CollapseContent>
-                <div class="ex-collapse-content">
-                  <h2 class="ex-collapse-title">{ "This is a Collapse" }</h2>
-                  <p class="ex-collapse-description">{ "Collapse toggles its content vibisi- vilisibili- vibilisi-... visibilility" }</p>
-                </div>
-              </CollapseContent>
-            </Collapse>
+              <Collapse>
+                <CollapseTrigger icon={Some(IconData::LUCIDE_MORE_VERTICAL)}>
+                  {"See more details"}
+                </CollapseTrigger>
+                <CollapseContent>
+                  <div class="ex-collapse-content">
+                    <h2 class="ex-collapse-title">{ "This is a Collapse" }</h2>
+                    <p class="ex-collapse-description">{ "Collapse toggles its content vibisi- vilisibili- vibilisi-... visibilility" }</p>
+                  </div>
+                </CollapseContent>
+              </Collapse>
           </PreviewContainer>
           <PreviewContainer
             title={"Indicator"}

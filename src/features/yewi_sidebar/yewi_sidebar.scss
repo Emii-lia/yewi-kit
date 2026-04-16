@@ -1,0 +1,14 @@
+.YewiSidebar {
+  .sidebar-header {
+    @apply flex flex-row items-center gap-2 mb-6;
+    .sidebar-logo {
+      @apply w-8 h-8 flex items-center justify-center cursor-pointer;
+      @apply bg-no-repeat bg-contain bg-center;
+      background-image: var(--logo);
+    }
+    .sidebar-title {
+      @apply font-semibold text-primary-800 text-lg whitespace-nowrap;
+      font-family: 'Belanosima', 'Poppins', Abel, "Roboto Slab", sans-serif;
+    }
+  }
+}

@@ -4,7 +4,7 @@ mod hooks;
 use yew::{classes, component, html, Callback, Classes, Html, Properties};
 use yew_icons::{Icon, IconData};
 pub(crate) use types::*;
-use crate::components::collapse::hooks::{use_collapse, HookResponse};
+use crate::components::collapse::hooks::{use_collapse, HookParams, HookResponse};
 
 #[derive(Properties, Clone, PartialEq)]
 pub struct CollapseProps {
@@ -62,13 +62,15 @@ pub(crate) fn collapse_content(props: &CollapseContentProps) -> Html {
 
 #[component(Collapse)]
 pub(crate) fn collapse(props: &CollapseProps) -> Html {
-  let HookResponse { is_open, toggle,checkbox_ref } = use_collapse();
+  
+  let HookResponse { is_open, toggle,checkbox_ref } = use_collapse(HookParams { variant: props.variant.clone() });
 
   match props.variant {
-    CollapseVariant::Toggle => {
+    CollapseVariant::Toggle(default_open) => {
+      
       html! {
         <div
-          class={classes!("Collapse", "toggle",is_open.then_some("open"), &props.class)}
+          class={classes!("Collapse", "toggle", is_open.then_some("open"), &props.class)}
           onclick={{
             let toggle = toggle.clone();
             Callback::from(move |_e| {

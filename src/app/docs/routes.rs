@@ -51,7 +51,7 @@ pub enum DocsRoute {
   #[at("/docs/select")]
   SelectPage,
   #[at("/docs/sidebar")]
-  Sidebar,
+  SidebarPage,
   #[at("/docs/table")]
   TablePage,
   #[at("/docs/tabs")]
@@ -90,7 +90,7 @@ impl DocsRoute {
       DocsRoute::QuickStartPage,
       DocsRoute::RadioPage,
       DocsRoute::SelectPage,
-      DocsRoute::Sidebar,
+      DocsRoute::SidebarPage,
       DocsRoute::TablePage,
       DocsRoute::TabsPage,
       DocsRoute::TextareaPage,
@@ -125,7 +125,7 @@ impl DocsRoute {
       DocsRoute::ModalPage => "Modal".to_string(),
       DocsRoute::RadioPage => "Radio".to_string(),
       DocsRoute::SelectPage => "Select".to_string(),
-      DocsRoute::Sidebar => "Sidebar".to_string(),
+      DocsRoute::SidebarPage => "Sidebar".to_string(),
       DocsRoute::TablePage => "Table".to_string(),
       DocsRoute::TabsPage => "Tabs".to_string(),
       DocsRoute::TextareaPage => "Textarea".to_string(),
