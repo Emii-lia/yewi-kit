@@ -28,7 +28,7 @@ pub struct Props {
   pub variant: CheckboxVariant,
   #[prop_or_default]
   pub class: Classes,
-  #[prop_or_default]
+  #[prop_or(AttrValue::from("yewi-checkbox-id"))]
   pub id: AttrValue,
 }
 

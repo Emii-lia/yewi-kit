@@ -83,9 +83,9 @@
   }
 }
 .btn-secondary {
-  @apply bg-white text-slate-700 border border-solid border-slate-500/70 shadow-sm;
+  @apply bg-white text-primary-800 border border-solid border-primary-400 shadow-sm;
   &:hover{
-    @apply bg-slate-200;
+    @apply bg-primary-200;
   }
   &:focus{
     @apply outline-none ring-2 ring-primary ring-offset-2;
@@ -107,5 +107,5 @@
   }
 }
 .btn-rounded {
-  @apply rounded-full;
+  @apply rounded-full flex-shrink-0;
 }
