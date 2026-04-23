@@ -1,6 +1,6 @@
 use web_sys::HtmlInputElement;
 use yew::{hook, use_node_ref, use_state, Callback, NodeRef, TargetCast};
-use crate::features::theme_section::data::ThemeColor;
+use crate::types::theme::ThemeColor;
 
 #[hook]
 pub fn use_theme_section() -> (
