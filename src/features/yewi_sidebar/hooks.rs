@@ -35,6 +35,7 @@ pub fn use_yewi_sidebar() -> (
     vec![
     ComponentNav::new(DocsRoute::Installation, Some(IconData::LUCIDE_CODE_2)),
     ComponentNav::new(DocsRoute::QuickStartPage, Some(IconData::LUCIDE_PLAY_CIRCLE)),
+    ComponentNav::new(DocsRoute::ThemeLabPage, Some(IconData::LUCIDE_FLASK_CONICAL)),
   ]);
 
   let components = ComponentNav::group_components();
