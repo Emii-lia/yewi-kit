@@ -11,6 +11,7 @@ mod why_section;
 pub(crate) mod prop_table;
 pub(crate) mod component_table;
 pub mod yewi_sidebar;
+pub mod theme_lab;
 
 pub(crate) use installation::*;
 pub(crate) use home_header::*;

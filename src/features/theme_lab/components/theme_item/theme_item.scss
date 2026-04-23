@@ -1,0 +1,73 @@
+.ThemeItem {
+  @apply flex flex-col gap-2 items-center;
+  .theme-colour-square {
+    @apply w-12 h-12 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer hover:scale-110;
+    &.custom {
+      @apply flex items-center justify-center text-slate-500 text-xs font-medium;
+      .theme-colour-plus {
+        @apply w-5 h-5 aspect-square flex-shrink-0;
+      }
+      .theme-colour-input {
+        @apply hidden;
+      }
+      &:not(.selected) {
+        @apply bg-slate-100/70;
+      }
+      &.selected {
+        @apply ring-2 ring-offset-2 ring-[var(--custom-colour)] border-transparent;
+        background-color: var(--custom-colour);
+      }
+    }
+    &.slate {
+      @apply bg-gradient-to-tr from-slate-400 to-slate-700;
+      &.selected {
+        @apply ring-2 ring-offset-2 ring-slate-700;
+      }
+    }
+    &.gray {
+      @apply bg-gradient-to-tr from-gray-400 to-gray-700;
+      &.selected {
+        @apply ring-2 ring-offset-2 ring-gray-700;
+      }
+    }
+    &.zinc {
+      @apply bg-gradient-to-tr from-zinc-400 to-zinc-700;
+      &.selected {
+        @apply ring-2 ring-offset-2 ring-zinc-700;
+      }
+    }
+    &.neutral {
+      @apply bg-gradient-to-tr from-neutral-400 to-neutral-700;
+      &.selected {
+        @apply ring-2 ring-offset-2 ring-neutral-700;
+      }
+    }
+    &.stone {
+      @apply bg-gradient-to-tr from-stone-400 to-stone-700;
+      &.selected {
+        @apply ring-2 ring-offset-2 ring-stone-700;
+      }
+    }
+    &.emerald {
+      @apply bg-gradient-to-tr from-emerald-400 to-emerald-700;
+      &.selected {
+        @apply ring-2 ring-offset-2 ring-emerald-700;
+      }
+    }
+    &.blue {
+      @apply bg-gradient-to-tr from-blue-400 to-blue-700;
+      &.selected {
+        @apply ring-2 ring-offset-2 ring-blue-700;
+      }
+    }
+    &.sky {
+      @apply bg-gradient-to-tr from-sky-400 to-sky-700;
+      &.selected {
+        @apply ring-2 ring-offset-2 ring-sky-700;
+      }
+    }
+  }
+  .theme-colour-label {
+    @apply text-sm font-medium text-center;
+  }
+}

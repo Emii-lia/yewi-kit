@@ -29,6 +29,7 @@ use crate::app::docs::sidebar::SidebarPage;
 use crate::app::docs::table::TablePage;
 use crate::app::docs::tabs::TabsPage;
 use crate::app::docs::textarea::TextareaPage;
+use crate::app::docs::theme_lab::ThemeLabPage;
 use crate::app::docs::toast::ToastPage;
 use crate::app::routes::AppRoute;
 use crate::components::sidebar::provider::SidebarProvider;
@@ -65,6 +66,7 @@ mod pagination;
 pub mod link;
 pub mod file_preview;
 pub mod sidebar;
+pub mod theme_lab;
 
 pub fn switch_docs(route: DocsRoute) -> Html {
   let current_route = match route {
@@ -96,6 +98,7 @@ pub fn switch_docs(route: DocsRoute) -> Html {
     DocsRoute::TablePage => html! {<TablePage/>},
     DocsRoute::TabsPage => html! {<TabsPage/>},
     DocsRoute::TextareaPage => html! {<TextareaPage/>},
+    DocsRoute::ThemeLabPage => html! {<ThemeLabPage/>},
     DocsRoute::ToastPage => html! {<ToastPage/>},
     DocsRoute::NotFound => html! {<Redirect<AppRoute> to={AppRoute::NotFound} />}
   };

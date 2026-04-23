@@ -1,10 +1,9 @@
-mod data;
 pub mod hooks;
 
 use yew::{classes, component, html, Callback, Html};
 use crate::components::code_preview::CodePreview;
 use crate::features::hooks::use_theme_section;
-use crate::features::theme_section::data::{ThemeColor};
+use crate::types::theme::ThemeColor;
 
 #[component(ThemeSection)]
 pub fn theme_section() -> Html {

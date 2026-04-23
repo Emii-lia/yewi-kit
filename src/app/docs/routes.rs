@@ -58,6 +58,8 @@ pub enum DocsRoute {
   TabsPage,
   #[at("/docs/textarea")]
   TextareaPage,
+  #[at("/docs/theme-lab")]
+  ThemeLabPage,
   #[at("/docs/toast")]
   ToastPage,
   #[not_found]
@@ -94,6 +96,7 @@ impl DocsRoute {
       DocsRoute::TablePage,
       DocsRoute::TabsPage,
       DocsRoute::TextareaPage,
+      DocsRoute::ThemeLabPage,
       DocsRoute::ToastPage,
       DocsRoute::NotFound
     ].into_iter()
@@ -129,6 +132,7 @@ impl DocsRoute {
       DocsRoute::TablePage => "Table".to_string(),
       DocsRoute::TabsPage => "Tabs".to_string(),
       DocsRoute::TextareaPage => "Textarea".to_string(),
+      DocsRoute::ThemeLabPage => "Theme Lab".to_string(),
       DocsRoute::ToastPage => "Toast".to_string(),
       DocsRoute::NotFound => "Not Found".to_string(),
     }

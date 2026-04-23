@@ -38,7 +38,7 @@ pub(crate) fn tabs(props: &TabsProps) -> Html {
   let color_class = format!("tab-{:?}", props.color).to_lowercase();
 
   html! {
-    <div class="Tabs">
+    <div class={classes!("Tabs", &props.classes)}>
       <div class="tab-list" role="tablist">
         {for tabs.iter().map(|tab| {
           let value = tab.props.value.clone();
