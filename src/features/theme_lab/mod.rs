@@ -7,6 +7,7 @@ use yew::{classes, component, html, Html};
 use crate::components::badge::{Badge, BadgeVariant};
 use crate::components::button::{Button, ButtonVariant};
 use crate::components::checkbox::{Checkbox, CheckboxVariant};
+use crate::components::code_preview::CodePreview;
 use crate::components::pagination::Pagination;
 use crate::components::progress::{Progress, ProgressVariant};
 use crate::components::radio::Radio;
@@ -37,6 +38,10 @@ pub fn theme_lab() -> Html {
         {for ThemeColor::iter().map(|theme| html! {
           <ThemeItem key={theme.to_string()} theme={ThemeColor::from_str(&theme)}/>
         })}
+      </div>
+      <div class={"ThemeLab__code"}>
+        <CodePreview code={format!("yewi new my-project --theme {}", theme.clone().to_string().to_lowercase())}/>
+        <CodePreview code={format!("yewi set --theme {}", theme.clone().to_string().to_lowercase())}/>
       </div>
       <div
         class={classes!(

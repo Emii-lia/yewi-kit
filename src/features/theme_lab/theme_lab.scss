@@ -14,6 +14,9 @@
   &__switcher {
     @apply flex justify-start gap-4 flex-wrap;
   }
+  &__code {
+    @apply flex flex-col gap-4;
+  }
   &__content {
     @apply grid gap-8 lg:grid-cols-3;
 
@@ -138,7 +141,7 @@
     }
 
     .tl-preview-container {
-      @apply flex flex-col gap-4;
+      @apply flex flex-col gap-4 w-full overflow-hidden;
       &.tl-component-preview {
         @apply lg:col-span-2;
       }
@@ -160,7 +163,7 @@
             @apply text-sm font-semibold text-primary-900;
           }
           .tl-preview-item-content {
-            @apply flex flex-wrap gap-3;
+            @apply flex flex-wrap gap-3 w-full overflow-x-auto;
             .tl-button-primary {
               @apply text-white;
               @apply focus:ring-[var(--tl-primary)];
@@ -253,9 +256,9 @@
       &.tl-shades {
         @apply flex flex-col gap-4 lg:col-span-3;
         .tl-shades-list {
-          @apply grid grid-cols-3 md:grid-cols-6 gap-3;
+          @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3;
           .tl-shade-item {
-            @apply flex flex-col text-center;
+            @apply flex flex-col text-center col-span-1;
             .tl-shade-square {
               @apply w-full h-16 rounded-lg border border-slate-200 shadow-sm mb-2;
             }
