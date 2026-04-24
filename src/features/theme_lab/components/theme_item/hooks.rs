@@ -1,5 +1,5 @@
 use web_sys::{Event, MouseEvent};
-use yew::{hook, use_memo, use_node_ref, use_state, Callback, NodeRef, TargetCast};
+use yew::{hook, use_memo, use_state, Callback, TargetCast};
 use crate::types::theme::ThemeColor;
 
 #[derive(Clone)]
@@ -9,20 +9,16 @@ pub(crate) struct HookParams {
   pub theme: ThemeColor,
 }
 
-#[derive(Clone)]
 pub(crate) struct HookResponse {
   pub onchange: Callback<Event>,
   pub onselect: Callback<ThemeColor>,
-  pub onclick: Callback<MouseEvent>,
   pub value: Option<String>,
-  pub input_ref: NodeRef,
   pub selected: bool,
 }
 
 #[hook]
 pub fn use_theme_item(params: HookParams) -> HookResponse {
   let value = use_state(|| None::<String>);
-  let input_ref = use_node_ref();
 
   let onchange = {
     let onselect = params.onselect.clone();
@@ -31,13 +27,6 @@ pub fn use_theme_item(params: HookParams) -> HookResponse {
       let target = e.target_unchecked_into::<web_sys::HtmlInputElement>();
       onselect.emit(ThemeColor::Custom(target.value()));
       value.set(Some(target.value()));
-    })
-  };
-
-  let onclick = {
-    let input_ref = input_ref.clone();
-    Callback::from(move |e: MouseEvent| {
-      input_ref.cast::<web_sys::HtmlInputElement>().unwrap().click();
     })
   };
 
@@ -84,9 +73,7 @@ pub fn use_theme_item(params: HookParams) -> HookResponse {
   HookResponse {
     onchange,
     onselect,
-    onclick,
     value: (*value).clone(),
-    input_ref,
     selected: (*selected).clone(),
   }
 }
