@@ -1,7 +1,7 @@
 .ThemeSection {
   @apply mx-auto max-w-5xl px-6 py-20 relative z-10;
   .theme-section-container {
-    @apply flex flex-col gap-8;
+    @apply flex flex-col gap-8 items-center;
     .theme-section-text {
       @apply text-center flex flex-col gap-3;
       .theme-section-title {
@@ -68,6 +68,9 @@
       .theme-command-separator {
         @apply text-slate-500 text-sm;
       }
+    }
+    .theme-section-button {
+      @apply w-fit px-5;
     }
   }
 }

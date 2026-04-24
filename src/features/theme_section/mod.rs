@@ -1,8 +1,13 @@
 pub mod hooks;
 
 use yew::{classes, component, html, Callback, Html};
+use yew_icons::IconData;
+use crate::app::docs::routes::DocsRoute;
 use crate::components::code_preview::CodePreview;
+use crate::components::link::Link;
+use crate::components::link::types::LinkVariant;
 use crate::features::hooks::use_theme_section;
+use crate::types::Size;
 use crate::types::theme::ThemeColor;
 
 #[component(ThemeSection)]
@@ -85,7 +90,14 @@ pub fn theme_section() -> Html {
             class={"theme-command"}
           />
         </div>
-
+        <Link<DocsRoute>
+          href={DocsRoute::ThemeLabPage}
+          icon={Some(IconData::LUCIDE_FLASK_CONICAL)}
+          variant={LinkVariant::primary().with_size(Size::Large)}
+          class={"theme-section-button"}
+        >
+          {"Visit Theme Lab"}
+        </Link<DocsRoute>>
       </div>
     </div>
   }
