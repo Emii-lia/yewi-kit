@@ -1,4 +1,4 @@
-use web_sys::{Event, MouseEvent};
+use web_sys::{Event};
 use yew::{hook, use_memo, use_state, Callback, TargetCast};
 use crate::types::theme::ThemeColor;
 
