@@ -24,9 +24,7 @@ pub fn theme_item(props: &Props) -> Html {
     onselect,
     onchange,
     value,
-    input_ref,
-    selected,
-    ..
+    selected
   } = use_theme_item(HookParams {
     onselect: set_theme.clone(),
     selected_theme: selected_theme.clone(),
@@ -49,7 +47,6 @@ pub fn theme_item(props: &Props) -> Html {
               class={"theme-colour-input"}
               value={value.clone().unwrap_or_default()}
               onchange={onchange.clone()}
-              ref={input_ref.clone()}
             />
           </label>
           <span class="theme-colour-label">{props.theme.clone().to_string()}</span>

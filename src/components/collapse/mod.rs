@@ -66,7 +66,7 @@ pub(crate) fn collapse(props: &CollapseProps) -> Html {
   let HookResponse { is_open, toggle,checkbox_ref } = use_collapse(HookParams { variant: props.variant.clone() });
 
   match props.variant {
-    CollapseVariant::Toggle(default_open) => {
+    CollapseVariant::Toggle(_) => {
       
       html! {
         <div
