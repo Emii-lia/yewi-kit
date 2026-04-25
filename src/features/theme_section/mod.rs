@@ -8,7 +8,7 @@ use crate::components::link::Link;
 use crate::components::link::types::LinkVariant;
 use crate::features::hooks::use_theme_section;
 use crate::types::Size;
-use crate::types::theme::ThemeColor;
+use crate::types::theme::{ThemeColor, ThemeGradient};
 
 #[component(ThemeSection)]
 pub fn theme_section() -> Html {
@@ -21,7 +21,8 @@ pub fn theme_section() -> Html {
     color_input_ref,
     on_select,
     on_change,
-    on_input_click
+    on_input_click,
+    theme_gradient,
   ) = use_theme_section();
 
 
@@ -62,18 +63,25 @@ pub fn theme_section() -> Html {
               type="color"
               ref={color_input_ref.clone()}
               onchange={on_change.clone()}
-              value={selected.to_string()}
+              value={selected.clone().to_string()}
               class={"colour-input"}
             />
             <div
               class={classes!(
                 "colour-square", "custom",
-                matches!(selected, ThemeColor::Custom(_)).then_some("selected")
+                matches!(selected.clone(), ThemeColor::Custom(_)).then_some("selected")
               )}
-              style={format!("--colour: {}", match &selected {
-                ThemeColor::Custom(c) => c.clone(),
-                _ => "#282828".to_string()
-              })}
+              style={{
+                let gradient = theme_gradient.unwrap_or(ThemeGradient {
+                  from: "".to_string(),
+                  to: "".to_string()
+                });
+                format!(
+                  "--colour-from: {}; --colour-to: {};",
+                  gradient.from,
+                  gradient.to
+                )
+              }}
               onclick={on_input_click.clone()}
             />
             <span class="colour-label">{"Custom"}</span>
