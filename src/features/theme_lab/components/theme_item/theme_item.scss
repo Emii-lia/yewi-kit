@@ -5,7 +5,7 @@
     &.custom {
       @apply flex items-center justify-center text-slate-500 text-xs font-medium;
       .theme-colour-plus {
-        @apply w-5 h-5 aspect-square flex-shrink-0;
+        @apply w-5 h-5 aspect-square flex-shrink-0 text-inherit;
       }
       .theme-colour-input {
         @apply hidden;
@@ -14,8 +14,11 @@
         @apply bg-slate-100/70;
       }
       &.selected {
-        @apply ring-2 ring-offset-2 ring-[var(--custom-colour)] border-transparent;
-        background-color: var(--custom-colour);
+        @apply ring-2 ring-offset-2 ring-[var(--custom-from)] border-transparent;
+        @apply bg-gradient-to-tr from-[var(--custom-from)] to-[var(--custom-to)];
+        .theme-colour-plus {
+          @apply text-white;
+        }
       }
     }
     &.slate {

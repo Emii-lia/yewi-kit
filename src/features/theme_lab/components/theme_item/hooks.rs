@@ -1,6 +1,6 @@
 use web_sys::{Event};
 use yew::{hook, use_memo, use_state, Callback, TargetCast};
-use crate::types::theme::ThemeColor;
+use crate::types::theme::{ThemeColor, ThemeGradient};
 
 #[derive(Clone)]
 pub(crate) struct HookParams {
@@ -9,12 +9,15 @@ pub(crate) struct HookParams {
   pub theme: ThemeColor,
 }
 
+#[derive(Clone)]
 pub(crate) struct HookResponse {
   pub onchange: Callback<Event>,
   pub onselect: Callback<ThemeColor>,
   pub value: Option<String>,
   pub selected: bool,
+  pub theme_gradient: Option<ThemeGradient>
 }
+
 
 #[hook]
 pub fn use_theme_item(params: HookParams) -> HookResponse {
@@ -70,10 +73,20 @@ pub fn use_theme_item(params: HookParams) -> HookResponse {
     )
   };
 
+  let theme_gradient = {
+    use_memo(
+      params.selected_theme.clone(),
+      |theme| {
+        ThemeGradient::from_theme(theme)
+      }
+    )
+  };
+
   HookResponse {
     onchange,
     onselect,
     value: (*value).clone(),
     selected: (*selected).clone(),
+    theme_gradient: (*theme_gradient).clone()
   }
 }

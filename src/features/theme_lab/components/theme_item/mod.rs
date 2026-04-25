@@ -6,7 +6,7 @@ use yew_icons::{Icon, IconData};
 use crate::features::theme_lab::components::theme_item::hooks::{use_theme_item, HookParams, HookResponse};
 use crate::features::theme_lab::provider::ThemeLabContextType;
 use crate::features::theme_lab::store::use_theme_lab_store;
-use crate::types::theme::ThemeColor;
+use crate::types::theme::{ThemeColor, ThemeGradient};
 
 #[derive(Properties, Clone, PartialEq)]
 pub struct Props {
@@ -24,7 +24,8 @@ pub fn theme_item(props: &Props) -> Html {
     onselect,
     onchange,
     value,
-    selected
+    selected,
+    theme_gradient
   } = use_theme_item(HookParams {
     onselect: set_theme.clone(),
     selected_theme: selected_theme.clone(),
@@ -37,7 +38,18 @@ pub fn theme_item(props: &Props) -> Html {
         <div class="ThemeItem">
           <label 
             class={classes!("theme-colour-square", "custom", selected.then_some("selected"))}
-            style={format!("--custom-colour: {}", value.clone().unwrap_or("gray".to_string()))}
+            style={{
+              let value = value.clone();
+              let gradient = theme_gradient.unwrap_or(ThemeGradient {
+                from: value.clone().unwrap_or("gray".to_string()),
+                to: value.clone().unwrap_or("gray".to_string())
+              });
+              format!(
+                "--custom-from: {}; --custom-to: {};",
+                gradient.from,
+                gradient.to
+              )
+            }}
             for={"theme-item-colour-input"}
           >
             <Icon data={IconData::LUCIDE_PLUS} class={"theme-colour-plus"}/>
