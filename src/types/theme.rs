@@ -1,3 +1,5 @@
+use crate::utils::shades::shades_of;
+
 #[derive(Clone, PartialEq, Debug)]
 pub enum ThemeColor {
   Slate,
@@ -51,6 +53,27 @@ impl ThemeColor {
       "blue" => ThemeColor::Blue,
       "sky" => ThemeColor::Sky,
       _ => ThemeColor::Custom(color.to_string()),
+    }
+  }
+}
+
+#[derive(Clone)]
+pub struct ThemeGradient {
+  pub from: String,
+  pub to: String,
+}
+
+impl ThemeGradient {
+  pub fn from_theme(theme: &ThemeColor) -> Option<Self> {
+    match theme {
+      ThemeColor::Custom(hex) => {
+        let shades = shades_of(hex.as_str()).unwrap();
+        Some(ThemeGradient {
+          from: shades.get(&crate::utils::shades::ShadeKey::U(400)).unwrap_or(&hex).to_string(),
+          to: shades.get(&crate::utils::shades::ShadeKey::U(700)).unwrap_or(&hex).to_string(),
+        })
+      },
+      _ => None
     }
   }
 }
