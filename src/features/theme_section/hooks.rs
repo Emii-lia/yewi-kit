@@ -1,6 +1,6 @@
 use web_sys::HtmlInputElement;
-use yew::{hook, use_node_ref, use_state, Callback, NodeRef, TargetCast};
-use crate::types::theme::ThemeColor;
+use yew::{hook, use_memo, use_node_ref, use_state, Callback, NodeRef, TargetCast};
+use crate::types::theme::{ThemeColor, ThemeGradient};
 
 #[hook]
 pub fn use_theme_section() -> (
@@ -8,7 +8,8 @@ pub fn use_theme_section() -> (
   NodeRef,
   Callback<ThemeColor>,
   Callback<web_sys::Event>,
-  Callback<web_sys::MouseEvent>
+  Callback<web_sys::MouseEvent>,
+  Option<ThemeGradient>
 ) {
   let selected_theme = use_state(|| ThemeColor::Slate);
   let color_input_ref = use_node_ref();
@@ -39,11 +40,23 @@ pub fn use_theme_section() -> (
     })
   };
 
+  let theme_gradient = {
+    let selected_theme = selected_theme.clone();
+    use_memo(
+      selected_theme,
+      |theme| {
+        let theme = theme.clone();
+        ThemeGradient::from_theme(&(*theme))
+      }
+    )
+  };
+
   (
     (*selected_theme).clone(), 
     color_input_ref,
     on_theme_select,
     on_color_change,
-    on_color_click
+    on_color_click,
+    (*theme_gradient).clone()
   )
 }
