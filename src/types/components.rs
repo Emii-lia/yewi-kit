@@ -41,6 +41,7 @@ impl ComponentNav {
       ]),
       ("Navigation".to_string(), vec![
         ComponentNav::new(DocsRoute::BreadcrumbsPage, Some(IconData::LUCIDE_CHEVRON_RIGHT)),
+        ComponentNav::new(DocsRoute::DividerPage, Some(IconData::LUCIDE_SEPARATOR_VERTICAL)),
         ComponentNav::new(DocsRoute::LinkPage, Some(IconData::LUCIDE_LINK_2)),
         ComponentNav::new(DocsRoute::PaginationPage, Some(IconData::LUCIDE_CHEVRONS_LEFT_RIGHT)),
         ComponentNav::new(DocsRoute::SidebarPage, Some(IconData::LUCIDE_SIDEBAR)),
