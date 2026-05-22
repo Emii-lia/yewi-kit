@@ -11,6 +11,9 @@
       @apply max-md:text-base;
     }
   }
+  .PackageTab {
+    @apply shadow-none;
+  }
   .installation-steps {
     @apply flex flex-col gap-6;
     .installation-step {
@@ -38,7 +41,7 @@
         .step-children {
           @apply w-full;
           .custom-install {
-            @apply text-slate-500 text-sm;
+            @apply text-slate-500 text-sm mb-3;
             .install-link {
               @apply text-primary-800 underline underline-offset-2 inline;
             }
