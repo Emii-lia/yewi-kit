@@ -4,7 +4,7 @@ port = 8081
 
 [[hooks]]
 stage = "pre_build"
-command = "npm"
+command = "bun"
 command_arguments = [
     "run", "build"
 ]
