@@ -39,83 +39,63 @@ pub(crate) fn tabs_preview() -> Html {
           <PreviewContainer
             title={"Default"}
             code={r#"
-    <Tabs>
-      <Tab
-        label={"Button"}
-        value={"button"}
-      >
-        <div class="w-full flex items-center justify-center gap-5">
-          <Button size={Size::Small}>
-            {"Primary"}
-          </Button>
-          <Button size={Size::Medium}>
-            {"Primary"}
-          </Button>
-          <Button size={Size::Large}>
-            {"Primary"}
-          </Button>
-        </div>
-      </Tab>
-      <Tab
-        label={"Label"}
-        value={"label"}
-      >
-        <div class="w-full flex items-center justify-center gap-5">
-          <Badge label="Default" color={Color::Red}/>
-          <Badge label="Default" color={Color::Blue}/>
-          <Badge label="Default" color={Color::Green}/>
-          <Badge label="Default" color={Color::Yellow}/>
-        </div>
-      </Tab>
-      <Tab
-        label={"Avatar"}
-        value={"avatar"}
-      >
-        <div class="w-full flex items-center justify-center gap-5">
-          <Avatar alt={"John Doe"} size={Size::Small}/>
-          <Avatar alt={"John Doe"} size={Size::Medium}/>
-          <Avatar alt={"John Doe"} size={Size::Large}/>
-        </div>
-      </Tab>
-    </Tabs>
+      <Tabs>
+        <Tab
+          label={"Yewi kit"}
+          value={"yewi-kit"}
+        >
+          <div class={"w-full text-slate-500 text-sm p-1"}>
+            {"A Rust-first UI kit and CLI for building clean, scalable Yew frontends. Fast to start, easy to grow."}
+          </div>
+        </Tab>
+        <Tab
+          label={"Yewi CLI"}
+          value={"yewi-cli"}
+        >
+          <div class="w-full text-slate-500 text-sm p-1">
+            {"Yewi-cli is a command-line tool for managing UI components in your Yew projects, inspired by shadcn/ui.
+              It allows you to create new projects from a pre-configured template, add components from the yewi-kit repository, and more.
+              The CLI is written in Rust and uses yew for the frontend.
+            "}
+          </div>
+        </Tab>
+        <Tab
+          label={"Yewi Template"}
+          value={"yewi-template"}
+        >
+          <div class="w-full text-slate-500 text-sm p-1">
+            {"Template for Yewi app when using yewi-cli [yewi new project] "}
+          </div>
+        </Tab>
+      </Tabs>
             "#}
           >
             <Tabs>
               <Tab
-                label={"Button"}
-                value={"button"}
+                label={"Yewi kit"}
+                value={"yewi-kit"}
               >
-                <div class="w-full flex items-center justify-center gap-5">
-                  <Button size={Size::Small}>
-                    {"Primary"}
-                  </Button>
-                  <Button size={Size::Medium}>
-                    {"Primary"}
-                  </Button>
-                  <Button size={Size::Large}>
-                    {"Primary"}
-                  </Button>
+                <div class="w-full text-slate-500 text-sm p-1">
+                  {"A Rust-first UI kit for building clean, scalable Yew frontends. Fast to start, easy to grow."}
                 </div>
               </Tab>
               <Tab
-                label={"Label"}
-                value={"label"}
+                label={"Yewi CLI"}
+                value={"yewi-cli"}
               >
-                <div class="w-full flex items-center justify-center gap-5">
-                  <Badge label="Default" color={Color::Red}/>
-                  <Badge label="Default" color={Color::Blue}/>
-                  <Badge label="Default" color={Color::Green}/>
-                  <Badge label="Default" color={Color::Yellow}/>
+                <div class="w-full text-slate-500 text-sm p-1">
+                  {r#"Yewi-cli is a command-line tool for managing UI components in your Yew projects, inspired by shadcn/ui.
+                    It allows you to create new projects from a pre-configured template, add components from the yewi-kit repository, and more.
+                    The CLI is written in Rust and uses yew for the frontend.
+                  "#}
                 </div>
               </Tab>
               <Tab
-                label={"Avatar"}
-                value={"avatar"}
+                label={"Yewi template"}
+                value={"yewi-template"}
               >
-                <div class="w-full flex items-center justify-center gap-5">
-                  <Avatar alt={"John Doe"} size={Size::Small}/>
-                  <Avatar alt={"John Doe"} size={Size::Medium}/>
-                  <Avatar alt={"John Doe"} size={Size::Large}/>
+                <div class="w-full text-slate-500 text-sm p-1">
+                  {"Template for Yewi app when using yewi-cli [yewi new project] "}
                 </div>
               </Tab>
             </Tabs>
@@ -125,40 +105,30 @@ pub(crate) fn tabs_preview() -> Html {
             code={r#"
     <Tabs color={Color::Rose}>
       <Tab
-        label={"Button"}
-        value={"button"}
+        label={"Yewi kit"}
+        value={"yewi-kit"}
       >
-        <div class="w-full flex items-center justify-center gap-5">
-          <Button size={Size::Small}>
-            {"Primary"}
-          </Button>
-          <Button size={Size::Medium}>
-            {"Primary"}
-          </Button>
-          <Button size={Size::Large}>
-            {"Primary"}
-          </Button>
+        <div class={"w-full text-slate-500 text-sm p-1"}>
+          {"A Rust-first UI kit for building clean, scalable Yew frontends. Fast to start, easy to grow."}
         </div>
       </Tab>
       <Tab
-        label={"Label"}
-        value={"label"}
+        label={"Yewi CLI"}
+        value={"yewi-cli"}
       >
-        <div class="w-full flex items-center justify-center gap-5">
-          <Badge label="Default" color={Color::Red}/>
-          <Badge label="Default" color={Color::Blue}/>
-          <Badge label="Default" color={Color::Green}/>
-          <Badge label="Default" color={Color::Yellow}/>
+        <div class="w-full text-slate-500 text-sm p-1">
+          {"Yewi-cli is a command-line tool for managing UI components in your Yew projects, inspired by shadcn/ui.
+            It allows you to create new projects from a pre-configured template, add components from the yewi-kit repository, and more.
+            The CLI is written in Rust and uses yew for the frontend.
+          "}
         </div>
       </Tab>
       <Tab
-        label={"Avatar"}
-        value={"avatar"}
+        label={"Yewi Template"}
+        value={"yewi template"}
       >
-        <div class="w-full flex items-center justify-center gap-5">
-          <Avatar alt={"John Doe"} size={Size::Small}/>
-          <Avatar alt={"John Doe"} size={Size::Medium}/>
-          <Avatar alt={"John Doe"} size={Size::Large}/>
+        <div class="w-full text-slate-500 text-sm p-1">
+          {"Template for Yewi app when using yewi-cli [yewi new project] "}
         </div>
       </Tab>
     </Tabs>
@@ -166,40 +136,30 @@ pub(crate) fn tabs_preview() -> Html {
           >
             <Tabs color={Color::Rose}>
               <Tab
-                label={"Button"}
-                value={"button"}
+                label={"Yewi kit"}
+                value={"yewi-kit"}
               >
-                <div class="w-full flex items-center justify-center gap-5">
-                  <Button size={Size::Small}>
-                    {"Primary"}
-                  </Button>
-                  <Button size={Size::Medium}>
-                    {"Primary"}
-                  </Button>
-                  <Button size={Size::Large}>
-                    {"Primary"}
-                  </Button>
+                <div class="w-full text-slate-500 text-sm p-1">
+                  {"A Rust-first UI kit for building clean, scalable Yew frontends. Fast to start, easy to grow."}
                 </div>
               </Tab>
               <Tab
-                label={"Label"}
-                value={"label"}
+                label={"Yewi CLI"}
+                value={"yewi-cli"}
               >
-                <div class="w-full flex items-center justify-center gap-5">
-                  <Badge label="Default" color={Color::Red}/>
-                  <Badge label="Default" color={Color::Blue}/>
-                  <Badge label="Default" color={Color::Green}/>
-                  <Badge label="Default" color={Color::Yellow}/>
+                <div class="w-full text-slate-500 text-sm p-1">
+                  {r#"Yewi-cli is a command-line tool for managing UI components in your Yew projects, inspired by shadcn/ui.
+                    It allows you to create new projects from a pre-configured template, add components from the yewi-kit repository, and more.
+                    The CLI is written in Rust and uses yew for the frontend.
+                  "#}
                 </div>
               </Tab>
               <Tab
-                label={"Avatar"}
-                value={"avatar"}
+                label={"Yewi Template"}
+                value={"yewi-template"}
               >
-                <div class="w-full flex items-center justify-center gap-5">
-                  <Avatar alt={"John Doe"} size={Size::Small}/>
-                  <Avatar alt={"John Doe"} size={Size::Medium}/>
-                  <Avatar alt={"John Doe"} size={Size::Large}/>
+                <div class="w-full text-slate-500 text-sm p-1">
+                  {"Template for Yewi app when using yewi-cli [yewi new project] "}
                 </div>
               </Tab>
             </Tabs>
