@@ -1,6 +1,6 @@
 FROM rust:1.94.0 as builder
 RUN apt-get update && apt-get install -y nodejs curl
-RUN curl -fsSL https://bun.com/install | bash
+RUN curl -fsSL https://bun.sh/install | bash
 ENV BUN_INSTALL=/root/.bun
 ENV PATH="${BUN_INSTALL}/bin:${PATH}"
 RUN rustup target add wasm32-unknown-unknown
