@@ -23,7 +23,12 @@ struct Props {
 #[component(PackageTab)]
 fn package_tab(props: &Props) -> Html {
   html! {
-    <Tabs color={Color::Transparent} on_tab_change={props.on_tab_change.clone()} classes={"PackageTab"}>
+    <Tabs
+      color={Color::Transparent}
+      on_tab_change={props.on_tab_change.clone()}
+      classes={"PackageTab"}
+      active_tab={Some(props.package_manager.to_string())}
+    >
       {for PackageManager::get_packages().iter().map(|package_manager| {
         html_nested! {
           <Tab
