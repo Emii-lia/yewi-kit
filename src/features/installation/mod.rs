@@ -1,16 +1,17 @@
 mod data;
+pub mod types;
 
 use yew::{component, html, Html};
 use yew_router::prelude::Link;
 use crate::app::docs::routes::DocsRoute;
 use crate::components::button::{Button, ButtonVariant};
 use crate::components::code_preview::CodePreview;
-use crate::features::installation::data::get_steps;
+use crate::features::installation::data::use_get_steps;
 use crate::types::Size;
 
 #[component(InstallationSection)]
 pub(crate) fn installation_section() -> Html {
-  let steps = get_steps();
+  let steps = use_get_steps();
 
   html! {
     <div class="InstallationSection">

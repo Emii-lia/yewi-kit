@@ -28,7 +28,7 @@ pub struct TabsProps {
   pub on_tab_change: Callback<String>,
   #[prop_or_default]
   pub classes: Classes,
-  #[prop_or(Color::Transparent)]
+  #[prop_or(Color::Primary)]
   pub color: Color
 }
 
@@ -38,8 +38,8 @@ pub(crate) fn tabs(props: &TabsProps) -> Html {
   let color_class = format!("tab-{:?}", props.color).to_lowercase();
 
   html! {
-    <div class={classes!("Tabs", &props.classes)}>
-      <div class="tab-list" role="tablist">
+    <div class={classes!("Tabs")}>
+      <div class={classes!("tab-list", &props.classes)} role="tablist">
         {for tabs.iter().map(|tab| {
           let value = tab.props.value.clone();
           let is_active = *active == value;

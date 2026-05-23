@@ -1,4 +1,7 @@
-use yew::{html, Html};
+use yew::{component, hook, html, html_nested, use_state, Callback, Html, Properties};
+use crate::components::tabs::{Tab, Tabs};
+use crate::features::types::PackageManager;
+use crate::types::Color;
 
 #[derive(Clone)]
 pub struct Step {
@@ -10,7 +13,41 @@ pub struct Step {
   pub children: Option<Html>
 }
 
-pub fn get_steps() -> Vec<Step> {
+#[derive(Properties, PartialEq, Clone)]
+struct Props {
+  #[prop_or(PackageManager::Npm)]
+  package_manager: PackageManager,
+  #[prop_or_default]
+  on_tab_change: Callback<String>,
+}
+#[component(PackageTab)]
+fn package_tab(props: &Props) -> Html {
+  html! {
+    <Tabs color={Color::Transparent} on_tab_change={props.on_tab_change.clone()} classes={"PackageTab"}>
+      {for PackageManager::get_packages().iter().map(|package_manager| {
+        html_nested! {
+          <Tab
+            label={package_manager.to_string()}
+            value={package_manager.to_string()}
+          />
+        }
+      }).collect::<Vec<_>>()}
+    </Tabs>
+  }
+}
+
+#[hook]
+pub fn use_get_steps() -> Vec<Step> {
+  let package_manager = use_state(|| PackageManager::Yarn);
+
+  let on_tab_change = {
+    let package_manager = package_manager.clone();
+    Callback::from(move |value: String| {
+      let package_manager = package_manager.clone();
+      package_manager.set(PackageManager::from_str(&value));
+    })
+  };
+
   vec![
     Step {
       number: 0,
@@ -44,15 +81,18 @@ cargo install --locked trunk"#.to_string(),
       number: 2,
       title: "Create new project".to_string(),
       description: "Use the CLI to initialize a new Yew project with Yewi-kit pre-configured.".to_string(),
-      command: "yewi new my-yewi-app".to_string(),
+      command: format!("yewi new my-yewi-app -p {}", (*package_manager).clone().to_string()),
       hint: Some("This scaffolds a new project with all dependencies ready to use.".to_string()),
       children: Some(html! {
-        <div class="custom-install">
-          {"You can directly specify the theme and i18n usages with the arguments: "}
-          <code class="code-highlight">{"--theme <theme-name>|<hex>"}</code>
-          {" and "}
-          <code class="code-highlight">{"--i18n"}</code>
-          {" respectively."}
+        <div >
+          <div class="custom-install">
+            {"You can directly specify the theme and i18n usages with the arguments: "}
+            <code class="code-highlight">{"--theme <theme-name>|<hex>"}</code>
+            {" and "}
+            <code class="code-highlight">{"--i18n"}</code>
+            {" respectively."}
+          </div>
+          <PackageTab package_manager={(*package_manager).clone()} on_tab_change={on_tab_change.clone()}/>
         </div>
       })
     },
@@ -60,11 +100,11 @@ cargo install --locked trunk"#.to_string(),
       number: 3,
       title: "Install node modules and start development server".to_string(),
       description: "Navigate into the project directory and run the following commands to install dependencies and start the development server.".to_string(),
-      command: r#"cd my-yewi-app
-yarn install && yarn build
-trunk serve"#.to_string(),
-      hint: Some(r#"Ensure you have yarn and trunk installed on your system.
-                    Your application will be available at http://localhost:8081."#.to_string()),
+      command: format!(r#"cd my-yewi-app
+{}
+trunk serve"#, (*package_manager).clone().get_command()).to_string(),
+      hint: Some(format!(r#"Ensure you have {} and trunk installed on your system.
+                    Your application will be available at http://localhost:8081."#, (*package_manager).clone().to_string())),
       children: None
     },
     Step {

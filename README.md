@@ -6,7 +6,6 @@ Live documentation:
 [https://yewi.fiaro.app](https://yewi.fiaro.app)
 
 Crate:
-
 [https://crates.io/crates/yewi-cli](https://crates.io/crates/yewi-cli)
 
 ## Purpose
@@ -105,8 +104,8 @@ cargo install --locked trunk
 ``` bash
 yewi new my-app
 cd my-app
-yarn install
-yarn build
+npm install
+npm build
 ```
 
 This command:
