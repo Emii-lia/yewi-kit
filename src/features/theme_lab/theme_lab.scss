@@ -220,11 +220,9 @@
               background: conic-gradient(var(--tl-primary) 65%, theme("colors.slate.300") 0);
             }
             .tl-tabs {
-              .tab-list {
-                .Tab {
-                  &.tab-is-active {
-                    @apply bg-[var(--tl-primary-500)] text-white;
-                  }
+              .Tab {
+                &.tab-is-active {
+                  @apply bg-[var(--tl-primary-500)] text-white;
                 }
               }
             }
