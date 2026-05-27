@@ -49,7 +49,8 @@ pub fn quick_start() -> Html {
             {"Here's a simple example of how to use Yewi-kit components in your Yew application:"}
           </p>
           <CodePreview code={r#"use yew::prelude::*;
-use crate::components::{Button, Card};
+use crate::components::button::{Button};
+use crate::components::card::{Card};
 
 #[component]
 fn App() -> Html {
