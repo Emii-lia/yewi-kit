@@ -1,0 +1,4 @@
+{
+  "list": ["avatar", "avatar_group", "badge", "breadcrumbs", "button", "card", "carousel", "checkbox", "code_preview", "collapse", "divider", "dropdown", "file_input", "file_preview", "input", "link", "modal", "pagination", "password_input", "progress", "radio", "select", "sidebar", "table", "tabs", "textarea", "toast"],
+  "total": 27
+}
