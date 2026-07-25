@@ -1,13 +1,18 @@
 use yew_icons::IconData;
+use yew_router::Routable;
 use crate::app::docs::routes::DocsRoute;
+use crate::app::ecosystem::route::EcosystemRoute;
 
 #[derive(Clone)]
-pub struct ComponentNav {
-  pub route: DocsRoute,
+pub struct ComponentNav<R>
+where 
+  R: Routable + 'static,
+{
+  pub route: R,
   pub icon: Option<IconData>
 }
 
-impl ComponentNav {
+impl ComponentNav<DocsRoute> {
   pub fn new(route: DocsRoute, icon: Option<IconData>) -> Self {
     Self { route, icon }
   }
@@ -48,5 +53,16 @@ impl ComponentNav {
         ComponentNav::new(DocsRoute::TabsPage, Some(IconData::LUCIDE_LAYERS)),
       ])
     ]
+  }
+}
+
+impl ComponentNav<EcosystemRoute> {
+  pub fn new_eco(route: EcosystemRoute, icon: Option<IconData>) -> Self { Self { route, icon } }
+  
+  pub fn get_routes() -> (String, Vec<Self>) {
+    ("Ecosystem".to_string(), vec![
+      ComponentNav::new_eco(EcosystemRoute::YewiCli, Some(IconData::LUCIDE_TERMINAL)),
+      ComponentNav::new_eco(EcosystemRoute::YewiSeo, Some(IconData::LUCIDE_GLOBE)),
+    ])
   }
 }

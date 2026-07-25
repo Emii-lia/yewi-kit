@@ -3,19 +3,24 @@ use yew::{hook, Callback};
 use yew_icons::IconData;
 use yew_router::prelude::{use_navigator, use_route};
 use crate::app::docs::routes::DocsRoute;
+use crate::app::ecosystem::route::EcosystemRoute;
 use crate::components::sidebar::provider::SidebarContextType;
 use crate::components::sidebar::store::use_sidebar_store;
 use crate::types::components::ComponentNav;
 
 #[hook]
 pub fn use_yewi_sidebar() -> (
-  (String, Vec<ComponentNav>),
-  Vec<(String, Vec<ComponentNav>)>,
+  (String, Vec<ComponentNav<DocsRoute>>),
+  Vec<(String, Vec<ComponentNav<DocsRoute>>)>,
+  (String, Vec<ComponentNav<EcosystemRoute>>),
   Callback<(MouseEvent, DocsRoute), ()>,
   Callback<DocsRoute, bool>,
+  Callback<(MouseEvent, EcosystemRoute), ()>,
+  Callback<EcosystemRoute, bool>,
 ) {
   let navigator = use_navigator().unwrap();
   let current_route = use_route::<DocsRoute>().unwrap();
+  let current_ecosystem = use_route::<EcosystemRoute>().unwrap();
 
   let SidebarContextType {
     toggle_sidebar,
@@ -30,7 +35,14 @@ pub fn use_yewi_sidebar() -> (
     })
   };
 
-  let get_started: (String, Vec<ComponentNav>) = (
+  let is_ecosystem_active = {
+    let current_ecosystem = current_ecosystem.clone();
+    Callback::from(move |ecosystem: EcosystemRoute| {
+      current_ecosystem == ecosystem
+    })
+  };
+
+  let get_started: (String, Vec<ComponentNav<DocsRoute>>) = (
     "Get Started".to_string(),
     vec![
     ComponentNav::new(DocsRoute::Installation, Some(IconData::LUCIDE_CODE_2)),
@@ -39,6 +51,8 @@ pub fn use_yewi_sidebar() -> (
   ]);
 
   let components = ComponentNav::group_components();
+
+  let ecosystem = ComponentNav::get_routes();
 
   let on_navigate = {
     let navigator = navigator.clone();
@@ -53,10 +67,26 @@ pub fn use_yewi_sidebar() -> (
     })
   };
 
+  let on_navigate_ecosystem = {
+    let navigator = navigator.clone();
+    let toggle_sidebar = toggle_sidebar.clone();
+
+    Callback::from(move |(e, route): (MouseEvent, EcosystemRoute)| {
+      e.stop_propagation();
+      navigator.push(&route);
+      if is_mobile {
+        toggle_sidebar.emit(());
+      }
+    })
+  };
+
   (
     get_started,
     components,
+    ecosystem,
     on_navigate,
-    is_active
+    is_active,
+    on_navigate_ecosystem,
+    is_ecosystem_active
   )
 }
