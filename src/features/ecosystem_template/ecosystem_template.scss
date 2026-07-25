@@ -1,0 +1,12 @@
+@use "./components/ecosystem_header/ecosystem_header";
+@use "./components/ecosystem_overview/ecosystem_overview";
+@use "./components/section/section";
+@use "./components/ecosystem_features/ecosystem_features";
+@use "./components/ecosystem_installation/ecosystem-installation";
+@use "./components/ecosystem_example/ecosystem_example";
+@use "./components/ecosystem_purpose/ecosystem_purpose";
+@use "./components/ecosystem_integration/ecosystem_integration";
+
+.EcosystemTemplate {
+  @apply mx-auto w-full max-w-3xl px-6 py-12 md:py-16;
+}

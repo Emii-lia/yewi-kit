@@ -1,0 +1,6 @@
+.Section {
+  @apply mt-12 scroll-mt-20;
+  .section-title {
+    @apply mb-5 text-xl font-semibold tracking-tight text-slate-900;
+  }
+}
