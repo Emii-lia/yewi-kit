@@ -1,0 +1,22 @@
+.EcosystemFeatures {
+  .ecosystem-features-list {
+    @apply grid gap-x-6 gap-y-5 sm:grid-cols-2;
+    .ecosystem-feature {
+      @apply flex gap-3;
+      .ecosystem-feature-icon-container {
+        @apply flex items-center justify-center w-6 h-6 aspect-square shrink-0 rounded bg-white border border-slate-200 text-slate-500;
+        .ecosystem-feature-icon {
+          @apply w-3.5 h-3.5 aspect-square shrink-0;
+        }
+      }
+      .ecosystem-feature-info {
+        .ecosystem-feature-title {
+          @apply text-sm font-semibold text-slate-900;
+        }
+        .ecosystem-feature-description {
+          @apply mt-0.5 text-sm leading-relaxed text-slate-500;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.EcosystemHeader {
+  @apply border-b border-slate-100 pb-10;
+  .ecosystem-header-title {
+    @apply text-4xl font-bold tracking-tight md:text-5xl text-primary-900;
+  }
+  .ecosystem-header-description {
+    @apply mt-4 max-w-2xl leading-relaxed text-slate-500;
+  }
+  .ecosystem-header-tags {
+    @apply mt-6 flex flex-wrap gap-1.5;
+    .ecosystem-header-badge {
+      @apply bg-slate-50 border-slate-200 hover:bg-slate-50;
+    }
+  }
+  .ecosystem-header-actions {
+    @apply mt-6 flex flex-wrap gap-2;
+  }
+}

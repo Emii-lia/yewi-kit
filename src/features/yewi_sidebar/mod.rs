@@ -9,7 +9,16 @@ use crate::features::yewi_sidebar::hooks::use_yewi_sidebar;
 
 #[component(YewiSidebar)]
 pub fn yewi_sidebar() -> Html {
-  let (get_stated, components, on_navigate, is_active) = use_yewi_sidebar();
+  let (
+    get_stated,
+    components,
+    ecosystem,
+    on_navigate,
+    is_active,
+    on_navigate_ecosystem,
+    is_ecosystem_active
+  ) = use_yewi_sidebar();
+
   html! {
     <Sidebar class={"YewiSidebar"} position={SidebarPosition::Left}>
       <SidebarHeader class={"sidebar-header"}>
@@ -94,6 +103,36 @@ pub fn yewi_sidebar() -> Html {
                 }
               })}
             </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+        <SidebarGroup>
+          <SidebarGroupTitle>
+            {ecosystem.0}
+          </SidebarGroupTitle>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {for ecosystem.1.iter().map(|nav| {
+                html! {
+                  <SidebarMenuItem
+                    icon={nav.icon.clone()}
+                    onclick={{
+                      let on_navigate_ecosystem = on_navigate_ecosystem.clone();
+                      let route = nav.route.clone();
+                      Callback::from(move |e| {
+                        on_navigate_ecosystem.emit((e, route.clone()));
+                      })
+                    }}
+                    active={{
+                      let is_ecosystem_active = is_ecosystem_active.clone();
+                      let route = nav.route.clone();
+                      is_ecosystem_active.emit(route.clone())
+                    }}
+                  >
+                    {nav.route.clone().to_string()}
+                  </SidebarMenuItem>
+                }
+              })}
+            </SidebarMenu>  
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>

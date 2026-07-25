@@ -103,11 +103,11 @@ cargo install --locked trunk"#.to_string(),
     },
     Step {
       number: 3,
-      title: "Install node modules and start development server".to_string(),
+      title: "Install dependencies and start development server".to_string(),
       description: "Navigate into the project directory and run the following commands to install dependencies and start the development server.".to_string(),
       command: format!(r#"cd my-yewi-app
-{}
-trunk serve"#, (*package_manager).clone().get_command()).to_string(),
+yewi install
+trunk serve"#).to_string(),
       hint: Some(format!(r#"Ensure you have {} and trunk installed on your system.
                     Your application will be available at http://localhost:8081."#, (*package_manager).clone().to_string())),
       children: None

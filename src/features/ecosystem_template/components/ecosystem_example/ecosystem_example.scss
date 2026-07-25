@@ -1,0 +1,13 @@
+.EcosystemExample {
+  .ecosystem-example-subtitle {
+    @apply mb-4 text-slate-500;
+  }
+  .ecosystem-example-codes {
+    @apply space-y-4;
+    .ecosystem-example-code-block {
+      .ecosystem-example-code-label {
+        @apply mb-1.5 font-mono text-xs uppercase tracking-wider text-slate-400;
+      }
+    }
+  }
+}

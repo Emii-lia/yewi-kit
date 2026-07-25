@@ -26,7 +26,7 @@ html, body {
   font-family: 'Poppins', Abel, "Roboto Slab", sans-serif;
   @apply h-auto min-h-screen relative overflow-hidden;
 }
-.app, .docs-app {
+.app, .docs-app, .ecosystem-app {
   @apply min-h-screen min-w-full w-full h-auto flex flex-col overflow-hidden;
 }
 .Home {
@@ -62,6 +62,7 @@ html, body {
 .page-container {
   @apply p-16 max-w-6xl mx-auto w-full overflow-x-hidden overflow-y-auto max-h-screen h-full;
   @apply max-lg:p-6 max-lg:max-w-full max-lg:mx-0;
+  @apply max-md:pb-12;
   scrollbar-width: none;
   -ms-overflow-style: none;
 
