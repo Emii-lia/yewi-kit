@@ -42,7 +42,7 @@ impl Ecosystem for EcosystemYewiCli {
       codes: vec![
         (Some("Create a new project".to_string()), "yewi new my-app".to_string()),
         (Some("Setup tailwind and run trunk dev".to_string()), r#"cd my-app
-yarn && yarn build
+yewi install
 trunk serve"#.to_string()),
         (Some("Add a component".to_string()), "yewi add button".to_string()),
         (Some("Change theme".to_string()), "yewi set --theme 'blue'".to_string()),
