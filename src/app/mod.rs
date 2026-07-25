@@ -2,7 +2,7 @@ pub mod page;
 pub mod not_found;
 pub mod docs;
 pub mod routes;
-
+pub mod ecosystem;
 
 use yew::{component, html, Html};
 use yew_router::prelude::{BrowserRouter, Switch};
